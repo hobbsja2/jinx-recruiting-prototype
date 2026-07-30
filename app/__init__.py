@@ -1,0 +1,1 @@
+"""Jinx Recruiting local prototype."""

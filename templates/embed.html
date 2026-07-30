@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/static/app.css">
+  <style>body{display:block;background:#fff}main{margin:0;padding:18px;width:100%}</style>
+</head>
+<body>
+  <main>
+    <h2>{{ title }}</h2>
+    {{ body | safe }}
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

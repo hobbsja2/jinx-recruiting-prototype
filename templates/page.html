@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} · Jinx Recruiting</title>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <aside>
+    <a class="brand" href="/admin">
+      <img class="logo" src="/static/jinx-logo.jpg" alt="Jinx Recruiting logo">
+    </a>
+    <nav>
+      <a href="/admin">Dashboard</a><a href="/colleges">Colleges</a>
+      <a href="/needs/overview">Team Needs</a><a href="/players">Players</a>
+      <a href="/school-lists">School Lists</a><a href="/intakes">Intake Forms</a>
+      <a href="/integrations">Integrations</a>
+    </nav>
+    <p class="aside-note">Local prototype<br>Integrations are simulated.</p>
+  </aside>
+  <main>
+    <header><h1>{{ title }}</h1><p>{{ subtitle }}</p></header>
+    {% if notice %}<div class="notice">{{ notice }}</div>{% endif %}
+    {{ body | safe }}
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
