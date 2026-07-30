@@ -5,6 +5,9 @@ jinx_recruiting.db
 static/uploads/
 .env
 
+# HawkEye generated analysis snapshots (VS Code extension tooling artifacts)
+.hawkeye/
+
 # Scratch pages fetched during research runs (agents save HTML to the repo root)
 /*.html
 _tmp/
