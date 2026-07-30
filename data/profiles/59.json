@@ -1,0 +1,46 @@
+{
+  "sid": 59,
+  "name": "West Virginia University Institute of Technology",
+  "division": "NAIA",
+  "conference": "River States Conference",
+  "city": "Beckley",
+  "state": "WV",
+  "website_url": "https://goldenbearathletics.com/sports/softball",
+  "academic_ranking": "WVU Tech is a regional public university in Beckley, WV, organized into the Leonard C. Nelson School of Engineering, School of Arts and Sciences, School of Business, and WVU School of Nursing - Beckley Campus. It emphasizes a 12:1 student-to-faculty ratio, small class sizes, and industry-driven curriculum, with engineering as a signature program area.",
+  "tuition": 9264,
+  "financial_aid": "In-state (resident) tuition and fees are approximately $9,264/year; out-of-state approximately $22,416/year, with a discounted Metro non-resident rate (~$13,152/year) available to residents of VA, NC, and SC. Each academic school adds separate per-credit-hour college tuition. Financial aid, scholarships, and student employment are administered via the WVU financial aid office and WVU Hub; source cost page notes figures are estimates that do not account for aid.",
+  "roster_size": 17,
+  "scholarship_count": null,
+  "facilities_notes": "Golden Bears softball competes as part of WVU Tech athletics based in Beckley, WV. No specific softball facility details were publicly listed on the athletics site as of research date.",
+  "program_reputation": "NAIA program competing in the River States Conference (RSC). Small roster (17 players on the 2027 roster) operating with an interim head coach and a compact staff at research time.",
+  "notes": "Researched 2026-07-30. Coaching staff sourced from goldenbearathletics.com softball coaches page and staff directory; the softball coaches page listed Kyleigh Jackson as Interim Head Coach, Brandon Moore as Assistant Coach, and Taylor Dickerson as Student Assistant. Roster size (17) from the 2027 softball roster page. Tuition from admissions.wvutech.edu/financial/cost. No phone numbers or Twitter/X handles were publicly listed for any softball staff.",
+  "coaches": [
+    {
+      "name": "Kyleigh Jackson",
+      "title": "Interim Head Coach",
+      "email": "kyleigh.jackson@mail.wvu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball coaches page checked 2026-07; email listed, no public phone or Twitter/X listed"
+    },
+    {
+      "name": "Brandon Moore",
+      "title": "Assistant Coach",
+      "email": "bmoore4@mail.wvu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball coaches page checked 2026-07; email listed, no public phone or Twitter/X listed"
+    },
+    {
+      "name": "Taylor Dickerson",
+      "title": "Student Assistant",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Softball coaches page checked 2026-07; no public email, phone, or Twitter/X listed"
+    }
+  ]
+}

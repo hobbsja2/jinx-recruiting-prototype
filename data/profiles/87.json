@@ -1,0 +1,91 @@
+{
+  "sid": 87,
+  "name": "West Virginia University Potomac State College",
+  "division": "JUCO",
+  "conference": "NJCAA Region 20 (Division II)",
+  "city": "Keyser",
+  "state": "WV",
+  "website_url": "https://www.potomacstatesports.com/sports/sball/index",
+  "academic_ranking": "Two-year residential college and integrated division of West Virginia University (since 2005), accredited through WVU by the Higher Learning Commission. Offers 62 degree programs including associate of arts, associate of applied science, Bachelor of Applied Science, Regents bachelor's, and WVU's Bachelor of Science in Nursing. Approx. 1,193 students (fall 2020). Located in Keyser, WV. Source: Wikipedia and college site checked 2026-07.",
+  "tuition": 5616,
+  "financial_aid": "West Virginia resident associate-degree base tuition and fees approx. $2,808/semester (~$5,616/year); non-resident approx. $7,020/semester (~$14,040/year); Metro rate (MD, PA, VA residents) approx. $4,452/semester (~$8,904/year), saving up to $5,000/year. Bachelor's-degree rates are higher. Federal and state financial aid plus scholarships offered through the WVU/Potomac State admissions cost-and-aid office. Source: admissions.potomacstatecollege.edu/cost-and-aid/tuition-and-fees checked 2026-07; academic year not stated on page.",
+  "roster_size": 15,
+  "scholarship_count": null,
+  "facilities_notes": "Athletics under the Catamounts brand at WVU Potomac State College, 101 Fort Avenue, Keyser, WV. Campus facilities include a baseball stadium (Golden Park), a recreation center, gymnasium, and a performing arts center. No softball-specific facility details published on the softball staff/roster pages checked 2026-07.",
+  "program_reputation": "NJCAA Region 20 Division II softball program. In the 2025 season the Catamounts advanced through the Region 20 tournament and finished as Region 20 Runner-Up after a championship series against Cecil College. Source: potomacstatesports.com softball news checked 2026-07.",
+  "notes": "Athletics site: https://www.potomacstatesports.com/landing/index. Softball page: https://www.potomacstatesports.com/sports/sball/index. Coaching staff from https://www.potomacstatesports.com/sports/sball/coaches/index (fetched live 2026-07). Roster size of 15 from 2025-26 roster at https://www.potomacstatesports.com/sports/sball/2025-26/roster. General athletics/college phone listed in site footer is (304) 788-6879; no coach-specific phones, twitter/X handles, or per-coach direct phones are publicly listed. Note name/email spelling discrepancies as published: head coach's name span reads 'Chris Greise' with email christopher.greise@mail.wvu.edu; assistant name span reads 'Chloe Griese' with email chloe.greise@mail.wvu.edu.",
+  "coaches": [
+    {
+      "name": "Chris Greise",
+      "title": "Head Softball Coach",
+      "email": "christopher.greise@mail.wvu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball coaches directory fetched 2026-07; email listed; no public phone or twitter listed."
+    },
+    {
+      "name": "Chloe Griese",
+      "title": "Assistant Softball Coach",
+      "email": "chloe.greise@mail.wvu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball coaches directory fetched 2026-07; email listed (spelled 'greise'); no public phone or twitter listed."
+    },
+    {
+      "name": "Mike Baker",
+      "title": "Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Softball coaches directory fetched 2026-07; no public email, phone, or twitter listed."
+    },
+    {
+      "name": "Armando Herrera",
+      "title": "Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Softball coaches directory fetched 2026-07; no public email, phone, or twitter listed."
+    },
+    {
+      "name": "Mike Palumbo",
+      "title": "Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "Softball coaches directory fetched 2026-07; no public email, phone, or twitter listed."
+    },
+    {
+      "name": "Johnny Davidson",
+      "title": "Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 50,
+      "source_note": "Softball coaches directory fetched 2026-07; no public email, phone, or twitter listed."
+    },
+    {
+      "name": "Ashton Spiker",
+      "title": "Student Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 60,
+      "source_note": "Softball coaches directory fetched 2026-07; no public email, phone, or twitter listed."
+    },
+    {
+      "name": "Meghan Harris",
+      "title": "Student Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 70,
+      "source_note": "Softball coaches directory fetched 2026-07; no public email, phone, or twitter listed."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "sid": 139,
+  "name": "Christian Brothers University",
+  "division": "NCAA D2",
+  "conference": "Gulf South Conference",
+  "city": "Memphis",
+  "state": "TN",
+  "website_url": "https://www.cbubucs.com/sports/softball",
+  "academic_ranking": "Private, 4-year not-for-profit Catholic (Lasallian) university. Total enrollment ~1,772 with ~1,155 undergraduates and a 9:1 student-to-faculty ratio (NCES). No specific national ranking verified from fetched sources.",
+  "tuition": null,
+  "financial_aid": "CBU offers institutional financial aid, scholarships, and need-based aid through its Financial Aid office (cbu.edu/admissions-aid/financial-aid). Specific annual tuition dollar figure and athletic aid amounts were not publicly verified from fetched pages as of 2026-07.",
+  "roster_size": 17,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes at the CBU/Buccaneers athletics facilities in Memphis, TN. No detailed public facilities description verified from fetched pages as of 2026-07.",
+  "program_reputation": "NCAA Division II program competing in the Gulf South Conference. Team social handle @CBUBucsSb.",
+  "notes": "Data gathered from https://www.cbubucs.com/sports/softball/coaches and /roster on 2026-07. Coaches Wheeler and Castro share the listed department phone 901-321-3376. Tuition and scholarship counts could not be verified from public pages and are left null rather than guessed.",
+  "coaches": [
+    {
+      "name": "Tara Wheeler",
+      "title": "Head Softball Coach",
+      "email": "twheele1@cbu.edu",
+      "phone": "901-321-3376",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Staff directory checked 2026-07; email and phone publicly listed. No individual X/Twitter handle listed."
+    },
+    {
+      "name": "Bryanna Castro",
+      "title": "Assistant Softball Coach",
+      "email": "bcastro@cbu.edu",
+      "phone": "901-321-3376",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Staff directory checked 2026-07; email and phone publicly listed (phone shared with head coach). No individual X/Twitter handle listed."
+    },
+    {
+      "name": "Summer Alexander",
+      "title": "Graduate Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Staff directory checked 2026-07; no public email or phone listed. No individual X/Twitter handle listed."
+    }
+  ]
+}

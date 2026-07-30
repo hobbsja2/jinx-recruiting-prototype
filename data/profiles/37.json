@@ -1,0 +1,46 @@
+{
+  "sid": 37,
+  "name": "Thomas More University",
+  "division": "NCAA D2",
+  "conference": "Great Midwest Athletic Conference (G-MAC)",
+  "city": "Crestview Hills",
+  "state": "KY",
+  "website_url": "https://thomasmoresaints.com/sports/softball",
+  "academic_ranking": "Private Catholic university founded in 1921. Approx. 2,350 total students (2,126 undergraduate) as of fall 2024. Organized into three colleges: Liberal Arts and Social Sciences, Business, and Natural and Health Sciences. Accredited by the Southern Association of Colleges and Schools (SACS).",
+  "tuition": null,
+  "financial_aid": "Financial aid details not confirmed from a live authoritative page (official thomasmore.edu tuition/aid pages returned HTTP 403 on fetch 2026-07). As a private not-for-profit institution, institutional merit and need-based aid are typically available; verify current figures via College Navigator (NCES) or the school's financial aid office.",
+  "roster_size": 16,
+  "scholarship_count": null,
+  "facilities_notes": "Softball program competes under Thomas More Saints athletics (thomasmoresaints.com). Specific softball facility details (field/complex name) not confirmed from fetched pages.",
+  "program_reputation": "NCAA Division II softball program in the Great Midwest Athletic Conference (G-MAC). Thomas More transitioned to NCAA Division II in recent years after a Division III history. Program-specific competitive record/reputation not detailed on fetched pages.",
+  "notes": "Researched 2026-07 via live fetch of thomasmoresaints.com softball coaches, roster, and staff-directory pages plus Wikipedia for school profile. Conference confirmed as Great Midwest Athletic Conference (G-MAC). Roster size (16) from softball roster page. Coaching staff appears to be an all-Eagan family staff (Lindsay, Pat, Chandler). Coach emails were not shown on the staff directory; email addresses were only surfaced in one fetch and could not be confirmed as publicly displayed, so they are left blank to avoid guessing. Tuition could not be confirmed (official site blocked WebFetch with 403) and is left null. Team social handle: @TMU_Softball on X/Twitter.",
+  "coaches": [
+    {
+      "name": "Lindsay Eagan",
+      "title": "Head Softball Coach / Assistant Athletic Director / Senior Woman Administrator",
+      "email": "",
+      "phone": "(859) 344-3628",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Name, title, and phone from thomasmoresaints.com softball coaches / staff directory (checked 2026-07). No public email confirmed as displayed in staff directory; no individual X/Twitter handle listed (team account @TMU_Softball)."
+    },
+    {
+      "name": "Pat Eagan",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "(859) 344-3381",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Name, title, and phone from thomasmoresaints.com softball coaches / staff directory (checked 2026-07). No public email confirmed as displayed; no individual X/Twitter handle listed."
+    },
+    {
+      "name": "Chandler Eagan",
+      "title": "Director of Operations",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Name and title from thomasmoresaints.com softball coaches / staff directory (checked 2026-07). No public phone or email listed; no individual X/Twitter handle listed."
+    }
+  ]
+}

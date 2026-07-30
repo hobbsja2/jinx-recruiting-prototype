@@ -1,0 +1,64 @@
+{
+  "sid": 15,
+  "name": "Bowling Green State University",
+  "division": "NCAA D1",
+  "conference": "Mid-American Conference",
+  "city": "Bowling Green",
+  "state": "OH",
+  "website_url": "https://bgsufalcons.com/sports/softball",
+  "academic_ranking": "Bowling Green State University is a public research university (Carnegie R2) in northwest Ohio enrolling roughly 18,000-19,000 students. It is well regarded for programs in education, business (Schmidthorst College of Business), psychology, and the health sciences, and is recognized for undergraduate teaching and student success/retention efforts.",
+  "tuition": 12342,
+  "financial_aid": "Public university offering in-state and out-of-state rates under the Falcon Tuition Guarantee (a fixed four-year rate locked by entering cohort). Non-resident tuition equals the instructional fee plus an out-of-state surcharge. Merit- and need-based aid, scholarships, grants, and work-study are available through the BGSU Office of Student Financial Aid; athletic scholarships for softball are administered per NCAA Division I limits. Exact current-year figures published via the BGSU Bursar tuition-and-fees page.",
+  "roster_size": 23,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes at the BGSU Softball Field on the Bowling Green campus. Falcon athletics facilities include the Sebo Athletic Center (strength/conditioning and support services) and the Stroh Center; team support includes athletic training staff shared with other programs.",
+  "program_reputation": "Bowling Green softball competes in NCAA Division I in the Mid-American Conference. Head coach Michelle Gardner, hired to lead the program, brings extensive Division I experience including head-coaching stints at Nevada and Indiana and a College World Series appearance as an assistant at Arizona State, plus associate head coach experience at Coastal Carolina. She also began her coaching career at BGSU in 1992.",
+  "notes": "Data sourced live from the official BGSU Falcons athletics site (bgsufalcons.com) softball coaches and roster pages, checked 2026-07-30. Roster_size (23) counted from the softball roster page. Coaching staff, titles, and emails extracted from the official staff directory. Tuition reflects BGSU's publicly reported in-state undergraduate tuition-and-fees figure under the Falcon Tuition Guarantee; exact current-year amounts are published via the BGSU Bursar page and should be reverified for the applicable cohort year. scholarship_count left null (not publicly listed; NCAA D1 softball limit is up to 12 equivalency scholarships).",
+  "coaches": [
+    {
+      "name": "Michelle Gardner",
+      "title": "Head Softball Coach",
+      "email": "miclgar@bgsu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Official BGSU softball coaches page, checked 2026-07-30; no public phone or twitter listed on staff directory."
+    },
+    {
+      "name": "Greg McQuillin",
+      "title": "Assistant Softball Coach",
+      "email": "gmcquil@bgsu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Official BGSU softball coaches page, checked 2026-07-30; no public phone or twitter listed."
+    },
+    {
+      "name": "Indya Smith",
+      "title": "Assistant Softball Coach",
+      "email": "sindya@bgsu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Official BGSU softball coaches page, checked 2026-07-30; no public phone or twitter listed."
+    },
+    {
+      "name": "Kolleen Kopchak",
+      "title": "Softball Alumnae Coordinator",
+      "email": "kopchak@bgsu.edu",
+      "phone": "419-372-7159",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Official BGSU softball coaches page, checked 2026-07-30; no public twitter listed."
+    },
+    {
+      "name": "Santiago Segura",
+      "title": "Assistant Athletic Trainer (Volleyball, Softball)",
+      "email": "ssegura@bgsu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "Listed on official BGSU softball coaches/staff page as softball-supporting athletic trainer, checked 2026-07-30; no public phone or twitter listed."
+    }
+  ]
+}

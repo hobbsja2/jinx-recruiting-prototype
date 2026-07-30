@@ -1,0 +1,55 @@
+{
+  "sid": 123,
+  "name": "Saint Mary-of-the-Woods College",
+  "division": "NAIA",
+  "conference": "River States Conference",
+  "city": "Saint Mary-of-the-Woods",
+  "state": "IN",
+  "website_url": "https://smwcathletics.com/sports/softball",
+  "academic_ranking": "Private Catholic liberal arts college in Indiana (teams known as the Pomeroys). U.S. News & World Report consistently ranks SMWC among the best baccalaureate colleges in the Midwest. Serves campus-based undergraduates, online undergraduates, and graduate students; motto 'Virtue and Knowledge United'.",
+  "tuition": 33940,
+  "financial_aid": "All part-time and full-time students are considered for institutional awards. Financial Aid office: (812) 535-5100 / financialaid@smwc.edu.",
+  "roster_size": 18,
+  "scholarship_count": null,
+  "facilities_notes": "Softball plays at the SMWC Softball Field (on-campus). Athletic training support provided by the SMWC athletic training staff.",
+  "program_reputation": "NAIA program competing in the River States Conference (RSC).",
+  "notes": "Data sourced live from smwcathletics.com softball coaches and roster pages and smwc.edu (2026-07). Roster size from 2027 softball roster page (18 players). Tuition is 2026-2027 full-time undergraduate rate. Note: a novelty/mascot entry 'Andre The Alpaca - Emotional Support Coach' appears on the coaches page and was excluded as it is not an actual staff member. Only the head coach has a public email listed; assistant coaches have no public contact info listed.",
+  "coaches": [
+    {
+      "name": "Gina Furrey Buhse",
+      "title": "Head Softball Coach",
+      "email": "Gina.FurreyBuhse@smwc.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "smwcathletics.com softball coaches page checked 2026-07; email listed, no public phone or twitter."
+    },
+    {
+      "name": "Sean Boardman",
+      "title": "Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "smwcathletics.com softball coaches page checked 2026-07; no public email, phone, or twitter listed."
+    },
+    {
+      "name": "Christina Haymaker",
+      "title": "Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "smwcathletics.com softball coaches page checked 2026-07; no public email, phone, or twitter listed."
+    },
+    {
+      "name": "Tyler Buhse",
+      "title": "Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "smwcathletics.com softball coaches page checked 2026-07; no public email, phone, or twitter listed."
+    }
+  ]
+}

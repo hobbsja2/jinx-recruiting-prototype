@@ -1,0 +1,64 @@
+{
+  "sid": 39,
+  "name": "Bryan College",
+  "division": "NAIA",
+  "conference": "Appalachian Athletic Conference",
+  "city": "Dayton",
+  "state": "TN",
+  "website_url": "https://bryanlions.com/sports/softball",
+  "academic_ranking": "Small, institutionally accredited Christian liberal arts college founded in 1930, located in Dayton, TN. Offers 50+ areas of study across associate's, bachelor's, master's, and doctorate degrees, plus professional certificates. Faith-based mission ('Christ above all') with both on-campus and online (eight-week course) program options.",
+  "tuition": 21700,
+  "financial_aid": "On-campus undergraduate tuition (12-17 hours) is $21,700/year for 2026-27; full traditional package with room and board totals $31,250/year. College states it is committed to assisting students with scholarships/grants, federal/state aid, campus employment, and/or loans. Interest-free payment plan available via Nelnet Campus Commerce (3, 4, or 5 installments per semester).",
+  "roster_size": 22,
+  "scholarship_count": null,
+  "facilities_notes": "Athletics department located at 721 Bryan Drive, Dayton, TN 37321. Softball program supported by team athletics facilities and Sports Medicine services; no softball-specific facility details (field name, etc.) publicly listed on the softball program pages (checked 2026-07).",
+  "program_reputation": "NAIA program competing in the Appalachian Athletic Conference (AAC). Bryan Lions athletics.",
+  "notes": "Data gathered 2026-07 from bryanlions.com softball staff/roster pages and bryan.edu tuition page. Roster size (22) taken from 2025-26 softball roster. Team general X account: @BCLionsSoftball. No individual coach Twitter/X handles publicly listed.",
+  "coaches": [
+    {
+      "name": "Leah Thompson",
+      "title": "Head Softball Coach",
+      "email": "lthompson0546@bryan.edu",
+      "phone": "423-775-7492",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "bryanlions.com softball staff directory, checked 2026-07; no public Twitter/X handle listed."
+    },
+    {
+      "name": "Nathan Thompson",
+      "title": "Assistant Softball Coach",
+      "email": "nthompson2388@bryan.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "bryanlions.com softball staff directory, checked 2026-07; no public phone or Twitter/X handle listed."
+    },
+    {
+      "name": "Aubree Presley",
+      "title": "Graduate Assistant",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "bryanlions.com softball staff directory, checked 2026-07; no public email, phone, or Twitter/X handle listed."
+    },
+    {
+      "name": "Cali Green",
+      "title": "Graduate Assistant",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "bryanlions.com softball staff directory, checked 2026-07; no public email, phone, or Twitter/X handle listed."
+    },
+    {
+      "name": "Alyssa Hudson",
+      "title": "Graduate Assistant",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "bryanlions.com softball staff directory, checked 2026-07; no public email, phone, or Twitter/X handle listed."
+    }
+  ]
+}

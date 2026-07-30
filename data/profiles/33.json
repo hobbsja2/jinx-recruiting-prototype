@@ -1,0 +1,55 @@
+{
+  "sid": 33,
+  "name": "University of Indianapolis",
+  "division": "NCAA D2",
+  "conference": "Great Lakes Valley Conference",
+  "city": "Indianapolis",
+  "state": "IN",
+  "website_url": "https://athletics.uindy.edu/sports/softball",
+  "academic_ranking": "Private not-for-profit 4-year university with approximately 3,600 undergraduates and a 12:1 student-to-faculty ratio (per NCES College Navigator).",
+  "tuition": null,
+  "financial_aid": "As a private university, UIndy offers merit and need-based aid. Specific tuition/aid figures could not be confirmed from official pages during research (uindy.edu tuition pages returned 404). Verify current figures directly with the UIndy financial aid office.",
+  "roster_size": 18,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes at the on-campus softball complex. Detailed facility specifications not confirmed during this research pass.",
+  "program_reputation": "NCAA Division II program competing in the Great Lakes Valley Conference (GLVC), one of the strongest D2 conferences in the Midwest.",
+  "notes": "Coaching staff, contact info, and roster size captured live from athletics.uindy.edu softball coaches and roster pages on 2026-07. Phone numbers on the staff directory display without an area code (Indianapolis area code is 317, not shown on page). No Twitter/X handles listed for any staff. Tuition and scholarship figures left null - not confirmable from official sources during research.",
+  "coaches": [
+    {
+      "name": "Melissa Frost",
+      "title": "Head Coach",
+      "email": "mfrost@uindy.edu",
+      "phone": "788-2198",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball coaches directory checked 2026-07; email listed, phone shown without area code, no Twitter/X listed."
+    },
+    {
+      "name": "Ben Ferrell",
+      "title": "Assistant Coach",
+      "email": "ferrellb@uindy.edu",
+      "phone": "788-5958",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball coaches directory checked 2026-07; email listed, phone shown without area code, no Twitter/X listed."
+    },
+    {
+      "name": "Amanda Demmerle",
+      "title": "Graduate Assistant",
+      "email": "demmerlea@uindy.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Softball coaches directory checked 2026-07; email listed, no public phone or Twitter/X listed."
+    },
+    {
+      "name": "Faith Muterspaugh",
+      "title": "Graduate Assistant",
+      "email": "muterspaughf@uindy.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Softball coaches directory checked 2026-07; email listed, no public phone or Twitter/X listed."
+    }
+  ]
+}

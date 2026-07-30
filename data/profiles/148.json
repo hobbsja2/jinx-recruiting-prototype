@@ -1,0 +1,55 @@
+{
+  "sid": 148,
+  "name": "Baldwin Wallace University",
+  "division": "NCAA D3",
+  "conference": "Ohio Athletic Conference",
+  "city": "Berea",
+  "state": "OH",
+  "website_url": "https://bwyellowjackets.com/sports/softball",
+  "academic_ranking": "Private university in Berea, OH (founded 1845), ~3,300 students. Ranked #10 of 165 regional Midwest master's universities by U.S. News & World Report (2025). Offers 60+ majors across five academic schools; ~80% of faculty hold doctorates or terminal degrees. Notable Conservatory of Performing Arts.",
+  "tuition": null,
+  "financial_aid": "As an NCAA Division III program, no athletic scholarships are offered. Financial aid is need- and merit-based academic aid. Specific figures not confirmed from an authoritative live source during research (2026-07).",
+  "roster_size": 18,
+  "scholarship_count": null,
+  "facilities_notes": "Yellow Jackets softball competes as part of BW athletics in Berea, OH. Detailed facility specifics not confirmed from a live source during research (2026-07).",
+  "program_reputation": "Baldwin Wallace Yellow Jackets softball competes in NCAA Division III as a member of the Ohio Athletic Conference (OAC).",
+  "notes": "Coaching emails captured from the softball coaches page (bwyellowjackets.com/sports/softball/coaches), which lists individual bw.edu emails; the general staff directory did not display emails. Roster size (18) taken from the softball roster page. Tuition not confirmed from an authoritative live page, set to null rather than guessed. Data verified 2026-07-30.",
+  "coaches": [
+    {
+      "name": "Tom Spencer",
+      "title": "Head Coach",
+      "email": "tspencer@bw.edu",
+      "phone": "440-826-3398",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "softball coaches page checked 2026-07; email and shared program phone listed; no public twitter/X handle"
+    },
+    {
+      "name": "Bridie Bricker '25",
+      "title": "Assistant Coach",
+      "email": "bbricker@bw.edu",
+      "phone": "440-826-3398",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "softball coaches page checked 2026-07; email and shared program phone listed; no public twitter/X handle"
+    },
+    {
+      "name": "Grace Bowman '25",
+      "title": "Assistant Coach",
+      "email": "gbowman@bw.edu",
+      "phone": "440-826-3398",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "softball coaches page checked 2026-07; email and shared program phone listed; no public twitter/X handle"
+    },
+    {
+      "name": "Jeff Morganti",
+      "title": "Assistant Coach",
+      "email": "jmorgant@bw.edu",
+      "phone": "440-826-3398",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "softball coaches page checked 2026-07; email and shared program phone listed; no public twitter/X handle"
+    }
+  ]
+}

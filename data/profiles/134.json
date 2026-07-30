@@ -1,0 +1,55 @@
+{
+  "sid": 134,
+  "name": "West Virginia Wesleyan College",
+  "division": "NCAA D2",
+  "conference": "Mountain East Conference",
+  "city": "Buckhannon",
+  "state": "WV",
+  "website_url": "https://wesleyanbobcats.com/sports/softball",
+  "academic_ranking": "Private Methodist-affiliated liberal arts college founded in 1890, accredited by the Higher Learning Commission. ~1,055 students (971 undergraduate). Offers 50+ undergraduate majors and 33 minors plus graduate programs (MBA, MFA, nursing). ~80% of faculty hold terminal degrees; student-faculty ratio ~11.6:1 with average class size of 15.",
+  "tuition": 33304,
+  "financial_aid": "More than 90% of the student body receives some form of financial aid. Merit scholarships for new students: Presidential $18,000 (3.75 GPA), Dean's $16,000 (3.3 GPA), Merit $14,000 (2.75 GPA). Co-curricular (athletics/arts/service) scholarships can be combined with academic awards. WV residents may add the Promise Scholarship and WV Higher Education Grant. Outside scholarships stack on top of institutional aid. Financial Aid Office: (304) 473-8080. Tuition figure is for 2026-27; total direct cost ~$48,698 including room, board, and fees.",
+  "roster_size": 19,
+  "scholarship_count": null,
+  "facilities_notes": "No softball-specific facility name or venue details were listed on the athletics softball page (checked 2026-07).",
+  "program_reputation": "NCAA Division II program competing in the Mountain East Conference. No recent championships or specific program achievements were listed on the softball page (checked 2026-07).",
+  "notes": "Data sourced live 2026-07 from wesleyanbobcats.com softball coaches and roster pages and wvwc.edu financial aid / total direct cost pages. Roster size (19) confirmed from jersey-number markers on the roster page. Tuition $33,304 is the 2026-27 published figure. No Twitter/X handles are publicly listed for any softball staff member.",
+  "coaches": [
+    {
+      "name": "Steve Warner",
+      "title": "Head Coach",
+      "email": "warner_s@wvwc.edu",
+      "phone": "304-473-8005",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "staff directory checked 2026-07; no public Twitter/X listed"
+    },
+    {
+      "name": "Sarah Richardson",
+      "title": "Assistant Coach",
+      "email": "richardson.s@wvwc.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "staff directory checked 2026-07; no public phone or Twitter/X listed"
+    },
+    {
+      "name": "Jim Gregory",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "staff directory checked 2026-07; no public email, phone, or Twitter/X listed"
+    },
+    {
+      "name": "Bob Allen",
+      "title": "Volunteer Assistant Coach",
+      "email": "allen.r@wvwc.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "staff directory checked 2026-07; no public phone or Twitter/X listed"
+    }
+  ]
+}

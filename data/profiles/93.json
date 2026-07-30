@@ -1,0 +1,46 @@
+{
+  "sid": 93,
+  "name": "Midway University",
+  "division": "NAIA",
+  "conference": "River States Conference",
+  "city": "Midway",
+  "state": "KY",
+  "website_url": "https://gomidwayeagles.com/sports/softball",
+  "academic_ranking": "Midway University is a small private university in Midway, Kentucky, founded in 1847. It offers undergraduate and graduate programs with a focus on nursing, business, education, equine studies, and health sciences. Small class sizes and a low student-to-faculty ratio; historically women's-focused, now coeducational at the undergraduate level.",
+  "tuition": null,
+  "financial_aid": "Midway University markets itself as one of the most affordable private universities in the region. Financial aid includes academic and need-based aid, plus NAIA athletic scholarships. Exact annual tuition figure not confirmed from a primary source during research (checked midway.edu 2026-07); left null rather than estimated.",
+  "roster_size": 31,
+  "scholarship_count": null,
+  "facilities_notes": "Softball plays home games at William G. Clark Memorial Field in Midway, KY (confirmed via gomidwayeagles.com softball schedule/facilities pages, 2026-07).",
+  "program_reputation": "NAIA program competing in the River States Conference. Full coaching staff and 31-player roster maintained for the 2026 season.",
+  "notes": "Data captured live from gomidwayeagles.com softball coaches, roster, and schedule pages on 2026-07. Coaching staff directory lists a head coach and two assistant coaches; no recruiting coordinator, director of player development, or graduate/volunteer assistants listed at time of check. No Twitter/X handles published for any staff member.",
+  "coaches": [
+    {
+      "name": "Bailey Curry",
+      "title": "Head Coach",
+      "email": "bailey.curry@midway.edu",
+      "phone": "859.846.5834",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "gomidwayeagles.com softball coaches page checked 2026-07; email and phone publicly listed; no twitter/X listed"
+    },
+    {
+      "name": "Brent Aldridge",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "gomidwayeagles.com softball coaches page checked 2026-07; no public email, phone, or twitter/X listed"
+    },
+    {
+      "name": "Scott Ashburn",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "gomidwayeagles.com softball coaches page checked 2026-07; no public email, phone, or twitter/X listed"
+    }
+  ]
+}

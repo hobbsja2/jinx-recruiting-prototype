@@ -1,0 +1,46 @@
+{
+  "sid": 40,
+  "name": "Cumberland University",
+  "division": "NAIA",
+  "conference": "Mid-South Conference",
+  "city": "Lebanon",
+  "state": "TN",
+  "website_url": "https://gocumberlandathletics.com/sports/softball",
+  "academic_ranking": "Private university founded in 1842 in Lebanon, TN. Total enrollment approximately 3,072 students. Endowment approximately $15.7 million (2021). No specific national academic ranking confirmed from live sources.",
+  "tuition": null,
+  "financial_aid": "Financial aid details not confirmed from a live public source (university tuition/aid pages returned HTTP 403 when checked 2026-07). As an NAIA program, athletic scholarships plus need- and merit-based aid are typically available; specific figures not verified.",
+  "roster_size": 22,
+  "scholarship_count": null,
+  "facilities_notes": "Softball plays home games on campus in Lebanon, TN. Specific facility name and details not confirmed from a live source during this research.",
+  "program_reputation": "Cumberland University Phoenix compete in NAIA in the Mid-South Conference (since 2012-13). Team nickname is the Phoenix; team social account is @CUPhoenixSB. Detailed competitive record/reputation not verified from live sources in this pass.",
+  "notes": "Coaching staff and roster size captured live from gocumberlandathletics.com softball pages on 2026-07-30. Tuition, scholarship count, financial aid figures, and facilities details could not be verified from live public sources (university site returned 403; NCES showed no figure) and are left null/noted rather than guessed. No individual coach Twitter/X handles are listed; team account is @CUPhoenixSB.",
+  "coaches": [
+    {
+      "name": "Stephanie Theall",
+      "title": "Head Coach",
+      "email": "stheall@cumberland.edu",
+      "phone": "(615) 453-6361",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball staff directory (gocumberlandathletics.com/sports/softball/coaches) checked 2026-07-30; no individual Twitter/X handle listed."
+    },
+    {
+      "name": "Lauren Powell",
+      "title": "Assistant Coach",
+      "email": "lpowell@cumberland.edu",
+      "phone": "615-257-9501",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball staff directory (gocumberlandathletics.com/sports/softball/coaches) checked 2026-07-30; no individual Twitter/X handle listed."
+    },
+    {
+      "name": "Katie Killen",
+      "title": "Graduate Assistant",
+      "email": "katiekillen@cumberland.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Softball staff directory (gocumberlandathletics.com/sports/softball/coaches) checked 2026-07-30; no public phone or Twitter/X handle listed."
+    }
+  ]
+}

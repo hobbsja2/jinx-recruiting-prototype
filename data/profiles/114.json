@@ -1,0 +1,64 @@
+{
+  "sid": 114,
+  "name": "Goshen College",
+  "division": "NAIA",
+  "conference": "Crossroads League",
+  "city": "Goshen",
+  "state": "IN",
+  "website_url": "https://goleafs.net/sports/softball",
+  "academic_ranking": "Private Mennonite-affiliated liberal arts college accredited by the Higher Learning Commission. Offers 46 majors and 52 minors plus several master's programs. Total enrollment approximately 847 (fall 2025), including about 738 undergraduates, with roughly 71 faculty. EDsmart lists a national ranking of #245.",
+  "tuition": 38890,
+  "financial_aid": "Published annual undergraduate tuition approximately $38,890 (2026); published total cost of attendance approximately $48,449. Need-based aid substantially reduces net cost - reported net prices around $12,761 for low-income and $15,163 for middle-income families. Specific percentage of students receiving aid not confirmed from a live-fetched source (goshen.edu returned HTTP 403).",
+  "roster_size": 19,
+  "scholarship_count": null,
+  "facilities_notes": "Softball team plays at the Goshen College Softball Complex, part of the John Ingold Athletic Complex. Campus athletic facilities also include the Roman Gingerich Recreation and Fitness Center (basketball/racquetball courts, indoor track, climbing wall). No published field dimensions or seating capacity found.",
+  "program_reputation": "NAIA program competing in the Crossroads League as the Maple Leafs; member of the NAIA Champions of Character initiative. Team social media @goshen_sb on X and Instagram.",
+  "notes": "Researched 2026-07-30 from goleafs.net (softball coaches and roster pages). Roster size of 19 counted from the softball roster page. Tuition figure corroborated across EDsmart, TheCollegeMonk, and CollegeAzimuth; official goshen.edu pages returned HTTP 403 and could not be fetched live.",
+  "coaches": [
+    {
+      "name": "Luke Wagner",
+      "title": "Head Coach",
+      "email": "jlwagner@goshen.edu",
+      "phone": "574-535-7233",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "goleafs.net softball coaches page checked 2026-07-30; email and phone publicly listed."
+    },
+    {
+      "name": "Hannah Middlebrooks",
+      "title": "Associate Head Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "goleafs.net softball coaches page checked 2026-07-30; no public email or phone listed."
+    },
+    {
+      "name": "Lesley Pipher",
+      "title": "Pitching Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "goleafs.net softball coaches page checked 2026-07-30; no public email or phone listed."
+    },
+    {
+      "name": "Emma Durkin",
+      "title": "Manual Therapist and Athletic Trainer",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "goleafs.net softball coaches page checked 2026-07-30; no public email or phone listed."
+    },
+    {
+      "name": "Tyler Hubbell",
+      "title": "Strength and Nutrition Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "goleafs.net softball coaches page checked 2026-07-30; no public email or phone listed."
+    }
+  ]
+}

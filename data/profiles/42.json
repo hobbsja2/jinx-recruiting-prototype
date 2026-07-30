@@ -1,0 +1,46 @@
+{
+  "sid": 42,
+  "name": "Johnson University",
+  "division": "NAIA",
+  "conference": "Appalachian Athletic Conference",
+  "city": "Knoxville",
+  "state": "TN",
+  "website_url": "https://www.johnsonroyals.com/sports/sball/index",
+  "academic_ranking": "Private, faith-based four-year institution affiliated with Christian Churches and Churches of Christ. Small enrollment (~978 students). Reported 57% graduation rate and ~$40,596 median earnings for graduates. Not ranked in major national rankings; primarily regional/private-college profile.",
+  "tuition": 21122,
+  "financial_aid": "Offers need- and merit-based scholarships, a work-study program, and other financial aid options. School markets its annual cost as less than half the national average for private colleges. Reported net price approximately $22,063.",
+  "roster_size": null,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes as the Royals in the NAIA/Appalachian Athletic Conference at the Knoxville, TN campus. Specific dedicated softball facility details were not publicly confirmed from the athletics site (site blocked automated access; not verified 2026-07).",
+  "program_reputation": "Ascending young program under head coach Dayna Carter. Won its first Appalachian Athletic Conference Tournament Championship in 2025 (program's first green banner) and reached the NAIA Opening Round after a ~29-15 season; finished regular season as AAC co-champions. Carter was named 2024 AAC Coach of the Year.",
+  "notes": "Athletics site (johnsonroyals.com) blocks automated fetching (HTTP 403 / CAPTCHA), so coaching staff and program details were compiled from indexed search snippets of the site's staff directory and roster pages, cross-checked across multiple sources. Confirmed softball-specific staff: head coach Dayna Carter, assistant coach Hannah DeVault, and assistant/GA Brody (Caden) Blalock. Roster size not reliably confirmed (only partial player lists available in snippets), so left null rather than guessed. Some search results referenced additional names (e.g., Shanon Plese, Zoe Porche) that could NOT be verified as current softball staff and were excluded to avoid inventing data.",
+  "coaches": [
+    {
+      "name": "Dayna Carter",
+      "title": "Head Softball Coach (also Assistant Athletic Director)",
+      "email": "dcarter@johnsonu.edu",
+      "phone": "865-251-2479",
+      "twitter": "@DaynaCarter5",
+      "sort_order": 0,
+      "source_note": "Email and phone from Johnson Royals staff directory listing, corroborated across search sources 2026-07. Twitter/X handle from public profile."
+    },
+    {
+      "name": "Hannah DeVault",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "@hannah_devault9",
+      "sort_order": 10,
+      "source_note": "Listed as softball assistant coach; staff directory checked via search 2026-07, no public email or phone listed. Twitter/X handle from public profile (Lipscomb softball alumna)."
+    },
+    {
+      "name": "Brody (Caden) Blalock",
+      "title": "Assistant Softball Coach (also Head Cross Country Coach; previously listed as Graduate Assistant)",
+      "email": "caden.blalock@johnsonu.edu",
+      "phone": "762-204-7671",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Email corroborated across multiple sources including his X profile; phone from staff directory listing 2026-07. No softball-specific Twitter handle confirmed."
+    }
+  ]
+}

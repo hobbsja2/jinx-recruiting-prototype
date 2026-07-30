@@ -1,0 +1,28 @@
+{
+  "sid": 112,
+  "name": "Owens Community College",
+  "division": "JUCO (NJCAA Division III)",
+  "conference": "Ohio Community College Athletic Conference (OCCAC)",
+  "city": "Perrysburg",
+  "state": "OH",
+  "website_url": "https://www.owensexpress.com/sports/sball/index",
+  "academic_ranking": "Public two-year community college serving northwest Ohio (main campus in Perrysburg, plus a Findlay-area campus). Offers associate degrees and certificate programs; open-admission institution with transfer pathways to four-year universities. No competitive national academic ranking applies to open-enrollment community colleges.",
+  "tuition": 5112.0,
+  "financial_aid": "As an Ohio public community college, Owens participates in federal (FAFSA) and state aid programs including Pell Grants, the Ohio College Opportunity Grant, and institutional scholarships. NJCAA Division III programs do NOT offer athletic scholarships, so softball recruits rely on need- and merit-based aid rather than athletic awards. Owens also promotes a Tuition Guarantee for students taking 15+ credit hours. (owens.edu financial aid/tuition pages, checked 2026-07.)",
+  "roster_size": 13,
+  "scholarship_count": null,
+  "facilities_notes": "Owens Athletics is based at the Perrysburg (Toledo-area) campus. Athletic facilities referenced on the athletics site include the SHAC (Student Health and Activities Center) and an Outdoor Sports Complex which houses the softball field. Specific softball-field dimensions/amenities are not detailed on the public softball pages (owensexpress.com, checked 2026-07).",
+  "program_reputation": "Owens Express softball competes in NJCAA Division III within the OCCAC. The program's news highlights a 2024 Regional Winner distinction, and the roster is composed largely of local northwest/central Ohio players, reflecting a regional recruiting footprint typical of a two-year JUCO program.",
+  "notes": "Coaching staff captured live from the official softball Coaches page (https://www.owensexpress.com/sports/sball/coaches/index) on 2026-07; only one softball-specific staff member (Head Coach Samantha Stimmel) is publicly listed. No assistant coaches, recruiting coordinators, or graduate assistants were listed at time of check. Roster size (13) taken from the 2025-26 Express Softball Roster (https://www.owensexpress.com/sports/sball/2025-26/roster); the 2026-27 roster page was published but not yet populated with players. Division confirmed as NJCAA Division III via the njcaastats.prestosports.com 'div3' team link on the coaches page. Tuition ($5,112/yr) computed from the published in-state rate of $213.00/credit hour (Instructional $197.50 + General $15.50) at 24 credit hours/year full-time (owens.edu tuition-rates page, checked 2026-07); actual cost varies by residency and credit load.",
+  "coaches": [
+    {
+      "name": "Samantha Stimmel",
+      "title": "Head Softball Coach",
+      "email": "samantha_stimmel2@owens.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Official softball Coaches page (owensexpress.com/sports/sball/coaches/index) checked 2026-07; email listed, no public phone or Twitter/X handle listed."
+    }
+  ]
+}

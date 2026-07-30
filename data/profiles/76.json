@@ -1,0 +1,55 @@
+{
+  "sid": 76,
+  "name": "Austin Peay State University",
+  "division": "NCAA D1",
+  "conference": "ASUN Conference",
+  "city": "Clarksville",
+  "state": "TN",
+  "website_url": "https://letsgopeay.com/sports/softball",
+  "academic_ranking": "Austin Peay State University is a public university in Clarksville, TN, founded in 1927. It offers a broad range of undergraduate and graduate programs and is known for accessible admissions and strong support for military-affiliated students given its proximity to Fort Campbell. Enrollment is roughly 9,000-10,000 students.",
+  "tuition": 9768,
+  "financial_aid": "In-state (Tennessee resident) undergraduate tuition and mandatory fees are approximately $9,768/year; out-of-state approximately $15,744/year (Clarksville campus standard rates, Fall 2026/Spring 2027 per apsu.edu). The university offers merit- and need-based aid, federal aid (FAFSA), and athletic scholarships. Softball is an NCAA D1 head-count/equivalency sport; specific per-athlete award amounts are not published publicly.",
+  "roster_size": 26,
+  "scholarship_count": null,
+  "facilities_notes": "Austin Peay softball plays at Cathi Maynard Park at Cheryl Holt Field. Coaching offices are located in the Winfield Dunn Center (DU 176). Specific capacity and renovation details were not confirmed on the facility page checked 2026-07.",
+  "program_reputation": "Austin Peay softball competes at the NCAA Division I level in the ASUN Conference (moved from the Ohio Valley Conference in 2022). The program is led by head coach Kassie Stanfill and carries a competitive roster of 26 players for the 2026 season.",
+  "notes": "Data gathered from letsgopeay.com softball coaches page, roster page, staff directory, and apsu.edu tuition pages, checked 2026-07. Conference confirmed as ASUN Conference. Roster size (26) from the softball roster page. Tuition figures are estimated annual totals (Fall+Spring, full-time 12+ hrs) from apsu.edu standard Clarksville campus rates.",
+  "coaches": [
+    {
+      "name": "Kassie Stanfill",
+      "title": "Head Coach",
+      "email": "stanfillk@apsu.edu",
+      "phone": "(931) 221-6190",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Email and phone from letsgopeay.com softball coaches page and athletics staff directory, checked 2026-07; no public Twitter/X handle listed."
+    },
+    {
+      "name": "Faith Canfield",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball coaches page and staff directory checked 2026-07; no public email, phone, or Twitter/X listed (office DU 176)."
+    },
+    {
+      "name": "Ryan Greenwood",
+      "title": "Assistant Coach",
+      "email": "greenwoodr@apsu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Email from letsgopeay.com softball coaches page, checked 2026-07; no public phone or Twitter/X listed."
+    },
+    {
+      "name": "Bub Feringa",
+      "title": "Director of Player Development",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Softball coaches page and staff directory checked 2026-07; no public email, phone, or Twitter/X listed."
+    }
+  ]
+}

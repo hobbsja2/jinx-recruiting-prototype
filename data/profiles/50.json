@@ -1,0 +1,64 @@
+{
+  "sid": 50,
+  "name": "University of Louisville",
+  "division": "NCAA D1",
+  "conference": "Atlantic Coast Conference (ACC)",
+  "city": "Louisville",
+  "state": "KY",
+  "website_url": "https://gocards.com/sports/softball",
+  "academic_ranking": "University of Louisville is a public research university (Carnegie R1 - very high research activity). Regularly ranked among national public universities (roughly top ~150-200 nationally in major rankings). Strong programs in business, engineering, health sciences, and nursing. Academic ranking not verified from a live ranking source during this research pass.",
+  "tuition": null,
+  "financial_aid": "Public university; in-state tuition is substantially lower than out-of-state. As a Division I ACC softball program, the NCAA permits up to 12 athletic scholarships (softball is a headcount/equivalency sport at 12.0). Athletic aid is combined with need- and merit-based institutional aid, federal/state grants, and Kentucky programs (e.g., KEES). Exact figures not verified from a live financial-aid page in this pass.",
+  "roster_size": 19,
+  "scholarship_count": 12,
+  "facilities_notes": "Home softball venue is Ulmer Stadium on the University of Louisville campus (confirmed via gocards.com softball roster/coaches pages, 2026-07). NCAA D1 ACC-level softball facilities.",
+  "program_reputation": "NCAA Division I women's softball program competing in the Atlantic Coast Conference (ACC), one of the top Power-conference leagues. Led by head coach Holly Aprile. Established D1 program in a Power 4 conference.",
+  "notes": "Data captured live from https://gocards.com/sports/softball/coaches and .../roster on 2026-07-30. The gocards.com site is a JavaScript SPA; coach names/titles/emails/phones were extracted from the server-delivered HTML of the coaches page. Coaching staff: 1 head coach, 3 assistant coaches, 1 graduate assistant (5 total). Roster size = 19 (count of player profiles on the 2026 roster page). Conference confirmed as ACC. tuition set to null - could not confirm a live USD figure (louisville.edu bursar page did not list a dollar amount in one hop); University of Louisville is a public school, so in-state tuition is roughly in the low-$13k/yr range and out-of-state substantially higher, but this was NOT verified live and is therefore not entered as a number. scholarship_count reflects the NCAA D1 softball scholarship limit (12.0), not a school-published number. No coach Twitter/X handles are listed on the staff directory. Coach phone numbers on the page are shown as local 852-#### numbers; the University of Louisville campus prefix is 502-852, so full numbers are recorded as 502-852-####.",
+  "coaches": [
+    {
+      "name": "Holly Aprile",
+      "title": "Head Coach",
+      "email": "holly@gocards.com",
+      "phone": "502-852-1782",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "gocards.com softball coaches page, fetched 2026-07-30; email holly@GoCards.com and phone 852-1782 listed (502-852 campus prefix). No Twitter/X handle listed."
+    },
+    {
+      "name": "Griffin Joiner",
+      "title": "Assistant Coach",
+      "email": "griffin@gocards.com",
+      "phone": "502-852-7854",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "gocards.com softball coaches page, fetched 2026-07-30; email griffin@GoCards.com and phone 852-7854 listed (502-852 campus prefix). No Twitter/X handle listed."
+    },
+    {
+      "name": "Bryan Sabatella",
+      "title": "Assistant Coach",
+      "email": "bryan@gocards.com",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "gocards.com softball coaches page, fetched 2026-07-30; email bryan@gocards.com listed; no public phone listed; no Twitter/X handle listed."
+    },
+    {
+      "name": "DeeDee Morris",
+      "title": "Assistant Coach",
+      "email": "deedee@gocards.com",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "gocards.com softball coaches page, fetched 2026-07-30; email deedee@GoCards.com listed; no public phone listed; no Twitter/X handle listed."
+    },
+    {
+      "name": "Ally Alexander",
+      "title": "Graduate Assistant",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "gocards.com softball coaches page, fetched 2026-07-30; listed as Graduate Assistant (support staff); no public email, phone, or Twitter/X handle listed."
+    }
+  ]
+}

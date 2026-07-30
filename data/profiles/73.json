@@ -1,0 +1,46 @@
+{
+  "sid": 73,
+  "name": "Defiance College",
+  "division": "NAIA",
+  "conference": "Wolverine-Hoosier Athletic Conference",
+  "city": "Defiance",
+  "state": "OH",
+  "website_url": "https://www.defianceathletics.com/sports/sball",
+  "academic_ranking": "Private liberal arts college affiliated with the United Church of Christ, founded in 1850. Accredited by the Higher Learning Commission. Total enrollment approx. 568 with about 529 undergraduates; student-to-faculty ratio approximately 11:1 (NCES College Navigator). Notable programs include Restoration Ecology and access to the 200-acre Thoreau Wildlife Sanctuary.",
+  "tuition": 28500,
+  "financial_aid": "Full-time undergraduate tuition is $28,500/year (2025-26); total tuition and fees approximately $29,410, and about $42,453 including housing and food. Federal subsidized/unsubsidized loans, Parent Federal PLUS, and alternative loans available. The '1850 Promise' program (starting 2026-27) offers a debt-free bachelor's degree for eligible area commuter students in 11 nearby Ohio counties with a 3.0+ HS GPA who qualify for the Ohio College Opportunity Grant. Financial aid office: financialaid@defiance.edu, 419-783-2314.",
+  "roster_size": 25,
+  "scholarship_count": null,
+  "facilities_notes": "The softball team plays at Sal Hench Field (991 Webster Street, Defiance, OH 43512), opened in 2000 in honor of longtime College and DC athletics supporter Sal Hench. Outfield dimensions are 210 feet all around, with a 28-foot by 12-foot inning-by-inning scoreboard installed in right field in spring 2026. In fall 2016 the field received a new laser-leveled infield surface with a Dura Edge classic infield mix and red Pro Slide top dressing.",
+  "program_reputation": "NAIA program competing in the Wolverine-Hoosier Athletic Conference (WHAC). Defiance College athletics moved to the NAIA/WHAC after the 2023-24 season, previously competing in the HCAC (NCAA Division III). Team social handle: @DefiCollegeSB.",
+  "notes": "Data gathered 2026-07 from the Defiance College athletics site (softball coaches page, coach bio pages, 2026 roster), the Defiance College payment-information page (tuition), NCES College Navigator (enrollment/ratio), and the athletics facilities page (Sal Hench Field). Softball sport code on the athletics site is 'sball'. Roster size of 25 taken from the 2025-26 (2026 season) roster page. Scholarship count not publicly listed. Coaching staff of three: head coach plus two assistant coaches (one dual-role administrative assistant/assistant coach). No volunteer, graduate assistant, or separate recruiting-coordinator/player-development titles listed for softball. No personal Twitter/X handles listed for any coach.",
+  "coaches": [
+    {
+      "name": "Jordan Osborne",
+      "title": "Head Coach",
+      "email": "josborne@defiance.edu",
+      "phone": "(419) 783-2406",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Email and phone from head coach bio page (defianceathletics.com/sports/sball/coaches/Osborne), checked 2026-07; no personal Twitter/X handle listed."
+    },
+    {
+      "name": "Kalin Hubble",
+      "title": "Administrative Assistant/Softball Assistant Coach",
+      "email": "khubble@defiance.edu",
+      "phone": "(419) 783-2342",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Email and phone from coach bio page (defianceathletics.com/sports/sball/coaches/Hubble), checked 2026-07; no personal Twitter/X handle listed."
+    },
+    {
+      "name": "Laney Grimwood",
+      "title": "Assistant Coach",
+      "email": "lgrimwood@defiance.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Email from coach bio page (defianceathletics.com/sports/sball/coaches/laney_grimwood), checked 2026-07; no public phone or Twitter/X handle listed."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "sid": 0,
+  "name": "Bethany College",
+  "division": "NCAA D3",
+  "conference": "Presidents' Athletic Conference",
+  "city": "Bethany",
+  "state": "WV",
+  "website_url": "https://www.bethanybison.com/sports/softball",
+  "academic_ranking": "Private four-year liberal arts college in Bethany, WV. Undergraduate-focused with an online graduate division (Bethany Online). Known for 'The Bethany Plan,' an experiential curriculum culminating in a senior project, and study-abroad affiliations in more than 50 countries. Specific enrollment, average class size, and student-faculty ratio figures were not published on the academics page checked 2026-07.",
+  "tuition": 41898,
+  "financial_aid": "Tuition and fees listed at $41,898 for 2026-2027 (housing and food $15,260; total direct costs $57,158; total direct + indirect $59,964). School states FAFSA filers may be awarded $25,000 or more in scholarships, grants, and work-study. Financial aid contact: financialaid@bethanywv.edu.",
+  "roster_size": 21,
+  "scholarship_count": null,
+  "facilities_notes": "NCAA Division III program. Home softball venue not explicitly labeled on the softball landing page (bethanybison.com) as of 2026-07; athletics facilities listed include Bethany Park, Bison Field, Don Ault Field at Bison Stadium, and Hoag Field, but none specifically identified as the softball field.",
+  "program_reputation": "NCAA Division III women's softball program competing in the Presidents' Athletic Conference (PAC). Small-college program with a three-member coaching staff for the 2026 season.",
+  "notes": "Data gathered live 2026-07 from bethanybison.com (softball coaches and roster pages) and bethanywv.edu (tuition/academics). As an NCAA D3 institution, Bethany College does not offer athletic scholarships; scholarship_count set to null. No coach phone numbers or twitter/X handles are publicly listed on the softball staff directory (general college phone (304) 829-7000 appears only in the site footer). Roster size (21) taken from the 2026 softball roster page.",
+  "coaches": [
+    {
+      "name": "Lexi Buck",
+      "title": "Head Softball Coach",
+      "email": "abuck@bethanywv.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "bethanybison.com softball coaches page checked 2026-07; email listed, no public phone or twitter/X handle listed"
+    },
+    {
+      "name": "Lauren Harris",
+      "title": "Assistant Coach",
+      "email": "lauren.harris@bethanywv.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "bethanybison.com softball coaches page checked 2026-07; email listed, no public phone or twitter/X handle listed"
+    },
+    {
+      "name": "Morgan Huey",
+      "title": "Assistant Coach",
+      "email": "mhuey@bethanywv.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "bethanybison.com softball coaches page checked 2026-07 (listed as Morgan Huey '23, '25); email listed, no public phone or twitter/X handle listed"
+    }
+  ]
+}

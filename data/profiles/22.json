@@ -1,0 +1,46 @@
+{
+  "sid": 22,
+  "name": "Wright State University",
+  "division": "NCAA D1",
+  "conference": "Horizon League",
+  "city": "Fairborn",
+  "state": "OH",
+  "website_url": "https://wsuraiders.com/sports/softball",
+  "academic_ranking": "Public research university (Carnegie R2: Doctoral Universities - High research activity), founded 1967 and named for the Wright brothers. Enrolls roughly 11,000+ students across seven colleges and three schools, offering ~106 bachelor's and ~136 graduate programs. Notable for the Boonshoft School of Medicine and engineering/computing programs. U.S. News national ranking approx. 230-301; Forbes approx. 198. Accredited by the Higher Learning Commission.",
+  "tuition": 11522,
+  "financial_aid": "Public in-state undergraduate tuition and fees approx. $11,522/yr; out-of-state approx. $21,222/yr (NCES College Navigator, 2024-25). Wright State offers merit- and need-based institutional aid, federal/state grants, and athletic aid; softball athletic scholarships are administered within NCAA D1 equivalency limits. Prospective athletes should confirm current aid packages with the WSU financial aid office.",
+  "roster_size": 17,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes at the on-campus softball facility on the Wright State (Dayton-area) campus in Fairborn, OH. Specific facility name/capacity not verified from a live source at time of research; confirm via wsuraiders.com facilities pages.",
+  "program_reputation": "NCAA Division I program competing in the Horizon League. Program has produced All-Horizon League players and has NCAA Tournament experience per assistant coach bio history. Led by head coach Laura Matthews.",
+  "notes": "Data captured live from wsuraiders.com softball coaches page and roster page on 2026-07-30. Coaching staff consists of one head coach and two assistant coaches; no volunteer, graduate assistant, or director-of-player-development titles were listed for Wright State (note: an initial cached fetch mistakenly returned Youngstown State data via the shared Sidearm/Imperva CDN; that was discarded and re-fetched clean). Roster size of 17 reflects distinct player profiles on the softball roster page. No per-coach phone numbers or personal Twitter/X handles are published in the staff directory (team account is @WSU_SB). Tuition figures from NCES College Navigator (id 206604), 2024-25.",
+  "coaches": [
+    {
+      "name": "Laura Matthews",
+      "title": "Head Coach",
+      "email": "laura.matthews@wright.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "wsuraiders.com softball coaches page checked 2026-07-30; email listed, no public phone or personal Twitter/X handle listed"
+    },
+    {
+      "name": "Kennedy Haynes",
+      "title": "Assistant Coach",
+      "email": "kennedy.haynes@wright.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "wsuraiders.com softball coaches page checked 2026-07-30; email listed, no public phone or personal Twitter/X handle listed"
+    },
+    {
+      "name": "Dave Brittingham",
+      "title": "Assistant Coach",
+      "email": "dave.brittingham@wright.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "wsuraiders.com softball coaches page checked 2026-07-30; long-tenured assistant coach; email listed, no public phone or personal Twitter/X handle listed"
+    }
+  ]
+}

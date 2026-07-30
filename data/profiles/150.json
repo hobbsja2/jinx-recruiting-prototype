@@ -1,0 +1,55 @@
+{
+  "sid": 150,
+  "name": "Heidelberg University",
+  "division": "NCAA D3",
+  "conference": "Ohio Athletic Conference",
+  "city": "Tiffin",
+  "state": "OH",
+  "website_url": "https://www.bergathletics.com/sports/softball",
+  "academic_ranking": "Private nonprofit liberal arts university (Higher Learning Commission accredited) with about 1,000-1,100 undergraduates and a roughly 14:1 student-faculty ratio. Acceptance rate reported around 86%. Ranked in the mid-30s to 40s among Ohio colleges by third-party aggregators (e.g., College Tuition Compare 36th in Ohio). Common majors include Business Administration, Criminal Justice, and health/biology fields.",
+  "tuition": 34183,
+  "financial_aid": "Over 97% of Heidelberg students receive some form of financial assistance. Aid includes merit scholarships (based on high school GPA and application), need/eligibility-based university grants (e.g., Out-of-State Grant up to $3,000 for CA/FL/IN/MI/TX, otherwise up to $1,500; UCC Grant for United Church of Christ members), federal/state grants, Federal Direct Loans, and work-study. Aid renewal requires satisfactory academic progress (2.0+ GPA, pass 67% of attempted hours). As an NCAA Division III program, Heidelberg does NOT offer athletic scholarships; athletes are funded through academic/need-based aid only.",
+  "roster_size": 31,
+  "scholarship_count": null,
+  "facilities_notes": "Heidelberg softball competes as part of Heidelberg University Athletics (bergathletics.com). Softball-specific facility details were not confirmed on the fetched pages; not listing to avoid inventing data.",
+  "program_reputation": "NCAA Division III program competing in the Ohio Athletic Conference (OAC), one of the oldest and most competitive D3 conferences in the country. Coaching staff led by Head Coach Mari Briggs.",
+  "notes": "Athletics domain in the discovery brief (heidelbergstudentprinces.com) does not resolve (NXDOMAIN in public DNS as of 2026-07); the live/current Heidelberg athletics site is www.bergathletics.com. Coaching staff, roster (31 players), conference (OAC), and D3 affiliation confirmed from live bergathletics.com pages on 2026-07. Tuition ($34,183 for new first-year students entering Fall 2025; $32,900 for returning students) taken from Heidelberg's official 2025-26 tuition & fees PDF (inside.heidelberg.edu). Support staff (Athletic Trainer Lauren McGraw) listed on the softball staff page but excluded from coaches array as non-coaching.",
+  "coaches": [
+    {
+      "name": "Mari Briggs",
+      "title": "Head Softball Coach",
+      "email": "mdeppe@heidelberg.edu",
+      "phone": "419.448.2289",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "bergathletics.com softball staff page fetched 2026-07; email and phone listed, no public twitter/X handle listed"
+    },
+    {
+      "name": "Shelby Miller",
+      "title": "Assistant Coach - Softball",
+      "email": "smiller7@heidelberg.edu",
+      "phone": "419.448.2011",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "bergathletics.com softball staff page fetched 2026-07; email and phone listed, no public twitter/X handle listed"
+    },
+    {
+      "name": "Gabbie Stallbaum",
+      "title": "Coaching Intern - Softball",
+      "email": "gstallba@heidelberg.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "bergathletics.com softball staff page fetched 2026-07; email listed, no public phone or twitter/X handle listed"
+    },
+    {
+      "name": "Erin Chapman-Hoskins",
+      "title": "Assistant Coach - Softball",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "bergathletics.com softball staff page fetched 2026-07; no public email, phone, or twitter/X handle listed"
+    }
+  ]
+}

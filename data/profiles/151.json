@@ -1,0 +1,46 @@
+{
+  "sid": 151,
+  "name": "Marietta College",
+  "division": "NCAA D3",
+  "conference": "Ohio Athletic Conference",
+  "city": "Marietta",
+  "state": "OH",
+  "website_url": "https://pioneers.marietta.edu/sports/softball",
+  "academic_ranking": "Private liberal arts college. Ranked among the top Best Midwestern Regional Colleges by U.S. News (tied ~17th in the 2025 edition). Acceptance rate ~79%; roughly 950-1,000 undergraduates. Known for programs including petroleum engineering, athletic training, education, and pre-professional tracks.",
+  "tuition": 39652,
+  "financial_aid": "Roughly 86% of undergraduates receive some form of financial aid (2023-24, per Univstats). Merit and need-based institutional aid available; average aid reported around $29,000. As an NCAA Division III institution, Marietta does not award athletic scholarships. Verify current figures with the Marietta College financial aid office.",
+  "roster_size": 20,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes on campus in Marietta, OH. Athletics facilities information is available via the Marietta College athletics (Pioneers) site facilities page; specific softball field naming/details were not confirmed on the softball program page checked 2026-07.",
+  "program_reputation": "NCAA Division III program competing in the Ohio Athletic Conference (OAC). Head coach Jenn Castle is in her eighth season (2025-26) and was named 2026 BSN Sports OAC Female Administrator of the Year, reflecting an established program within the conference.",
+  "notes": "Athletics site domain resolves at pioneers.marietta.edu (gomarietta.com was unreachable from the research environment). Coaching staff, roster size (20), and conference confirmed live from pioneers.marietta.edu on 2026-07. Tuition figure ($39,652) reflects the most recent published annual undergraduate tuition (2024-25, via CollegeTuitionCompare); confirm current-year figure with the college. As a D3 school there are no athletic scholarships (scholarship_count = null).",
+  "coaches": [
+    {
+      "name": "Jenn Castle",
+      "title": "Head Softball Coach",
+      "email": "ja003@marietta.edu",
+      "phone": "740-376-4668",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "pioneers.marietta.edu softball coaches page, fetched 2026-07; no individual Twitter/X listed (team account @ettasoftball)."
+    },
+    {
+      "name": "Skyler Davis",
+      "title": "Assistant Softball Coach",
+      "email": "sld010@marietta.edu",
+      "phone": "740-376-4903",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "pioneers.marietta.edu softball coaches page, fetched 2026-07; no individual Twitter/X listed."
+    },
+    {
+      "name": "Casey Morris",
+      "title": "Assistant Softball Coach",
+      "email": "cpm001@marietta.edu",
+      "phone": "740-885-1325",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "pioneers.marietta.edu softball coaches page, fetched 2026-07; no individual Twitter/X listed."
+    }
+  ]
+}

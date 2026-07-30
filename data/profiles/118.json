@@ -1,0 +1,55 @@
+{
+  "sid": 118,
+  "name": "Marian University",
+  "division": "NAIA",
+  "conference": "Crossroads League",
+  "city": "Indianapolis",
+  "state": "IN",
+  "website_url": "https://muknights.com/sports/softball",
+  "academic_ranking": "Private Catholic university in Indianapolis, IN. Offers a broad range of undergraduate programs; recognized regionally as a comprehensive Catholic institution with strong pre-professional and health sciences offerings.",
+  "tuition": 43400,
+  "financial_aid": "Over 99 percent of first-time, full-time Marian University students receive financial aid. Institutional scholarships and need-based aid available. Tuition and fees approx $43,400/year (2025-26 basis); total on-campus cost with room and board approx $58,440.",
+  "roster_size": 23,
+  "scholarship_count": null,
+  "facilities_notes": "Softball plays at the MU Softball Field (also referenced as the MU Softball Diamond) on the Marian University campus in Indianapolis, IN.",
+  "program_reputation": "Nationally competitive NAIA program in the Crossroads League; ranked #10 in NAIA softball at time of research (2026-07).",
+  "notes": "Data sourced from muknights.com softball staff and roster pages and marian.edu tuition page (checked 2026-07). Roster size 23 from 2027 roster page. Team X/Twitter account is @MarianKnightsSB; no individual coach handles listed.",
+  "coaches": [
+    {
+      "name": "Scott Fleming",
+      "title": "Head Coach",
+      "email": "sfleming@marian.edu",
+      "phone": "317.955.6106",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "muknights.com softball staff page checked 2026-07; email and phone publicly listed; no individual X/Twitter handle listed (team account @MarianKnightsSB)."
+    },
+    {
+      "name": "Hannah Williams",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "muknights.com softball staff page checked 2026-07; no public email, phone, or X/Twitter handle listed."
+    },
+    {
+      "name": "Breena Smith",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "muknights.com softball staff page checked 2026-07; no public email, phone, or X/Twitter handle listed."
+    },
+    {
+      "name": "Lanie Puckett",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "muknights.com softball staff page checked 2026-07; no public email, phone, or X/Twitter handle listed."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "sid": 54,
+  "name": "Western Kentucky University",
+  "division": "NCAA D1",
+  "conference": "Conference USA (C-USA)",
+  "city": "Bowling Green",
+  "state": "KY",
+  "website_url": "https://wkusports.com/sports/softball",
+  "academic_ranking": "National University, ranked #363 (tie) by U.S. News & World Report (2025-2026). Total enrollment ~16,762 (fall 2024) with ~14,593 undergraduates; undergrad IPEDS size ~12,155 (College Scorecard). Home to the Mahurin Honors College (Kentucky's first honors college) and the Gatton Academy. Overall admission rate ~93.9% (College Scorecard), making it a broadly accessible institution.",
+  "tuition": 27000,
+  "financial_aid": "College Scorecard (U.S. Dept. of Education): in-state tuition & fees ~$11,652/yr; out-of-state ~$27,000/yr. Average net price for a public-school student ~$10,990/yr. Athletic scholarships and need-/merit-based aid administered through WKU Financial Aid; softball scholarship counts not publicly itemized on the athletics site.",
+  "roster_size": 13,
+  "scholarship_count": null,
+  "facilities_notes": "Home venue is the WKU Softball Complex in Bowling Green, KY (referenced in official WKU softball roster/team content).",
+  "program_reputation": "NCAA Division I program competing in Conference USA. Historically competitive under head coach Amy Tudor, including a C-USA East Division title in 2019 (18-6 conference record per WKU athletics content).",
+  "notes": "Staff directory (wkusports.com/sports/softball/coaches) checked 2026-07-30. Softball-specific coaching staff: Amy Tudor (Head Coach), Kayla Bixel (Associate Head Coach), Melissa Mayeux (Assistant Coach). Support staff also listed: Josh Vortherms (Assistant Athletic Trainer) and Parker Cheuvront (Assistant Director) - these are support/administrative roles rather than coaches. Tuition/aid figures from U.S. Dept. of Education College Scorecard API (school 157401). Roster size = 13 distinct player profiles on the published softball roster page (checked 2026-07-30); this appears to be a small/transitional published roster. Coaches shown here are only those with softball-specific coaching titles per the directive.",
+  "coaches": [
+    {
+      "name": "Amy Tudor",
+      "title": "Head Coach",
+      "email": "wkusoftball@wku.edu",
+      "phone": "(270) 745-6269",
+      "twitter": "AmyLTudor",
+      "sort_order": 0,
+      "source_note": "wkusports.com softball staff directory checked 2026-07-30; email listed is the program's general softball email (wkusoftball@wku.edu)."
+    },
+    {
+      "name": "Kayla Bixel",
+      "title": "Associate Head Coach",
+      "email": "kayla.bixel@wku.edu",
+      "phone": "(270) 745-3211",
+      "twitter": "kaylabixel",
+      "sort_order": 10,
+      "source_note": "wkusports.com softball staff directory checked 2026-07-30."
+    },
+    {
+      "name": "Melissa Mayeux",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "wkusports.com softball staff directory checked 2026-07-30; no public email, phone, or twitter listed for this coach."
+    }
+  ]
+}

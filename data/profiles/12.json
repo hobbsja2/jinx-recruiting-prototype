@@ -1,0 +1,37 @@
+{
+  "sid": 12,
+  "name": "Sewanee: The University of the South",
+  "division": "NCAA D3",
+  "conference": "Southern Athletic Association",
+  "city": "Sewanee",
+  "state": "TN",
+  "website_url": "https://sewaneetigers.com/sports/softball",
+  "academic_ranking": "Highly selective private national liberal arts college. Ranked #45 among National Liberal Arts Colleges by U.S. News & World Report. ~1,644 undergraduates, 9:1 student-faculty ratio. Notable for producing 26 Rhodes Scholars and numerous Fulbright and Watson fellows.",
+  "tuition": 56120,
+  "financial_aid": "Per NCES College Navigator (2023-24), 98% of full-time beginning undergraduates received grant or scholarship aid, averaging about $37,171. As an NCAA Division III institution, no athletic scholarships are offered; aid is need-based and merit-based only.",
+  "roster_size": 15,
+  "scholarship_count": null,
+  "facilities_notes": "Softball program plays on the Sewanee (Domain) campus. Specific field/stadium name not published on the softball program page as of 2026-07.",
+  "program_reputation": "NCAA Division III program competing in the Southern Athletic Association (SAA). Small-roster liberal arts program (15 players for 2026). No standout national reputation identified from public sources.",
+  "notes": "Data gathered from sewaneetigers.com softball coaches page, roster page, and staff directory (checked 2026-07), plus NCES College Navigator (IPEDS ID 221519, tuition/aid 2024-25 and 2023-24) and Wikipedia (academic rankings). Division III: no athletic scholarships, so scholarship_count is null. Team X/Twitter account is @SoftballSewanee; no individual coach handles publicly listed.",
+  "coaches": [
+    {
+      "name": "Merritt Yackey",
+      "title": "Head Softball Coach",
+      "email": "meyackey@sewanee.edu",
+      "phone": "(931) 598-1901",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "sewaneetigers.com softball coaches page and staff directory checked 2026-07; email and phone publicly listed. Staff directory also lists title 'Club Sports Director'. No individual Twitter/X handle listed."
+    },
+    {
+      "name": "Natalie Winchester",
+      "title": "Assistant Softball Coach",
+      "email": "nawinche@sewanee.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "sewaneetigers.com softball coaches page checked 2026-07; email publicly listed. No public phone or Twitter/X handle listed."
+    }
+  ]
+}

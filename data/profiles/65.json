@@ -1,0 +1,37 @@
+{
+  "sid": 65,
+  "name": "Motlow State Community College",
+  "division": "JUCO",
+  "conference": "TCCAA / NJCAA Region VII",
+  "city": "Tullahoma",
+  "state": "TN",
+  "website_url": "https://www.motlowsports.com/sports/sball/index",
+  "academic_ranking": "Public two-year community college founded in 1969, accredited by the Southern Association of Colleges and Schools Commission on Colleges (SACSCOC). Awards associate degrees and serves an 11-county area of southern Middle Tennessee with total enrollment around 5,000 students. Main campus in Moore County (Lynchburg), with additional locations in McMinnville, Fayetteville, and Smyrna.",
+  "tuition": 4738,
+  "financial_aid": "In-state (in-district) tuition and fees approx. $4,738/year vs. approx. $17,722/year out-of-state (2024-25, per IPEDS/CollegeTuitionCompare). Motlow extends in-state tuition rates to residents of three bordering Alabama counties (Madison, Jackson, Limestone). As a NJCAA/TCCAA member, athletic aid follows state/NJCAA rules; standard federal and state aid (Pell, Tennessee Promise, HOPE) available. Specific softball scholarship dollar amounts not publicly listed on the athletics site (checked 2026-07).",
+  "roster_size": 16,
+  "scholarship_count": null,
+  "facilities_notes": "Softball program plays at the Motlow State softball complex on the Moore County campus (6015 Ledford Mill Rd., Tullahoma, TN 37388). Detailed facility specifications not published on the athletics site (checked 2026-07).",
+  "program_reputation": "Motlow State Bucks/Lady Bucks compete in the Tennessee Community College Athletic Association (TCCAA) and NJCAA Region VII. Softball is one of the college's core intercollegiate sports alongside baseball, men's/women's basketball, women's soccer, and esports. The 2025-26 roster is regionally focused, drawing primarily from Middle Tennessee and northern Alabama high schools.",
+  "notes": "Researched live 2026-07 from the official Motlow athletics site (motlowsports.com), which is the destination of motlow.edu/athletics. Coaching staff captured from the softball Coaches directory: 2 softball-specific staff listed (Head Coach and one Assistant Coach); no recruiting coordinator, director of player development, or graduate/volunteer assistants listed. Roster size (16) counted from the 2025-26 softball roster page. Tuition figures sourced from IPEDS-based CollegeTuitionCompare (2024-25). Note: coach emails use the @mscc.edu domain (Motlow State Community College).",
+  "coaches": [
+    {
+      "name": "Janice Morey",
+      "title": "Head Coach",
+      "email": "jmorey@mscc.edu",
+      "phone": "931-393-1617",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Official Motlow softball Coaches page fetched 2026-07; email and phone listed."
+    },
+    {
+      "name": "Macy Ham",
+      "title": "Assistant Coach",
+      "email": "mham@mscc.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Official Motlow softball Coaches page fetched 2026-07; email listed, no public phone or twitter listed."
+    }
+  ]
+}

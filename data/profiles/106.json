@@ -1,0 +1,55 @@
+{
+  "sid": 106,
+  "name": "University of Evansville",
+  "division": "NCAA D1",
+  "conference": "Missouri Valley Conference",
+  "city": "Evansville",
+  "state": "IN",
+  "website_url": "https://gopurpleaces.com/sports/softball",
+  "academic_ranking": "Private United Methodist-affiliated university founded in 1854. Enrollment ~2,100 (about 1,740 undergraduates) with 80+ majors across four colleges. Admissions described as 'more selective.' Historically ranked among the top regional universities in the Midwest by U.S. News & World Report (e.g., #7 regional Midwest, #12 for value in 2022). Known for its Harlaxton College study-abroad program in England.",
+  "tuition": 44172,
+  "financial_aid": "Private institution with published undergraduate tuition and fees of $44,172 (2024-2025, IPEDS/College Navigator ID 150534). Institution offers merit- and need-based aid; specific softball scholarship figures not publicly listed on program pages. Prospective student-athletes should confirm packages with the UE financial aid office and coaching staff.",
+  "roster_size": 24,
+  "scholarship_count": null,
+  "facilities_notes": "Purple Aces softball competes as an NCAA Division I program within the Missouri Valley Conference. Specific softball facility details (stadium name, seating, indoor training) were not confirmed on the fetched program pages; verify directly with the athletics department.",
+  "program_reputation": "NCAA Division I women's softball program competing in the Missouri Valley Conference under head coach Bailey Dillender. Coaching staff comprises a head coach, associate head coach, and assistant coach supported by athletic training staff.",
+  "notes": "Data gathered live from gopurpleaces.com softball coaches and roster pages on 2026-07-30. Roster of 24 players confirmed by counting the 2026 roster listing (jersey numbers 1-44). Tuition sourced from NCES College Navigator (IPEDS ID 150534, 2024-2025: $44,172). Academic/profile details from Wikipedia. No coach phone numbers or Twitter/X handles were publicly listed on the staff directory.",
+  "coaches": [
+    {
+      "name": "Bailey Dillender",
+      "title": "Head Softball Coach",
+      "email": "bd237@evansville.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Email from gopurpleaces.com softball staff directory checked 2026-07; no public phone or Twitter listed."
+    },
+    {
+      "name": "Alyssa Richards",
+      "title": "Associate Head Coach",
+      "email": "ar639@evansville.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Email from gopurpleaces.com softball staff directory checked 2026-07; no public phone or Twitter listed."
+    },
+    {
+      "name": "Mia Aldridge",
+      "title": "Assistant Softball Coach",
+      "email": "ma551@evansville.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Email from gopurpleaces.com softball staff directory checked 2026-07; no public phone or Twitter listed."
+    },
+    {
+      "name": "Elizabeth Huebner",
+      "title": "Assistant Athletic Trainer (XC, SB)",
+      "email": "eh277@evansville.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Softball support staff (athletic trainer) listed on gopurpleaces.com staff directory checked 2026-07; no public phone or Twitter listed."
+    }
+  ]
+}

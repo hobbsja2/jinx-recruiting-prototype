@@ -1,0 +1,37 @@
+{
+  "sid": 95,
+  "name": "Union Commonwealth University",
+  "division": "NAIA",
+  "conference": "Appalachian Athletic Conference",
+  "city": "Barbourville",
+  "state": "KY",
+  "website_url": "https://www.gounionbulldogs.com/sports/sball/index",
+  "academic_ranking": "Private liberal arts university founded in 1879 as Union College, described as the first college founded in the Kentucky mountains; core affiliation with Methodism. Serves students from throughout Appalachia and nationally. Notable programs include the Edna Jenkins Mann School of Nursing, Educational Studies, Psychology, and Health Sciences, with undergraduate, graduate, and online offerings.",
+  "tuition": 29600,
+  "financial_aid": "University reports 100% of undergraduate students receiving scholarships or aid (2026-2027, unionky.edu cost-aid pages). Interest-free monthly payment plans available (12-month annual or 6-month fall/spring options). 2026-2027 comprehensive fee $2,400/year.",
+  "roster_size": 28,
+  "scholarship_count": null,
+  "facilities_notes": "No softball-specific venue or facility details were publicly listed on the athletics site as of 2026-07; softball index, coaches, and roster pages checked, no field name or facility description provided.",
+  "program_reputation": "NAIA program competing in the Appalachian Athletic Conference (AAC). Softball index and staff directory checked 2026-07; no notable awards or reputation detail publicly published.",
+  "notes": "Coaching staff and 28-player roster confirmed live from gounionbulldogs.com softball pages (sport code 'sball') on 2026-07. Head coach and one assistant coach listed with public email and phone; no twitter/X handles listed. Conference (Appalachian Athletic Conference) and NAIA division confirmed on the softball index page. Tuition ($29,600 annual full-time undergraduate, 2026-2027), fees, and financial aid notes sourced from unionky.edu tuition-fees page; academic profile from unionky.edu about page. Note: head coach's bio link path spells 'Kylie_Goff' but the displayed staff-card name is 'Kiley Goff'.",
+  "coaches": [
+    {
+      "name": "Kiley Goff",
+      "title": "Head Softball Coach",
+      "email": "kgoff@unionky.edu",
+      "phone": "606.546.1366",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "gounionbulldogs.com softball coaches directory checked 2026-07; email and phone publicly listed, no twitter/X handle listed"
+    },
+    {
+      "name": "Sydnie Wimpee",
+      "title": "Assistant Softball Coach",
+      "email": "swimpee@unionky.edu",
+      "phone": "805.229.5089",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "gounionbulldogs.com softball coaches directory checked 2026-07; email and phone publicly listed, no twitter/X handle listed"
+    }
+  ]
+}

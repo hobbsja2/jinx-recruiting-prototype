@@ -1,0 +1,46 @@
+{
+  "sid": 52,
+  "name": "Morehead State University",
+  "division": "NCAA D1",
+  "conference": "Ohio Valley Conference (OVC)",
+  "city": "Morehead",
+  "state": "KY",
+  "website_url": "https://msueagles.com/sports/softball",
+  "academic_ranking": "4-year public university in Morehead, KY (Town: Remote). Fall 2024 total enrollment ~8,791 (undergrad ~8,258). Admission rate ~77%, student-to-faculty ratio 16:1. Full-time retention ~65%; 6-year graduation rate ~52%. (Source: NCES College Navigator, 2024-25.)",
+  "tuition": 10024,
+  "financial_aid": "In-state tuition & fees ~$10,024; out-of-state ~$14,980 (NCES 2024-25). 99% of full-time beginning undergrads receive some aid; 97% receive grant/scholarship aid averaging ~$11,976; 56% receive Pell grants. Average net price ~$9,630. Athletic scholarships administered per NCAA D1 softball limits.",
+  "roster_size": 22,
+  "scholarship_count": null,
+  "facilities_notes": "Softball plays at University Field on the Morehead State campus. (Facility name confirmed via athletics/Wikipedia; softball-specific amenities not detailed on the public softball page as of 2026-07.)",
+  "program_reputation": "NCAA Division I program competing in the Ohio Valley Conference (OVC). Specific championship/NCAA tournament history was not confirmed from a live fetch during this research and should be verified before use.",
+  "notes": "Researched 2026-07. Conference (OVC) confirmed via athletics site and Wikipedia. Tuition and academic/financial-aid figures sourced from NCES College Navigator (2024-25). Roster size read from the softball roster page (fetches returned 21-22; using 22 from the 2026 roster URL - verify). Coaching staff captured from https://msueagles.com/sports/softball/coaches; only head coach and two assistants listed publicly (no recruiting coordinator, player development, or GA/volunteer positions shown).",
+  "coaches": [
+    {
+      "name": "Megan Griffith",
+      "title": "Head Coach",
+      "email": "m.griffith@moreheadstate.edu",
+      "phone": "606-783-5283",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball staff directory fetched 2026-07; email and phone listed on page. No individual X/Twitter handle listed (team account @MSUEaglesSB)."
+    },
+    {
+      "name": "Bonita Allen",
+      "title": "Assistant Coach",
+      "email": "ballen1@moreheadstate.edu",
+      "phone": "606-783-5283",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball staff directory fetched 2026-07; email and shared department phone listed on page. No individual X/Twitter handle listed."
+    },
+    {
+      "name": "Emily Bankson",
+      "title": "Assistant Coach",
+      "email": "ejbankson@moreheadstate.edu",
+      "phone": "606-783-5283",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Softball staff directory fetched 2026-07; email and shared department phone listed on page. No individual X/Twitter handle listed."
+    }
+  ]
+}

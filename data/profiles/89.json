@@ -1,0 +1,46 @@
+{
+  "sid": 89,
+  "name": "University of the Cumberlands",
+  "division": "NAIA",
+  "conference": "Mid-South Conference",
+  "city": "Williamsburg",
+  "state": "KY",
+  "website_url": "https://cumberlandspatriots.com/sports/softball",
+  "academic_ranking": "Private Christian liberal arts university in Williamsburg, KY, offering Associate, Bachelor's, and graduate programs. Known for its 'One Price Promise' flat-rate tuition model. No specific admissions GPA/test-score academic profile was publicly listed on checked pages.",
+  "tuition": 9875,
+  "financial_aid": "On-campus undergraduate tuition set under the 'One Price Promise' flat-rate model ($9,875/year tuition; ~$19,175 with housing/room & board of $9,300). Every student has a Cost of Attendance (COA) budget capping total aid. NAIA athletic scholarships available; contact the Student Financial Center for aid details. Source: ucumberlands.edu tuition page checked 2026-07.",
+  "roster_size": 22,
+  "scholarship_count": null,
+  "facilities_notes": "Softball program competes at the University of the Cumberlands athletics facilities in Williamsburg, KY. Specific softball facility details were not published on the pages checked 2026-07.",
+  "program_reputation": "NAIA women's softball program competing in the Mid-South Conference. Team X/Twitter account: @Patriots_UC_SB.",
+  "notes": "Data gathered from cumberlandspatriots.com softball coaches and roster pages (checked 2026-07). Roster size (22) taken from the softball roster page. Scholarship count not publicly listed. No individual coach Twitter/X handles published; team account is @Patriots_UC_SB.",
+  "coaches": [
+    {
+      "name": "Nicole Thompson",
+      "title": "Head Coach",
+      "email": "nicole.thompson@ucumberlands.edu",
+      "phone": "606-539-4178",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "cumberlandspatriots.com softball coaches page checked 2026-07; no individual Twitter/X handle listed."
+    },
+    {
+      "name": "Cassie Valdez",
+      "title": "Assistant Coach",
+      "email": "cassandra.valdez@ucumberlands.edu",
+      "phone": "606-539-5544",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "cumberlandspatriots.com softball coaches page checked 2026-07; no individual Twitter/X handle listed."
+    },
+    {
+      "name": "Gilbert Alvarado",
+      "title": "Assistant Coach",
+      "email": "galvarado44087@ucumberlands.edu",
+      "phone": "606-539-4178",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "cumberlandspatriots.com softball coaches page checked 2026-07; no individual Twitter/X handle listed."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "sid": 103,
+  "name": "Valparaiso University",
+  "division": "NCAA D1",
+  "conference": "Missouri Valley Conference",
+  "city": "Valparaiso",
+  "state": "IN",
+  "website_url": "https://valpoathletics.com/sports/softball",
+  "academic_ranking": "Private Lutheran national university. 2025 U.S. News: tied #204 among National Universities, #45 Best Value Schools, and tied #15 in Best Undergraduate Engineering Programs (institutions without doctorate). Organized into five undergraduate colleges (Arts & Sciences, Business, Engineering, Nursing & Health Professions, and Christ College honors college) with 70+ programs. ~89% acceptance rate (2025).",
+  "tuition": 50650.0,
+  "financial_aid": "Approximately 94% of undergraduates receive financial assistance. Aid includes merit and need-based scholarships, grants, federal and private loans, and student employment. 2026-27 undergraduate tuition is $50,650 (12-19 credits/semester) plus a $1,630 general fee ($52,280 tuition and fees). Net Price Calculator available at valpo.edu/aid.",
+  "roster_size": 23,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes at the on-campus Valparaiso softball complex. Specific facility details not confirmed from live source during research 2026-07.",
+  "program_reputation": "NCAA Division I program competing in the Missouri Valley Conference. Note: the university has faced recent enrollment declines and financial challenges in recent years.",
+  "notes": "Researched 2026-07 from live pages. Coaching staff, roster size (23), and 2026-27 tuition confirmed from official sources. Scholarship count not publicly listed. Team X account: @ValpoSoftball. No individual coach phone numbers or personal Twitter/X handles listed in the staff directory.",
+  "coaches": [
+    {
+      "name": "Mike Armitage",
+      "title": "Head Coach",
+      "email": "Michael.Armitage@valpo.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "valpoathletics.com softball staff directory checked 2026-07; email listed, no public phone or personal X handle listed"
+    },
+    {
+      "name": "Addy Jarvis",
+      "title": "Assistant Coach",
+      "email": "addy.jarvis@valpo.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "valpoathletics.com softball staff directory checked 2026-07; email listed, no public phone or personal X handle listed"
+    },
+    {
+      "name": "Jazmyne Armendariz",
+      "title": "Graduate Assistant",
+      "email": "Jazmyne.Armendariz@valpo.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "valpoathletics.com softball staff directory checked 2026-07; email listed, no public phone or personal X handle listed"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "sid": 7,
+  "name": "Tiffin University",
+  "division": "NCAA D2",
+  "conference": "Great Midwest Athletic Conference (G-MAC)",
+  "city": "Tiffin",
+  "state": "OH",
+  "website_url": "https://gotiffindragons.com/sports/softball",
+  "academic_ranking": "Private university in Tiffin, OH offering undergraduate and graduate programs across business, criminal justice, arts and sciences, and professional studies. Known for career-focused academics and small class sizes.",
+  "tuition": 35700,
+  "financial_aid": "Block tuition rate for 12-17 credit hours ($1,190/credit for fewer than 12). Costs vary based on transfer credits, financial aid, tuition assistance, and partnership discounts. Monthly payment plans available. Scholarships and grants (e.g., Choose Ohio First, TEACH Grant) offered. Office of Financial Aid: 419.448.3279, finaid@tiffin.edu. FAFSA encouraged.",
+  "roster_size": 26,
+  "scholarship_count": null,
+  "facilities_notes": "Softball program competes as part of Tiffin Dragons athletics. Specific softball facility details not confirmed on pages checked 2026-07.",
+  "program_reputation": "NCAA Division II women's softball program competing in the Great Midwest Athletic Conference (G-MAC).",
+  "notes": "Staff directory (gotiffindragons.com/sports/softball/coaches) checked 2026-07. No recruiting coordinator, director of player development, volunteer, or graduate assistant roles listed. No individual Twitter/X handles for coaches; team account is @TiffinUSoftball. Roster size (26) from softball roster page 2026-07. Tuition from tiffin.edu/tuition (2026-27, on-campus undergrad).",
+  "coaches": [
+    {
+      "name": "Paige McMenemy",
+      "title": "Head Coach",
+      "email": "mcmenemype@tiffin.edu",
+      "phone": "419-448-3337",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "gotiffindragons.com softball staff directory checked 2026-07; no public twitter listed"
+    },
+    {
+      "name": "Megan (McMenemy) Bammann",
+      "title": "Assistant Coach",
+      "email": "mcmenemyme@tiffin.edu",
+      "phone": "419-448-3378",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "gotiffindragons.com softball staff directory checked 2026-07; no public twitter listed"
+    },
+    {
+      "name": "Maddie Woods",
+      "title": "Student Assistant",
+      "email": "woodsmaa@tiffin.edu",
+      "phone": "330-465-4163",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "gotiffindragons.com softball staff directory checked 2026-07; no public twitter listed"
+    },
+    {
+      "name": "Allie Hall",
+      "title": "Student Manager",
+      "email": "hallalc@tiffin.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "gotiffindragons.com softball staff directory checked 2026-07; no public phone or twitter listed"
+    }
+  ]
+}

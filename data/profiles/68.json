@@ -1,0 +1,28 @@
+{
+  "sid": 68,
+  "name": "Volunteer State Community College",
+  "division": "JUCO",
+  "conference": "TCCAA / NJCAA Region VII",
+  "city": "Gallatin",
+  "state": "TN",
+  "website_url": "https://www.volstatepioneers.com/sports/sball/index",
+  "academic_ranking": "2-year public community college (Tennessee Board of Regents system). Student population 6,963 (all undergraduate), student-to-faculty ratio 19:1. Awards less-than-one-year and one-to-two-year certificates and associate's degrees. Suburban campus, no on-campus housing. Source: NCES College Navigator, unitid 222053.",
+  "tuition": 4756,
+  "financial_aid": "In-state tuition & fees $4,756/yr; out-of-state $17,740/yr (NCES 2024-2025). Average net price for full-time beginning students $8,651 (2023-24). Participates in a state Promise program (Tennessee Promise) and offers a tuition payment plan. FAFSA-based federal, state, and institutional aid available; net price calculator at volstate.edu/FinancialAid. Source: NCES College Navigator 2024-25.",
+  "roster_size": 20,
+  "scholarship_count": null,
+  "facilities_notes": "Pioneers softball plays in the TCCAA / NJCAA Region VII (Gallatin, TN). Specific softball facility details were not published on the athletics site as of research date; no dedicated facilities page found.",
+  "program_reputation": "NJCAA Division program competing in the Tennessee Community College Athletic Association (TCCAA) / NJCAA Region VII. Head coach Christian Lynn leads the program. Athletics site: volstatepioneers.com (PrestoSports).",
+  "notes": "Researched 2026-07-30 via live fetch of volstatepioneers.com (PrestoSports). Softball staff directory (https://www.volstatepioneers.com/sports/sball/coaches/index) lists only one staff member: Head Coach Christian Lynn; no assistant coaches, recruiting coordinators, or graduate/volunteer assistants were publicly listed at research time. 2025-26 roster page listed 20 players. Conference confirmed as TCCAA / NJCAA on the softball index page. Tuition/academic/financial-aid figures sourced from NCES College Navigator (unitid 222053). NOTE: the given athletics domain occasionally served cached content from another school (Walters State / wsccathletics.com) during an early fetch; all data used here was verified against pages whose canonical URL is volstatepioneers.com.",
+  "coaches": [
+    {
+      "name": "Christian Lynn",
+      "title": "Head Coach",
+      "email": "christian.lynn@volstate.edu",
+      "phone": "615-230-3448",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "From softball coaches directory and coach bio page (volstatepioneers.com/sports/sball/coaches/Christian_Lynn), fetched 2026-07-30. Email and phone listed in bio contact block; no Twitter/X handle listed."
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "sid": 72,
+  "name": "University of Northwestern Ohio",
+  "division": "NAIA",
+  "conference": "Wolverine-Hoosier Athletic Conference",
+  "city": "Lima",
+  "state": "OH",
+  "website_url": "https://www.unohracers.com/sports/sball/index",
+  "academic_ranking": "University of Northwestern Ohio is a private, career-focused institution in Lima, OH, known primarily for its College of Applied Technologies (automotive, diesel, high-performance/motorsports, agricultural), plus Colleges of Business, Health Professions, and Occupational Professions. It offers associate, bachelor's, and select graduate programs on a quarter-based, program-driven model. No formal national academic ranking was confirmed from public sources.",
+  "tuition": null,
+  "financial_aid": "UNOH's Office of Financial Aid administers grants, loans, student employment, and scholarships. Scholarship categories include university scholarships, college-specific scholarships (Business/Health/Occupational Professions and Applied Technologies), and external scholarships; FAFSA is used for federal aid. A published annual tuition figure was not listed on the public financial aid pages (UNOH directs prospective students to its online Tuition Cost Calculator at unoh.studentaidcalculator.com), so tuition is left null. Financial aid office: financial aid, info@unoh.edu, 419-998-3120.",
+  "roster_size": 26,
+  "scholarship_count": null,
+  "facilities_notes": "Softball is played at the UNOH softball complex on the Lima, OH campus. Specific facility details (dimensions, seating, lighting) were not confirmed from the pages fetched.",
+  "program_reputation": "NAIA women's softball program competing in the Wolverine-Hoosier Athletic Conference (WHAC), one of the strongest NAIA conferences. The Racers regularly participate in the WHAC Tournament. Program reputation details beyond conference competition were not independently confirmed.",
+  "notes": "Data sourced live on 2026-07-30 from the official athletics site (unohracers.com / nwohio.prestosports.com). Coaching staff captured from /sports/sball/coaches/index (4 staff: head coach, two assistant coaches, one graduate assistant). Roster size (26) counted from unique player bio links on /sports/sball/2025-26/roster. Conference (WHAC) confirmed on the softball index page. Tuition and scholarship count not publicly listed, set to null rather than estimated. Twitter/X handles were not listed for any staff member on the staff directory.",
+  "coaches": [
+    {
+      "name": "Billy Glessner",
+      "title": "Head Coach",
+      "email": "wglessner@unoh.edu",
+      "phone": "419-998-8438",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball staff directory (unohracers.com/sports/sball/coaches/index) checked 2026-07-30; email and phone publicly listed, no Twitter/X handle listed."
+    },
+    {
+      "name": "Drew Powell",
+      "title": "Assistant Coach",
+      "email": "dmpowell2@unoh.edu",
+      "phone": "419-998-8484",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball staff directory checked 2026-07-30; email and phone publicly listed, no Twitter/X handle listed."
+    },
+    {
+      "name": "Hannah Swartzentruber",
+      "title": "Assistant Coach",
+      "email": "hswartzentrub@unoh.edu",
+      "phone": "419-998-8419",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Softball staff directory checked 2026-07-30; email and phone publicly listed, no Twitter/X handle listed."
+    },
+    {
+      "name": "Tess Denning",
+      "title": "Graduate Assistant",
+      "email": "tdenning@unoh.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Softball staff directory checked 2026-07-30; email publicly listed, no public phone or Twitter/X handle listed."
+    }
+  ]
+}

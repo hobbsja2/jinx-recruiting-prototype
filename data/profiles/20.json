@@ -1,0 +1,55 @@
+{
+  "sid": 20,
+  "name": "University of Dayton",
+  "division": "NCAA D1",
+  "conference": "Atlantic 10 Conference",
+  "city": "Dayton",
+  "state": "OH",
+  "website_url": "https://daytonflyers.com/sports/softball",
+  "academic_ranking": "Private Catholic (Marianist) research university. Undergraduate enrollment approximately 7,682. Overall admission rate approximately 65% (source: U.S. Dept. of Education College Scorecard, checked 2026-07).",
+  "tuition": 49140,
+  "financial_aid": "Private university with published undergraduate tuition of approximately $49,140/year (College Scorecard, most recent year). NCAA D1 athletic scholarships available for softball; most students receive institutional financial aid and merit-based scholarships. Specific softball scholarship allocations not publicly itemized.",
+  "roster_size": 19,
+  "scholarship_count": null,
+  "facilities_notes": "Softball plays home games at the UD Softball Stadium on the University of Dayton campus. Detailed facility specifications (capacity, year built) were not publicly listed on the athletics site as of 2026-07.",
+  "program_reputation": "NCAA Division I women's softball program competing in the Atlantic 10 Conference. Specific championship/postseason history not confirmed from fetched sources.",
+  "notes": "Data compiled from daytonflyers.com softball staff and roster pages and the U.S. Dept. of Education College Scorecard, checked 2026-07. Coaching staff and roster reflect the 2027 season listing. NCES College Navigator ID 206604 returned Wright State data and was not used; tuition/enrollment/admission figures sourced from College Scorecard for University of Dayton.",
+  "coaches": [
+    {
+      "name": "Cara Clark",
+      "title": "Head Coach",
+      "email": "flyersoftball@udayton.edu",
+      "phone": "(937) 229-4399",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "daytonflyers.com softball coaches page checked 2026-07; email listed is the program's shared address; no public Twitter/X handle listed"
+    },
+    {
+      "name": "Elle Buffenbarger",
+      "title": "Assistant Coach",
+      "email": "ebuffenbarger1@udayton.edu",
+      "phone": "(937) 229-4188",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "daytonflyers.com softball coaches page checked 2026-07; no public Twitter/X handle listed"
+    },
+    {
+      "name": "Amanda Greenfield",
+      "title": "Assistant Coach",
+      "email": "agreenfield1@udayton.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "daytonflyers.com softball coaches page checked 2026-07; no public phone or Twitter/X handle listed"
+    },
+    {
+      "name": "Maddi Banks",
+      "title": "Assistant Coach",
+      "email": "mbanks2@udayton.edu",
+      "phone": "(937) 229-4188",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "daytonflyers.com softball coaches page checked 2026-07; no public Twitter/X handle listed"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "sid": 19,
+  "name": "University of Toledo",
+  "division": "NCAA D1",
+  "conference": "Mid-American Conference",
+  "city": "Toledo",
+  "state": "OH",
+  "website_url": "https://utrockets.com/sports/softball",
+  "academic_ranking": "Public R1 doctoral research university (Carnegie 'very high research activity'), part of the University System of Ohio. U.S. News National Universities ~#293 (2024-25). Total enrollment ~14,440 (undergrad ~11,036). Known for engineering, sciences, medicine, business, law, and pharmacy; 250+ academic programs; ~20:1 student-to-faculty ratio.",
+  "tuition": 22260.72,
+  "financial_aid": "Public university with a '2026 Cohort Tuition Guarantee' locking tuition/housing/meal rates for four years. 2026-27 undergraduate rate per semester: in-state total $6,450.36 (tuition $5,619.24 + general fee $831.12); out-of-state total $11,130.36 (tuition $10,299.24 + general fee $831.12), plus a Miscellaneous Student Services Fee of $19.83/credit hour (max 12 hrs). Academic and athletic scholarships plus need-based federal/state aid available; consult utoledo.edu treasurer and financial aid offices for current figures.",
+  "roster_size": 19,
+  "scholarship_count": 12,
+  "facilities_notes": "Rockets softball competes at the on-campus softball facility on Toledo's Main Campus (utrockets.com). Detailed facility specs were not confirmed from a live page during this research (checked 2026-07).",
+  "program_reputation": "NCAA Division I program competing in the Mid-American Conference (MAC). Full details of recent postseason/conference finishes were not verified from a live page during this research.",
+  "notes": "Researched 2026-07-30 from utrockets.com softball coaches and roster pages (site is JS-rendered; data extracted from page HTML). Coaching staff table listed exactly three softball coaches (head coach, assistant coach, pitching coach); other named athletics staff (sport administrator, Olympic sports ops, athletic trainer, strength & conditioning, student-athlete support) are department support staff, not softball coaching staff, so they are excluded. Roster count of 19 taken from the current (2027) softball roster page. Tuition value is the annual out-of-state tuition+general fee (2 semesters x $11,130.36) for the 2026-27 cohort; in-state annual total is $12,900.72. scholarship_count reflects the NCAA D1 softball maximum of 12 equivalency scholarships, not a school-confirmed figure. No Twitter/X handles were listed for the softball coaches on the staff directory.",
+  "coaches": [
+    {
+      "name": "Jessica Bracamonte",
+      "title": "Head Softball Coach",
+      "email": "jessica.bracamonte@utoledo.edu",
+      "phone": "419-530-6258",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "utrockets.com softball coaches staff table, fetched 2026-07-30; no Twitter/X handle listed."
+    },
+    {
+      "name": "Kayla Noch",
+      "title": "Assistant Softball Coach",
+      "email": "kayla.noch@utoledo.edu",
+      "phone": "419-530-6257",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "utrockets.com softball coaches staff table, fetched 2026-07-30; no Twitter/X handle listed."
+    },
+    {
+      "name": "Staci Chambers",
+      "title": "Pitching Coach",
+      "email": "staci.chambers@utoledo.edu",
+      "phone": "419-530-6261",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "utrockets.com softball coaches staff table, fetched 2026-07-30; no Twitter/X handle listed."
+    }
+  ]
+}

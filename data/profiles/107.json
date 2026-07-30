@@ -1,0 +1,64 @@
+{
+  "sid": 107,
+  "name": "University of Southern Indiana",
+  "division": "NCAA D1",
+  "conference": "Ohio Valley Conference",
+  "city": "Evansville",
+  "state": "IN",
+  "website_url": "https://usiscreamingeagles.com/sports/softball",
+  "academic_ranking": "Public master's-level university (Carnegie M1 - Master's Colleges and Universities: Larger Programs; also classified community-engaged). Offers 70+ undergraduate majors, 13 master's programs, and 2 doctoral programs across the Romain College of Business, College of Liberal Arts, College of Nursing and Health Professions, and Pott College of Science, Engineering, and Education. Enrollment approximately 9,286 (fall 2023).",
+  "tuition": null,
+  "financial_aid": "USI offers institutional, state, and federal financial aid plus athletic scholarships. Specific published tuition and aid figures were not confirmed from a live public source during research (2026-07); usi.edu financial aid pages returned 404. Not guessed.",
+  "roster_size": 22,
+  "scholarship_count": null,
+  "facilities_notes": "Home venue is the USI Softball Field (usiscreamingeagles.com/facilities/usi-softball-field/3), built in 2004 and opened in 2005. Hosted two NCAA Division II Midwest Region Tournaments (2017 and 2022). Home record of 204-98 from 2005-2022, including 100-30 since 2015. Seating capacity, surface, and dimensions not publicly listed on the facilities page.",
+  "program_reputation": "USI Screaming Eagles softball has a strong home track record (100-30 at home since 2015) and hosted NCAA D-II regional tournaments in 2017 and 2022. The program has transitioned from NCAA Division II to NCAA Division I and now competes in the Ohio Valley Conference.",
+  "notes": "Data captured from live fetches of usiscreamingeagles.com softball coaches page, roster page, and facilities detail page on 2026-07. Coaching staff and titles verified twice against the softball coaches directory. Roster count (22) taken from the 2026 softball roster page (jersey numbers 1-7, 9-22, 24). Tuition, scholarship count, and detailed financial aid figures were not confirmed from a live public source (multiple usi.edu tuition/finaid URLs returned 404); left null / not guessed per accuracy rules.",
+  "coaches": [
+    {
+      "name": "Sue Kunkle",
+      "title": "Softball Head Coach",
+      "email": "kunkle@usi.edu",
+      "phone": "812-465-1664",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball coaches directory checked 2026-07; no public Twitter/X handle listed."
+    },
+    {
+      "name": "MacKenzi Dorsam",
+      "title": "Softball Assistant Coach",
+      "email": "bmdorsam@usi.edu",
+      "phone": "812-228-5075",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball coaches directory checked 2026-07; no public Twitter/X handle listed."
+    },
+    {
+      "name": "Alyssa Rivera",
+      "title": "Softball Assistant Coach",
+      "email": "anrivera@usi.edu",
+      "phone": "812-465-1218",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Softball coaches directory checked 2026-07; no public Twitter/X handle listed."
+    },
+    {
+      "name": "Kimmy Fleming",
+      "title": "Softball Character Development Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Softball coaches directory checked 2026-07; no public email, phone, or Twitter/X listed."
+    },
+    {
+      "name": "Dr. Josh Wildeman",
+      "title": "Strength & Conditioning Coach",
+      "email": "jnwildeman@usi.edu",
+      "phone": "812-465-1678",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "Softball coaches directory checked 2026-07; no public Twitter/X handle listed."
+    }
+  ]
+}

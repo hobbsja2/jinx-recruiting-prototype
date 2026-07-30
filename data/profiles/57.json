@@ -1,0 +1,18 @@
+{
+  "sid": 57,
+  "name": "Vincennes University",
+  "division": "JUCO",
+  "conference": "Mid-West Athletic Conference (MWAC)",
+  "city": "Vincennes",
+  "state": "IN",
+  "website_url": "https://govutrailblazers.com",
+  "academic_ranking": "Vincennes University is a public two-year college (Indiana's oldest, founded 1801) offering associate and select bachelor's degrees; open-admission with strong transfer, technical, and workforce programs. No specific national ranking captured.",
+  "tuition": null,
+  "financial_aid": "Financial aid data not captured; VU is a public institution offering federal/state aid and institutional scholarships. Details not confirmed from live source during this research.",
+  "roster_size": null,
+  "scholarship_count": null,
+  "facilities_notes": "Not applicable - no women's softball program or softball facilities found.",
+  "program_reputation": "Not applicable - no women's softball program exists at Vincennes University.",
+  "notes": "RESEARCH RESULT: Vincennes University does NOT sponsor women's softball. Verified live on 2026-07-30 via govutrailblazers.com. The full sponsored-sports navigation lists only: Baseball, Cheer, Men's & Women's Basketball, Bowling, Golf, Men's & Women's Track & Field, Men's & Women's Cross Country, Wrestling, Women's Wrestling, and Volleyball. The word 'softball' appears 0 times on the athletics homepage and 0 times in the full staff directory (https://govutrailblazers.com/inside-athletics/general-info/staff-directory/index). All softball URL patterns (/sports/softball, /sports/wsoft, /sports/sball, /sports/soft, /sports/wsb) return HTTP 404. Note: the athletics site returns HTTP 403 to WebFetch; findings obtained via curl with a browser user-agent. Because there is no softball program, there is no softball coaching staff, roster, tuition-for-program, or facilities to report - fields left null/empty rather than invented.",
+  "coaches": []
+}

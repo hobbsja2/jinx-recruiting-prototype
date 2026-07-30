@@ -1,0 +1,37 @@
+{
+  "sid": 44,
+  "name": "Tennessee Wesleyan University",
+  "division": "NAIA",
+  "conference": "Appalachian Athletic Conference",
+  "city": "Athens",
+  "state": "TN",
+  "website_url": "https://www.twbulldogs.com/sports/softball",
+  "academic_ranking": "Small private United Methodist-affiliated university with total enrollment around 1,198 students and an approximately 12:1 student-to-faculty ratio.",
+  "tuition": 30814.0,
+  "financial_aid": "Reported net price around $16,414 after scholarships and grants. According to aggregated data, roughly 91% of enrolled undergraduates receive grants or scholarships, averaging about $20,642. Softball-specific athletic scholarship figures not publicly confirmed.",
+  "roster_size": null,
+  "scholarship_count": null,
+  "facilities_notes": "Softball-specific facility name not confirmed on public pages; TWU athletics venues in Athens, TN include Jack Bowling Field at Athens Insurance Stadium (baseball), James L. Robb Gymnasium, and the TWU Athletic Complex. Softball venue details not verified 2026-07.",
+  "program_reputation": "Established NAIA program competing in the Appalachian Athletic Conference (member since 2001-02). Long-tenured head coach (Toby Brooks) with 20+ seasons leading the program.",
+  "notes": "Athletics site (twbulldogs.com) returned HTTP 403 to automated fetches; coach names, titles, and contacts confirmed via search-result snippets referencing the school employee/staff directory and public listings. Roster size could not be verified from a live roster page (403). Conference and NAIA division confirmed via public sources. Tuition figure is undergraduate 2024-2025 (~$30,814); graduate tuition listed separately (~$17,750).",
+  "coaches": [
+    {
+      "name": "Toby Brooks",
+      "title": "Head Softball Coach",
+      "email": "tbrooks@tnwesleyan.edu",
+      "phone": "(423) 746-5254",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Name, title, email, and phone from Tennessee Wesleyan staff/employee directory listings (checked 2026-07 via search snippets; athletics site returned 403). No public twitter/X handle found."
+    },
+    {
+      "name": "Logan Fleener",
+      "title": "Assistant Coach/Recruiting Coordinator",
+      "email": "lfleener@tnwesleyan.edu",
+      "phone": "(423) 746-5296",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Name, title, email, and phone from Tennessee Wesleyan staff directory listings (checked 2026-07 via search snippets; athletics site returned 403). No public twitter/X handle found."
+    }
+  ]
+}

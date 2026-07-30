@@ -1,0 +1,55 @@
+{
+  "sid": 108,
+  "name": "Cuyahoga Community College",
+  "division": "JUCO",
+  "conference": "Ohio Community College Athletic Conference (OCCAC)",
+  "city": "Highland Hills",
+  "state": "OH",
+  "website_url": "https://athletics.tri-c.edu/sports/sball/index",
+  "academic_ranking": "Cuyahoga Community College (Tri-C) is Ohio's oldest and largest public community college, founded in 1963, serving the Greater Cleveland area across multiple campuses (Metropolitan, Eastern, Western, Westshore). It is an open-admission, two-year institution granting associate degrees and certificates, with transfer pathways to Ohio four-year universities.",
+  "tuition": 3349,
+  "financial_aid": "As a public community college, Tri-C offers federal and state financial aid (FAFSA-based Pell grants, Ohio College Opportunity Grant), institutional scholarships, and the tuition-free Tri-C High School Scholars/Degree in 3 style programs. NJCAA Division II athletics does not permit athletic scholarships that cover more than tuition, fees, room, board, and books; JUCO programs typically rely on need- and merit-based aid. Specific softball athletic aid not publicly detailed on the athletics site.",
+  "roster_size": 18,
+  "scholarship_count": null,
+  "facilities_notes": "Softball is played under NJCAA Division II / Region 12 within the OCCAC. Specific home softball field/facility details were not published on the softball program pages checked 2026-07.",
+  "program_reputation": "NJCAA Division II women's softball program competing in the Ohio Community College Athletic Conference (OCCAC) and NJCAA Region 12. Head coach Bryan Komlos leads the program. Detailed competitive/postseason reputation not published on the athletics site as of 2026-07.",
+  "notes": "Data sourced live 2026-07 from athletics.tri-c.edu softball coaches page (https://athletics.tri-c.edu/sports/sball/coaches/index) and 2025-26 roster (https://athletics.tri-c.edu/sports/sball/2025-26/roster). Roster size = 18 based on 18 unique jersey numbers on 2025-26 roster. Conference (OCCAC) and NJCAA Region 12 affiliation confirmed via athletics site footer logos. Tuition ~$3,349/yr is an estimate for in-county (Cuyahoga County) residents based on Tri-C published Summer/Fall 2026 in-county rate of $139.54/credit hour x 24 credits (two 12-credit semesters); Ohio out-of-county ~$4,058, out-of-state ~$7,349. No public Twitter/X handles listed for any softball staff. Coaches share department phone 216-987-4333 x1464.",
+  "coaches": [
+    {
+      "name": "Bryan Komlos",
+      "title": "Head Coach",
+      "email": "bryan.komlos@tri-c.edu",
+      "phone": "216-987-4333 x1464",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball coaches page checked 2026-07; email and phone publicly listed, no Twitter/X handle listed."
+    },
+    {
+      "name": "Nick Iarussi",
+      "title": "Assistant Coach",
+      "email": "nicholas.iarussi@tri-c.edu",
+      "phone": "216-987-4333 x1464",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball coaches page checked 2026-07; email and phone publicly listed, no Twitter/X handle listed."
+    },
+    {
+      "name": "Mel Kuches",
+      "title": "Assistant Coach",
+      "email": "melanie.kuches@tri-c.edu",
+      "phone": "216-987-4333 x1464",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Softball coaches page checked 2026-07; email and phone publicly listed, no Twitter/X handle listed."
+    },
+    {
+      "name": "Gio Vargas",
+      "title": "",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Softball coaches page checked 2026-07; listed on staff with no title, email, phone, or Twitter/X handle published."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "sid": 144,
+  "name": "Lincoln Memorial University",
+  "division": "NCAA D2",
+  "conference": "South Atlantic Conference",
+  "city": "Harrogate",
+  "state": "TN",
+  "website_url": "https://www.lmurailsplitters.com/sports/softball",
+  "academic_ranking": "Private university in Harrogate, TN, chartered 1897 as a memorial to Abraham Lincoln. Accredited by the Southern Association of Colleges and Schools (SACS). ~6,081 total students (Fall 2023), of which ~1,668 undergraduates. 1,000-acre main campus bordering Cumberland Gap National Historical Park. Home to notable graduate/professional colleges (DeBusk College of Osteopathic Medicine, Gillespie College of Veterinary Medicine, Duncan School of Law).",
+  "tuition": null,
+  "financial_aid": "LMU Federal School Code 003502. Financial aid contact: finaid@LMUnet.edu / 423.869.6336. Scholarship application due Jan 31; FAFSA-based aid available; TSAA (Tennessee) FAFSA deadline April 1. As an NCAA D2 program, softball can offer athletic scholarships in addition to academic and need-based aid. Exact tuition figure not verified from a public source at time of research.",
+  "roster_size": 22,
+  "scholarship_count": null,
+  "facilities_notes": "Railsplitters softball competes at the on-campus softball facility on LMU's 1,000-acre Harrogate campus. Specific facility name/details not confirmed on public softball program pages at time of research.",
+  "program_reputation": "NCAA Division II program competing in the South Atlantic Conference (SAC). Part of the LMU Railsplitters athletics department.",
+  "notes": "Coaching staff and roster confirmed live from https://www.lmurailsplitters.com/sports/softball on 2026-07 (2026 season). Softball coaches page listed only two staff members (head coach and one assistant); no volunteer/graduate assistants, recruiting coordinators, or directors of operations were listed. Team social handle is @LMU_Softball. Tuition figure could not be verified from a public primary source and is left null rather than estimated.",
+  "coaches": [
+    {
+      "name": "Ritchie Richardson",
+      "title": "Head Coach",
+      "email": "ritchie.richardson@lmunet.edu",
+      "phone": "423.869.6476",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball coaches page fetched 2026-07; email and phone publicly listed. No personal Twitter/X handle listed (team handle @LMU_Softball)."
+    },
+    {
+      "name": "Caitlin Gambone",
+      "title": "Assistant Coach",
+      "email": "caitlin.gambone@lmunet.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball coaches page fetched 2026-07; email publicly listed, no public phone listed; no personal Twitter/X handle listed."
+    }
+  ]
+}

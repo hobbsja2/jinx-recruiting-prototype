@@ -1,0 +1,55 @@
+{
+  "sid": 127,
+  "name": "University of Charleston",
+  "division": "NCAA D2",
+  "conference": "Mountain East Conference",
+  "city": "Charleston",
+  "state": "WV",
+  "website_url": "https://ucgoldeneagles.com/sports/softball",
+  "academic_ranking": "University of Charleston is a private university in Charleston, WV, offering undergraduate and graduate programs. It is regionally accredited and known for programs in health sciences, business, and pharmacy.",
+  "tuition": 33990,
+  "financial_aid": "UC states it strives to offer an education that is accessible and affordable. Resources include Financial Aid, a Net Price Calculator, and Scholarships. Discounts offered for UC Alumni (20% on select graduate programs), Military/Law Enforcement, and Charleston Area Alliance members (10%); discounts cannot be combined (highest single discount applies). Source: ucwv.edu cost page, checked 2026-07.",
+  "roster_size": 25,
+  "scholarship_count": null,
+  "facilities_notes": "Softball plays at the UC Softball Field. UC athletics venues include the Wehrle Innovation Center/Arena, UC Stadium at Laidley Field, Welch Athletic Complex, and Schoenbaum Tennis Courts. Source: ucgoldeneagles.com softball roster page, checked 2026-07.",
+  "program_reputation": "NCAA Division II program competing in the Mountain East Conference. No specific rankings or recent achievements were listed on the fetched softball landing page; reputation details not publicly detailed on the pages checked (2026-07).",
+  "notes": "Athletics site redirects from ucwvathletics.com to ucgoldeneagles.com. Coaching staff and roster data captured from ucgoldeneagles.com softball pages on 2026-07. Roster: 25 players plus one student manager (Olivia Chapman).",
+  "coaches": [
+    {
+      "name": "Taylor Welch",
+      "title": "Head Coach",
+      "email": "taylorwelch@ucwv.edu",
+      "phone": "814-602-2330",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "ucgoldeneagles.com softball coaches page, checked 2026-07; no public twitter listed"
+    },
+    {
+      "name": "Maddie Krause",
+      "title": "Assistant Coach",
+      "email": "madisonkrause@ucwv.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "ucgoldeneagles.com softball coaches page, checked 2026-07; no public phone or twitter listed"
+    },
+    {
+      "name": "Rielly Lucas",
+      "title": "Volunteer Assistant Coach",
+      "email": "riellylucas@ucwv.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "ucgoldeneagles.com softball coaches page, checked 2026-07; no public phone or twitter listed"
+    },
+    {
+      "name": "Chuck Gaerttner",
+      "title": "Strength and Conditioning Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "ucgoldeneagles.com softball coaches page, checked 2026-07; no public email, phone, or twitter listed"
+    }
+  ]
+}

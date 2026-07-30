@@ -1,0 +1,91 @@
+{
+  "sid": 83,
+  "name": "University of Tennessee",
+  "division": "NCAA D1",
+  "conference": "Southeastern Conference",
+  "city": "Knoxville",
+  "state": "TN",
+  "website_url": "https://utsports.com/sports/softball",
+  "academic_ranking": "R1 doctoral (very high research). U.S. News 2026: tied 49th among public universities, tied 102nd among national universities. Undergraduate acceptance rate ~46% (2023 entering class); total enrollment ~40,784 with ~30,564 undergraduates.",
+  "tuition": 33336,
+  "financial_aid": "Public flagship. 2025-26 annual tuition & mandatory fees: $13,876 in-state, $33,336 out-of-state (source: admissions.utk.edu, checked 2026-07). UT reports ~$79M in scholarships and financial aid offered to students in 2024. Tuition figure recorded here is out-of-state.",
+  "roster_size": 24,
+  "scholarship_count": 12,
+  "facilities_notes": "Softball plays at Sherri Parker Lee Stadium in Knoxville (referenced on utsports.com softball pages).",
+  "program_reputation": "Perennial SEC and national power. Long-tenured, nationally respected program led by head coach Karen Weekly; frequent NCAA Tournament / Women's College World Series participant.",
+  "notes": "Data captured from live utsports.com softball coaches and roster pages on 2026-07-30 (pages labeled 2027 season). IMPORTANT: an initial CDN fetch returned cross-tenant cached content (Ohio Dominican University) via the shared Sidearm/Imperva cache; that data was discarded and a clean re-fetch verified as University of Tennessee (title '2027 Softball Coaches - University of Tennessee Athletics', 0 ohiodominican references) was used. NCAA D1 softball scholarship_count set to the D1 equivalency maximum of 12 (not published per-school on the athletics site). No individual coach twitter/X handles are listed in the staff directory (team account is @Vol_Softball).",
+  "coaches": [
+    {
+      "name": "Karen Weekly",
+      "title": "Head Coach",
+      "email": "softball@utk.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "utsports.com softball coaches page, verified 2026-07-30; listed email is the general program address softball@utk.edu; no individual phone or twitter listed."
+    },
+    {
+      "name": "Megan Rhodes Smith",
+      "title": "Associate Head Coach",
+      "email": "Megan.Smith@utk.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "utsports.com softball coaches page, verified 2026-07-30; no public phone or twitter listed."
+    },
+    {
+      "name": "Ehren Earleywine",
+      "title": "Associate Head Coach",
+      "email": "eearleyw@utk.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "utsports.com softball coaches page, verified 2026-07-30; no public phone or twitter listed."
+    },
+    {
+      "name": "Aubrey Leach-Gartner",
+      "title": "Assistant Coach",
+      "email": "aleach3@utk.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "utsports.com softball coaches page, verified 2026-07-30; no public phone or twitter listed."
+    },
+    {
+      "name": "Laura Dukes",
+      "title": "Director of Operations",
+      "email": "ldukes2@utk.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "utsports.com softball coaches page (Support Staff), verified 2026-07-30; no public phone or twitter listed."
+    },
+    {
+      "name": "Hunter King",
+      "title": "Director of Analytics and Technology",
+      "email": "hking21@utk.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 50,
+      "source_note": "utsports.com softball coaches page (Support Staff), verified 2026-07-30; no public phone or twitter listed."
+    },
+    {
+      "name": "Kayleigh Olson",
+      "title": "Assistant Athletic Trainer - Softball/M. Golf",
+      "email": "kolson9@utk.edu",
+      "phone": "(865) 974-1943",
+      "twitter": "",
+      "sort_order": 60,
+      "source_note": "utsports.com softball coaches page (Support Staff), verified 2026-07-30; phone listed on page; no twitter listed."
+    },
+    {
+      "name": "Dan Wirth",
+      "title": "Director of Olympic Sports Performance - Softball/Rowing",
+      "email": "dwirth1@utk.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 70,
+      "source_note": "utsports.com softball coaches page (Support Staff), verified 2026-07-30; no public phone or twitter listed."
+    }
+  ]
+}

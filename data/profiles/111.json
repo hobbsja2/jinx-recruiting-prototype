@@ -1,0 +1,46 @@
+{
+  "sid": 111,
+  "name": "Lakeland Community College",
+  "division": "JUCO",
+  "conference": "Ohio Community College Athletic Conference (OCCAC)",
+  "city": "Kirtland",
+  "state": "OH",
+  "website_url": "https://athletics.lakelandcc.edu/sports/sball/index",
+  "academic_ranking": "Public 2-year community college (Kirtland, OH). Offers less-than-1-year and 1-2 year certificates plus Associate's degrees. Undergraduate enrollment approx. 4,358; student-to-faculty ratio approx. 13:1; suburban campus, no on-campus housing (NCES College Navigator, IPEDS ID 203599).",
+  "tuition": 4607.0,
+  "financial_aid": "As a public community college, Lakeland offers standard federal/state financial aid (FAFSA-based Pell grants, state grants, loans) and institutional/foundation scholarships via the Lakeland Foundation. Athletics scholarship specifics for softball not published on the athletics staff/roster pages checked 2026-07. In-state (Ohio resident) tuition approx. $4,607/yr; in-district approx. $3,872/yr; out-of-state approx. $9,235/yr (per third-party aggregators, 2024-25).",
+  "roster_size": 17,
+  "scholarship_count": null,
+  "facilities_notes": "Softball is part of Lakeland Athletics based at the main Kirtland campus (7700 Clocktower Dr). Campus includes an Athletic and Fitness Center (AFC). Specific softball field details not published on the softball pages checked 2026-07.",
+  "program_reputation": "NJCAA program competing in Region XII (Region 12) and the Ohio Community College Athletic Conference (OCCAC). Rosters listed as NJCAA (site footer references NJCAA / NJCAA Region 12 / OCCAC).",
+  "notes": "Official athletics site: athletics.lakelandcc.edu (PrestoSports platform; the CDN intermittently served cached pages of other schools, so pages were fetched with cache-busting to confirm Lakeland content). Coaches page: https://athletics.lakelandcc.edu/sports/sball/coaches/index (fetched live 2026-07). Roster page: https://athletics.lakelandcc.edu/sports/sball/2026-27/roster shows 17 players (2026-27). Athletics Twitter/X: @LakelandLakers (department-wide); team account referenced elsewhere as @LakelandCCSB (not linked on the official staff/roster pages). No coach phone numbers or personal Twitter handles are published on the staff directory.",
+  "coaches": [
+    {
+      "name": "Nick Price",
+      "title": "Softball Head Coach",
+      "email": "nprice3@lakelandcc.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball coaches page fetched live 2026-07; email listed. No phone or twitter listed."
+    },
+    {
+      "name": "Bob Alderman",
+      "title": "Assistant Softball Coach",
+      "email": "ralderman1@lakelandcc.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball coaches page fetched live 2026-07; email listed. No phone or twitter listed. (Listed name 'Bob Alderman'; email uses first initial R.)"
+    },
+    {
+      "name": "Patty McHugh",
+      "title": "Assistant Softball Coach",
+      "email": "pmchugh2@lakelandcc.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Softball coaches page fetched live 2026-07; email listed. No phone or twitter listed."
+    }
+  ]
+}

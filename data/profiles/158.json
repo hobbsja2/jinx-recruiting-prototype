@@ -1,0 +1,46 @@
+{
+  "sid": 158,
+  "name": "John Carroll University",
+  "division": "NCAA D3",
+  "conference": "North Coast Athletic Conference",
+  "city": "University Heights",
+  "state": "OH",
+  "website_url": "https://jcusports.com/sports/softball",
+  "academic_ranking": "Private Jesuit university founded in 1886. Ranked 3rd among Midwest regional universities by U.S. News & World Report (2025), and top-10 in that category since 1988; also highly ranked for undergraduate teaching and most innovative. Offers 70+ undergraduate majors/minors across three colleges (Arts & Sciences, Boler College of Business, College of Health). 2025 acceptance rate ~81%; enrolled students averaged a 3.66 high school GPA (test-optional; submitters averaged 1240 SAT / 27 ACT).",
+  "tuition": null,
+  "financial_aid": "Per jcu.edu, 100% of students receive some type of financial aid and 100% of admitted students receive a merit scholarship (automatic at admission, no separate application). JCU awarded $24.9M to first-year students in 2025-2026. FAFSA required each year. Recognized by The Princeton Review as a Best Value college.",
+  "roster_size": 30,
+  "scholarship_count": null,
+  "facilities_notes": "NCAA Division III program (no athletic scholarships offered at the D3 level). Facilities details not confirmed from a public source during research (2026-07).",
+  "program_reputation": "NCAA Division III softball program (Blue Streaks). Competes in the North Coast Athletic Conference (JCU joined the NCAC in 2025, previously the Ohio Athletic Conference since 1989).",
+  "notes": "Staff and roster captured from jcusports.com softball pages (2027 season listings) on 2026-07. No recruiting coordinator or dedicated recruiting title listed on the softball staff page. Exact annual tuition figure could not be confirmed from an authoritative public source during research, so tuition left null rather than guessed.",
+  "coaches": [
+    {
+      "name": "Tony Scibelli",
+      "title": "Head Coach",
+      "email": "ascibelli@jcu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "jcusports.com softball staff page checked 2026-07; no public phone or Twitter/X listed."
+    },
+    {
+      "name": "Matt McPeek",
+      "title": "Assistant Coach",
+      "email": "mmcpeek@jcu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "jcusports.com softball staff page checked 2026-07; no public phone or Twitter/X listed."
+    },
+    {
+      "name": "Kelsey Bernhard",
+      "title": "Graduate Assistant",
+      "email": "kbernhard27@jcu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "jcusports.com softball staff page checked 2026-07; no public phone or Twitter/X listed."
+    }
+  ]
+}

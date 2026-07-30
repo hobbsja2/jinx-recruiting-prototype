@@ -1,0 +1,46 @@
+{
+  "sid": 41,
+  "name": "Freed-Hardeman University",
+  "division": "NAIA",
+  "conference": "Mid-South Conference",
+  "city": "Henderson",
+  "state": "TN",
+  "website_url": "https://www.gofhulions.com/sports/softball",
+  "academic_ranking": "Private university affiliated with the Churches of Christ, founded 1869. Primarily undergraduate and residential with roughly 2,300 total students (about 1,850 undergraduates) across five colleges. Noted by U.S. News & World Report for affordability among Southern master's-granting universities.",
+  "tuition": null,
+  "financial_aid": "Financial aid details not confirmed from a live official source during research (fhu.edu tuition/aid pages returned HTTP 403 on 2026-07). FHU reports a $96.2M endowment (2025) and is recognized for affordability; prospective athletes should confirm merit/need-based aid and athletic scholarship packages directly with FHU financial aid and the softball staff.",
+  "roster_size": 24,
+  "scholarship_count": null,
+  "facilities_notes": "Softball program is based at Chalmers Clubhouse (listed as the coaching staff office location).",
+  "program_reputation": "NAIA program competing in the Mid-South Conference as the FHU Lions/Lady Lions. Team social account @FHU_SB.",
+  "notes": "Coaching staff verified against the softball staff directory at gofhulions.com on 2026-07. No individual staff Twitter/X handles listed; team account is @FHU_SB. Tuition and scholarship counts left null because they could not be confirmed from a live authoritative source (FHU official tuition page returned 403; Wikipedia did not list current figures).",
+  "coaches": [
+    {
+      "name": "Todd Humphry",
+      "title": "Head Coach",
+      "email": "thumphry@fhu.edu",
+      "phone": "731-989-6906",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball staff directory (gofhulions.com) checked 2026-07; email and phone publicly listed. No public Twitter/X handle."
+    },
+    {
+      "name": "Rob Parson",
+      "title": "Assistant Coach",
+      "email": "rparson@fhu.edu",
+      "phone": "731-989-6960",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball staff directory (gofhulions.com) checked 2026-07; email and phone publicly listed. No public Twitter/X handle."
+    },
+    {
+      "name": "Bianca Pettus",
+      "title": "Graduate Assistant",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Softball staff directory (gofhulions.com) checked 2026-07; no public email, phone, or Twitter/X handle listed."
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "sid": 132,
+  "name": "West Liberty University",
+  "division": "NCAA D2",
+  "conference": "Mountain East Conference",
+  "city": "West Liberty",
+  "state": "WV",
+  "website_url": "https://hilltoppersports.com/sports/softball",
+  "academic_ranking": "Oldest university in West Virginia (established 1837). Public 4-year institution accredited by the Higher Learning Commission (HLC). Enrollment approx. 2,500 students (roughly 1,900 undergraduates). Offers 70+ undergraduate majors and graduate programs across colleges of Business, Liberal & Creative Arts and Communication, Education & Human Performance, and Sciences. Noted for its comprehensive dental hygiene program, one of the earliest in the nation.",
+  "tuition": 18840.0,
+  "financial_aid": "Out-of-state tuition & fees approx. $18,840/yr; in-state approx. $9,414/yr (2026-2027). About 36% of undergraduates are Pell grant (low-income) recipients, indicating substantial need-based aid participation. Athletic scholarships available as an NCAA D2 program (equivalency/partial scholarships permitted).",
+  "roster_size": 25,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes at West Liberty University; program is part of the Hilltoppers athletics department fielding 16 intercollegiate sports with nearly 400 student-athletes. Specific softball facility details not confirmed from public pages checked 2026-07.",
+  "program_reputation": "NCAA Division II Mountain East Conference softball program, a charter member conference for West Liberty. Part of a long-established athletics department (Hilltoppers) at the oldest university in West Virginia.",
+  "notes": "Data gathered 2026-07 from hilltoppersports.com softball coaches page, roster page, staff directory, and westliberty.edu financial-aid cost page plus Wikipedia for academic profile. Roster size (25) from softball roster page. Tuition set to out-of-state figure ($18,840) as most relevant for recruiting; in-state ($9,414) noted in financial_aid. scholarship_count not publicly listed. Head coach and assistant coach appeared on softball coaches page; staff directory listed only the two graduate assistants.",
+  "coaches": [
+    {
+      "name": "Sara Pelegreen",
+      "title": "Head Softball Coach",
+      "email": "sara.pelegreen@westliberty.edu",
+      "phone": "304-336-8476",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball coaches page checked 2026-07; email and phone publicly listed. No individual Twitter/X handle listed (team account @WLU_Softball)."
+    },
+    {
+      "name": "Jim Welsh",
+      "title": "Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball coaches page checked 2026-07; no public email, phone, or Twitter/X handle listed for this coach."
+    },
+    {
+      "name": "Delani Buckner",
+      "title": "Graduate Assistant Softball Coach",
+      "email": "dbuckner@westliberty.edu",
+      "phone": "304-336-8476",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Softball coaches page checked 2026-07; email and department phone listed. No individual Twitter/X handle listed."
+    },
+    {
+      "name": "Rachel Jones",
+      "title": "Graduate Assistant Softball Coach",
+      "email": "rijones@westliberty.edu",
+      "phone": "304-336-8476",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Softball coaches page checked 2026-07; email and department phone listed. No individual Twitter/X handle listed."
+    }
+  ]
+}

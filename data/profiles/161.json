@@ -1,0 +1,64 @@
+{
+  "sid": 161,
+  "name": "Ohio Wesleyan University",
+  "division": "NCAA D3",
+  "conference": "North Coast Athletic Conference",
+  "city": "Delaware",
+  "state": "OH",
+  "website_url": "https://battlingbishops.com/sports/softball",
+  "academic_ranking": "Private liberal arts college affiliated with the United Methodist Church; approximately 1,600 undergraduates. Test-optional admissions with an admit rate around 55%. Ranked roughly #119 among National Liberal Arts Colleges by U.S. News. Offers 80+ majors/minors across B.A., B.S., and B.F.A. degrees; known for strong programs in the sciences (zoology), psychology, business, and music.",
+  "tuition": 54248,
+  "financial_aid": "Tuition and fees approximately $54,248 (2024-2025). About 99% of enrolled undergraduates receive grants or scholarships, with an average aid amount around $42,385. As an NCAA Division III institution, OWU does not offer athletic scholarships; aid is need-based and merit-based/academic only. (Figures per collegetuitioncompare.com, checked 2026-07.)",
+  "roster_size": 26,
+  "scholarship_count": null,
+  "facilities_notes": "Softball home games are played at Margaret Sagan Field on campus in Delaware, OH. OWU athletics facilities include Selby Stadium, Branch Rickey Arena, Meek Aquatics and Recreation Center, and Gordon Field House.",
+  "program_reputation": "NCAA Division III program competing in the North Coast Athletic Conference (NCAC) as the Battling Bishops. Small-college liberal arts athletics program emphasizing the student-athlete experience without athletic scholarships.",
+  "notes": "Athletics site is battlingbishops.com (athletics.owu.edu did not resolve). Softball staff directory and roster fetched live 2026-07; staff directory lists no public email addresses for any softball staff member. Roster page lists 26 players (2025 roster).",
+  "coaches": [
+    {
+      "name": "Cassie Cunningham",
+      "title": "Head Coach",
+      "email": "",
+      "phone": "740-368-3737",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball staff directory checked 2026-07; no public email or twitter listed. Phone 740-368-3737 listed."
+    },
+    {
+      "name": "Alexis Harvey",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "740-368-3755",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball staff directory checked 2026-07; no public email or twitter listed. Phone 740-368-3755 listed."
+    },
+    {
+      "name": "Shelley Johnson",
+      "title": "Volunteer Assistant Coach",
+      "email": "",
+      "phone": "740-368-3737",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Softball staff directory checked 2026-07; no public email or twitter listed. Department phone 740-368-3737 listed."
+    },
+    {
+      "name": "Brooke Nethers",
+      "title": "Volunteer Assistant Coach",
+      "email": "",
+      "phone": "740-368-3737",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Softball staff directory checked 2026-07; no public email or twitter listed. Department phone 740-368-3737 listed."
+    },
+    {
+      "name": "Lisa Tubbs",
+      "title": "Volunteer Assistant Coach",
+      "email": "",
+      "phone": "740-368-3737",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "Softball staff directory checked 2026-07; no public email or twitter listed. Department phone 740-368-3737 listed."
+    }
+  ]
+}

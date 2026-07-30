@@ -1,0 +1,64 @@
+{
+  "sid": 49,
+  "name": "University of Kentucky",
+  "division": "NCAA D1",
+  "conference": "Southeastern Conference (SEC)",
+  "city": "Lexington",
+  "state": "KY",
+  "website_url": "https://ukathletics.com/sports/softball/",
+  "academic_ranking": "Public land-grant research university (Carnegie R1). U.S. News & World Report (2025): #152 national universities, #81 among public universities. Comprises 16 colleges with ~35,900 students (fall 2024).",
+  "tuition": 35846,
+  "financial_aid": "Out-of-state undergraduate tuition and fees ~$35,846 for 2026-27; in-state ~$14,178 (figures include mandatory fees, full-time enrollment). Financial aid administered by the Office of Student Financial Aid & Scholarships (OSFAS@uky.edu, (859) 257-3172); FAFSA school code 001989. Athletic scholarships available for softball as an NCAA D1 head-count/equivalency sport.",
+  "roster_size": 23,
+  "scholarship_count": null,
+  "facilities_notes": "Kentucky softball plays at John Cropp Stadium, a $9.5 million facility that debuted for the 2013 season. The program has hosted the SEC Tournament and multiple NCAA regionals (2013, 2014, 2016-2018).",
+  "program_reputation": "Established NCAA Division I SEC softball program. Regular NCAA Tournament participant, having hosted NCAA regionals multiple times at John Cropp Stadium. Competes in the Southeastern Conference, one of the strongest softball conferences nationally.",
+  "notes": "Data gathered live from the UK Athletics staff directory (staff-directory), softball roster page, and University of Kentucky financial/academic sources on 2026-07-30. Roster size (23) reflects the 2026-27 softball roster. Coaching staff emails route to a shared program address (kentuckysoftball@uky.edu); no individual public emails or Twitter/X handles were listed for coaches in the staff directory.",
+  "coaches": [
+    {
+      "name": "Rachel Lawson",
+      "title": "Head Coach",
+      "email": "kentuckysoftball@uky.edu",
+      "phone": "(859) 257-9037",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "UK Athletics staff directory checked 2026-07; shared program email listed, no public Twitter/X handle listed"
+    },
+    {
+      "name": "Kristine Himes",
+      "title": "Associate Head Coach",
+      "email": "kentuckysoftball@uky.edu",
+      "phone": "(859) 257-6314",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "UK Athletics staff directory checked 2026-07; shared program email listed, no public Twitter/X handle listed"
+    },
+    {
+      "name": "Molly Belcher",
+      "title": "Assistant Coach",
+      "email": "kentuckysoftball@uky.edu",
+      "phone": "(859) 257-9152",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "UK Athletics staff directory checked 2026-07; shared program email listed, no public Twitter/X handle listed"
+    },
+    {
+      "name": "Grace Baalman",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "UK Athletics staff directory checked 2026-07; no public email, phone, or Twitter/X handle listed"
+    },
+    {
+      "name": "Brittany Cervantes",
+      "title": "Director of Softball Operations",
+      "email": "kentuckysoftball@uky.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "UK Athletics staff directory checked 2026-07; shared program email listed, no public phone or Twitter/X handle listed"
+    }
+  ]
+}

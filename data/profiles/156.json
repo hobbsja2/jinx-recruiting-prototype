@@ -1,0 +1,46 @@
+{
+  "sid": 156,
+  "name": "Wilmington College",
+  "division": "NCAA D3",
+  "conference": "Ohio Athletic Conference",
+  "city": "Wilmington",
+  "state": "OH",
+  "website_url": "https://wilmingtonquakers.com/sports/softball",
+  "academic_ranking": "Private liberal arts college affiliated with the Religious Society of Friends (Quakers); HLC accredited. Emphasizes hands-on, experiential learning with labs, greenhouses, and academic farms. Notable program areas include exercise science, sustainable/agricultural sciences, and business/finance.",
+  "tuition": 31654,
+  "financial_aid": "99% of students receive financial aid, with an average aid package of $24,263. Scholarships awarded based on academics, leadership, diversity enhancement, and talent; grants awarded as-needed. FAFSA priority deadline March 15 (FAFSA code 003142). College advertises offering more financial aid than most large public universities/colleges in Ohio. As an NCAA D3 institution, no athletic scholarships are offered.",
+  "roster_size": 22,
+  "scholarship_count": null,
+  "facilities_notes": "Wilmington College Quakers softball competes at the on-campus softball field. Detailed facilities specifications not published on the softball program page checked 2026-07.",
+  "program_reputation": "NCAA Division III program competing in the Ohio Athletic Conference (OAC). Team X/Twitter account: @DubC_Softball.",
+  "notes": "Data gathered from wilmingtonquakers.com softball coaches and roster pages and wilmington.edu financial aid/tuition pages, checked 2026-07. Roster size (22) reflects the 2026 softball roster. Tuition figure is 2025-26 main campus annual undergraduate tuition ($31,654; plus a $1,450 annual student services fee). No athletic scholarships (NCAA D3).",
+  "coaches": [
+    {
+      "name": "Megan Warren",
+      "title": "Head Softball Coach / Senior Woman Administrator",
+      "email": "megan.e.warren@wilmington.edu",
+      "phone": "937-481-2392",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Staff directory checked 2026-07; email and phone publicly listed. No individual Twitter/X handle listed (team account: @DubC_Softball)."
+    },
+    {
+      "name": "Madelyn Thomas",
+      "title": "Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Staff directory checked 2026-07; no public email, phone, or Twitter/X handle listed."
+    },
+    {
+      "name": "Tom Purtell",
+      "title": "Volunteer Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Staff directory checked 2026-07; no public email, phone, or Twitter/X handle listed."
+    }
+  ]
+}

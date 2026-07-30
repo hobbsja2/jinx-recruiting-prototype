@@ -1,0 +1,37 @@
+{
+  "sid": 36,
+  "name": "Kentucky Wesleyan College",
+  "division": "NCAA D2",
+  "conference": "Great Midwest Athletic Conference (G-MAC)",
+  "city": "Owensboro",
+  "state": "KY",
+  "website_url": "https://kwcpanthers.com/sports/softball",
+  "academic_ranking": "Private liberal arts college founded in 1858, affiliated with the United Methodist Church. Located in Owensboro, KY (permanent home since 1954). Offers more than 40 academic programs. Led by President Dr. Stephen Germic.",
+  "tuition": 35545,
+  "financial_aid": "2026-2027 full-time undergraduate tuition listed at $35,545 (12-18 hours). Financial aid includes Grants & Loans, Federal Work Study, Private Loans, Military/Veteran student aid, and Scholarships. The school notes most students do not pay the total cost of tuition, room and board, and fees; a Net Price Calculator is available.",
+  "roster_size": 12,
+  "scholarship_count": null,
+  "facilities_notes": "Athletics campus at 3000 Frederica Street, Owensboro, KY 42301. Athletics facilities reference the Woodward Health and Recreation Center. No specific softball venue name was published on the roster/softball pages checked 2026-07.",
+  "program_reputation": "NCAA Division II program competing in the Great Midwest Athletic Conference (G-MAC).",
+  "notes": "Data gathered from kwcpanthers.com softball coaches, roster, and softball pages plus kwc.edu tuition and about pages, checked 2026-07. Coaching staff directory lists two softball-specific staff: head coach and one assistant. No twitter/X handles published. Roster page listed 12 players for 2026.",
+  "coaches": [
+    {
+      "name": "Miles Mallette",
+      "title": "Head Softball Coach",
+      "email": "mmallette@kwc.edu",
+      "phone": "270-852-3250",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "kwcpanthers.com softball coaches page checked 2026-07; email and phone publicly listed; no twitter/X handle listed"
+    },
+    {
+      "name": "Jessica Johnson",
+      "title": "Assistant Softball Coach",
+      "email": "jessica.johnson@kwc.edu",
+      "phone": "270-852-3250",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "kwcpanthers.com softball coaches page checked 2026-07; email and shared department phone publicly listed; no twitter/X handle listed"
+    }
+  ]
+}

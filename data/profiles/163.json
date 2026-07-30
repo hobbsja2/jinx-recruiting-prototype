@@ -1,0 +1,55 @@
+{
+  "sid": 163,
+  "name": "The College of Wooster",
+  "division": "NCAA D3",
+  "conference": "North Coast Athletic Conference",
+  "city": "Wooster",
+  "state": "OH",
+  "website_url": "https://woosterathletics.com/sports/softball",
+  "academic_ranking": "Private liberal arts college founded 1866. Ranked #77 among National Liberal Arts Colleges (U.S. News & World Report). Member of the Annapolis Group and listed among 'Colleges That Change Lives.' Known for its signature senior Independent Study (I.S.) research program. Most popular majors: Political Science, Psychology, Biology.",
+  "tuition": 66290,
+  "financial_aid": "Tuition and fees for 2026-27 are $66,290; total comprehensive cost (with housing and meals) is $82,340 before aid. As a D3 institution, no athletic scholarships are offered. About 99% of admitted students receive some form of financial aid; average aid package for FAFSA filers exceeds $55,000. Merit scholarships include Presidential Scholar (full tuition), College Scholar, and Dean's Scholar ($25,000-$43,000). Need-based Wooster Grants, Pell/FSEOG, federal loans, work-study, and tuition exchange programs also available. Frequently cited as a Best Value College.",
+  "roster_size": 21,
+  "scholarship_count": null,
+  "facilities_notes": "Wooster is a NCAA Division III member (Fighting Scots). Primary athletics facility is the Scot Center, a 123,000-sq-ft, $30 million recreation facility opened in 2012 with four multipurpose courts, a 200-meter indoor track, a fitness center, and batting cages for baseball and softball. The Scot Center's 20,000-sq-ft solar roof is noted as one of the largest of any U.S. college facility. No dedicated softball field details were confirmed from public pages.",
+  "program_reputation": "Softball competes in NCAA Division III in the North Coast Athletic Conference (NCAC). Team X/Twitter handle is @CoWSoftball.",
+  "notes": "Data gathered from woosterathletics.com softball coaches page, roster page, and staff directory (checked 2026-07); tuition/aid from wooster.edu; academics/facilities from Wikipedia. No individual staff X/Twitter handles are publicly listed (team account is @CoWSoftball). As a D3 program, athletic scholarships are not offered.",
+  "coaches": [
+    {
+      "name": "Victoria Rumph",
+      "title": "Head Coach",
+      "email": "vrumph@wooster.edu",
+      "phone": "(330) 263-2679",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball coaches page checked 2026-07; email and phone publicly listed; no individual X handle listed."
+    },
+    {
+      "name": "Caroline Turner",
+      "title": "Asst. Coach",
+      "email": "cturner@wooster.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball coaches page checked 2026-07; email publicly listed; no public phone or X handle listed."
+    },
+    {
+      "name": "Bob Lance",
+      "title": "Volunteer Asst. Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Softball coaches page checked 2026-07; no public email, phone, or X handle listed."
+    },
+    {
+      "name": "Dan Jech",
+      "title": "Volunteer Asst. Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Softball coaches page checked 2026-07; no public email, phone, or X handle listed."
+    }
+  ]
+}

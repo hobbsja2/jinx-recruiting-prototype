@@ -1,0 +1,46 @@
+{
+  "sid": 45,
+  "name": "University of Tennessee Southern",
+  "division": "NAIA",
+  "conference": "Southern States Athletic Conference",
+  "city": "Pulaski",
+  "state": "TN",
+  "website_url": "https://utsfirehawks.com/sports/softball",
+  "academic_ranking": "Public university in the University of Tennessee System (joined 2021), located on a rural 55-acre campus in Pulaski, TN. Founded 1870 (originally Martin Female College). Small enrollment of approximately 1,132 students (fall 2025) with about 57 faculty. Accredited by the Southern Association of Colleges and Schools (SACS).",
+  "tuition": null,
+  "financial_aid": "Automatic merit scholarships based on GPA and test scores: Chancellor's Scholar (full tuition), Provost's Scholar ($6,000/yr), Dean's Scholar ($3,000/yr), Firehawk Scholar ($1,500/yr), Rising Scholar ($1,000/yr). Transfer scholarships: Victoria Martin ($4,000) and Thomas Martin ($3,000). Institutional aid is 'last dollar' and renewable up to four years. UT Promise offers free tuition and mandatory fees for qualifying Tennessee residents. Federal aid via FAFSA (school code 003504), Direct Loans, Parent PLUS, Work-Study, TSAC state aid, endowed scholarships, and VA benefits. Approximately 41% of students receive Pell grants. Financial Aid Office: financialaid@utsouthern.edu.",
+  "roster_size": 28,
+  "scholarship_count": null,
+  "facilities_notes": "Firehawks compete on campus in Pulaski, TN. Specific softball facility details were not published on the pages checked 2026-07.",
+  "program_reputation": "NAIA program competing in the Southern States Athletic Conference (SSAC). UT Southern athletics has a strong overall history with 12 national championships across various NAIA sports, though softball-specific accolades were not detailed on the pages checked.",
+  "notes": "Data gathered from utsfirehawks.com softball coaches and roster pages, utsouthern.edu financial aid page, and Wikipedia, all checked 2026-07. Roster size (28) taken from the 2026 softball roster; the default 2027 roster page listed staff only with no players yet. Annual tuition dollar figure could not be confirmed from a live public page (official tuition pages returned 404 or referred to a PDF/Net Price Calculator), so tuition left null rather than guessed. No public softball scholarship count available (NAIA softball allows up to 10 equivalency scholarships as a general association limit, but the school's actual count was not published).",
+  "coaches": [
+    {
+      "name": "Murphy Davis",
+      "title": "Head Coach",
+      "email": "mdavi237@utsouthern.edu",
+      "phone": "931-363-9879",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "utsfirehawks.com softball coaches page, checked 2026-07; no public Twitter/X handle listed."
+    },
+    {
+      "name": "Keith Essary",
+      "title": "Assistant Coach",
+      "email": "dessary@utsouthern.edu",
+      "phone": "931-363-9879",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "utsfirehawks.com softball coaches page, checked 2026-07; no public Twitter/X handle listed."
+    },
+    {
+      "name": "Hazel Konkel",
+      "title": "Athletic Trainer",
+      "email": "hkonkel@utsouthern.edu",
+      "phone": "931-363-9874",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "utsfirehawks.com softball coaches page, checked 2026-07; listed as support staff for softball; no public Twitter/X handle listed."
+    }
+  ]
+}

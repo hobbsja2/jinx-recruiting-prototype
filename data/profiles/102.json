@@ -1,0 +1,55 @@
+{
+  "sid": 102,
+  "name": "Indiana State University",
+  "division": "NCAA D1",
+  "conference": "Missouri Valley Conference",
+  "city": "Terre Haute",
+  "state": "IN",
+  "website_url": "https://gosycamores.com/sports/softball",
+  "academic_ranking": "Public doctoral/professional university founded in 1865, accredited by the Higher Learning Commission continuously since 1915. Offers 100+ undergraduate majors and 75+ graduate/professional programs. U.S. News ranks it near the lower tier of national universities (approx. 382 of 394 in recent editions).",
+  "tuition": null,
+  "financial_aid": "ISU offers need- and merit-based aid via FAFSA. Notable program: awards a laptop to admitted Pell-eligible students; ISU was the first public university in Indiana to require incoming freshmen to have a laptop. Exact tuition figures not confirmed from a live authoritative source during research (2026-07); left null rather than guessed.",
+  "roster_size": 22,
+  "scholarship_count": null,
+  "facilities_notes": "Home venue is Price Field at the Eleanor Forsythe St. John Softball Complex (opened spring 1989), located at Fourth and Tippecanoe Streets. Features two playing fields (game + practice), a 2019 Daktronics electronic scoreboard, storage building, two bullpens, expanded dugouts, drainage system, and batting cage. Seating for 700 (added prior to 2011). Upgrades include infield/outfield renovations (2012), press box upgrade with dedicated wireless, seating, and HVAC (2013), and a padded outfield wall (2015). Named for Dr. Ferne E. Price, ISU's first softball coach (1971-1977) and AAGPBL Hall of Famer.",
+  "program_reputation": "NCAA Division I program competing in the Missouri Valley Conference (MVC) as the Sycamores. Hosted the MVC Softball Tournament in 1995.",
+  "notes": "Data captured from live gosycamores.com pages on 2026-07. Staff directory listed under the 2027 season showed only Head Coach Windy Thees and Assistant Coach Nicole Bechtel plus support staff (graduate assistant athletic trainer and athletic communications GA). No recruiting coordinator, director of player development, or volunteer coach was listed. No individual Twitter/X handles or phone numbers (beyond a partial internal extension) were publicly listed for staff. Tuition and scholarship_count not confirmed from authoritative live sources; left null to avoid guessing.",
+  "coaches": [
+    {
+      "name": "Windy Thees",
+      "title": "Head Coach",
+      "email": "Windy.Thees@indstate.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "gosycamores.com softball staff page checked 2026-07; email listed. Only a partial internal extension (4166) shown for phone, no full public phone number; no X/Twitter handle listed."
+    },
+    {
+      "name": "Nicole Bechtel",
+      "title": "Assistant Women's Softball Coach",
+      "email": "Nicole.Bechtel@indstate.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "gosycamores.com softball staff page checked 2026-07; email listed, no public phone or X/Twitter handle listed."
+    },
+    {
+      "name": "Haven Hoffenkamp",
+      "title": "Graduate Assistant Athletic Trainer / Softball",
+      "email": "Haven.Hoffenkamp@indstate.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "gosycamores.com softball staff page checked 2026-07; listed under support staff (LAT, ATC). Email listed, no public phone or X/Twitter handle listed."
+    },
+    {
+      "name": "Daniela Orta Castaneda",
+      "title": "Athletic Communications Graduate Assistant / SB, WSOC",
+      "email": "dortacastaned@sycamores.indstate.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "gosycamores.com softball staff page checked 2026-07; listed under support staff serving softball and women's soccer. Email listed, no public phone or X/Twitter handle listed."
+    }
+  ]
+}

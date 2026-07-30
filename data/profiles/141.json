@@ -1,0 +1,37 @@
+{
+  "sid": 141,
+  "name": "Lane College",
+  "division": "NCAA D2",
+  "conference": "Southern Intercollegiate Athletic Conference",
+  "city": "Jackson",
+  "state": "TN",
+  "website_url": "https://golcdragons.com/sports/softball",
+  "academic_ranking": "Private historically black college (HBCU) founded in 1882, affiliated with the Christian Methodist Episcopal Church. Located on an urban ~55-acre campus in Jackson, TN. Accredited by the Southern Association of Colleges and Schools Commission on Colleges (SACSCOC) to award associate's and bachelor's degrees in the arts and sciences. Enrollment approximately 800-900 students; reported student-faculty ratio of 15:1.",
+  "tuition": 10198,
+  "financial_aid": "Annual tuition for 2025-26 is $10,198 ($5,099/semester for 12-16 hours; $413/credit hour otherwise). Total annual cost of attendance approximately $21,448 residential / $16,208 non-residential including fees, room, and board. School reports 98% of students receive need-based scholarships. FAFSA required for new and transfer students; aid application deadline of March 31 each year recommended to maximize awards.",
+  "roster_size": 14,
+  "scholarship_count": null,
+  "facilities_notes": "Softball is administered by Lane College Dragons Athletics (NCAA Division II, SIAC). No specific softball facility details published on the official athletics site as of research date.",
+  "program_reputation": "NCAA Division II member competing in the Southern Intercollegiate Athletic Conference (SIAC). Small-roster program (14 players on the 2026 roster) led by head coach Patrick Barbour with one assistant. Branded under the Lane College Dragons '#FearTHEDRAGONS' identity.",
+  "notes": "Data gathered from golcdragons.com softball coaches and roster pages and lanecollege.edu college-costs page (research date 2026-07-30). Roster size (14) taken from the 2026 softball roster page. Conference confirmed as Southern Intercollegiate Athletic Conference (SIAC). Scholarship count not publicly listed; NCAA D2 softball max is 7.2 equivalency scholarships but the school's specific allotment was not published, so left null.",
+  "coaches": [
+    {
+      "name": "Patrick Barbour",
+      "title": "Head Coach",
+      "email": "pbarbour@lanecollege.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Email listed on golcdragons.com softball coaches page (checked 2026-07); no public phone or twitter listed."
+    },
+    {
+      "name": "Autumn Phillips",
+      "title": "Assistant Coach",
+      "email": "aphillips@lanecollege.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Email listed on golcdragons.com softball coaches page (checked 2026-07); no public phone or twitter listed."
+    }
+  ]
+}

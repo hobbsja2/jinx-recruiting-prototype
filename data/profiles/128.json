@@ -1,0 +1,46 @@
+{
+  "sid": 128,
+  "name": "Concord University",
+  "division": "NCAA D2",
+  "conference": "Mountain East Conference",
+  "city": "Athens",
+  "state": "WV",
+  "website_url": "https://cumountainlions.com/sports/softball",
+  "academic_ranking": "Public regional university founded 1872 in Athens, WV. Fall 2024 enrollment ~1,956 (~1,389 undergrad). Test-optional admissions with ~89.6% acceptance rate (2025) and ~3.4 avg HS GPA. U.S. News 2026: tied #90 of 135 Regional Universities South, tied #46 Top Public Schools, tied #79 Top Performers on Social Mobility.",
+  "tuition": null,
+  "financial_aid": "Concord University is a public institution; West Virginia residents receive in-state tuition rates while out-of-state students pay a higher rate. Specific published tuition/fee figures could not be verified from a live official source at research time (2026-07); financial aid packages (federal, state, and institutional aid/scholarships) available via the CU Financial Aid office.",
+  "roster_size": 20,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes as the Concord Mountain Lions on the Athens, WV campus (123-acre knoll overlooking the Appalachian Mountains). Specific softball facility/stadium details not confirmed from a live official source at research time.",
+  "program_reputation": "NCAA Division II program competing in the Mountain East Conference (MEC) as the Concord Mountain Lions.",
+  "notes": "Coaching staff and roster captured live from cumountainlions.com on 2026-07. Roster size = 20 players (2026 roster). Tuition and scholarship_count left null; no public figures could be verified from a live authoritative source at research time.",
+  "coaches": [
+    {
+      "name": "Alisa Tasler",
+      "title": "Head Coach",
+      "email": "atasler@concord.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball coaches page (cumountainlions.com/sports/softball/coaches) checked 2026-07; email listed, no public phone or twitter listed."
+    },
+    {
+      "name": "Courtney Raines",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball coaches page checked 2026-07; no public email, phone, or twitter listed."
+    },
+    {
+      "name": "Aundrea Mills",
+      "title": "Staff Athletic Trainer (WBB, SB)",
+      "email": "akmills@concord.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Softball-specific support staff listed on softball coaches page checked 2026-07; email listed, no public phone or twitter."
+    }
+  ]
+}

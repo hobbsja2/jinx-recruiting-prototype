@@ -1,0 +1,28 @@
+{
+  "sid": 58,
+  "name": "Marian University Ancilla",
+  "division": "JUCO",
+  "conference": "Michigan Community College Athletic Association (MCCAA)",
+  "city": "Donaldson",
+  "state": "IN",
+  "website_url": "https://ancilla.prestosports.com/sports/sball/index",
+  "academic_ranking": "Two-year associate/transfer-focused campus of Marian University (now branded Marian University Plymouth). Rural campus spanning 1,400+ acres with an 11:1 student-to-faculty ratio. Offers two-year associate degrees through bachelor's degree pathways in fields including agriculture, veterinary nursing, business, education, exercise science, liberal arts, and nursing.",
+  "tuition": null,
+  "financial_aid": "Financial aid available via FAFSA; institutional scholarships and financial aid offered. No campus-specific Ancilla/Plymouth annual tuition figure is publicly published in fetchable form; the Marian University main-campus published figure (approx. $43,400 tuition and fees for 2025-26) is not attributable to the two-year Ancilla/Plymouth campus, so tuition left null to avoid misattribution.",
+  "roster_size": 17,
+  "scholarship_count": null,
+  "facilities_notes": "Home athletic venues associated with the Marian University Plymouth (Ancilla) Chargers include Charger Arena at LifePlex and the Charger Athletic Complex; softball listed at 20097 9B Road, Plymouth, IN 46563.",
+  "program_reputation": "NJCAA/JUCO women's softball program of the Marian University Ancilla (Marian University Plymouth) Chargers, competing in the Michigan Community College Athletic Association (MCCAA). Small two-year program serving as a transfer/development pathway. Head coach Izzy Johnson leads the staff.",
+  "notes": "Sources fetched live 2026-07-30 via ancilla.prestosports.com (the ancillachargers.com public domain was serving mismatched Motlow State Athletics content at time of research, so the authoritative Presto subdomain was used). Coaches page (ancilla.prestosports.com/sports/sball/coaches/index) lists a single softball staff member: Izzy Johnson, Head Coach. Roster page (ancilla.prestosports.com/sports/sball/2025-26/roster) shows 17 players. School now branded 'Marian University Plymouth'; conference confirmed as MCCAA.",
+  "coaches": [
+    {
+      "name": "Izzy Johnson",
+      "title": "Head Coach",
+      "email": "ijohnson@marian.edu",
+      "phone": "765-461-2380",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "ancilla.prestosports.com softball coaches directory checked 2026-07-30; name, title, email and phone publicly listed; no public Twitter/X handle listed."
+    }
+  ]
+}

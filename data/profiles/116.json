@@ -1,0 +1,109 @@
+{
+  "sid": 116,
+  "name": "Huntington University",
+  "division": "NAIA",
+  "conference": "Crossroads League",
+  "city": "Huntington",
+  "state": "IN",
+  "website_url": "https://www.huathletics.com/sports/sball/index",
+  "academic_ranking": "Private Christian liberal arts university founded in 1897, affiliated with the Church of the United Brethren in Christ and a member of the CCCU. Consistently recognized among the best regional universities in the Midwest by U.S. News & World Report, Forbes, and The Princeton Review. No exact numeric ranking captured from official source.",
+  "tuition": 34170,
+  "financial_aid": "100% of traditional full-time HU students receive financial aid. The university offers 143 different scholarships and awarded roughly $17 million in aid for 2025/2026. Aid types include academic, athletic, performance, department, and need-based awards, plus alumni/church-service awards. Additional sources include federal aid (up to $7,395 for 25/26), Indiana State grants (up to $10,600 for 25/26), loans, and work-study. Source: huntington.edu/financial-aid, checked 2026-07.",
+  "roster_size": 28,
+  "scholarship_count": null,
+  "facilities_notes": "Softball plays at the HU Softball Field on the Huntington campus. Athletics facilities also include the Merillat Physical Education & Recreation Complex (weight/exercise rooms, Platt Arena), Forest Glen Park, King Stadium, and other venues. Source: huathletics.com/facility, checked 2026-07.",
+  "program_reputation": "NAIA member competing in the Crossroads League. Part of Huntington University's 18-sport athletics program (Foresters). Detailed competitive-history notes not captured from official source.",
+  "notes": "Athletics site: huathletics.com (Sidearm/PrestoSports; returns 403 to some automated fetchers, retrieved via browser user agent). Softball program pages under /sports/sball/. Roster size (28) counted from unique player bios on the 2025-26 softball roster (huathletics.com/sports/sball/2025-26/roster); the 2026-27 roster was not yet populated at time of research. Coaching staff captured live from huathletics.com/sports/sball/coaches/index on 2026-07. No Twitter/X handles were listed for any softball staff member.",
+  "coaches": [
+    {
+      "name": "Tim Averill",
+      "title": "Head Coach",
+      "email": "taverill@huntington.edu",
+      "phone": "260-227-0873",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "huathletics.com softball coaches page checked 2026-07; email and phone publicly listed, no Twitter/X listed."
+    },
+    {
+      "name": "Miranda Mokma",
+      "title": "Assistant Coach",
+      "email": "mkmokma@huntington.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "huathletics.com softball coaches page checked 2026-07; email listed, no public phone or Twitter/X listed."
+    },
+    {
+      "name": "Molly Long Sterrett",
+      "title": "Pitching Coach",
+      "email": "msterrett@huntington.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "huathletics.com softball coaches page checked 2026-07; email listed, no public phone or Twitter/X listed."
+    },
+    {
+      "name": "Dave Neuenschwander",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "huathletics.com softball coaches page checked 2026-07; no public email, phone, or Twitter/X listed."
+    },
+    {
+      "name": "Jen Blandin",
+      "title": "Assistant Coach/Recruiting Coordinator",
+      "email": "jblandin@huntington.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "huathletics.com softball coaches page checked 2026-07; email listed, no public phone or Twitter/X listed."
+    },
+    {
+      "name": "Shaana Robrock",
+      "title": "Chaplain",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 50,
+      "source_note": "huathletics.com softball coaches page checked 2026-07; no public email, phone, or Twitter/X listed."
+    },
+    {
+      "name": "Danielle Dathe",
+      "title": "Graduate Assistant",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 60,
+      "source_note": "huathletics.com softball coaches page checked 2026-07; no public email, phone, or Twitter/X listed."
+    },
+    {
+      "name": "Alyssa Allen",
+      "title": "Manager",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 70,
+      "source_note": "huathletics.com softball coaches page checked 2026-07; no public email, phone, or Twitter/X listed."
+    },
+    {
+      "name": "Max Robrock",
+      "title": "Student Assistant",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 80,
+      "source_note": "huathletics.com softball coaches page checked 2026-07; no public email, phone, or Twitter/X listed."
+    },
+    {
+      "name": "Brady Averill",
+      "title": "Student Assistant",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 90,
+      "source_note": "huathletics.com softball coaches page checked 2026-07; no public email, phone, or Twitter/X listed."
+    }
+  ]
+}

@@ -3,3 +3,7 @@ __pycache__/
 *.py[cod]
 jinx_recruiting.db
 .env
+
+# Scratch pages fetched during research runs (agents save HTML to the repo root)
+/*.html
+_tmp/

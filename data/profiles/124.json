@@ -1,0 +1,73 @@
+{
+  "sid": 124,
+  "name": "Calumet College of St. Joseph",
+  "division": "NAIA",
+  "conference": "Chicagoland Collegiate Athletic Conference",
+  "city": "Whiting",
+  "state": "IN",
+  "website_url": "https://ccsjathletics.com/sports/sball/index",
+  "academic_ranking": "Small private Catholic university accredited by the Higher Learning Commission, located in Whiting, IN near Chicago. Offers associate, bachelor, and master programs; serves 1,500+ students per semester. Emphasis on small class sizes, mentorship, social justice, and service learning.",
+  "tuition": 23900,
+  "financial_aid": "94% of students receive financial aid; all admitted students are automatically considered for internal scholarships and grants (per ccsj.edu tuition page, checked 2026-07).",
+  "roster_size": 19,
+  "scholarship_count": null,
+  "facilities_notes": "Athletics operates as the Crimson Wave. Softball plays home games off-campus; specific home venue not confirmed on the athletics facilities page (redirected, checked 2026-07). Campus (2400 New York Ave, Whiting, IN) includes Specker Memorial Library, four science labs, and a Student Success Center.",
+  "program_reputation": "NAIA program competing in the Chicagoland Collegiate Athletic Conference (CCAC). Softball led by Athletic Director/Head Coach Dave Lopez with a multi-person coaching and recruiting staff.",
+  "notes": "Data sourced live 2026-07 from ccsjathletics.com softball coaches page (/sports/sball/coaches/index) and 2025-26 roster (/sports/sball/2025-26/roster), plus ccsj.edu for tuition/academics. Athletics site blocks automated fetch (403); accessed via browser user-agent. Roster size 19 confirmed from 2025-26 roster (jersey numbers 1-44). Conference confirmed as CCAC. Coach emails from individual athletics bio pages; per-coach phone listed only for head coach.",
+  "coaches": [
+    {
+      "name": "Dave Lopez",
+      "title": "Head Coach",
+      "email": "dlopez@ccsj.edu",
+      "phone": "219-616-2054",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Athletics coaches bio page (ccsjathletics.com/sports/sball/coaches/Dave_Lopez), checked 2026-07; email and phone listed. Also serves as Athletic Director. No personal Twitter/X listed (team account is @CCSJSOFTBALL)."
+    },
+    {
+      "name": "Jackie Bryce",
+      "title": "Assistant Coach",
+      "email": "jbryce@ccsj.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Athletics coaches bio page (ccsjathletics.com/sports/sball/coaches/Jackie_Bryce), checked 2026-07; email listed, no public phone or personal Twitter/X."
+    },
+    {
+      "name": "Ashley Houlihan",
+      "title": "Assistant Coach",
+      "email": "ahoulihan@ccsj.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Athletics coaches bio page (ccsjathletics.com/sports/sball/coaches/Ashley_Houlihan), checked 2026-07; email listed, no public phone or personal Twitter/X."
+    },
+    {
+      "name": "Josselline Monge",
+      "title": "Assistant Coach",
+      "email": "jmonge14500@ccsj.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Athletics coaches bio page (ccsjathletics.com/sports/sball/coaches/Josseline_Monge), checked 2026-07; email listed, no public phone or personal Twitter/X."
+    },
+    {
+      "name": "Christin Sobeck",
+      "title": "Recruiting Operations Coordinator",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "Athletics coaches bio page (ccsjathletics.com/sports/sball/coaches/Christin_Sobeck), checked 2026-07; no public email, phone, or personal Twitter/X listed."
+    },
+    {
+      "name": "Jarrett Lopez",
+      "title": "Assistant Coach/Recruiter",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 50,
+      "source_note": "Athletics coaches bio page (ccsjathletics.com/sports/sball/coaches/Jarrett_Lopez), checked 2026-07; no public email, phone, or personal Twitter/X listed."
+    }
+  ]
+}

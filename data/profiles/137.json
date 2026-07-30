@@ -1,0 +1,37 @@
+{
+  "sid": 137,
+  "name": "Bluefield State University",
+  "division": "NCAA D2",
+  "conference": "Central Intercollegiate Athletic Association (CIAA)",
+  "city": "Bluefield",
+  "state": "WV",
+  "website_url": "https://gobstate.com/sports/softball",
+  "academic_ranking": "Public HBCU founded in 1895 (originally Bluefield Colored Institute), renamed Bluefield State University in 2022. Small enrollment (~1,300 students, ~59% female). Six colleges/schools including Arts and Sciences, W. Paul Cole Jr. School of Business, Engineering Technology, Health Sciences, Criminal Justice, and Education. Launched its first master's program (MBA) in 2022. No major national numeric ranking verified.",
+  "tuition": null,
+  "financial_aid": "As of Fall 2023, approximately 44% of students received income-based Pell grants. Federal, state, and institutional aid available; specific verified tuition figure not obtained from public sources checked 2026-07.",
+  "roster_size": 18,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes as part of Bluefield State (Big Blue) athletics in Bluefield, WV. Specific softball facility details not verified from public sources checked 2026-07.",
+  "program_reputation": "NCAA Division II program competing in the CIAA since the 2023-24 season. Athletics teams are nicknamed the Big Blue. Softball is a developing program within a small HBCU athletic department.",
+  "notes": "Data sourced from official athletics site gobstate.com softball coaches and roster pages and Wikipedia (school profile), checked 2026-07. Tuition figure not verified from a reliable public source and left null to avoid guessing. Roster size (18) taken from the softball roster page.",
+  "coaches": [
+    {
+      "name": "Chelsea Holliday",
+      "title": "Head Coach",
+      "email": "cholliday@bluefieldstate.edu",
+      "phone": "(304) 327-4147",
+      "twitter": "@CoachH0lli",
+      "sort_order": 0,
+      "source_note": "Softball coaches page gobstate.com checked 2026-07; email, phone, and twitter publicly listed."
+    },
+    {
+      "name": "Lexi Shadowens",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball coaches page gobstate.com checked 2026-07; no public email, phone, or twitter listed."
+    }
+  ]
+}

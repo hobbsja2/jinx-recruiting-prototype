@@ -1,0 +1,28 @@
+{
+  "sid": 140,
+  "name": "King University",
+  "division": "NCAA D2",
+  "conference": "Conference Carolinas",
+  "city": "Bristol",
+  "state": "TN",
+  "website_url": "https://www.kingtornado.com/sports/softball",
+  "academic_ranking": "Private Presbyterian-affiliated university (founded 1867) in Bristol, TN. Accredited by SACSCOC. Enrollment approximately 1,357 (Fall 2022). Offers 80+ undergraduate majors, minors, and pre-professional programs plus graduate degrees (MBA, MSW, M.Ed., MSN) and a Doctorate of Nursing Practice. No specific national ranking confirmed from public sources.",
+  "tuition": null,
+  "financial_aid": "King University awards over $19 million in financial aid annually to the majority of students, with an average annual award of about $20,336. Aid types include grants, scholarships, work-study, federal/state assistance, and loans. FAFSA federal school code 003496. Financial Aid Office: financialaid@king.edu, 423-652-4725. Exact published tuition figure not located on official pages as of 2026-07.",
+  "roster_size": 21,
+  "scholarship_count": null,
+  "facilities_notes": "Athletics site references general athletics facilities; no dedicated softball home field/stadium name published on the softball program or roster pages as of 2026-07.",
+  "program_reputation": "NCAA Division II program competing in Conference Carolinas. No specific softball championships or honors detailed on the public program page as of 2026-07.",
+  "notes": "Data gathered from kingtornado.com softball coaches/roster pages, king.edu financial aid page, and Wikipedia (academic profile) on 2026-07. Softball coaches directory listed only the head coach; no assistant coaches or support staff were publicly listed. Tuition not published on accessible official pages.",
+  "coaches": [
+    {
+      "name": "Kyleigh Payne",
+      "title": "Head Coach/Diversity & Inclusion Designee",
+      "email": "kmpayne@king.edu",
+      "phone": "423-652-4856",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "kingtornado.com softball coaches page checked 2026-07; no Twitter/X handle publicly listed."
+    }
+  ]
+}

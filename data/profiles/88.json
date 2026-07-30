@@ -1,0 +1,55 @@
+{
+  "sid": 88,
+  "name": "Campbellsville University",
+  "division": "NAIA",
+  "conference": "Mid-South Conference",
+  "city": "Campbellsville",
+  "state": "KY",
+  "website_url": "https://www.campbellsvilletigers.com/sports/softball",
+  "academic_ranking": "Private Christian university in Campbellsville, KY, affiliated with the Kentucky Baptist Convention. Offers a broad range of undergraduate and graduate programs with a liberal arts core. Emphasizes small class sizes and faith-based education. (Specific national ranking not confirmed from official pages during research.)",
+  "tuition": 29760,
+  "financial_aid": "University states it is committed to affordable, accessible education. Aid includes federal Pell Grants (up to $7,395/yr), Direct/PLUS loans, SEOG, Federal Work-Study; Kentucky state aid via KHEAA (KY Tuition Grant up to $3,300/yr, CAP Grant up to $5,300/yr for KY residents); and merit-based scholarships and need-based grants administered through the AwardSpring system. FAFSA and Net Price Calculator available. Source: campbellsville.edu financial aid page, checked 2026-07.",
+  "roster_size": 30,
+  "scholarship_count": null,
+  "facilities_notes": "Softball program plays at Campbellsville University. Specific field/stadium name and facility details were not confirmed from official athletics pages during research (softball landing page checked 2026-07; facilities not detailed).",
+  "program_reputation": "Competes in NAIA within the Mid-South Conference. Team carried a '(RV)' (Receiving Votes) designation in national rankings per the athletics site navigation as of 2026-07, indicating a competitive program that is nationally noticed but not top-ranked. Detailed recent record and standings not confirmed from official pages during research.",
+  "notes": "Data gathered from official athletics site (campbellsvilletigers.com) softball coaches and roster pages and the university financial aid/tuition pages, checked 2026-07. Tuition reflects 2026-2027 Campbellsville Campus flat rate (12-18 hrs) of $14,880/semester = $29,760/year (prior 2025-2026 year was $28,618/year). Roster size counted at 30 players. No individual coach Twitter/X handles were publicly listed; team X account is @CvilleLTS. Scholarship count not publicly listed.",
+  "coaches": [
+    {
+      "name": "Shannon Wathen",
+      "title": "Head Coach",
+      "email": "slwathen@campbellsville.edu",
+      "phone": "270-789-5335",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Official softball coaches page checked 2026-07; email and phone publicly listed; no individual X handle listed."
+    },
+    {
+      "name": "Bryce White",
+      "title": "Assistant Coach",
+      "email": "bdwhite@campbellsville.edu",
+      "phone": "270-789-5455",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Official softball coaches page checked 2026-07; email and phone publicly listed; no individual X handle listed."
+    },
+    {
+      "name": "Matthew Schmuck",
+      "title": "Assistant Coach",
+      "email": "mschmuck@campbellsville.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Official softball coaches page checked 2026-07; email listed; no public phone or X handle listed."
+    },
+    {
+      "name": "Emily Reynolds",
+      "title": "Graduate Assistant",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Official softball coaches page checked 2026-07; no public email, phone, or X handle listed."
+    }
+  ]
+}

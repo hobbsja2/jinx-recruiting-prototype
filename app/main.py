@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import html
+import os
 from contextlib import asynccontextmanager
 from pathlib import Path
 from urllib.parse import quote
@@ -26,9 +27,12 @@ TEMPLATES = Jinja2Templates(directory=str(ROOT / "templates"))
 async def lifespan(_: FastAPI):
     Base.metadata.create_all(bind=engine)
     sync_sqlite_columns()
-    with Session(bind=engine) as db:
-        seed_demo_data(db)
-        backfill_demo_contacts(db)
+    # Demo seeding is disabled: the database holds real college data. To restore
+    # the fictional local demo set, set JINX_SEED_DEMO=1 in the environment.
+    if os.environ.get("JINX_SEED_DEMO") == "1":
+        with Session(bind=engine) as db:
+            seed_demo_data(db)
+            backfill_demo_contacts(db)
     yield
 
 
@@ -216,7 +220,7 @@ async def player_create(request: Request, db: Session = Depends(get_db)):
 def player_detail(player_id: int, request: Request, db: Session = Depends(get_db)):
     player = get_or_404(db, Player, player_id)
     body = f'<div class="actions"><a class="button" href="/players/{player.id}/edit">Edit player</a><a class="button secondary" href="/players/{player.id}/metrics">Metrics dashboard</a><a class="button secondary" href="/school-lists/{player.id}">Recommended schools</a><a class="button secondary" href="/flyers/player/{player.id}">Flyer preview</a><a class="button secondary" href="/email/compose?player_id={player.id}">Compose email</a><form method="post" action="/players/{player.id}/delete"><button class="button danger">Delete</button></form></div>'
-    body += facts(player, [("grad_year", "Graduation year"), ("primary_position", "Primary position"), ("secondary_position", "Secondary position"), ("gpa", "GPA"), ("sat_act", "SAT / ACT"), ("height", "Height"), ("weight", "Weight"), ("throwing_hand", "Throws"), ("batting_side", "Bats"), ("highlight_link", "Highlight video"), ("social_handles", "Social"), ("notes", "Notes")])
+    body += facts(player, [("grad_year", "Graduation year"), ("primary_position", "Primary position"), ("secondary_position", "Secondary position"), ("player_email", "Player email"), ("parent_email", "Parent email"), ("gpa", "GPA"), ("sat_act", "SAT / ACT"), ("height", "Height"), ("weight", "Weight"), ("throwing_hand", "Throws"), ("batting_side", "Bats"), ("highlight_link", "Highlight video"), ("social_handles", "Social"), ("notes", "Notes")])
     return page(request, player.name, body, "Player recruiting profile")
 
 

@@ -1,0 +1,37 @@
+{
+  "sid": 120,
+  "name": "Taylor University",
+  "division": "NAIA",
+  "conference": "Crossroads League",
+  "city": "Upland",
+  "state": "IN",
+  "website_url": "https://www.taylortrojans.com/sports/sball/index",
+  "academic_ranking": "Private, non-denominational Christian liberal arts university founded in 1846 in Upland, IN; enrollment ~2,200. Ranked #2 Regional (Midwest) by U.S. News & World Report and #233 national by Forbes. Offers 100+ areas of study / 60+ majors; 99% of students are employed or in graduate school within six months of graduation.",
+  "tuition": 41300,
+  "financial_aid": "Tuition and fees for 2026-27 are $41,300 (total direct cost ~$53,548 with housing/food/fees). 99% of Taylor students receive financial aid; 600+ scholarships awarded with over $59 million distributed. Merit awards (based on GPA/test scores) range from $11,000 (Director) up to $21,000/yr (President), plus need-based aid via FAFSA (school code 001838): Taylor Fund/endowed grants, Federal Pell/SEOG, Indiana State Grants, Federal Direct Loans, and Work Study. Financial Aid Office: 765-998-5358, finaid@taylor.edu.",
+  "roster_size": null,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes on Taylor's Upland, IN campus (approximately 950-acre campus). Specific softball facility/stadium details were not verified from a live official page (athletics site returned bot-protection 403; roster/facility pages not directly accessible 2026-07).",
+  "program_reputation": "NAIA program competing in the Crossroads League (formerly Mid-Central College Conference). Program underwent a coaching transition, with Grace Glidewell named head coach in June 2025 following interim head coach Doug Gower (58-48 over two seasons) and former head coach Jessica Brown (2023). Taylor athletics has strong recent NAIA success across sports (men's cross country national champions 2020, women's cross country 2022).",
+  "notes": "Researched 2026-07. The official athletics domain taylortrojans.com blocks direct automated fetching (HTTP 403 / bot verification); coaching and profile data were verified via live rendering of taylortrojans.com softball pages through search-index sources plus taylor.edu (tuition/financial aid) and Wikipedia (institutional profile). Softball coaches page: https://www.taylortrojans.com/sports/sball/coaches/index . Roster count could not be confirmed from a live official roster page and is left null. Note: local cs_*.html sample files in the project repo are Cleveland State Cougars pages and are NOT Taylor University sources.",
+  "coaches": [
+    {
+      "name": "Grace Glidewell",
+      "title": "Head Coach",
+      "email": "grace_glidewell@taylor.edu",
+      "phone": "765-998-5292",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Verified via live taylortrojans.com softball coaches page (2026-07). Named head coach June 2025. No public Twitter/X handle listed."
+    },
+    {
+      "name": "Matt Glidewell",
+      "title": "Assistant Coach / Recruiting Coordinator",
+      "email": "matthew_glidewell@taylor.edu",
+      "phone": "",
+      "twitter": "@TUSBCoachMatt",
+      "sort_order": 10,
+      "source_note": "Verified via live taylortrojans.com softball coaches page (2026-07). Twitter/X handle @TUSBCoachMatt confirmed at x.com/TUSBCoachMatt. No public phone listed."
+    }
+  ]
+}

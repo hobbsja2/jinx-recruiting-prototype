@@ -1,0 +1,37 @@
+{
+  "sid": 110,
+  "name": "Hocking College",
+  "division": "JUCO",
+  "conference": "Ohio Community College Athletic Conference (OCCAC)",
+  "city": "Nelsonville",
+  "state": "OH",
+  "website_url": "https://athletics.hocking.edu/sports/sball/index",
+  "academic_ranking": "Public two-year community college in Nelsonville, OH (Athens County). Grants associate degrees and certificates with a career/technical and natural-resources focus (e.g., forestry, fish/wildlife management, nursing, culinary, allied health). Open-enrollment institution serving primarily Appalachian southeastern Ohio.",
+  "tuition": 6540,
+  "financial_aid": "Hocking College uses an all-inclusive pricing model. Full-time in-state tuition and course fees are approximately $3,270 per semester (roughly $6,540/year); out-of-state full-time is $6,540 per semester (out-of-state students add $218 per credit hour, or $3,270 per semester full time). The all-inclusive fee does not cover the $106 parking pass or housing and meal plans. FAFSA-based federal aid, grants, loans, and scholarships are available.",
+  "roster_size": 11,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes as the Hocking College Hawks. Specific softball facility details (field name, seating) were not publicly listed on the athletics site during research; campus is located at 3301 Hocking Parkway, Nelsonville, OH 45764.",
+  "program_reputation": "NJCAA women's softball program competing in the Ohio Community College Athletic Conference (OCCAC). Team publicized as 2023 and 2024 OCCAC Champions. Kylee Bako was announced as the new head softball coach on August 28, 2025.",
+  "notes": "Official athletics site (athletics.hocking.edu) returned HTTP 403 to WebFetch and Jina/proxy readers hit CAPTCHA; coaching staff, roster, and program details were retrieved via direct curl with a browser user-agent on 2026-07-30 from athletics.hocking.edu/sports/sball/coaches, /sports/sball/2025-26/roster, and /sports/sball/index. Roster_size = 11 reflects the 2025-26 roster listed live. Scholarship count not publicly listed; left null. Tuition reflects the annualized full-time in-state rate ($3,270/semester x 2) from hocking.edu/tuition-fees. Randy Williams' email is a public yahoo address as listed on the official coaches page.",
+  "coaches": [
+    {
+      "name": "Kylee Bako",
+      "title": "Head Softball Coach",
+      "email": "bakok@hocking.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Name/title/email from official softball coaches page (athletics.hocking.edu/sports/sball/coaches) fetched 2026-07-30; hire announced Aug 28, 2025. No public phone listed; team X handle @coachkylee referenced in search but not confirmed on official page."
+    },
+    {
+      "name": "Randy Williams",
+      "title": "Assistant Softball Coach",
+      "email": "rwill_03@yahoo.com",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Name/title/email from official softball coaches page (athletics.hocking.edu/sports/sball/coaches) fetched 2026-07-30; no public phone or Twitter/X handle listed."
+    }
+  ]
+}

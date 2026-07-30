@@ -1,0 +1,64 @@
+{
+  "sid": 96,
+  "name": "Kentucky Christian University",
+  "division": "NAIA",
+  "conference": "Appalachian Athletic Conference",
+  "city": "Grayson",
+  "state": "KY",
+  "website_url": "https://kcuknights.com/sports/sball/index",
+  "academic_ranking": "Private, 4-year, non-profit Christian university affiliated with the Christian Churches and Churches of Christ, located in Grayson, KY. Carnegie classification: Baccalaureate Colleges - Diverse Fields. Small enrollment of about 550 students (494 undergraduate) with a 12-to-1 student-to-faculty ratio. Overall (IPEDS) graduation rate of 37%. (Source: NCES College Navigator, id=157100)",
+  "tuition": 26625,
+  "financial_aid": "NCES-reported tuition and fees for 2024-2025 total $26,625. KCU emphasizes affordability of private Christian higher education. Per KCU cost-of-attendance page: average institutional gift assistance of $12,841 per student and an average total financial aid package of $24,913. Eligible students may receive Pell Grants and federal Direct Loans. (Sources: NCES College Navigator; kcu.edu/apply-afford/cost-aid/cost-of-attendance)",
+  "roster_size": 19,
+  "scholarship_count": null,
+  "facilities_notes": "Campus at 100 Academic Parkway, Grayson, KY 41143, with on-campus housing available. Softball competes as the KCU Knights in the NAIA Appalachian Athletic Conference. No specific softball facility details (stadium/field name) were publicly listed on the softball program pages checked 2026-07.",
+  "program_reputation": "NAIA women's softball program competing in the Appalachian Athletic Conference (AAC). Team social handle @GoKnightsSB. No notable national ranking or postseason accolades were confirmed on the pages checked; treat reputation as unverified beyond AAC membership.",
+  "notes": "Researched live 2026-07 from kcuknights.com. Softball URL code is 'sball'. Coaching staff captured from https://kcuknights.com/sports/sball/coaches/index and individual bio pages. Roster size (19) counted from 2025-26 roster page https://kcuknights.com/sports/sball/2025-26/roster. Only the head coach lists an individual email and phone; assistants/coordinator/student assistant show only the shared university switchboard (606-474-3270), so their individual email/phone were left blank. No individual Twitter/X handles are listed for coaches (team account is @GoKnightsSB). Tuition/academic/financial-aid data corroborated via NCES College Navigator (id=157100) and kcu.edu.",
+  "coaches": [
+    {
+      "name": "Mark Ritchhart",
+      "title": "Head Coach",
+      "email": "mdritchhart@kcu.edu",
+      "phone": "423-650-3950",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "kcuknights.com softball coaches bio page, checked 2026-07; email and phone publicly listed."
+    },
+    {
+      "name": "Chad Case",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "kcuknights.com softball coaches bio page, checked 2026-07; no public individual email, phone, or Twitter listed."
+    },
+    {
+      "name": "Jim Shelton",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "kcuknights.com softball coaches bio page, checked 2026-07; no public individual email, phone, or Twitter listed."
+    },
+    {
+      "name": "Brayden Staton",
+      "title": "Recruiting Coordinator",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "kcuknights.com softball coaches bio page, checked 2026-07; no public individual email, phone, or Twitter listed."
+    },
+    {
+      "name": "Makenna Mulhearn",
+      "title": "Student Assistant",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "kcuknights.com softball coaches bio page, checked 2026-07; no public individual email, phone, or Twitter listed."
+    }
+  ]
+}

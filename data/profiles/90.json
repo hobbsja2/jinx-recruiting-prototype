@@ -1,0 +1,55 @@
+{
+  "sid": 90,
+  "name": "Georgetown College",
+  "division": "NAIA",
+  "conference": "Mid-South Conference",
+  "city": "Georgetown",
+  "state": "KY",
+  "website_url": "https://georgetowncollegeathletics.com/sports/sball/coaches/index",
+  "academic_ranking": "Private, Baptist-affiliated Christian liberal arts college founded in 1829 in Georgetown, KY. Baccalaureate College - Arts & Sciences; offers 40+ undergraduate programs plus a Master of Arts in Education. Undergraduate enrollment ~1,097; acceptance rate ~91%.",
+  "tuition": 42840,
+  "financial_aid": "2024-25 undergraduate tuition & fees approx. $42,840 (well above the average for baccalaureate colleges); additional living costs ~$14,000/year. NAIA athletic scholarships are available and renewable through the eighth semester provided GPA requirements are met; students must file the FAFSA each year to renew need-based aid. All student-athletes must be cleared by the NAIA Eligibility Center (playnaia.org).",
+  "roster_size": null,
+  "scholarship_count": null,
+  "facilities_notes": "Home softball venue is the Tiger Softball Complex, 794 Lemons Mill Rd, Georgetown, KY 40324.",
+  "program_reputation": "Established NAIA program competing in the Mid-South Conference (MSC) since 1995-96. Multiple-time MSC regular season champions and Georgetown's first NAIA national tournament team under head coach Thomas Thornton. Recent NAIA All-Americans include Madison Diaz and Maggie Byrd; Haylee Stansbury named MSC Champion of Character.",
+  "notes": "Athletics site (georgetowncollegeathletics.com) blocks automated fetches (HTTP 403 / CAPTCHA); coaching staff, contact details, and program data compiled from live search-engine result snippets and the school's cached staff/roster pages, 2026-07. Roster size could not be confirmed from a live source and is left null. Kara Howard has a dedicated softball coaches page (sports/sball/coaches/Kara_Howard) confirming a current staff role; her exact title/contact were not publicly retrievable.",
+  "coaches": [
+    {
+      "name": "Thomas Thornton",
+      "title": "Head Coach",
+      "email": "thomas_thornton@georgetowncollege.edu",
+      "phone": "502-863-7017",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Name, title, email and phone from athletics staff directory result snippet, 2026-07. Georgetown College '93; 640-427 over 24 years. No public twitter handle listed."
+    },
+    {
+      "name": "Dave Woolums",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "@CoachDave_GC",
+      "sort_order": 10,
+      "source_note": "Assistant Coach, Georgetown College, per staff/NCSA snippets and his X profile (@CoachDave_GC), 2026-07. Staff directory checked 2026-07; no public GC email or phone listed."
+    },
+    {
+      "name": "Kara Howard",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Listed on Georgetown College softball coaches page (sports/sball/coaches/Kara_Howard) and NCSA staff snippet as Assistant Coach; former GC player. Staff directory checked 2026-07; no public email, phone, or twitter listed."
+    },
+    {
+      "name": "Callie Allison",
+      "title": "Student Assistant",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Listed as Student Assistant on Georgetown College softball staff page snippet, 2026-07. Staff directory checked 2026-07; no public email, phone, or twitter listed."
+    }
+  ]
+}

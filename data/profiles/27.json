@@ -1,0 +1,55 @@
+{
+  "sid": 27,
+  "name": "Franklin College",
+  "division": "NCAA D3",
+  "conference": "Heartland Collegiate Athletic Conference",
+  "city": "Franklin",
+  "state": "IN",
+  "website_url": "https://franklingrizzlies.com/sports/softball",
+  "academic_ranking": "Private liberal arts college in Franklin, IN. Offers Bachelor of Arts degrees across 49 majors from 25 academic disciplines, 43 minors, 11 pre-professional programs, and 5 cooperative programs, plus master's programs in Athletic Training and Physician Assistant Studies. Enrollment ~966 (fall 2023) with roughly 81 full-time and 35 part-time faculty.",
+  "tuition": 40230,
+  "financial_aid": "Full-time undergraduate tuition $40,230 for the 2026-27 academic year. Franklin College processed $35.5 million in financial aid in 2023-24. Per College Navigator, 100% of full-time beginning undergraduates received grant or scholarship aid.",
+  "roster_size": 26,
+  "scholarship_count": null,
+  "facilities_notes": "NCAA Division III program; as a D3 institution Franklin College does not offer athletic scholarships. Softball facility details not detailed on program pages checked 2026-07.",
+  "program_reputation": "NCAA Division III softball program (Grizzlies) competing in the Heartland Collegiate Athletic Conference, of which Franklin College is a charter and current member.",
+  "notes": "Data gathered from franklingrizzlies.com softball staff and roster pages, franklincollege.edu, and NCES College Navigator on 2026-07. NCAA D3 - no athletic scholarships offered; scholarship_count set to null. Team-level social handle @FCGrizSoftball; no individual coach Twitter/X handles listed.",
+  "coaches": [
+    {
+      "name": "Brittney Harvey",
+      "title": "Head Softball Coach/Assistant Director of Athletics/SWA",
+      "email": "bharvey@franklincollege.edu",
+      "phone": "317-738-8158",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball staff directory franklingrizzlies.com checked 2026-07; email and phone publicly listed; no individual Twitter/X handle listed."
+    },
+    {
+      "name": "Amanda Prather",
+      "title": "Assistant Softball Coach",
+      "email": "aprather@franklincollege.edu",
+      "phone": "317-443-8158",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball staff directory franklingrizzlies.com checked 2026-07; email and phone publicly listed; no individual Twitter/X handle listed."
+    },
+    {
+      "name": "Abby Hickson",
+      "title": "Volunteer Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Softball staff directory franklingrizzlies.com checked 2026-07; no public email or phone listed; no Twitter/X handle listed."
+    },
+    {
+      "name": "Makiah Thomas",
+      "title": "Volunteer Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Softball staff directory franklingrizzlies.com checked 2026-07; no public email or phone listed; no Twitter/X handle listed."
+    }
+  ]
+}

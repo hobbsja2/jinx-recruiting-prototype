@@ -1,0 +1,64 @@
+{
+  "sid": 115,
+  "name": "Grace College and Seminary",
+  "division": "NAIA",
+  "conference": "Crossroads League",
+  "city": "Winona Lake",
+  "state": "IN",
+  "website_url": "https://gclancers.com/sports/softball",
+  "academic_ranking": "Private Christian liberal arts college in Winona Lake, IN offering over 100 academic programs (majors, degrees, and pathways) including online, dual enrollment, and accelerated degree options. No public acceptance rate, GPA, or standardized test averages were listed on the school cost page checked 2026-07.",
+  "tuition": 32458,
+  "financial_aid": "2026-2027 full-time undergraduate tuition is $32,458 (12-18 credit hours). Total direct cost approx. $44,556 on-campus (food/housing +$11,198, $900 comprehensive fee) or $33,358 commuter. Financial aid options include scholarships & grants, college loans, online financial aid, and military/veteran benefits; specific aid dollar amounts not published on the cost page (checked 2026-07).",
+  "roster_size": 18,
+  "scholarship_count": null,
+  "facilities_notes": "Softball program competes as the Grace College Lancers. Specific softball facility details not published on athletics pages checked 2026-07.",
+  "program_reputation": "NAIA program competing in the Crossroads League. Program social media account listed as @GC__Softball.",
+  "notes": "Coaching staff and roster captured from gclancers.com softball pages (coaches and roster) on 2026-07. Roster size of 18 taken from the 2026 softball roster page. Athletics site: gclancers.com. Scholarship count not publicly listed.",
+  "coaches": [
+    {
+      "name": "Amanda Jones",
+      "title": "Head Softball Coach",
+      "email": "amanda.jones@grace.edu",
+      "phone": "574-372-5100 x6273",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "gclancers softball coaches page checked 2026-07; email and phone publicly listed, no individual Twitter handle listed"
+    },
+    {
+      "name": "Cassie Hayes",
+      "title": "Graduate Assistant",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "gclancers softball coaches page checked 2026-07; no public email, phone, or Twitter listed"
+    },
+    {
+      "name": "Maggie Chinnadurai",
+      "title": "Graduate Assistant",
+      "email": "chinnam@grace.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "gclancers softball coaches page checked 2026-07; email listed, no public phone or Twitter listed"
+    },
+    {
+      "name": "Bri Flanegan",
+      "title": "Volunteer Assistant Coach",
+      "email": "",
+      "phone": "574-372-5100 x6273",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "gclancers softball coaches page checked 2026-07; phone listed (shared department number), no public email or Twitter listed"
+    },
+    {
+      "name": "Scott Freds",
+      "title": "Volunteer Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "gclancers softball coaches page checked 2026-07; no public email, phone, or Twitter listed"
+    }
+  ]
+}

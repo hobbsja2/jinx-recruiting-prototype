@@ -1,0 +1,37 @@
+{
+  "sid": 92,
+  "name": "Brescia University",
+  "division": "NAIA",
+  "conference": "River States Conference",
+  "city": "Owensboro",
+  "state": "KY",
+  "website_url": "https://bresciabearcats.com/sports/sball/index",
+  "academic_ranking": "Private, four-year Catholic liberal arts institution founded by the Ursuline Sisters of Mount Saint Joseph. Small enrollment (roughly 550 undergraduates, ~690 total, fall 2023-2024). Known for small class sizes and programs in business, education, social work, and pre-professional/health tracks. No specific national ranking confirmed from primary sources.",
+  "tuition": 31550,
+  "financial_aid": "Published 2024-25 undergraduate cost is approximately $31,550 per year ($30,500 base tuition plus ~$1,050 required fees), per third-party aggregators (univstats, collegefactual). As a private NAIA institution Brescia offers institutional academic scholarships, need-based aid, and athletic aid; specific award amounts were not published on public pages checked 2026-07.",
+  "roster_size": 18,
+  "scholarship_count": null,
+  "facilities_notes": "Softball is part of Brescia Bearcats athletics in Owensboro, KY. Specific softball facility/field details were not published on the public softball pages checked 2026-07.",
+  "program_reputation": "NAIA program competing in the River States Conference. Public roster and staff pages confirmed an active program with a full 18-player 2025-26 roster and a two-person coaching staff (head coach plus one assistant). No conference-championship or ranking claims verified from primary sources.",
+  "notes": "Data captured 2026-07-30 from live bresciabearcats.com pages (correct softball path is /sports/sball/). Note: the athletics CDN intermittently served stale Ohio Dominican University content under a Brescia-titled shell; cache-busted requests returned the correct Brescia data, which is what is reported here. Coaching staff directory (/sports/sball/coaches/index) listed exactly two softball staff: Traci Smith (Head Coach) and Greg Tanner (Assistant Coach); no recruiting coordinator, player-development director, GA, or volunteer positions were listed. Roster size (18) is from the most recent populated roster, 2025-26 (/sports/sball/2025-26/roster); the 2026-27 roster page exists but was empty/not yet posted. Conference (River States) and NAIA affiliation confirmed via Wikipedia. Tuition confirmed via two independent aggregators (univstats, collegefactual); brescia.edu and NCES/CollegeScorecard blocked or did not return dollar figures.",
+  "coaches": [
+    {
+      "name": "Traci Smith",
+      "title": "Head Coach",
+      "email": "traci.smith@brescia.edu",
+      "phone": "270-686-4341",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Email and phone listed on her bio page /sports/sball/coaches/Traci_Smith (checked 2026-07); no personal Twitter/X handle listed (only the team account @BresciaBearcats)."
+    },
+    {
+      "name": "Greg Tanner",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Staff directory and bio page /sports/sball/coaches/Greg_Tanner checked 2026-07; no public email, phone, or Twitter/X handle listed (bio showed only title)."
+    }
+  ]
+}

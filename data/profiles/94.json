@@ -1,0 +1,46 @@
+{
+  "sid": 94,
+  "name": "University of Pikeville",
+  "division": "NAIA",
+  "conference": "Appalachian Athletic Conference",
+  "city": "Pikeville",
+  "state": "KY",
+  "website_url": "https://upikebears.com/sports/softball",
+  "academic_ranking": "Private university founded in 1889, affiliated with the Presbyterian Church (USA), accredited by SACS. Fall 2024 enrollment of about 2,547 students (roughly 1,540 undergraduates). Confers associate, bachelor's, master's, and doctoral degrees across six academic divisions plus the Kentucky College of Osteopathic Medicine and a Doctor of Optometry program.",
+  "tuition": 24850,
+  "financial_aid": "Approximately 97% of enrolled undergraduates receive grants or scholarships, with an average award of about $21,613 (2024-2025 data via CollegeTuitionCompare).",
+  "roster_size": 27,
+  "scholarship_count": null,
+  "facilities_notes": "No softball-specific venue or facility details were publicly listed on the athletics site as of 2026-07; staff directory and softball pages checked, no field name provided.",
+  "program_reputation": "NAIA program competing in the Appalachian Athletic Conference. Softball page and staff directory checked 2026-07; no notable awards or reputation detail publicly published.",
+  "notes": "Coaching staff and roster confirmed from upikebears.com softball pages on 2026-07. Coach contact info (email, phone, twitter) is not publicly listed on the athletics staff directory or softball coaches page. Tuition and financial aid figures sourced from CollegeTuitionCompare (2024-2025); enrollment/academic profile from Wikipedia.",
+  "coaches": [
+    {
+      "name": "Robert Staggs",
+      "title": "Assistant Director of Athletics, Head Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "upikebears.com softball coaches/staff directory checked 2026-07; no public email, phone, or twitter listed"
+    },
+    {
+      "name": "April Charles",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "upikebears.com softball coaches/staff directory checked 2026-07; no public email, phone, or twitter listed"
+    },
+    {
+      "name": "Ellie Keene",
+      "title": "Graduate Assistant",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "upikebears.com softball coaches/staff directory checked 2026-07; no public email, phone, or twitter listed"
+    }
+  ]
+}

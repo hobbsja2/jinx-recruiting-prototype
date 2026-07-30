@@ -1,0 +1,37 @@
+{
+  "sid": 35,
+  "name": "Kentucky State University",
+  "division": "NCAA D2",
+  "conference": "Southern Intercollegiate Athletic Conference (SIAC)",
+  "city": "Frankfort",
+  "state": "KY",
+  "website_url": "https://ksuthorobreds.com/sports/softball",
+  "academic_ranking": "Public historically black land-grant university (HBCU) founded in 1886; total enrollment approximately 2,020 (fall 2024). Offers 4 associate degrees, 55 undergraduate degrees, and 6 postgraduate programs across five colleges plus the Whitney Young School of Honors and Liberal Studies. No specific national numeric ranking confirmed from a primary source during research.",
+  "tuition": null,
+  "financial_aid": "Federal and state aid, need-based aid, and institutional/athletic scholarships available as a public land-grant HBCU. Specific annual figures not confirmed from a primary source during research (2026-07); KSU tuition/cost-of-attendance pages returned HTTP 404 and third-party databases returned data for the wrong institution.",
+  "roster_size": 13,
+  "scholarship_count": null,
+  "facilities_notes": "Softball program listed on the KSU Thorobreds athletics site. No specific softball venue/stadium details were published on the softball program or facilities pages at time of research (2026-07).",
+  "program_reputation": "NCAA Division II softball program competing in the Southern Intercollegiate Athletic Conference (SIAC) as the Kentucky State Thorobreds. Small 2026 roster (13 players). Team X/Twitter: @kysusoftball.",
+  "notes": "Researched live 2026-07-30 from ksuthorobreds.com. Softball coaches page lists a two-person staff (head coach + one assistant). Tuition and scholarship_count set to null because they could not be verified from a reliable primary source (university tuition pages 404'd; NCES College Navigator / College Scorecard ID 157401 returned Murray State data). Roster size (13 players; excludes team manager) from the 2026 softball roster page.",
+  "coaches": [
+    {
+      "name": "David Morton Jr.",
+      "title": "Head Softball Coach",
+      "email": "david.morton@kysu.edu",
+      "phone": "502-597-6923",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball coaches page ksuthorobreds.com checked 2026-07; email and phone publicly listed. No individual X handle listed (team account: @kysusoftball)."
+    },
+    {
+      "name": "Abby Wall",
+      "title": "Assistant Softball Coach",
+      "email": "abby.wall@kysu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball coaches page ksuthorobreds.com checked 2026-07; email listed, no public phone listed. No individual X handle listed."
+    }
+  ]
+}

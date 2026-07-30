@@ -1,0 +1,100 @@
+{
+  "sid": 78,
+  "name": "University of Tennessee at Chattanooga",
+  "division": "NCAA D1",
+  "conference": "Southern Conference",
+  "city": "Chattanooga",
+  "state": "TN",
+  "website_url": "https://gomocs.com/sports/softball",
+  "academic_ranking": "Regional public university (University of Tennessee system). Mid-size doctoral/research institution with roughly 11,000 students; moderately selective admissions. Specific ranking not verified from an authoritative source during research.",
+  "tuition": null,
+  "financial_aid": "Public university offering both in-state and out-of-state tuition rates; standard federal/state aid, need- and merit-based scholarships available through UTC. Specific USD tuition figure not confirmed from an authoritative source during research (staff/bursar pages returned 404 and third-party sites resolved to other Tennessee schools).",
+  "roster_size": 21,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes at the on-campus facility within the UTC athletics complex (gomocs.com). Facility page not accessible during research; no verified details captured.",
+  "program_reputation": "NCAA Division I program competing in the Southern Conference (SoCon). Detailed championship/NCAA appearance history not verified from an authoritative source during research.",
+  "notes": "Data collected from gomocs.com softball coaches and roster pages, fetched 2026-07-30. Coaching staff and support staff reflect the 2026 directory. Tuition and scholarship figures left null because they could not be confirmed from an authoritative UTC/NCES source (multiple lookups resolved to other schools or returned 404).",
+  "coaches": [
+    {
+      "name": "Frank Reed",
+      "title": "Head Coach",
+      "email": "frank-reed@utc.edu",
+      "phone": "423-425-2163",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "gomocs.com softball coaches page, fetched 2026-07-30. No public Twitter/X handle listed."
+    },
+    {
+      "name": "Scottie Kilgore",
+      "title": "Associate Head Coach",
+      "email": "scottie-kilgore@utc.edu",
+      "phone": "423-425-2163",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "gomocs.com softball coaches page, fetched 2026-07-30. No public Twitter/X handle listed."
+    },
+    {
+      "name": "Cheyanne Camp",
+      "title": "Assistant Coach",
+      "email": "cheyanne-tarango@utc.edu",
+      "phone": "423-425-2163",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "gomocs.com softball coaches page, fetched 2026-07-30. Email listed under cheyanne-tarango@utc.edu. No public Twitter/X handle listed."
+    },
+    {
+      "name": "Ryan Brzozoski",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "gomocs.com softball coaches page, fetched 2026-07-30. No public email, phone, or Twitter/X handle listed."
+    },
+    {
+      "name": "Sharon Tomei",
+      "title": "Director of Player Development",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "gomocs.com softball coaches page, fetched 2026-07-30. No public email, phone, or Twitter/X handle listed."
+    },
+    {
+      "name": "Kyle Mether",
+      "title": "Assistant Athletic Trainer (Softball & Football)",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 50,
+      "source_note": "gomocs.com softball support staff, fetched 2026-07-30. No public email, phone, or Twitter/X handle listed."
+    },
+    {
+      "name": "Chris James",
+      "title": "Assistant Director - Athletics Performance",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 60,
+      "source_note": "gomocs.com softball support staff, fetched 2026-07-30. No public email, phone, or Twitter/X handle listed."
+    },
+    {
+      "name": "Katie Feeney",
+      "title": "Academic Advisor",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 70,
+      "source_note": "gomocs.com softball support staff, fetched 2026-07-30. No public email, phone, or Twitter/X handle listed."
+    },
+    {
+      "name": "Anne Wehunt",
+      "title": "Assistant Director - Strategic Communications (Softball, Soccer, CC/TF)",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 80,
+      "source_note": "gomocs.com softball support staff, fetched 2026-07-30. No public email, phone, or Twitter/X handle listed."
+    }
+  ]
+}

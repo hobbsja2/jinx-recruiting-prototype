@@ -1,0 +1,46 @@
+{
+  "sid": 34,
+  "name": "Purdue University Northwest",
+  "division": "NCAA D2",
+  "conference": "Great Lakes Intercollegiate Athletic Conference",
+  "city": "Hammond",
+  "state": "IN",
+  "website_url": "https://pnwathletics.com/sports/softball",
+  "academic_ranking": "Purdue University Northwest is a 4-year public university (part of the Purdue University system) located in Hammond, Indiana. Total enrollment approx. 9,051 with about 8,201 undergraduates; student-to-faculty ratio approx. 17:1. Suburban campus setting with on-campus housing available.",
+  "tuition": null,
+  "financial_aid": "As a public regional university, PNW offers in-state (Indiana resident) and out-of-state tuition rates. Federal and state need-based aid, merit scholarships, and athletic aid are available. Exact current tuition figures were not confirmed from a live authoritative source during this research (2026-07); prospective recruits should confirm current rates with the PNW Bursar/Financial Aid office.",
+  "roster_size": 22,
+  "scholarship_count": null,
+  "facilities_notes": "PNW softball competes at the NCAA Division II level in the GLIAC. Specific softball facility (field/stadium) details were not confirmed from a live source during this research; see pnwathletics.com for current facility information.",
+  "program_reputation": "NCAA Division II women's softball program competing in the Great Lakes Intercollegiate Athletic Conference (GLIAC). Currently operating under an interim head coach (2026 season).",
+  "notes": "Staff directory (pnwathletics.com/sports/softball/coaches) fetched live 2026-07-30. Three softball staff members listed: interim head coach and two assistant coaches. No Twitter/X handles were published on the staff page. Roster page confirmed 22 players for 2026. Tuition and scholarship counts left null because they could not be confirmed from a live authoritative source (PNW bursar pages returned 404 during research).",
+  "coaches": [
+    {
+      "name": "Claire Schapker",
+      "title": "Interim Head Coach",
+      "email": "cschapke@pnw.edu",
+      "phone": "(219) 989-8301",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "pnwathletics.com softball coaches page fetched 2026-07-30; no Twitter/X handle listed"
+    },
+    {
+      "name": "Ellie Manderfeld",
+      "title": "Assistant Coach",
+      "email": "emanderf@purdue.edu",
+      "phone": "(219) 989-8301",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "pnwathletics.com softball coaches page fetched 2026-07-30; no Twitter/X handle listed"
+    },
+    {
+      "name": "Raven VerVoort",
+      "title": "Assistant Coach",
+      "email": "rvandenl@purdue.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "pnwathletics.com softball coaches page fetched 2026-07-30; no public phone or Twitter/X handle listed"
+    }
+  ]
+}

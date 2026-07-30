@@ -1,0 +1,46 @@
+{
+  "sid": 6,
+  "name": "Ohio Dominican University",
+  "division": "NCAA D2",
+  "conference": "Great Midwest Athletic Conference (G-MAC)",
+  "city": "Columbus",
+  "state": "OH",
+  "website_url": "https://ohiodominicanpanthers.com/sports/softball",
+  "academic_ranking": "Private Catholic (Dominican) university founded in 1911 in Columbus, OH. Small institution: ~1,139 students enrolled, average class size 15. Offers 30 undergraduate majors and 10 master's degree programs. Reported 91% job and grad-school placement rate within six months of graduation. Incoming class averages (per ODU Fast Facts): 3.4 GPA, 24 ACT, 1021 SAT.",
+  "tuition": 36528,
+  "financial_aid": "Full-time undergraduate tuition $18,264/semester ($36,528/year) for 2026-2027; tuition & fees total approx. $37,138/year. Cost of attendance living on campus ~$53,950 (in-state). ODU reports 99% of full-time undergraduate students received some form of financial assistance in 2025-2026. Office of Financial Aid: (614) 251-4778, finaid@ohiodominican.edu.",
+  "roster_size": 20,
+  "scholarship_count": null,
+  "facilities_notes": "Home softball venue is Panther Softball Field (on-campus, dedicated softball facilities page on the athletics site). Athletics site: ohiodominicanpanthers.com.",
+  "program_reputation": "NCAA Division II program competing in the Great Midwest Athletic Conference (G-MAC). Head coach Marcella Vanlandingham leads the Panthers. 2026 roster of 20 players. Team X/Twitter account: @ODU_Softball.",
+  "notes": "Note on source domain: the athletics URL provided in discovery (odupanthers.com) no longer resolves; the school's current athletics site is ohiodominicanpanthers.com. All data captured live from ohiodominicanpanthers.com (softball coaches and 2026 roster pages) and ohiodominican.edu (Fast Facts, Financial Aid, and 2026-2027 undergraduate tuition & fees pages), checked 2026-07. scholarship_count left null: no publicly listed softball scholarship/equivalency count found on the program pages.",
+  "coaches": [
+    {
+      "name": "Marcella Vanlandingham",
+      "title": "Head Coach",
+      "email": "vanlandm@ohiodominican.edu",
+      "phone": "614-251-4532",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball coaches page (ohiodominicanpanthers.com) checked 2026-07; email and phone publicly listed. No individual X/Twitter handle listed (team account @ODU_Softball)."
+    },
+    {
+      "name": "McKenzie Bump",
+      "title": "Assistant Coach",
+      "email": "bumpm@ohiodominican.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball coaches page checked 2026-07; email publicly listed. No public phone or X/Twitter handle listed."
+    },
+    {
+      "name": "Madison Kennedy",
+      "title": "Graduate Assistant",
+      "email": "kennedym9@ohiodominican.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Softball coaches page checked 2026-07; email publicly listed. No public phone or X/Twitter handle listed."
+    }
+  ]
+}

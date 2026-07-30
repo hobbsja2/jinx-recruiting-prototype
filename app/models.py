@@ -11,14 +11,14 @@ class College(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(String(160))
     division: Mapped[str] = mapped_column(String(30))
-    conference: Mapped[str | None] = mapped_column(String(100))
+    conference: Mapped[str | None] = mapped_column(Text)
     city: Mapped[str | None] = mapped_column(String(100))
     state: Mapped[str | None] = mapped_column(String(30))
-    academic_ranking: Mapped[str | None] = mapped_column(String(100))
+    academic_ranking: Mapped[str | None] = mapped_column(Text)
     tuition: Mapped[float | None] = mapped_column(Float)
     financial_aid: Mapped[str | None] = mapped_column(Text)
-    head_coach: Mapped[str | None] = mapped_column(String(120))
-    recruiting_coordinator: Mapped[str | None] = mapped_column(String(120))
+    head_coach: Mapped[str | None] = mapped_column(Text)
+    recruiting_coordinator: Mapped[str | None] = mapped_column(Text)
     coach_emails: Mapped[str | None] = mapped_column(Text)
     coach_phones: Mapped[str | None] = mapped_column(Text)
     roster_size: Mapped[int | None] = mapped_column(Integer)
@@ -28,6 +28,30 @@ class College(Base):
     website_url: Mapped[str | None] = mapped_column(String(300))
     notes: Mapped[str | None] = mapped_column(Text)
     needs: Mapped[list[TeamNeed]] = relationship(back_populates="college", cascade="all, delete-orphan")
+    coaches: Mapped[list[Coach]] = relationship(
+        back_populates="college", cascade="all, delete-orphan", order_by="Coach.sort_order")
+
+
+class Coach(Base):
+    """A single member of a college's softball coaching staff.
+
+    Colleges keep flat head_coach / coach_emails fields for the existing UI and
+    email tools; this table holds the full structured staff (head coach,
+    assistants, recruiting coordinators, directors of player development, etc.).
+    """
+    __tablename__ = "coaches"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    college_id: Mapped[int] = mapped_column(ForeignKey("colleges.id"))
+    name: Mapped[str] = mapped_column(String(160))
+    title: Mapped[str | None] = mapped_column(String(120))
+    email: Mapped[str | None] = mapped_column(String(160))
+    phone: Mapped[str | None] = mapped_column(String(50))
+    twitter: Mapped[str | None] = mapped_column(String(120))
+    # Lower sort_order surfaces first; head coach = 0, assistants after.
+    sort_order: Mapped[int] = mapped_column(Integer, default=100)
+    # Provenance for contact fields that were checked but not publicly listed.
+    source_note: Mapped[str | None] = mapped_column(Text)
+    college: Mapped[College] = relationship(back_populates="coaches")
 
 
 class TeamNeed(Base):

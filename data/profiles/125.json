@@ -1,0 +1,37 @@
+{
+  "sid": 125,
+  "name": "Indiana University South Bend",
+  "division": "NAIA",
+  "conference": "Chicagoland Collegiate Athletic Conference",
+  "city": "South Bend",
+  "state": "IN",
+  "website_url": "https://iusbtitans.com/index.aspx?path=softball",
+  "academic_ranking": "Public regional master's university within the Indiana University System; the third largest and northernmost IU campus. Offers programs through the Raclin School of the Arts, Judd Leighton School of Business and Economics, School of Education, Vera Z. Dwyer College of Health Sciences, College of Liberal Arts and Sciences, and School of Social Work. Total enrollment approximately 4,300 (Fall 2022), with roughly 3,750 undergraduates.",
+  "tuition": null,
+  "financial_aid": "More than 70% of IU South Bend students receive scholarship or financial aid (per southbend.iu.edu). Exact published tuition figures could not be confirmed from a live authoritative source during research (2026-07).",
+  "roster_size": 14,
+  "scholarship_count": null,
+  "facilities_notes": "Softball home venue is Dick Pfeil Field (per iusbtitans.com softball roster page, 2026-07).",
+  "program_reputation": "NAIA program competing in the Chicagoland Collegiate Athletic Conference (CCAC). Indiana University South Bend Titans athletics.",
+  "notes": "Data sourced live from iusbtitans.com softball coaches and roster pages and southbend.iu.edu (2026-07). Coaching staff page listed only a head coach and one assistant coach at time of research. Tuition and scholarship_count left null; not confirmable from authoritative live sources during research.",
+  "coaches": [
+    {
+      "name": "Annie Dehnke",
+      "title": "Head Softball Coach",
+      "email": "andehnke@iu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "iusbtitans.com softball coaches page checked 2026-07; no public phone or twitter listed."
+    },
+    {
+      "name": "Mikaela Schramski",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "iusbtitans.com softball coaches page checked 2026-07; no public email, phone, or twitter listed."
+    }
+  ]
+}
