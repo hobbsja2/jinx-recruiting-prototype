@@ -1,0 +1,7 @@
+{
+  "sid": 65,
+  "name": "Motlow State Community College",
+  "out_of_state_tuition": 17722,
+  "is_private_single_rate": false,
+  "oos_note": "Public JUCO (TN Board of Regents). Out-of-state (non-resident) tuition & fees $17,722 vs in-state $4,738 from federal College Scorecard/IPEDS 'latest' data (approx 2023-24 reporting year). Official mscc.edu and tbr.edu tuition pages returned HTTP 403 to automated fetch, so used federal government source. Note: known in-state benchmark ($5,064) is a slightly more recent figure; the non-resident number here is the most recent officially verifiable value."
+}

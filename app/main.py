@@ -3,10 +3,12 @@ from __future__ import annotations
 import html
 import os
 from contextlib import asynccontextmanager
+from io import BytesIO
 from pathlib import Path
 from urllib.parse import quote
 
-from fastapi import Depends, FastAPI, HTTPException, Query, Request
+from PIL import Image as PILImage, ImageOps
+from fastapi import Depends, FastAPI, File, HTTPException, Query, Request, UploadFile
 from fastapi.responses import RedirectResponse, Response
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -21,6 +23,10 @@ from .seed import backfill_demo_contacts, seed_demo_data
 
 ROOT = Path(__file__).resolve().parent.parent
 TEMPLATES = Jinja2Templates(directory=str(ROOT / "templates"))
+STATIC_ROOT = (ROOT / "static").resolve()
+PHOTO_DIR = STATIC_ROOT / "uploads" / "players"
+MAX_PHOTO_BYTES = 8 * 1024 * 1024
+THUMB_SIZE = (480, 480)
 
 
 @asynccontextmanager
@@ -39,8 +45,14 @@ async def lifespan(_: FastAPI):
 app = FastAPI(title="Jinx Recruiting", lifespan=lifespan)
 app.mount("/static", StaticFiles(directory=str(ROOT / "static")), name="static")
 
-COLLEGE_FIELDS = [("name", "College name", "text", True), ("division", "Division", "text", True), ("conference", "Conference", "text", False), ("city", "City", "text", False), ("state", "State", "text", False), ("academic_ranking", "Academic profile", "text", False), ("tuition", "Annual tuition", "number", False), ("financial_aid", "Financial aid", "textarea", False), ("head_coach", "Head coach", "text", False), ("recruiting_coordinator", "Recruiting coordinator", "text", False), ("coach_emails", "Coach emails", "text", False), ("coach_phones", "Coach phones", "text", False), ("roster_size", "Roster size", "number", False), ("scholarship_count", "Scholarships", "number", False), ("facilities_notes", "Facilities notes", "textarea", False), ("program_reputation", "Program reputation", "textarea", False), ("website_url", "Website", "url", False), ("notes", "Recruiting notes", "textarea", False)]
-PLAYER_FIELDS = [("name", "Player name", "text", True), ("grad_year", "Graduation year", "number", True), ("primary_position", "Primary position", "text", True), ("secondary_position", "Secondary position", "text", False), ("player_email", "Player email", "email", False), ("parent_email", "Parent/guardian email", "email", False), ("gpa", "GPA", "number", False), ("sat_act", "SAT / ACT", "text", False), ("height", "Height", "text", False), ("weight", "Weight", "text", False), ("throwing_hand", "Throwing hand", "text", False), ("batting_side", "Batting side", "text", False), ("home_to_first", "Home-to-first", "text", False), ("exit_velo", "Exit velocity", "text", False), ("pop_time", "Pop time", "text", False), ("pitching_velo", "Pitching velocity", "text", False), ("highlight_link", "Highlight link", "url", False), ("transcript_path", "Transcript path", "text", False), ("photo_path", "Photo path", "text", False), ("social_handles", "Social handles", "text", False), ("notes", "Recruiting notes", "textarea", False)]
+COLLEGE_FIELDS = [("name", "College name", "text", True), ("division", "Division", "text", True), ("conference", "Conference", "text", False), ("city", "City", "text", False), ("state", "State", "text", False), ("academic_ranking", "Academic profile", "text", False), ("tuition", "Annual tuition (in-state + housing)", "number", False), ("in_state_tuition", "In-state tuition", "number", False), ("out_of_state_tuition", "Out-of-state tuition", "number", False), ("housing_cost", "Housing cost", "number", False), ("financial_aid", "Financial aid", "textarea", False), ("head_coach", "Head coach", "text", False), ("recruiting_coordinator", "Recruiting coordinator", "text", False), ("coach_emails", "Coach emails", "text", False), ("coach_phones", "Coach phones", "text", False), ("roster_size", "Roster size", "number", False), ("scholarship_count", "Scholarships", "number", False), ("facilities_notes", "Facilities notes", "textarea", False), ("program_reputation", "Program reputation", "textarea", False), ("website_url", "Website", "url", False), ("notes", "Recruiting notes", "textarea", False)]
+PLAYER_FIELDS = [("name", "Player name", "text", True), ("grad_year", "Graduation year", "number", True), ("primary_position", "Primary position", "text", True), ("secondary_position", "Secondary position", "text", False), ("home_state", "Home state", "select", False), ("player_email", "Player email", "email", False), ("parent_email", "Parent/guardian email", "email", False), ("gpa", "GPA", "number", False), ("sat_act", "SAT / ACT", "text", False), ("height", "Height", "text", False), ("weight", "Weight", "text", False), ("throwing_hand", "Throwing hand", "text", False), ("batting_side", "Batting side", "text", False), ("home_to_first", "Home-to-first", "text", False), ("exit_velo", "Exit velocity", "text", False), ("pop_time", "Pop time", "text", False), ("pitching_velo", "Pitching velocity", "text", False), ("highlight_link", "Highlight link", "url", False), ("transcript_path", "Transcript path", "text", False), ("social_handles", "Social handles", "text", False), ("notes", "Recruiting notes", "textarea", False)]
+US_STATES = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA",
+             "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM",
+             "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA",
+             "WV", "WI", "WY"]
+# Fields rendered as a single-choice dropdown, keyed by form field name.
+SELECT_OPTIONS = {"home_state": US_STATES}
 DIVISION_OPTIONS = ["NCAA D1", "NCAA D2", "NCAA D3", "NAIA", "JUCO"]
 CAMPUS_OPTIONS = ["", "Urban", "Suburban", "Rural", "Small campus", "Large campus"]
 INTAKE_FIELDS = [
@@ -48,6 +60,7 @@ INTAKE_FIELDS = [
     ("primary_position", "Primary position", "text", True, None), ("secondary_position", "Secondary position", "text", False, None),
     ("player_email", "Player email", "email", False, None), ("parent_name", "Parent/guardian name", "text", False, None),
     ("parent_email", "Parent/guardian email", "email", False, None), ("phone", "Best phone number", "text", False, None),
+    ("home_state", "Home state", "select", False, [""] + US_STATES),
     ("gpa", "GPA", "number", False, None), ("sat_act", "SAT / ACT", "text", False, None),
     ("height", "Height", "text", False, None), ("weight", "Weight", "text", False, None),
     ("throwing_hand", "Throwing hand", "select", False, ["", "R", "L"]),
@@ -98,8 +111,17 @@ def form_html(action: str, fields, item: object | None, cancel: str, title: str,
         wide = " wide" if kind == "textarea" else ""
         if kind == "textarea":
             control = f'<textarea name="{key}">{current}</textarea>'
+        elif kind == "select":
+            raw = norm_state(value(item, key)) if key == "home_state" else value(item, key)
+            options = list(SELECT_OPTIONS.get(key, []))
+            if raw and raw not in options:  # keep any pre-existing value selectable
+                options.append(raw)
+            rendered = "".join(
+                f'<option value="{esc(option)}"{" selected" if option == raw else ""}>{esc(option)}</option>'
+                for option in options)
+            control = f'<select name="{key}"><option value="">— select —</option>{rendered}</select>'
         else:
-            step = ' step="any"' if key in {"gpa", "tuition"} else ""
+            step = ' step="any"' if key in {"gpa", "tuition", "in_state_tuition", "out_of_state_tuition", "housing_cost"} else ""
             control = f'<input type="{kind}" name="{key}" value="{current}"{step}{required_text}>'
         controls.append(f'<label class="{wide}">{esc(label)}{control}</label>')
     return f'<div class="card"><form class="grid" method="post" action="{action}">{extra}{"".join(controls)}<div class="wide actions"><a class="button secondary" href="{cancel}">Cancel</a><button>{esc(title)}</button></div></form></div>'
@@ -115,7 +137,7 @@ async def payload(request: Request, fields) -> dict:
         if not raw:
             data[key] = None
         elif kind == "number":
-            data[key] = float(raw) if key in {"gpa", "tuition"} else int(raw)
+            data[key] = float(raw) if key in {"gpa", "tuition", "in_state_tuition", "out_of_state_tuition", "housing_cost"} else int(raw)
         else:
             data[key] = raw
     return data
@@ -124,6 +146,98 @@ async def payload(request: Request, fields) -> dict:
 def facts(item: object, labels: list[tuple[str, str]]) -> str:
     parts = [f'<div><b>{esc(label)}</b>{esc(value(item, key)) or "—"}</div>' for key, label in labels]
     return f'<section class="detail">{"".join(parts)}</section>'
+
+
+def norm_state(value: str | None) -> str:
+    """Normalize a state value for comparison (upper-case, trimmed)."""
+    return (value or "").strip().upper()
+
+
+def is_out_of_state(player: Player | None, college: College) -> bool:
+    """True when we know the player's home state and it differs from the college's.
+
+    Requires both states to be present; an unknown player state never triggers
+    the out-of-state rate (we don't assume residency)."""
+    if player is None:
+        return False
+    ps, cs = norm_state(player.home_state), norm_state(college.state)
+    return bool(ps and cs and ps != cs)
+
+
+def tuition_for(college: College, player: Player | None) -> tuple[float | None, bool]:
+    """Return (amount, is_oos_and_higher) for the tuition to display.
+
+    Combined figure = applicable tuition (in-state vs out-of-state) + housing.
+    The bold/out-of-state flag is only set when the player is out-of-state AND the
+    out-of-state total actually exceeds the in-state total — private schools charge
+    one rate to everyone, so their out-of-state == in-state and we don't flag them."""
+    housing = college.housing_cost or 0
+    if is_out_of_state(player, college) and college.out_of_state_tuition is not None:
+        oos_total = college.out_of_state_tuition + housing
+        in_state_total = college.tuition
+        if in_state_total is None or oos_total > in_state_total:
+            return oos_total, True
+        # Out-of-state rate matches in-state (private single rate): no distinction.
+        return in_state_total, False
+    return college.tuition, False
+
+
+def tuition_cell(college: College, player: Player | None, wrap: str = "td") -> str:
+    """Render a tuition table cell/value, bolded when the out-of-state rate is shown."""
+    amount, oos = tuition_for(college, player)
+    text = ("$" + format(amount, ",.0f")) if amount else "—"
+    if oos:
+        text = f'<strong title="Out-of-state rate for {esc(player.home_state)} player">{text} *</strong>'
+    return f"<{wrap}>{text}</{wrap}>" if wrap else text
+
+
+NAME_SUFFIXES = {"jr", "sr", "ii", "iii", "iv", "v"}
+
+
+def split_name(full_name: str) -> tuple[str, str]:
+    """Return (last, first) for sorting. Handles "Last, First" and name suffixes."""
+    name = (full_name or "").strip()
+    if "," in name:
+        last, _, first = name.partition(",")
+        return last.strip().lower(), first.strip().lower()
+    parts = [part for part in name.split() if part]
+    while len(parts) > 1 and parts[-1].strip(".").lower() in NAME_SUFFIXES:
+        parts.pop()
+    if not parts:
+        return "", ""
+    return parts[-1].lower(), " ".join(parts[:-1]).lower()
+
+
+def player_sort_key(player: Player) -> tuple:
+    """Graduation class first, then alphabetical by last name."""
+    last, first = split_name(player.name)
+    return (player.grad_year if player.grad_year is not None else 9999, last, first)
+
+
+def photo_url(player: Player) -> str:
+    """Return a cache-busted URL for the player's stored thumbnail, or "" if none exists.
+
+    Paths are confined to the static directory so a stray database value cannot
+    point the page at an arbitrary file on disk.
+    """
+    relative = (getattr(player, "photo_path", "") or "").strip().replace("\\", "/")
+    if not relative:
+        return ""
+    try:
+        resolved = (STATIC_ROOT / relative).resolve()
+    except (OSError, ValueError):
+        return ""
+    if not resolved.is_file() or STATIC_ROOT not in resolved.parents:
+        return ""
+    return f"/static/{resolved.relative_to(STATIC_ROOT).as_posix()}?v={int(resolved.stat().st_mtime)}"
+
+
+def thumbnail_html(player: Player, size: str = "thumb-lg") -> str:
+    url = photo_url(player)
+    if url:
+        return f'<img class="{size}" src="{esc(url)}" alt="{esc(player.name)} thumbnail">'
+    initials = "".join(part[0] for part in (player.name or "?").split()[:2]).upper() or "?"
+    return f'<span class="{size} thumb-placeholder" aria-hidden="true">{esc(initials)}</span>'
 
 
 def log(db: Session, kind: str, detail: str) -> None:
@@ -184,11 +298,40 @@ async def college_create(request: Request, db: Session = Depends(get_db)):
 
 
 @app.get("/colleges/{college_id}")
-def college_detail(college_id: int, request: Request, db: Session = Depends(get_db)):
+def college_detail(college_id: int, request: Request, player_id: int | None = None, db: Session = Depends(get_db)):
     college = get_or_404(db, College, college_id)
+    player = db.get(Player, player_id) if player_id else None
     need_rows = "".join(f'<tr><td>{esc(n.class_year)}</td><td>{esc(n.position)}</td><td>{esc(n.pitching_profile or n.hitting_profile)}</td><td><a href="/needs/{n.id}/edit">Edit</a></td></tr>' for n in college.needs) or '<tr><td colspan="4">No team needs recorded.</td></tr>'
     body = f'<div class="actions"><a class="button" href="/colleges/{college.id}/edit">Edit college</a><a class="button secondary" href="/needs/college/{college.id}/new">Add team need</a><form method="post" action="/colleges/{college.id}/delete"><button class="button danger">Delete</button></form></div>'
-    body += facts(college, [("division", "Division"), ("conference", "Conference"), ("city", "City"), ("state", "State"), ("academic_ranking", "Academic profile"), ("tuition", "Annual tuition"), ("financial_aid", "Financial aid"), ("head_coach", "Head coach"), ("recruiting_coordinator", "Recruiting coordinator"), ("coach_emails", "Coach email"), ("coach_phones", "Coach phone"), ("website_url", "Website"), ("notes", "Notes")])
+
+    # "View costs for player" selector: picking a player recomputes tuition in/out-of-state.
+    players = db.scalars(select(Player).order_by(Player.name)).all()
+    opts = '<option value="">— no player (in-state) —</option>' + "".join(
+        f'<option value="{p.id}"{" selected" if player and p.id == player.id else ""}>{esc(p.name)}'
+        f'{f" ({esc(p.home_state)})" if norm_state(p.home_state) else ""}</option>' for p in players)
+    body += (f'<form class="filters" method="get" action="/colleges/{college.id}" data-autosubmit>'
+             f'<label class="stack">View costs for player<select name="player_id">{opts}</select></label>'
+             f'<button>Apply</button></form>')
+
+    # Tuition line reflects the selected player's residency; bold when out-of-state.
+    amount, oos = tuition_for(college, player)
+    tuition_text = tuition_cell(college, player, wrap="")
+    if oos:
+        tuition_text += (f' <span class="muted">(out-of-state rate; {esc(player.name)} is from '
+                         f'{esc(player.home_state)}, college is in {esc(college.state)})</span>')
+    elif player is not None and norm_state(player.home_state) and norm_state(player.home_state) == norm_state(college.state):
+        tuition_text += f' <span class="muted">(in-state rate; {esc(player.name)} is from {esc(college.state)})</span>'
+
+    detail_labels = [("division", "Division"), ("conference", "Conference"), ("city", "City"), ("state", "State"), ("academic_ranking", "Academic profile")]
+    detail_parts = [f'<div><b>{esc(label)}</b>{esc(value(college, key)) or "—"}</div>' for key, label in detail_labels]
+    detail_parts.append(f'<div><b>Annual tuition</b>{tuition_text}</div>')
+    detail_parts.append(f'<div><b>In-state tuition</b>{("$" + format(college.in_state_tuition, ",.0f")) if college.in_state_tuition else "—"}</div>')
+    detail_parts.append(f'<div><b>Out-of-state tuition</b>{("$" + format(college.out_of_state_tuition, ",.0f")) if college.out_of_state_tuition else "—"}</div>')
+    detail_parts.append(f'<div><b>Housing cost</b>{("$" + format(college.housing_cost, ",.0f")) if college.housing_cost else "—"}</div>')
+    for key, label in [("financial_aid", "Financial aid"), ("head_coach", "Head coach"), ("recruiting_coordinator", "Recruiting coordinator"), ("coach_emails", "Coach email"), ("coach_phones", "Coach phone"), ("website_url", "Website"), ("notes", "Notes")]:
+        detail_parts.append(f'<div><b>{esc(label)}</b>{esc(value(college, key)) or "—"}</div>')
+    body += f'<section class="detail">{"".join(detail_parts)}</section>'
+
     body += f'<h2>Team needs</h2><table><tr><th>Class</th><th>Position</th><th>Profile</th><th></th></tr>{need_rows}</table>'
     return page(request, college.name, body, "College recruiting profile")
 
@@ -214,9 +357,9 @@ def college_delete(college_id: int, db: Session = Depends(get_db)):
 
 @app.get("/players")
 def players(request: Request, db: Session = Depends(get_db)):
-    items = db.scalars(select(Player).order_by(Player.grad_year, Player.name)).all()
-    rows = "".join(f'<tr><td><a href="/players/{p.id}">{esc(p.name)}</a></td><td>{esc(p.grad_year)}</td><td>{esc(p.primary_position)}</td><td>{esc(p.secondary_position)}</td><td>{esc(p.gpa)}</td></tr>' for p in items) or '<tr><td colspan="5">No players added.</td></tr>'
-    body = f'<div class="toolbar"><a class="button" href="/players/new">Add player</a></div><table><tr><th>Player</th><th>Class</th><th>Primary</th><th>Secondary</th><th>GPA</th></tr>{rows}</table>'
+    items = sorted(db.scalars(select(Player)).all(), key=player_sort_key)
+    rows = "".join(f'<tr><td>{thumbnail_html(p, "thumb-sm")}</td><td><a href="/players/{p.id}">{esc(p.name)}</a></td><td>{esc(p.grad_year)}</td><td>{esc(p.primary_position)}</td><td>{esc(p.secondary_position)}</td><td>{esc(p.gpa)}</td></tr>' for p in items) or '<tr><td colspan="6">No players added.</td></tr>'
+    body = f'<div class="toolbar"><a class="button" href="/players/new">Add player</a></div><table><tr><th></th><th>Player</th><th>Class</th><th>Primary</th><th>Secondary</th><th>GPA</th></tr>{rows}</table>'
     return page(request, "Players", body, "Manage athlete profiles and recruiting materials")
 
 
@@ -234,8 +377,17 @@ async def player_create(request: Request, db: Session = Depends(get_db)):
 @app.get("/players/{player_id}")
 def player_detail(player_id: int, request: Request, db: Session = Depends(get_db)):
     player = get_or_404(db, Player, player_id)
-    body = f'<div class="actions"><a class="button" href="/players/{player.id}/edit">Edit player</a><a class="button secondary" href="/players/{player.id}/metrics">Metrics dashboard</a><a class="button secondary" href="/school-lists/{player.id}">Recommended schools</a><a class="button secondary" href="/flyers/player/{player.id}">Flyer preview</a><a class="button secondary" href="/email/compose?player_id={player.id}">Compose email</a><form method="post" action="/players/{player.id}/delete"><button class="button danger">Delete</button></form></div>'
-    body += facts(player, [("grad_year", "Graduation year"), ("primary_position", "Primary position"), ("secondary_position", "Secondary position"), ("player_email", "Player email"), ("parent_email", "Parent email"), ("gpa", "GPA"), ("sat_act", "SAT / ACT"), ("height", "Height"), ("weight", "Weight"), ("throwing_hand", "Throws"), ("batting_side", "Bats"), ("highlight_link", "Highlight video"), ("social_handles", "Social"), ("notes", "Notes")])
+    remove_button = (f'<form method="post" action="/players/{player.id}/photo/delete"><button class="button secondary">Remove</button></form>'
+                     if photo_url(player) else "")
+    body = (f'<section class="player-head">{thumbnail_html(player)}'
+            f'<div class="photo-upload"><h2>{esc(player.name)}</h2>'
+            f'<form method="post" action="/players/{player.id}/photo" enctype="multipart/form-data" class="actions">'
+            f'<input type="file" name="photo" accept="image/*" required>'
+            f'<button>Upload thumbnail</button>{remove_button}</form>'
+            f'<p class="muted">JPEG, PNG, WebP, or GIF up to 8 MB. Resized to a {THUMB_SIZE[0]}px thumbnail on upload.</p>'
+            f'</div></section>')
+    body += f'<div class="actions"><a class="button" href="/players/{player.id}/edit">Edit player</a><a class="button secondary" href="/players/{player.id}/metrics">Metrics dashboard</a><a class="button secondary" href="/school-lists/{player.id}">Recommended schools</a><a class="button secondary" href="/flyers/player/{player.id}">Flyer preview</a><a class="button secondary" href="/email/compose?player_id={player.id}">Compose email</a><form method="post" action="/players/{player.id}/delete"><button class="button danger">Delete</button></form></div>'
+    body += facts(player, [("grad_year", "Graduation year"), ("primary_position", "Primary position"), ("secondary_position", "Secondary position"), ("home_state", "Home state"), ("player_email", "Player email"), ("parent_email", "Parent email"), ("gpa", "GPA"), ("sat_act", "SAT / ACT"), ("height", "Height"), ("weight", "Weight"), ("throwing_hand", "Throws"), ("batting_side", "Bats"), ("highlight_link", "Highlight video"), ("social_handles", "Social"), ("notes", "Notes")])
     return page(request, player.name, body, "Player recruiting profile")
 
 
@@ -256,6 +408,46 @@ async def player_update(player_id: int, request: Request, db: Session = Depends(
 def player_delete(player_id: int, db: Session = Depends(get_db)):
     db.delete(get_or_404(db, Player, player_id)); db.commit()
     return redirect("/players", "Player deleted.")
+
+
+@app.post("/players/{player_id}/photo")
+async def player_photo_upload(player_id: int, photo: UploadFile = File(...), db: Session = Depends(get_db)):
+    """Store an uploaded picture as the player's thumbnail.
+
+    The upload is re-encoded through Pillow, so only genuine images are saved, the
+    file name is generated server-side, and camera metadata is dropped.
+    """
+    player = get_or_404(db, Player, player_id)
+    data = await photo.read(MAX_PHOTO_BYTES + 1)
+    if not data:
+        raise HTTPException(status_code=422, detail="Choose an image file to upload.")
+    if len(data) > MAX_PHOTO_BYTES:
+        raise HTTPException(status_code=413, detail="Image is larger than the 8 MB limit.")
+    try:
+        image = PILImage.open(BytesIO(data))
+        image.load()
+        image = ImageOps.exif_transpose(image).convert("RGB")
+    except Exception:
+        raise HTTPException(status_code=422, detail="That file could not be read as an image.")
+    image.thumbnail(THUMB_SIZE)
+    PHOTO_DIR.mkdir(parents=True, exist_ok=True)
+    target = PHOTO_DIR / f"player-{player.id}.jpg"
+    image.save(target, "JPEG", quality=85, optimize=True)
+    player.photo_path = f"uploads/players/{target.name}"
+    db.commit()
+    log(db, "photo", f"Uploaded thumbnail for {player.name}.")
+    return redirect(f"/players/{player.id}", "Thumbnail updated.")
+
+
+@app.post("/players/{player_id}/photo/delete")
+def player_photo_delete(player_id: int, db: Session = Depends(get_db)):
+    player = get_or_404(db, Player, player_id)
+    url = photo_url(player)
+    if url:
+        (STATIC_ROOT / (player.photo_path or "").replace("\\", "/")).unlink(missing_ok=True)
+    player.photo_path = None
+    db.commit()
+    return redirect(f"/players/{player.id}", "Thumbnail removed.")
 
 
 @app.get("/players/{player_id}/metrics")
@@ -383,11 +575,16 @@ def school_list(player_id: int, request: Request, division: list[str] = Query(de
     query_string = request.url.query
     download = f'<a class="button" href="/school-lists/{player.id}/pdf{"?" + query_string if query_string else ""}">Download PDF</a>'
     rows = []
+    any_oos = False
     for college, need, score in matches:
-        rows.append(f'<tr><td><a href="/colleges/{college.id}">{esc(college.name)}</a></td><td>{esc(college.division)}</td><td>{esc(college.state)}</td><td>{("$" + format(college.tuition, ",.0f")) if college.tuition else "—"}</td><td>{esc(college.coach_emails)}</td><td>{esc(need.position)} · {need.class_year}</td><td><span class="pill">{score}</span></td><td><a href="/email/compose?player_id={player.id}&college_id={college.id}">Email</a></td></tr>')
+        cell = tuition_cell(college, player)
+        any_oos = any_oos or is_out_of_state(player, college)
+        rows.append(f'<tr><td><a href="/colleges/{college.id}?player_id={player.id}">{esc(college.name)}</a></td><td>{esc(college.division)}</td><td>{esc(college.state)}</td>{cell}<td>{esc(college.coach_emails)}</td><td>{esc(need.position)} · {need.class_year}</td><td><span class="pill">{score}</span></td><td><a href="/email/compose?player_id={player.id}&college_id={college.id}">Email</a></td></tr>')
     table = "".join(rows) or '<tr><td colspan="8">No direct primary-position matches. Try adding team needs or adjusting the player profile.</td></tr>'
     toolbar = f'<div class="toolbar">{download}<span class="muted">{len(matches)} matching college(s)</span></div>' if matches else ""
-    body = filter_form + f'<p class="muted">Ranked exact matches for {esc(player.name)}: {player.grad_year} {esc(player.primary_position)}.</p>{toolbar}<table><tr><th>College</th><th>Division</th><th>State</th><th>Tuition</th><th>Coach email</th><th>Matching need</th><th>Fit score</th><th></th></tr>{table}</table>'
+    home_note = f' Home state: <b>{esc(player.home_state)}</b>.' if norm_state(player.home_state) else ' No home state on file — showing in-state tuition.'
+    oos_legend = '<p class="muted"><strong>Bold *</strong> tuition = out-of-state rate (college is outside the player\'s home state).</p>' if any_oos else ""
+    body = filter_form + f'<p class="muted">Ranked exact matches for {esc(player.name)}: {player.grad_year} {esc(player.primary_position)}.{home_note}</p>{oos_legend}{toolbar}<table><tr><th>College</th><th>Division</th><th>State</th><th>Tuition</th><th>Coach email</th><th>Matching need</th><th>Fit score</th><th></th></tr>{table}</table>'
     return page(request, f"School List · {player.name}", body, "Exact class-year and primary-position matches")
 
 
@@ -422,7 +619,7 @@ def integrations(request: Request, db: Session = Depends(get_db)):
 @app.get("/flyers/player/{player_id}")
 def flyer_preview(player_id: int, request: Request, db: Session = Depends(get_db)):
     player = get_or_404(db, Player, player_id)
-    body = f'<section class="card"><p class="pill">PLAYER SPOTLIGHT</p><h2>{esc(player.name)}</h2><p><b>{esc(player.grad_year)}</b> · {esc(player.primary_position)} / {esc(player.secondary_position)}</p><div class="detail"><div><b>GPA</b>{esc(player.gpa)}</div><div><b>Exit velo</b>{esc(player.exit_velo)}</div><div><b>Home-to-first</b>{esc(player.home_to_first)}</div><div><b>Pitching velo</b>{esc(player.pitching_velo)}</div></div><p>{esc(player.notes)}</p></section><form method="post" action="/flyers/player/{player.id}/pdf"><button>Request PDF export (stub)</button></form>'
+    body = f'<section class="card"><p class="pill">PLAYER SPOTLIGHT</p>{thumbnail_html(player)}<h2>{esc(player.name)}</h2><p><b>{esc(player.grad_year)}</b> · {esc(player.primary_position)} / {esc(player.secondary_position)}</p><div class="detail"><div><b>GPA</b>{esc(player.gpa)}</div><div><b>Exit velo</b>{esc(player.exit_velo)}</div><div><b>Home-to-first</b>{esc(player.home_to_first)}</div><div><b>Pitching velo</b>{esc(player.pitching_velo)}</div></div><p>{esc(player.notes)}</p></section><form method="post" action="/flyers/player/{player.id}/pdf"><button>Request PDF export (stub)</button></form>'
     return page(request, f"Flyer Preview · {player.name}", body, "HTML preview only; PDF/PNG generation is not configured")
 
 
@@ -550,7 +747,7 @@ def intake_form_html(action: str, submit_label: str = "Submit my information") -
         if kind == "checkdrop":
             controls.append(checkbox_dropdown(key, label, options or [], [], "divisions"))
         elif kind == "select":
-            opts = "".join(f'<option value="{esc(o)}">{esc(o) if o else "No preference"}</option>' for o in (options or []))
+            opts = "".join(f'<option value="{esc(o)}">{esc(o) if o else "— select —"}</option>' for o in (options or []))
             controls.append(f'<label class="stack">{esc(label)}<select name="{key}">{opts}</select></label>')
         elif kind == "textarea":
             controls.append(f'<label class="wide">{esc(label)}<textarea name="{key}"></textarea></label>')
@@ -634,6 +831,7 @@ def intake_detail(intake_id: int, request: Request, db: Session = Depends(get_db
             f'<button>Create player record</button></form>'
             f'<a class="button secondary" href="/intakes">Back to submissions</a></div>')
     body += facts(intake, [("grad_year", "Graduation year"), ("primary_position", "Primary position"), ("secondary_position", "Secondary position"),
+                           ("home_state", "Home state"),
                            ("player_email", "Player email"), ("parent_name", "Parent/guardian"), ("parent_email", "Parent email"), ("phone", "Phone"),
                            ("gpa", "GPA"), ("sat_act", "SAT / ACT"), ("height", "Height"), ("weight", "Weight"),
                            ("throwing_hand", "Throws"), ("batting_side", "Bats"), ("home_to_first", "Home-to-first"),
@@ -647,7 +845,7 @@ def intake_detail(intake_id: int, request: Request, db: Session = Depends(get_db
 @app.post("/intakes/{intake_id}/create-player")
 def intake_create_player(intake_id: int, db: Session = Depends(get_db)):
     intake = get_or_404(db, PlayerIntake, intake_id)
-    carried = ["grad_year", "primary_position", "secondary_position", "player_email", "parent_email", "gpa", "sat_act",
+    carried = ["grad_year", "primary_position", "secondary_position", "home_state", "player_email", "parent_email", "gpa", "sat_act",
                "height", "weight", "throwing_hand", "batting_side", "home_to_first", "exit_velo", "pop_time",
                "pitching_velo", "highlight_link"]
     preferences = " | ".join(part for part in [

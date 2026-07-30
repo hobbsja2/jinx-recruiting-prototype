@@ -19,6 +19,7 @@ class College(Base):
     # existing school-list filter and PDF keep working; the components are stored too.
     tuition: Mapped[float | None] = mapped_column(Float)
     in_state_tuition: Mapped[float | None] = mapped_column(Float)
+    out_of_state_tuition: Mapped[float | None] = mapped_column(Float)
     housing_cost: Mapped[float | None] = mapped_column(Float)
     financial_aid: Mapped[str | None] = mapped_column(Text)
     head_coach: Mapped[str | None] = mapped_column(Text)
@@ -77,6 +78,8 @@ class Player(Base):
     grad_year: Mapped[int] = mapped_column(Integer)
     primary_position: Mapped[str] = mapped_column(String(30))
     secondary_position: Mapped[str | None] = mapped_column(String(30))
+    # Home/school state (2-letter). Drives in-state vs out-of-state tuition display.
+    home_state: Mapped[str | None] = mapped_column(String(30))
     player_email: Mapped[str | None] = mapped_column(String(160))
     parent_email: Mapped[str | None] = mapped_column(String(160))
     gpa: Mapped[float | None] = mapped_column(Float)
@@ -118,6 +121,7 @@ class PlayerIntake(Base):
     parent_name: Mapped[str | None] = mapped_column(String(160))
     parent_email: Mapped[str | None] = mapped_column(String(160))
     phone: Mapped[str | None] = mapped_column(String(50))
+    home_state: Mapped[str | None] = mapped_column(String(30))
     gpa: Mapped[float | None] = mapped_column(Float)
     sat_act: Mapped[str | None] = mapped_column(String(50))
     height: Mapped[str | None] = mapped_column(String(30))
