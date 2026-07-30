@@ -1,0 +1,28 @@
+{
+  "sid": 70,
+  "name": "University of Rio Grande",
+  "division": "NAIA",
+  "conference": "River States Conference",
+  "city": "Rio Grande",
+  "state": "OH",
+  "website_url": "https://rioredstorm.com/sports/sball",
+  "academic_ranking": "Private not-for-profit 4-year institution (IPEDS ID 205203) with a total enrollment of approximately 2,258 students and a student-to-faculty ratio of about 20:1. Located in Rio Grande, Ohio. Reported to have a relatively lower graduation rate. Offers primarily associate's and bachelor's programs.",
+  "tuition": 20560,
+  "financial_aid": "Published undergraduate tuition & fees approximately $20,560 for the 2024-2025 academic year (source: CollegeTuitionCompare, IPEDS-based). About 57% of enrolled undergraduates received grants or scholarships, with an average aid amount of roughly $9,701. NAIA institution; athletic scholarship aid may be available through the program.",
+  "roster_size": 20,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes at the University of Rio Grande in Rio Grande, OH. Specific facility details not published on the softball program pages checked 2026-07.",
+  "program_reputation": "NAIA member competing in the River States Conference (RSC). Program social presence on X/Twitter at @SoftballRio and Instagram @softball_rio.",
+  "notes": "Data gathered from live rioredstorm.com PrestoSports pages on 2026-07-30. Softball uses sport code 'sball'. Coaches page (https://rioredstorm.com/sports/sball/coaches) lists only a head coach; no assistant/volunteer/GA staff were publicly listed at the time of research. Roster size of 20 confirmed from the 2025-26 roster page (20 player cards). Tuition and financial aid figures sourced from third-party IPEDS aggregator (CollegeTuitionCompare) because rio.edu cost pages returned 404.",
+  "coaches": [
+    {
+      "name": "Chris Hammond",
+      "title": "Head Coach",
+      "email": "chammond@rio.edu",
+      "phone": "740-245-7490",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Listed on https://rioredstorm.com/sports/sball/coaches, fetched 2026-07-30. Name, title, email, and phone publicly listed. No individual Twitter/X handle listed; program account is @SoftballRio."
+    }
+  ]
+}

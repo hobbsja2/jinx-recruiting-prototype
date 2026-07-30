@@ -1,0 +1,55 @@
+{
+  "sid": 26,
+  "name": "Earlham College",
+  "division": "NCAA D3",
+  "conference": "Heartland Collegiate Athletic Conference",
+  "city": "Richmond",
+  "state": "IN",
+  "website_url": "https://goearlham.com/sports/softball",
+  "academic_ranking": "Private liberal arts college (Quaker-affiliated, founded 1847). Ranked #74 among National Liberal Arts Colleges by U.S. News & World Report. Small enrollment (~677 students) with strong science research focus and heavy study-abroad participation (~70% of students).",
+  "tuition": 56784,
+  "financial_aid": "Tuition is the same for in-state and out-of-state students ($56,784 for 2026-27; total billed cost of attendance ~$73,526). Both merit-based scholarships (all applicants automatically considered) and need-based aid (via FAFSA) offered, including grants, loans, and Federal College Work-Study. INspire Earlham program offers free tuition to Pell- and Indiana-grant-eligible Indiana students with family income up to $60,000. Early Decision applicants receive a $3k/year scholarship.",
+  "roster_size": 24,
+  "scholarship_count": null,
+  "facilities_notes": "Softball program competes as the Earlham Quakers; team X account @Quaker_Softball. Specific softball facility details not confirmed on official pages checked 2026-07.",
+  "program_reputation": "NCAA Division III program in the Heartland Collegiate Athletic Conference (HCAC). As a D3 program, no athletic scholarships are offered; recruiting emphasizes academics and need/merit-based financial aid.",
+  "notes": "Data sourced from goearlham.com softball coaches and roster pages and earlham.edu cost pages, verified 2026-07. Roster size of 24 taken from 2026 softball roster page. D3 programs do not award athletic scholarships, so scholarship_count is null.",
+  "coaches": [
+    {
+      "name": "Stacey Goyette",
+      "title": "Head Softball Coach",
+      "email": "goyetst@earlham.edu",
+      "phone": "765-620-4163",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "goearlham.com softball coaches page, verified 2026-07; no individual X handle listed"
+    },
+    {
+      "name": "Meg Stanley",
+      "title": "Graduate Assistant Softball Coach",
+      "email": "stanlme@earlham.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "goearlham.com softball coaches page, verified 2026-07; no public phone or X handle listed"
+    },
+    {
+      "name": "David Goyette",
+      "title": "Volunteer Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "goearlham.com softball coaches page, verified 2026-07; no public email, phone, or X handle listed"
+    },
+    {
+      "name": "Bill Gray",
+      "title": "Volunteer Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "goearlham.com softball coaches page, verified 2026-07; no public email, phone, or X handle listed"
+    }
+  ]
+}

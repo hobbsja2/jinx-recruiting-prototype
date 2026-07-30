@@ -1,0 +1,8 @@
+{
+  "sid": 143,
+  "name": "LeMoyne-Owen College",
+  "in_state_tuition": null,
+  "housing_cost": 3600,
+  "housing_basis": "room only",
+  "tuition_note": "Official Cost/Tuition page (loc.edu/admissions/financial-aid-2/cost/, 'Tuition Update Fall 2026') publishes tuition ONLY as a per-credit rate: $472 per credit hour (plus Student Activity Fee $125, Student Health Fee $200, Books $25.50/credit); no flat full-time or annual tuition & fees total is published, so in_state_tuition is null rather than a computed guess. Private/independent HBCU (single rate for all students). Housing: page lists 'Housing (double-occupancy, per semester) $1,800' = $3,600/year room only (2 semesters); meal plan/board listed separately at $1,320/semester and NOT included in housing_cost."
+}

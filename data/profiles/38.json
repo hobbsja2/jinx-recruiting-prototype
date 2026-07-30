@@ -1,0 +1,37 @@
+{
+  "sid": 38,
+  "name": "Bethel University",
+  "division": "NAIA",
+  "conference": "Mid-South Conference",
+  "city": "McKenzie",
+  "state": "TN",
+  "website_url": "https://www.bethelathletics.com/sports/sball",
+  "academic_ranking": "Private Christian university in McKenzie, TN with ~3,000 students and a 15:1 student-to-faculty ratio. Offers 42 undergraduate and 5 graduate/professional programs across three colleges (Arts & Sciences, Health Sciences, and Professional Studies). Markets itself as one of the most affordable private Christian universities. No formal national ranking captured.",
+  "tuition": 20160.0,
+  "financial_aid": "About 98% of students receive financial aid. 2026-27 full-time undergraduate tuition is $20,160/year ($10,080/semester); total estimated cost of attendance with residence hall ($6,480) and meal plan ($5,040) is roughly $31,680. Net Price Calculator and scholarship/aid pages available at bethelu.edu/sfs. As an NAIA program, athletic scholarships (softball NAIA limit is 10 equivalencies) are available but specific award counts not publicly listed.",
+  "roster_size": 24,
+  "scholarship_count": null,
+  "facilities_notes": "Softball is played at Lady Wildcat Park at the Kahlden Complex on the Bethel campus in McKenzie, TN (per bethelathletics.com/facilities).",
+  "program_reputation": "NAIA women's softball program competing in the Mid-South Conference. Bethel University fields 21 NAIA sports teams. Roster is heavily Tennessee/regional based with several JUCO transfers.",
+  "notes": "Data sourced live from bethelathletics.com on 2026-07. Coaches page (/sports/sball/coaches) lists only two softball staff: Head Coach Craig Massey and Assistant Coach Shanta Emerson. The 2026-27 roster page was not yet published; roster_size of 24 is from the published 2025-26 roster (/sports/sball/2025-26/roster). Tuition/academic data from bethelu.edu/sfs/cost.",
+  "coaches": [
+    {
+      "name": "Craig Massey",
+      "title": "Head Coach",
+      "email": "masseyc@bethelu.edu",
+      "phone": "(731) 345-9133",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Listed on bethelathletics.com softball coaches page, checked 2026-07; no public twitter/X handle listed."
+    },
+    {
+      "name": "Shanta Emerson",
+      "title": "Assistant Coach",
+      "email": "emersons@bethelu.edu",
+      "phone": "(731) 414-4545",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Listed on bethelathletics.com softball coaches page, checked 2026-07; no public twitter/X handle listed."
+    }
+  ]
+}

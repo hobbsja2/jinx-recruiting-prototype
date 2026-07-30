@@ -1,0 +1,55 @@
+{
+  "sid": 147,
+  "name": "Union University",
+  "division": "NCAA D2",
+  "conference": "Gulf South Conference",
+  "city": "Jackson",
+  "state": "TN",
+  "website_url": "https://uuathletics.com/sports/softball",
+  "academic_ranking": "Private Christian liberal arts university in Jackson, TN. Self-reported as ranked among the top Christian universities in America; maintains a US News Best Colleges profile (usnews.com/best-colleges/union-university-3528). Specific US News numeric ranking not confirmed from a primary source during research (checked 2026-07).",
+  "tuition": 39990,
+  "financial_aid": "Per the official Union University catalog (uu.smartcatalogiq.com), full-time undergraduate tuition is $19,995 per semester (12-16 hours) for fall and spring, ~$39,990/year for 2025-2026. Third-party aggregators list lower blended tuition & fees figures ($37,398-$38,450). As a private university, Union offers institutional academic and need-based aid; specific softball athletic aid not publicly itemized.",
+  "roster_size": 19,
+  "scholarship_count": null,
+  "facilities_notes": "Home field is Fesmire Softball Field (part of the Fesmire Fields complex, which houses both baseball and softball with lighted playing fields) on the Union University campus in Jackson, TN. Source: uuathletics.com/facilities and uu.edu.",
+  "program_reputation": "NCAA Division II program competing in the Gulf South Conference (GSC). Roster of 19 for the 2026-27 season. Detailed rankings/postseason history not confirmed from primary sources during this research pass (2026-07).",
+  "notes": "Athletics site is uuathletics.com (the discovery-provided domain uubulldogs.com does not resolve / is not the official site). Coaching staff and roster captured live from uuathletics.com softball coaches and roster pages on 2026-07. Roster count = 19 players confirmed by enumerated list. No Twitter/X handles are listed for individual coaches; team account is @UUAthleticsSB. Nicole Goggin (Athletic Trainer) listed under support staff, not coaching staff, so excluded from coaches list.",
+  "coaches": [
+    {
+      "name": "Sydney Sturner",
+      "title": "Head Coach",
+      "email": "ssturner@uu.edu",
+      "phone": "731-661-5289",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "uuathletics.com softball coaches page, fetched 2026-07; email and phone publicly listed; no individual X handle listed."
+    },
+    {
+      "name": "Mike Smith",
+      "title": "Assistant Coach",
+      "email": "mjsmith@uu.edu",
+      "phone": "731-661-5141",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "uuathletics.com softball coaches page, fetched 2026-07; email and phone publicly listed; no individual X handle listed."
+    },
+    {
+      "name": "Kaitlynn Lankford",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "uuathletics.com softball coaches page, fetched 2026-07; no public email or phone listed; no individual X handle listed."
+    },
+    {
+      "name": "John Means",
+      "title": "Volunteer Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "uuathletics.com softball coaches page, fetched 2026-07; no public email or phone listed; no individual X handle listed."
+    }
+  ]
+}

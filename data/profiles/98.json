@@ -1,0 +1,82 @@
+{
+  "sid": 98,
+  "name": "Indiana University Bloomington",
+  "division": "NCAA D1",
+  "conference": "Big Ten Conference",
+  "city": "Bloomington",
+  "state": "IN",
+  "website_url": "https://iuhoosiers.com/sports/softball",
+  "academic_ranking": "Indiana University Bloomington is a large public flagship research university (R1) and a founding member of the Big Ten Conference. It is regarded as a strong national public university, well known for its Kelley School of Business, Jacobs School of Music, and programs in public affairs, informatics, and the sciences.",
+  "tuition": 12142,
+  "financial_aid": "Tuition figure shown is 2026-27 full-time in-state (Indiana resident) tuition and mandatory fees (approx. $12,142). Non-resident tuition and mandatory fees are approx. $42,702; estimated total cost of attendance is approx. $30,574 (resident) and $62,956 (non-resident) per IU Student Central (studentcentral.indiana.edu). Athletic scholarships plus need- and merit-based institutional/federal/state aid are available; prospective student-athletes should contact IU Student Central and the softball staff for details.",
+  "roster_size": 24,
+  "scholarship_count": 12,
+  "facilities_notes": "Indiana softball plays at Andy Mohr Field on the Bloomington campus, a dedicated on-campus softball stadium with fixed seating, press box, and lights. scholarship_count reflects the standard NCAA Division I softball equivalency scholarship limit (12), not a confirmed figure from the IU staff directory.",
+  "program_reputation": "Big Ten Conference Division I program competing at IU Bloomington. Head coach Shonda Stanton, a member of the National Fastpitch Coaches Association (NFCA) All-America Committee and former member of the NFCA Head Coaches Council, leads the staff.",
+  "notes": "Coaching staff and contact details captured live from iuhoosiers.com softball coaches/staff directory (checked 2026-07). Roster size (24) counted from the softball roster page player list. No individual coach Twitter/X handles are listed in the staff directory; the team account is @IndianaSB. Head coach email listed as the general softball@iu.edu program address; no separate personal email was published for the head coach. Support staff (athletic trainer, academic services, strategic communications) are shared/multi-sport IU athletics staff assigned to softball among other sports and are included with source notes.",
+  "coaches": [
+    {
+      "name": "Shonda Stanton",
+      "title": "Head Coach",
+      "email": "softball@iu.edu",
+      "phone": "(812) 855-9518",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "iuhoosiers.com softball staff directory checked 2026-07; email listed is the general program address softball@iu.edu (no separate personal email published); no personal Twitter/X handle listed."
+    },
+    {
+      "name": "Chanda Bell",
+      "title": "Associate Head Coach",
+      "email": "bell1@iu.edu",
+      "phone": "(812) 855-9738",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "iuhoosiers.com softball staff directory checked 2026-07; no public Twitter/X handle listed."
+    },
+    {
+      "name": "Kendra Kirkhoff",
+      "title": "Assistant Coach",
+      "email": "kennkirk@iu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "iuhoosiers.com softball staff directory checked 2026-07; no public phone or Twitter/X handle listed."
+    },
+    {
+      "name": "Cassie Hendrix",
+      "title": "Assistant Coach/Director of Operations",
+      "email": "hendrix@iu.edu",
+      "phone": "(812) 855-5462",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "iuhoosiers.com softball staff directory checked 2026-07; no public Twitter/X handle listed."
+    },
+    {
+      "name": "Morgan DePlanty, MS, LAT, ATC",
+      "title": "Athletic Trainer (Softball, Men's Tennis)",
+      "email": "mdeplant@iu.edu",
+      "phone": "(812) 855-1326",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "iuhoosiers.com softball staff/support-staff directory checked 2026-07; multi-sport support staff assigned to softball; no Twitter/X handle listed."
+    },
+    {
+      "name": "Ben Smith",
+      "title": "Assistant Director of Academic Services and Certification",
+      "email": "bds10@iu.edu",
+      "phone": "(812) 855-2861",
+      "twitter": "",
+      "sort_order": 50,
+      "source_note": "iuhoosiers.com softball support-staff directory checked 2026-07; academic services staff listed for softball; no Twitter/X handle listed."
+    },
+    {
+      "name": "Jackson Yeary",
+      "title": "Assistant Director for Strategic Communications (Field Hockey, Wrestling, Softball, Men's Tennis)",
+      "email": "jbyeary@iu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 60,
+      "source_note": "iuhoosiers.com softball support-staff directory checked 2026-07; multi-sport strategic communications contact for softball; no public phone or Twitter/X handle listed."
+    }
+  ]
+}

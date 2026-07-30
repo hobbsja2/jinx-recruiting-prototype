@@ -1,0 +1,55 @@
+{
+  "sid": 66,
+  "name": "Roane State Community College",
+  "division": "JUCO",
+  "conference": "TCCAA / NJCAA Region VII",
+  "city": "Harriman",
+  "state": "TN",
+  "website_url": "https://www.rsccathletics.com/sports/sball/index",
+  "academic_ranking": "Public two-year community college in Harriman, TN, part of the Tennessee Board of Regents system. Offers associate degrees and technical certificates with transfer pathways to four-year institutions. As a community college it carries no traditional national university ranking.",
+  "tuition": null,
+  "financial_aid": "As an NJCAA member institution, athletics-based aid is governed by NJCAA rules. Tennessee community-college students are typically eligible for federal aid (FAFSA), state aid, Tennessee Promise, Tennessee Reconnect, work-study, grants, and institutional scholarships. A specific 2025-26 tuition/fees figure could not be verified from a live authoritative source during research (roanestate.edu tuition/cost pages returned HTTP 404 on 2026-07-30; NCES College Navigator and College Scorecard pages did not render dollar figures), so tuition is left null rather than estimated.",
+  "roster_size": 18,
+  "scholarship_count": null,
+  "facilities_notes": "No dedicated softball facilities page found on the athletics site as of 2026-07-30. The team is the Roane State Raiders / Lady Raiders, based in Harriman, TN. A softball prospect camp is promoted on the program page (/sports/sball/Roane_State_Softball_Prospect_Camp).",
+  "program_reputation": "NJCAA / TCCAA (NJCAA Region VII) women's softball program at Roane State Community College, competing as the Raiders (Lady Raiders). 2025-26 roster has 18 players. Program is led by head coach Marty McDaniel with a three-person assistant staff.",
+  "notes": "Researched live 2026-07-30 using a browser user-agent (site blocks default WebFetch with HTTP 403, and the /sports/sball/coaches/index path served mismatched third-party content, so data was taken from the verified 2025-26 roster page and individual coach bio pages on rsccathletics.com). Coaching staff captured from https://www.rsccathletics.com/sports/sball/2025-26/roster and individual coach bios: Marty McDaniel (Head Coach), Kelly McDaniel (Assistant Coach), Brett Ellison (Assistant Coach), Beth Smith (Assistant Coach). No coach emails or phone numbers are publicly listed on the roster or bio pages (only generic share-mailto links). No personal Twitter/X handles are listed for coaches; the program team account is @RoaneStSoftball. Roster size (18) counted from unique player bios on the 2025-26 roster page. Conference (TCCAA / NJCAA Region VII) confirmed on the site.",
+  "coaches": [
+    {
+      "name": "Marty McDaniel",
+      "title": "Head Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Confirmed via coach bio page https://www.rsccathletics.com/sports/sball/2025-26/coach/mcdaniel_marty_dmib (checked 2026-07-30); no public email, phone, or personal Twitter/X handle listed."
+    },
+    {
+      "name": "Kelly McDaniel",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Confirmed via coach bio page https://www.rsccathletics.com/sports/sball/2025-26/coach/mcdaniel_kelly_ntk7 (checked 2026-07-30); no public email, phone, or personal Twitter/X handle listed."
+    },
+    {
+      "name": "Brett Ellison",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Confirmed via coach bio page https://www.rsccathletics.com/sports/sball/2025-26/coach/ellison_brett_5x6j (checked 2026-07-30); no public email, phone, or personal Twitter/X handle listed."
+    },
+    {
+      "name": "Beth Smith",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Confirmed via coach bio page https://www.rsccathletics.com/sports/sball/2025-26/coach/smith_beth_yfkz (checked 2026-07-30); no public email, phone, or personal Twitter/X handle listed."
+    }
+  ]
+}

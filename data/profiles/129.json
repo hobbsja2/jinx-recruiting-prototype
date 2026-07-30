@@ -1,0 +1,37 @@
+{
+  "sid": 129,
+  "name": "Davis & Elkins College",
+  "division": "NCAA D2",
+  "conference": "Mountain East Conference",
+  "city": "Elkins",
+  "state": "WV",
+  "website_url": "https://senatornation.com/sports/softball",
+  "academic_ranking": "Private, nonprofit liberal arts college founded in 1904 (Presbyterian Church USA affiliation). U.S. News: #15 Regional Colleges South and #18 Top Performers on Social Mobility. Enrollment roughly 680-805 students with a 12:1 student/faculty ratio; offers ~45 degree programs and an honors program.",
+  "tuition": null,
+  "financial_aid": "Davis & Elkins is a private liberal arts college and typically offers merit-based academic scholarships and need-based financial aid; athletic aid is available for softball as an NCAA D2 program. Specific published tuition/aid figures could not be confirmed from a live source at research time (college site unreachable 2026-07).",
+  "roster_size": 31,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes as the Davis & Elkins Senators. Specific softball facility details were not confirmed from a live source at research time.",
+  "program_reputation": "NCAA Division II women's softball program competing in the Mountain East Conference as the Davis & Elkins Senators (team social handle @SenatorsSB).",
+  "notes": "Coaching staff and roster size confirmed from senatornation.com softball pages (fetched 2026-07). Roster listed 31 student-athletes for 2026. Tuition and scholarship_count set to null because no reliable published figure could be confirmed live at research time; NCAA D2 max softball scholarship allotment is 7.2 (not verified as awarded).",
+  "coaches": [
+    {
+      "name": "Elle Fracker",
+      "title": "Head Softball Coach",
+      "email": "frackera@dewv.edu",
+      "phone": "304-637-1387",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball coaches directory on senatornation.com fetched 2026-07; no personal twitter/X handle listed."
+    },
+    {
+      "name": "Kellsi Peterson",
+      "title": "Assistant Softball Coach",
+      "email": "petersonk2@dewv.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball coaches directory on senatornation.com fetched 2026-07; no public phone or twitter/X handle listed."
+    }
+  ]
+}

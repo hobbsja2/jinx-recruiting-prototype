@@ -1,0 +1,37 @@
+{
+  "sid": 63,
+  "name": "Dyersburg State Community College",
+  "division": "JUCO",
+  "conference": "TCCAA / NJCAA Region VII",
+  "city": "Dyersburg",
+  "state": "TN",
+  "website_url": "https://athletics.dscc.edu/sports/sball/index",
+  "academic_ranking": "Public two-year community college established in 1969, governed by the Tennessee Board of Regents and accredited by SACSCOC (reaffirmed for 10 years). Open-admissions institution serving nine West Tennessee counties from a 100-acre main campus in Dyersburg plus centers in Covington and Paris. Offers Associate of Science, Associate of Arts, and Associate of Applied Science degrees along with technical and academic certificates.",
+  "tuition": 5084.0,
+  "financial_aid": "In-state (Tennessee resident) full-time annual tuition & fees are $5,084 and out-of-state $8,564 for 2026-27 (source: DSCC FY26-27 Fee Schedule and 2026-2027 Cost of Attendance PDFs). Estimated total annual cost of attendance including living expenses is $22,254 in-state and $25,734 out-of-state. Students must complete the FAFSA to be considered for federal/state aid; a Net Price Calculator and COA adjustment request process are available. As a Tennessee community college, students may be eligible for TN Promise/TN Reconnect programs. Athletic scholarship specifics not published on the softball pages.",
+  "roster_size": 17,
+  "scholarship_count": null,
+  "facilities_notes": "Softball is played at the DSCC Softball Complex on campus. The athletics department also lists a DSCC Baseball Complex, DSCC Athletic Weight Room, E.H. Lannom, Jr. Gymnasium, Patriot Bank Soccer Field, and an Indoor Practice Facility (source: athletics.dscc.edu facilities menu, checked 2026-07).",
+  "program_reputation": "The Dyersburg State Eagles (Lady Eagles) compete as an NJCAA / TCCAA member in NJCAA Region VII. The softball program is led by head coach Dusty Rhodes, who joined the athletic department in spring 2024, with assistant coach Emily Gilstrap added to the staff to bring added energy to the Lady Eagles' softball program. No independent national ranking data was found on the official pages.",
+  "notes": "Researched live 2026-07-30 from official DSCC athletics site (PrestoSports platform). Coaching staff page lists exactly two softball staff members (head coach and one assistant). The head coach profile page URL slug is 'Softball_Interim_Head_Coach', but the displayed title on both the roster/coaches listing and the individual bio is 'Head Coach' (Organization: Softball); title recorded as displayed. Roster_size = 17 is the number of players on the 2025-26 softball roster page. No individual coach Twitter/X handles are published; the team account is @DSCCSoftball. Main athletics phone: 731-286-3200.",
+  "coaches": [
+    {
+      "name": "Dusty Rhodes",
+      "title": "Head Coach",
+      "email": "jlrhodes@dscc.edu",
+      "phone": "731-286-3255",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "athletics.dscc.edu/sports/sball/coaches/Softball_Interim_Head_Coach, checked 2026-07; email and phone publicly listed on bio page; no individual Twitter/X handle listed (team account @DSCCSoftball). Bio page URL slug says 'Interim' but displayed title is 'Head Coach'."
+    },
+    {
+      "name": "Emily Gilstrap",
+      "title": "Assistant Coach",
+      "email": "gilstrap@dscc.edu",
+      "phone": "731-286-3217",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "athletics.dscc.edu/sports/sball/coaches/Assistant_Coach_Gilstrap, checked 2026-07; email and phone publicly listed on bio page; no individual Twitter/X handle listed."
+    }
+  ]
+}

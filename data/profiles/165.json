@@ -1,0 +1,37 @@
+{
+  "sid": 165,
+  "name": "Mount St. Joseph University",
+  "division": "NCAA D3",
+  "conference": "Heartland Collegiate Athletic Conference",
+  "city": "Cincinnati",
+  "state": "OH",
+  "website_url": "https://msjlions.com/sports/softball",
+  "academic_ranking": "Private Catholic liberal arts and sciences university organized into four schools (Arts & Sciences, Business & Communication, Education, Health Sciences). Offers a broad range of undergraduate majors, minors, certificates, pre-professional and graduate programs, plus an Honors Program and select three-year degree tracks. Reported 10:1 student-to-faculty ratio.",
+  "tuition": 39750,
+  "financial_aid": "Full-time traditional undergraduates in 2025 were awarded over $31 million in scholarships/grants, with an average aid package of $38,851.20. Merit scholarships range $1,000-$26,000; need-based grants (MSJ Grant, Pell, Ohio College Opportunity Grant, Catholic HS GAP Awards up to 85% off tuition/room/board) range $500-$13,000. Federal/parent loans, work study, and an interest-free Nelnet payment plan are available. Apply via FAFSA (code 003033).",
+  "roster_size": 27,
+  "scholarship_count": null,
+  "facilities_notes": "Softball plays at the Mount St. Joseph Softball Complex (listed among MSJ athletic facilities). No detailed venue description published on the facilities page as of 2026-07.",
+  "program_reputation": "NCAA Division III program competing in the Heartland Collegiate Athletic Conference. As a D3 program, no athletic scholarships are offered; recruits are supported through academic and need-based aid.",
+  "notes": "Correct athletics domain is msjlions.com (Mount St. Joseph teams are the 'Lions'); the discovery URL msjbears.com did not resolve and is incorrect. Data gathered from live msjlions.com and msj.edu pages on 2026-07. Softball staff directory (msjlions.com/sports/softball/coaches) lists only two coaches for the 2026 season; no recruiting coordinator, director of player development, or graduate/volunteer assistants listed. Team general handle is @MSJSoftball; no individual coach twitter/X handles published.",
+  "coaches": [
+    {
+      "name": "Beth Goderwis",
+      "title": "Head Coach",
+      "email": "beth.goderwis@msj.edu",
+      "phone": "(513) 244-4853",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "msjlions.com softball staff directory checked 2026-07; no public twitter/X handle listed"
+    },
+    {
+      "name": "Kate Hoelmer '17",
+      "title": "Assistant Coach/Intramurals",
+      "email": "kate.hoelmer@msj.edu",
+      "phone": "(513) 244-2001",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "msjlions.com softball staff directory checked 2026-07; no public twitter/X handle listed"
+    }
+  ]
+}

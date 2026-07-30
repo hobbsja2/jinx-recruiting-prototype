@@ -1,0 +1,46 @@
+{
+  "sid": 14,
+  "name": "University of Akron",
+  "division": "NCAA D1",
+  "conference": "Mid-American Conference",
+  "city": "Akron",
+  "state": "OH",
+  "website_url": "https://gozips.com/sports/softball",
+  "academic_ranking": "Public research university (R2) in Akron, OH, part of the University System of Ohio. Notable for engineering and polymer science/polymer engineering programs (nationally recognized). Broad range of undergraduate and graduate programs.",
+  "tuition": 20815.0,
+  "financial_aid": "Out-of-state undergraduate tuition approx $20,815; in-state (Ohio resident) approx $13,135 (2024-25, source: univstats). Athletic scholarships available for softball; institutional need- and merit-based aid also offered. Specific per-athlete scholarship figures not publicly listed.",
+  "roster_size": 23,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes at Lee Jackson Field on the University of Akron campus. Athletics facilities under the GoZips/Akron Athletics program.",
+  "program_reputation": "NCAA Division I program competing in the Mid-American Conference (MAC). Head coach Craig Nicholson leads the program.",
+  "notes": "Staff directory (gozips.com/sports/softball/coaches) fetched live 2026-07-30; listed 3 softball staff (1 head coach, 2 assistant coaches). No recruiting coordinator, director of player development, or graduate/volunteer assistant separately listed on the public staff page. Roster size (23) counted from gozips.com/sports/softball/roster fetched 2026-07-30. Individual coach Twitter/X handles not listed on staff page; team account is @zipssb. scholarship_count left null (NCAA D1 softball max is 12 equivalency scholarships but school-specific count not publicly published).",
+  "coaches": [
+    {
+      "name": "Craig Nicholson",
+      "title": "Head Softball Coach",
+      "email": "cnicholson@uakron.edu",
+      "phone": "(330) 972-5056",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "gozips.com softball staff directory, fetched 2026-07-30; email and phone publicly listed. No individual Twitter/X handle listed."
+    },
+    {
+      "name": "Sara Zilles",
+      "title": "Assistant Coach",
+      "email": "szilles@uakron.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "gozips.com softball staff directory, fetched 2026-07-30; email publicly listed. No public phone or Twitter/X handle listed."
+    },
+    {
+      "name": "Cailey Joyce",
+      "title": "Assistant Coach",
+      "email": "cjoyce@uakron.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "gozips.com softball staff directory, fetched 2026-07-30; email publicly listed. No public phone or Twitter/X handle listed."
+    }
+  ]
+}

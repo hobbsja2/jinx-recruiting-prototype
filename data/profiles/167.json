@@ -1,0 +1,37 @@
+{
+  "sid": 167,
+  "name": "Hiram College",
+  "division": "NCAA D3",
+  "conference": "Presidents' Athletic Conference",
+  "city": "Hiram",
+  "state": "OH",
+  "website_url": "https://hiramterriers.com/sports/softball",
+  "academic_ranking": "Private liberal arts college founded in 1850, accredited by the Higher Learning Commission. Ranked 10th among Midwestern regional liberal arts colleges in the 2026 U.S. News & World Report rankings. Featured in Loren Pope's 'Colleges That Change Lives.' Enrollment approx. 1,026 undergraduates (fall 2024), roughly 30 majors and 38 minors under the 'Hiram Connect' curriculum.",
+  "tuition": null,
+  "financial_aid": "As an NCAA Division III institution, Hiram College does not offer athletic scholarships. Financial aid is available in the form of academic/merit scholarships, need-based grants, and federal/state aid. Exact tuition and aid figures not confirmed from a live authoritative source during research (checked 2026-07).",
+  "roster_size": 18,
+  "scholarship_count": 0,
+  "facilities_notes": "Hiram Terriers athletics facilities listed on the athletics site include Fishel Field at Proverbs Park, Charles A. Henry Field at Malmisur Stadium, and Myrtis E. Herndon Field. A specific named softball venue was not clearly confirmed from the softball program page (checked 2026-07).",
+  "program_reputation": "NCAA Division III women's softball program competing in the Presidents' Athletic Conference (PAC), which Hiram joined July 1, 2024. Team X/Twitter account is @Hiram_SB.",
+  "notes": "Coaching staff and roster data captured live from hiramterriers.com on 2026-07. Softball coaches directory lists a two-person staff (head coach and one assistant). Roster page listed 18 players for the 2026 season. Tuition figure could not be verified from a live authoritative source and is left null rather than guessed.",
+  "coaches": [
+    {
+      "name": "Giselle Bahena",
+      "title": "Head Softball Coach",
+      "email": "BahenaG@hiram.edu",
+      "phone": "(330) 569-5478",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball coaches directory checked 2026-07; email and phone publicly listed. No individual Twitter/X handle listed (team account @Hiram_SB)."
+    },
+    {
+      "name": "Gianna Araki",
+      "title": "Assistant Softball Coach",
+      "email": "ArakiGK@hiram.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball coaches directory checked 2026-07; email publicly listed. No public phone or individual Twitter/X handle listed."
+    }
+  ]
+}

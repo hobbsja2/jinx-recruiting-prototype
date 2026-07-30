@@ -1,0 +1,28 @@
+{
+  "sid": 146,
+  "name": "Tusculum University",
+  "division": "NCAA D2",
+  "conference": "South Atlantic Conference",
+  "city": "Tusculum",
+  "state": "TN",
+  "website_url": "https://www.tusculumpioneers.com/sports/sball/index",
+  "academic_ranking": "Regional University (South). U.S. News & World Report 2025-2026: #86 (tie) of 90 Regional Universities (South). Washington Monthly 2025: 341 of 604 Master's Universities. Tennessee's first university and the 28th-oldest operating college in the U.S.",
+  "tuition": 29250,
+  "financial_aid": "Federal College Scorecard reports Pell Grant recipient rate of ~46.4%. Private university with need- and merit-based aid; most students receive some form of financial aid. Specific average award amounts not publicly confirmed on official pages checked 2026-07.",
+  "roster_size": 25,
+  "scholarship_count": null,
+  "facilities_notes": "Pioneers softball competes at the on-campus softball complex in Tusculum/Greeneville, TN. Detailed facility specs not published on the softball program pages checked 2026-07.",
+  "program_reputation": "NCAA Division II program competing in the South Atlantic Conference (SAC), a strong D2 conference in the Southeast. Program branded as Tusculum Pioneers.",
+  "notes": "Softball coaches directory (https://www.tusculumpioneers.com/sports/sball/coaches/index) checked 2026-07 lists only the head coach; no assistant coaches, coordinators, or graduate/volunteer assistants are publicly listed. Roster size (25) from the 2026-27 roster page (https://www.tusculumpioneers.com/sports/sball/2026-27/roster). Tuition ($29,250, in-state = out-of-state) and Pell rate from U.S. Dept. of Education College Scorecard (latest). Federal data lists the school city as Greeneville, TN; the campus community is Tusculum, TN. Scholarship count not publicly listed (D2 softball is equivalency-limited).",
+  "coaches": [
+    {
+      "name": "Julie Huebner",
+      "title": "Head Softball Coach",
+      "email": "jhuebner@tusculum.edu",
+      "phone": "(423) 636-7300 x-5131",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "From official softball coaches page https://www.tusculumpioneers.com/sports/sball/coaches/index (fetched 2026-07). No public Twitter/X handle listed."
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "sid": 104,
+  "name": "Butler University",
+  "division": "NCAA D1",
+  "conference": "Big East Conference",
+  "city": "Indianapolis",
+  "state": "IN",
+  "website_url": "https://butlersports.com/sports/softball",
+  "academic_ranking": "Butler University is a private university founded in 1855 with a total enrollment of about 5,746 students and an average class size of 21. Butler is ranked the No. 1 Regional University in the Midwest (U.S. News) and was named one of Jeffrey Selingo's 75 'New Dream Schools.' It reports a 98% placement rate (employed or in graduate school) for 2024 graduates. Known for a student-centered model blending liberal arts with professional training.",
+  "tuition": 50860,
+  "financial_aid": "2026-27 undergraduate tuition is $50,860 (total cost of attendance approx. $75,080 including housing/food, fees, and indirect costs). 96% of first-year students received gift aid in 2024-25. All first-year applicants are automatically considered for the Academic Scholarship Program with awards ranging $18,000-$30,000. Merit scholarships for academics and athletics, need-based aid via FAFSA (school code 001788), work-study, loans, and a Loan Repayment Assistance Program (LRAP) are available. Financial Aid Office: 317-940-8200, finaid@butler.edu.",
+  "roster_size": 22,
+  "scholarship_count": null,
+  "facilities_notes": "Butler softball competes as an NCAA Division I program on the Butler University campus in Indianapolis, IN. Specific stadium/facility details were not confirmed from a live page (softball facility page returned an error 2026-07); not stated to avoid guessing.",
+  "program_reputation": "NCAA Division I softball program competing in the Big East Conference, based in Indianapolis, IN.",
+  "notes": "Researched live from butlersports.com and butler.edu on 2026-07. Coaching staff pulled from the softball coaches directory (labeled '2027 Butler Softball Coaching Staff'). Roster size (22) from the Fall 2026 softball roster page. Scholarship count not publicly listed. No Twitter/X handles listed for any staff member.",
+  "coaches": [
+    {
+      "name": "Scott Hall",
+      "title": "Head Coach",
+      "email": "sahall@butler.edu",
+      "phone": "317-940-9618",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "butlersports.com softball coaches directory checked 2026-07; no public Twitter/X handle listed"
+    },
+    {
+      "name": "Mallory Winters",
+      "title": "Assistant Coach",
+      "email": "mfwinter@butler.edu",
+      "phone": "317-940-8388",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Listed as 'Mallory Winters '12'. butlersports.com softball coaches directory checked 2026-07; no public Twitter/X handle listed"
+    },
+    {
+      "name": "Bryce Small",
+      "title": "Assistant Coach / Strength & Conditioning",
+      "email": "bjsmall@butler.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "butlersports.com softball coaches directory checked 2026-07; no public phone or Twitter/X handle listed"
+    },
+    {
+      "name": "Cory Rywalt",
+      "title": "Assistant Coach",
+      "email": "crywalt@butler.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "butlersports.com softball coaches directory checked 2026-07; no public phone or Twitter/X handle listed"
+    },
+    {
+      "name": "Renee Milos",
+      "title": "Athletic Trainer (ATC)",
+      "email": "rmilos@butler.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "Listed under softball support staff. butlersports.com checked 2026-07; no public phone or Twitter/X handle listed"
+    },
+    {
+      "name": "Sean O'Brien",
+      "title": "Director of Operations",
+      "email": "sjobrien@butler.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 50,
+      "source_note": "Listed under softball support staff. butlersports.com checked 2026-07; no public phone or Twitter/X handle listed"
+    }
+  ]
+}

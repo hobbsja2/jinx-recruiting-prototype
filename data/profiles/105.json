@@ -1,0 +1,46 @@
+{
+  "sid": 105,
+  "name": "Indiana University Indianapolis (IU Indy)",
+  "division": "NCAA D1",
+  "conference": "Horizon League",
+  "city": "Indianapolis",
+  "state": "IN",
+  "website_url": "https://iuindyjags.com/sports/softball",
+  "academic_ranking": "Large urban public research university and Indiana's primary academic health sciences campus. In February 2025 its Carnegie Classification was raised to R1: Doctoral Universities (very high research). Home to the IU School of Medicine (largest medical school in the U.S.), IU School of Dentistry, IU McKinney School of Law, and an Indianapolis campus of the Kelley School of Business, offering 550+ degree programs. Total enrollment ~29,000 (roughly 20,000 undergraduate). Founded July 1, 2024 from the split of the former IUPUI.",
+  "tuition": null,
+  "financial_aid": "As an NCAA Division I public university, IU Indy offers need-based and merit-based financial aid, federal/state grants, and athletic aid administered through the athletics department. Specific figures not confirmed on live sources checked 2026-07.",
+  "roster_size": 24,
+  "scholarship_count": null,
+  "facilities_notes": "Softball home venue is the IU Indy Softball Complex (listed on the athletics facilities page at iuindyjags.com/facilities/iu-indy-softball-complex/6). Additional venue details (capacity, features) not published on the pages checked 2026-07.",
+  "program_reputation": "NCAA Division I program competing in the Horizon League, representing the IU Indy Jaguars. Athletics site: iuindyjags.com.",
+  "notes": "Researched live from iuindyjags.com and the school staff directory on 2026-07. Coaching staff confirmed across both the softball coaches page and the staff directory: Head Coach Elisabeth Beirne plus two assistant coaches. No volunteer/graduate assistants, director of operations, or recruiting coordinator were listed for softball. Tuition not confirmed from a reliable live source, so left null rather than guessed.",
+  "coaches": [
+    {
+      "name": "Elisabeth Beirne",
+      "title": "Head Coach",
+      "email": "ebeirne@iu.edu",
+      "phone": "317-274-2340",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "iuindyjags.com softball coaches page + staff directory checked 2026-07; email and phone publicly listed, no public X/Twitter handle listed"
+    },
+    {
+      "name": "Jackie Barley",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "iuindyjags.com softball coaches page + staff directory checked 2026-07; no public email, phone, or X/Twitter listed"
+    },
+    {
+      "name": "Chris Ulrey",
+      "title": "Assistant Coach",
+      "email": "cdulrey@iu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "iuindyjags.com softball coaches page checked 2026-07; email publicly listed, no public phone or X/Twitter listed"
+    }
+  ]
+}

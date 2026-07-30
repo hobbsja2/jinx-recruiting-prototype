@@ -1,0 +1,28 @@
+{
+  "sid": 61,
+  "name": "Cleveland State Community College",
+  "division": "JUCO",
+  "conference": "TCCAA / NJCAA Region VII",
+  "city": "Cleveland",
+  "state": "TN",
+  "website_url": "https://cscougars.com/sports/sball/index",
+  "academic_ranking": "Public two-year community college (NCES/IPEDS 2-year public). Approx. 3,282 undergraduate students with an 18:1 student-to-faculty ratio (College Navigator). Offers Tennessee Transfer Pathways, an Honors College, and articulation/transfer agreements to four-year institutions.",
+  "tuition": 4762,
+  "financial_aid": "Awards more than $5 million in financial aid each academic year. Options include federal Pell grants, federal work-study, and Direct (subsidized/unsubsidized) and PLUS loans; Tennessee Student Assistance Award, TN Promise, TN Reconnect, and TN Education Lottery scholarships; plus institutional and foundation scholarships. All aid begins with the FAFSA (school code 003999). Source: clevelandstatecc.edu/paying-for-college/financial-aid, checked 2026-07.",
+  "roster_size": 17,
+  "scholarship_count": null,
+  "facilities_notes": "Softball plays at the on-campus Softball Field. Athletics facilities listed on cscougars.com also include Cougar Field, the Mark E. Smith Performance Center, Indoor Batting Cages, the L. Quentin Lane Gymnasium, the Athletic Academic Success Center/Cougar Room, and a Training Room.",
+  "program_reputation": "NJCAA / TCCAA (NJCAA Region VII) women's softball program at Cleveland State Community College (the Cougars), Cleveland, TN. No specific ranking or accolade data was publicly listed on the official softball site as of 2026-07.",
+  "notes": "Discovery URL https://www.cscougars.com is correct: the Cleveland State CC official site (clevelandstatecc.edu) links its Athletics section to cscougars.com/landing/index. The Sidearm-hosted softball coaches page (cscougars.com/sports/sball/coaches/index) lists only one staff member: Head Softball Coach Haley Carroll; no assistant coaches, recruiting coordinators, or graduate/volunteer assistants were listed as of 2026-07. Her bio page (cscougars.com/sports/sball/coaches/Haley_Carroll) shows a placeholder bio with no public email, direct phone, or Twitter/X handle. Roster size (17) is from the 2025-26 roster at clevelandscc.prestosports.com/sports/sball/2025-26/roster. Conference confirmed via TCCAA/NJCAA references on the official softball site. Tuition ($4,762 in-state TN resident annual tuition & fees, ~2024-25) is an aggregator figure (CollegeTuitionCompare/CollegeEvaluator); the official tuition page (clevelandstatecc.edu/paying-for-college/tuition-fees) was JS-protected and not directly readable, so the exact figure should be re-verified with the college bursar. Scholarship count for softball was not publicly listed.",
+  "coaches": [
+    {
+      "name": "Haley Carroll",
+      "title": "Head Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "cscougars.com/sports/sball/coaches/index and bio page /coaches/Haley_Carroll checked 2026-07; no public email, direct phone, or Twitter/X listed (only general athletics line (423) 478-6219)."
+    }
+  ]
+}

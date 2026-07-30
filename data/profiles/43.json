@@ -1,0 +1,37 @@
+{
+  "sid": 43,
+  "name": "Milligan University",
+  "division": "NAIA",
+  "conference": "Appalachian Athletic Conference",
+  "city": "Elizabethton",
+  "state": "TN",
+  "website_url": "https://www.milliganbuffs.com/sports/softball",
+  "academic_ranking": "Private Christian liberal arts university founded 1866, affiliated with the Restoration Movement. Ranked #15 of 90 Regional Universities (South) by U.S. News & World Report and #214 of 604 by Washington Monthly (Master's Universities). Offers over 100 programs of study; student-to-faculty ratio approximately 10:1.",
+  "tuition": null,
+  "financial_aid": "Financial aid details not confirmed from a live authoritative source during research (2026-07); no reliable public figure captured. Milligan reports an endowment of ~$60.3M (2025). Prospective athletes should confirm merit/need-based aid and athletic scholarship packages with the admissions and financial aid offices.",
+  "roster_size": 18,
+  "scholarship_count": null,
+  "facilities_notes": "Milligan competes as the Buffaloes. Campus is a suburban 355-acre site in Elizabethton, TN. Specific softball facility details not confirmed from a live source during research (2026-07).",
+  "program_reputation": "NAIA program competing in the Appalachian Athletic Conference (AAC). Athletics branded 'milliganbuffs.com'. Detailed competitive history/recent results not captured from a live source during this research pass.",
+  "notes": "Softball program page: https://www.milliganbuffs.com/sports/softball ; roster (2026): https://www.milliganbuffs.com/sports/softball/roster (18 players). Coaching staff verified via athletics staff directory (https://www.milliganbuffs.com/staff-directory) on 2026-07. Only two softball staff listed: head coach and one assistant. Tuition/financial aid figures could not be confirmed from a live authoritative source and are left null/unconfirmed rather than guessed.",
+  "coaches": [
+    {
+      "name": "Cassie Fortner",
+      "title": "Head Coach",
+      "email": "",
+      "phone": "423-461-8951",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Verified via milliganbuffs.com staff directory 2026-07. Phone listed publicly; email only behind a 'Send Email' redirect link (no plain-text address published); no Twitter/X handle listed."
+    },
+    {
+      "name": "Kaylee Higgins",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Verified via milliganbuffs.com staff directory 2026-07. No public phone or plain-text email listed (email only behind 'Send Email' redirect link); no Twitter/X handle listed."
+    }
+  ]
+}

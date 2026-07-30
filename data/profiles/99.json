@@ -1,0 +1,55 @@
+{
+  "sid": 99,
+  "name": "Purdue University",
+  "division": "NCAA D1",
+  "conference": "Big Ten Conference",
+  "city": "West Lafayette",
+  "state": "IN",
+  "website_url": "https://purduesports.com/sports/softball",
+  "academic_ranking": "Purdue is a major public research university (member of the Association of American Universities). U.S. News & World Report (2026 edition) ranks it approximately 46th among national universities and 19th among public universities, and it is highly regarded for STEM/engineering (top-10 engineering school, ranked among the most innovative national universities). Admissions are classified as 'more selective' (roughly 49% acceptance rate).",
+  "tuition": 28794.0,
+  "financial_aid": "Public university with in-state (Indiana resident) tuition and fees of approximately $9,992/yr and non-resident tuition of approximately $28,794/yr (NCES published rate, 2024-25). Purdue is nationally known for its long-running tuition freeze holding rates flat for over a decade. Athletic scholarships plus need- and merit-based institutional aid, federal aid, and state grants are available. Verify current figures with Purdue's Office of the Bursar and Division of Financial Aid.",
+  "roster_size": 24,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes at Bittinger Stadium on the West Lafayette campus.",
+  "program_reputation": "NCAA Division I women's softball program competing in the Big Ten Conference. Part of Purdue's Big Ten athletics department in West Lafayette, IN.",
+  "notes": "Coaching staff and roster captured live from purduesports.com staff directory and softball roster page on 2026-07 (roster page reflected the 2027 season, 24 players). The direct softball coaches URL (/sports/softball/coaches) returned 404; softball staff were captured from the athletics staff directory (/staff-directory) filtered to the Softball department. No phone numbers or Twitter/X handles are publicly listed for softball staff. Tuition figures sourced from NCES College Navigator (published 2024-25 rates) because Purdue's bursar pages did not expose dollar amounts to automated retrieval.",
+  "coaches": [
+    {
+      "name": "Magali Frezzotti",
+      "title": "Head Coach",
+      "email": "coachfrezzotti@purdue.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "purduesports.com staff directory checked 2026-07; email listed, no public phone or Twitter/X handle listed"
+    },
+    {
+      "name": "Lucas Gardner",
+      "title": "Assistant Coach",
+      "email": "lwgardne@purdue.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "purduesports.com staff directory checked 2026-07; email listed, no public phone or Twitter/X handle listed"
+    },
+    {
+      "name": "Kate Claypool",
+      "title": "Director of Player Development",
+      "email": "claypook@purdue.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "purduesports.com staff directory checked 2026-07; email listed, no public phone or Twitter/X handle listed"
+    },
+    {
+      "name": "Casey Bonk",
+      "title": "Supervisor of Softball Operations",
+      "email": "caseybonk@purdue.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "purduesports.com staff directory checked 2026-07; email listed, no public phone or Twitter/X handle listed"
+    }
+  ]
+}

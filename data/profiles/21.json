@@ -1,0 +1,37 @@
+{
+  "sid": 21,
+  "name": "Cleveland State University",
+  "division": "NCAA D1",
+  "conference": "Horizon League",
+  "city": "Cleveland",
+  "state": "OH",
+  "website_url": "https://csuvikings.com/sports/softball",
+  "academic_ranking": "Public R2 doctoral university (Carnegie: High research activity). U.S. News & World Report 2025 ranked CSU #342 (tie) nationally and #183 among public national universities; Forbes #196; Washington Monthly #217.",
+  "tuition": 12988,
+  "financial_aid": "In-state undergraduate tuition and required fees approximately $12,988/year and out-of-state approximately $18,510/year (2024-25, per NCES/IPEDS). Total cost of attendance (on campus) roughly $32,792 in-state and $38,314 out-of-state. Athletic scholarships and need/merit-based aid available; contact the CSU Office of Financial Aid for specifics.",
+  "roster_size": 18,
+  "scholarship_count": null,
+  "facilities_notes": "Vikings softball competes as an NCAA Division I program in the Horizon League. Staff directory and roster verified via csuvikings.com 2026-07; no detailed public facilities description captured from the fetched pages.",
+  "program_reputation": "NCAA Division I women's softball program competing in the Horizon League, based in Cleveland, Ohio.",
+  "notes": "Data gathered from official csuvikings.com softball coaches and roster pages plus NCES/IPEDS (ID 202134) and Wikipedia, verified 2026-07. Coaches page listed only 2 softball staff (head coach and one assistant); no recruiting coordinator, director of player development, or graduate/volunteer assistant was publicly listed at time of check.",
+  "coaches": [
+    {
+      "name": "Amy Kyler",
+      "title": "Head Coach",
+      "email": "a.kyler@csuohio.edu",
+      "phone": "(216) 687-5110",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "csuvikings.com softball coaches page checked 2026-07; email and phone publicly listed, no Twitter/X handle listed"
+    },
+    {
+      "name": "Erin Pond",
+      "title": "Assistant Coach",
+      "email": "e.e.pond@csuohio.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "csuvikings.com softball coaches page checked 2026-07; email publicly listed, no public phone or Twitter/X listed"
+    }
+  ]
+}

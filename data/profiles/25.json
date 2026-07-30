@@ -1,0 +1,55 @@
+{
+  "sid": 25,
+  "name": "DePauw University",
+  "division": "NCAA D3",
+  "conference": "North Coast Athletic Conference",
+  "city": "Greencastle",
+  "state": "IN",
+  "website_url": "https://depauwtigers.com/sports/softball",
+  "academic_ranking": "DePauw University is a highly regarded private liberal arts college in Greencastle, Indiana, consistently ranked among the top national liberal arts colleges (typically ranked in the top ~50-60 range by U.S. News). Known for strong programs in music (School of Music), sciences, and the humanities, and a robust liberal arts curriculum with high faculty engagement.",
+  "tuition": null,
+  "financial_aid": "More than 95% of DePauw students receive some form of financial assistance. Beginning Fall 2026, DePauw meets 100% of calculated financial need for all incoming first-year students ('The DePauw Promise'). Merit scholarships range from $20,000 up to full tuition and are awarded automatically upon admission. As an NCAA Division III institution, athletic scholarships are not offered. Source: depauw.edu admission-aid page, checked 2026-07.",
+  "roster_size": 22,
+  "scholarship_count": null,
+  "facilities_notes": "Softball home venue is DePauw Tigers Field (softball). Source: depauwtigers.com softball roster/facilities navigation, checked 2026-07.",
+  "program_reputation": "DePauw softball competes in the North Coast Athletic Conference (NCAA Division III). The Tigers are led by head coach Gabby Smart, a DePauw '17 alumna. The program carries a 22-player roster for the 2026 season.",
+  "notes": "Data gathered live from depauwtigers.com softball coaches, roster, and staff directory pages plus depauw.edu admission-aid page, 2026-07. As an NCAA D3 program, no athletic scholarships are awarded. Exact annual tuition figure could not be confirmed from a live authoritative page during research (relevant depauw.edu cost pages returned 404); left as null rather than guessing. No public phone numbers or Twitter/X handles were listed for coaching staff.",
+  "coaches": [
+    {
+      "name": "Gabby Smart",
+      "title": "Head Coach",
+      "email": "gabriellesmart@depauw.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Email listed on depauwtigers.com softball coaches page (checked 2026-07); no public phone or Twitter/X listed."
+    },
+    {
+      "name": "Becky Iaccino",
+      "title": "Assistant Softball Coach",
+      "email": "beckyiaccino@depauw.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Email listed on depauwtigers.com softball coaches page (checked 2026-07); no public phone or Twitter/X listed."
+    },
+    {
+      "name": "Mark Hendrickson",
+      "title": "Volunteer Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Listed on depauwtigers.com softball coaches page and staff directory (checked 2026-07); no public email, phone, or Twitter/X listed."
+    },
+    {
+      "name": "Bob England",
+      "title": "Volunteer Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Listed on depauwtigers.com softball coaches page and staff directory (checked 2026-07); no public email, phone, or Twitter/X listed."
+    }
+  ]
+}

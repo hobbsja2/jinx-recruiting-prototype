@@ -1,0 +1,55 @@
+{
+  "sid": 160,
+  "name": "Oberlin College",
+  "division": "NCAA D3",
+  "conference": "North Coast Athletic Conference",
+  "city": "Oberlin",
+  "state": "OH",
+  "website_url": "https://goyeo.com/sports/softball",
+  "academic_ranking": "Private liberal arts college and conservatory of music founded in 1833 (oldest coeducational liberal arts college in the U.S.). Ranked tied for 55th among national liberal arts colleges by U.S. News & World Report (2025). Enrollment ~3,000 across the College of Arts & Sciences and the Conservatory, with 50+ majors/minors. Associated with more MacArthur fellows than any other liberal arts college and among the top producers of Fulbright scholars.",
+  "tuition": 68340,
+  "financial_aid": "As a private institution, Oberlin does not offer athletic scholarships (NCAA Division III). Financial aid is need-based and merit-based; the college offers the Oberlin Commitment (a $10,000 scholarship reference) and a MyinTuition quick cost estimator. Total 2025-26 comprehensive cost of attendance is approximately $89,578 (tuition $68,340 + housing $9,970 + meal plan $10,126 + fees $1,142). Source: oberlin.edu/admissions-and-aid/tuition-and-fees, checked 2026-07.",
+  "roster_size": 20,
+  "scholarship_count": null,
+  "facilities_notes": "Softball is played at Dill Field on the Oberlin College campus (listed among Oberlin athletics facilities on goyeo.com). No additional facility specifications were publicly listed.",
+  "program_reputation": "NCAA Division III program competing in the North Coast Athletic Conference (NCAC). No athletic scholarships offered per Division III rules. Team social media account is @Yeo_Softball.",
+  "notes": "Data gathered from goyeo.com softball coaches and roster pages and oberlin.edu tuition/aid pages, fetched 2026-07. Roster size (20) from the 2026 softball roster page. As a D3 program, no athletic scholarships are awarded, so scholarship_count is null.",
+  "coaches": [
+    {
+      "name": "Julie Pratt",
+      "title": "Head Softball Coach",
+      "email": "jpratt@oberlin.edu",
+      "phone": "330-329-2475",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "goyeo.com softball coaches page, checked 2026-07; email and phone publicly listed. No personal Twitter/X handle listed (team account @Yeo_Softball)."
+    },
+    {
+      "name": "Lauren Polak",
+      "title": "Assistant Softball Coach",
+      "email": "ldockril@oberlin.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "goyeo.com softball coaches page, checked 2026-07; email listed, no public phone or Twitter/X handle listed."
+    },
+    {
+      "name": "Mia Brito",
+      "title": "Volunteer Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "goyeo.com softball coaches page, checked 2026-07; no public email, phone, or Twitter/X handle listed."
+    },
+    {
+      "name": "Nicole Doyle",
+      "title": "Volunteer Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "goyeo.com softball coaches page, checked 2026-07; no public email, phone, or Twitter/X handle listed."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "sid": 124,
+  "name": "Calumet College of St. Joseph",
+  "in_state_tuition": 23900,
+  "housing_cost": null,
+  "housing_basis": "",
+  "tuition_note": "Private/independent school with single published rate. Traditional full-time tuition $23,900/year (2026-27) from https://www.ccsj.edu/tuition; note this is tuition only - required fees (technology $170/term, student association $100/term, textbook rental $520/semester) are listed separately per term and no combined tuition & fees total is published. Housing: on-campus room/board cost is NOT published on the official CCSJ site (residence-life and financial-aid pages list facilities and contact info only, no pricing); set to null rather than use widely varying third-party estimates ($5,700-$10,000)."
+}

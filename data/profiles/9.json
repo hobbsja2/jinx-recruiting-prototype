@@ -1,0 +1,55 @@
+{
+  "sid": 9,
+  "name": "Walsh University",
+  "division": "NCAA D2",
+  "conference": "Great Midwest Athletic Conference (G-MAC)",
+  "city": "North Canton",
+  "state": "OH",
+  "website_url": "https://athletics.walsh.edu/sports/softball",
+  "academic_ranking": "Private Catholic university founded in 1960 by the Brothers of Christian Instruction. Located in North Canton, OH. Enrollment ~2,192 (fall 2024): ~1,523 undergraduates and ~669 postgraduates. Offers 70+ undergraduate majors and graduate programs including DPT, MSN, MBA, and DNP.",
+  "tuition": 33030,
+  "financial_aid": "Walsh University markets itself as an affordable Catholic institution with merit- and need-based aid available. Specific percent-of-students-aided figures were not published on pages checked 2026-07.",
+  "roster_size": 24,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes as an NCAA D2 program in the G-MAC. The athletics facilities page (athletics.walsh.edu/facilities) listed no facility details ('There are no facilities to show') as of 2026-07; no dedicated softball field/stadium name was publicly listed.",
+  "program_reputation": "NCAA Division II softball program competing in the Great Midwest Athletic Conference (G-MAC) as the Walsh Cavaliers. Team X/social account: @WalshUSoftball.",
+  "notes": "Data sourced from athletics.walsh.edu softball coaches and roster pages (fetched 2026-07). The public site walshcavaliers.com was unreachable; athletics.walsh.edu is the working mirror/canonical Sidearm site. Tuition & fees ($33,030, AY 2024-2025) confirmed via Univstats (IPEDS/NCES-based). Roster count of 24 taken from the 2027 softball roster page.",
+  "coaches": [
+    {
+      "name": "Katie Connell",
+      "title": "Head Coach",
+      "email": "kconnell@walsh.edu",
+      "phone": "330.490.7517",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "athletics.walsh.edu softball coaches page, fetched 2026-07; email and phone publicly listed; no individual X/Twitter handle listed (team account @WalshUSoftball)."
+    },
+    {
+      "name": "Katie Cozy",
+      "title": "Assistant Coach",
+      "email": "kcozy@walsh.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "athletics.walsh.edu softball coaches page, fetched 2026-07; email publicly listed; no public phone or X/Twitter handle listed."
+    },
+    {
+      "name": "Bryn Elliott",
+      "title": "Graduate Assistant",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "athletics.walsh.edu softball coaches page, fetched 2026-07; no public email, phone, or X/Twitter handle listed."
+    },
+    {
+      "name": "Steve Woolf",
+      "title": "Volunteer Assistant",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "athletics.walsh.edu softball coaches page, fetched 2026-07; no public email, phone, or X/Twitter handle listed."
+    }
+  ]
+}

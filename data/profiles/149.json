@@ -1,0 +1,55 @@
+{
+  "sid": 149,
+  "name": "Capital University",
+  "division": "NCAA D3",
+  "conference": "Ohio Athletic Conference",
+  "city": "Bexley",
+  "state": "OH",
+  "website_url": "https://athletics.capital.edu/sports/softball",
+  "academic_ranking": "Private liberal arts university in Bexley, OH. Acceptance rate approximately 73%. 10-year median graduate earnings reported around $54,143. Tuition considered on the higher end among Ohio private four-year colleges.",
+  "tuition": 43234,
+  "financial_aid": "As an NCAA Division III program, Capital does not offer athletic scholarships; aid is need- and merit-based academic aid. Average net price after aid reported at approximately $23,585. Financial Aid Office publishes an annual Cost of Attendance estimate.",
+  "roster_size": 16,
+  "scholarship_count": null,
+  "facilities_notes": "Athletics facilities include the Clowson Field Complex and Bernlohr Stadium; specific softball field name not confirmed on the softball program page (checked 2026-07).",
+  "program_reputation": "NCAA Division III softball program competing in the Ohio Athletic Conference. Head coach Anna Kirk entering her fourth season leading the program in 2026-27.",
+  "notes": "Researched from athletics.capital.edu (note: primary domain is athletics.capital.edu, not gocomets.capital.edu). Coaching staff and roster captured from live pages 2026-07. Assistant coach Bayli Dennison is listed on the staff page with email bpope@capital.edu exactly as published.",
+  "coaches": [
+    {
+      "name": "Anna Kirk",
+      "title": "Head Softball Coach",
+      "email": "akirk2@capital.edu",
+      "phone": "614-236-6487",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "athletics.capital.edu softball coaches page, fetched 2026-07"
+    },
+    {
+      "name": "Molly Troutman",
+      "title": "Assistant Softball Coach",
+      "email": "mtroutman@capital.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "athletics.capital.edu softball coaches page, fetched 2026-07; no public phone or twitter listed"
+    },
+    {
+      "name": "Bayli Dennison",
+      "title": "Assistant Softball Coach",
+      "email": "bpope@capital.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "athletics.capital.edu softball coaches page, fetched 2026-07; email published as bpope@capital.edu; no public phone or twitter listed"
+    },
+    {
+      "name": "Jami Pope",
+      "title": "Assistant Softball Coach / Recruiting Coordinator",
+      "email": "jpope7@capital.edu",
+      "phone": "740-504-7105",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "athletics.capital.edu softball coaches page, fetched 2026-07; no public twitter listed"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "sid": 60,
+  "name": "Chattanooga State Community College",
+  "division": "JUCO",
+  "conference": "TCCAA / NJCAA Region VII",
+  "city": "Chattanooga",
+  "state": "TN",
+  "website_url": "https://www.chattstatetigers.com/sports/sball/index",
+  "academic_ranking": "Public two-year community college in the Tennessee Board of Regents system, accredited by the Southern Association of Colleges and Schools (SACSCOC). Roughly 10,000 undergraduates (federal College Scorecard reports enrollment of ~5,284; NCES ~7,600 depending on year/measure). Seven academic departments span business/IT, engineering technology, humanities and fine arts, math and sciences, nursing and allied health, social/behavioral sciences, and the integrated Tennessee College of Applied Technology (TCAT). Notable for the Volkswagen Academy and Wacker Institute technical training partnerships. As a community college it is open-enrollment and not ranked among selective national universities.",
+  "tuition": 4772.0,
+  "financial_aid": "Tuition figure ($4,772/yr) is the in-state annual tuition/fees per the federal College Scorecard; out-of-state tuition is approximately $17,756/yr. Tennessee residents may qualify for the TN Promise (last-dollar scholarship covering community college tuition/fees for recent high school graduates) and TN Reconnect (for adult learners), which frequently make community college tuition-free for eligible in-state students. Federal Pell Grants, state grants, and institutional aid are administered through the Chattanooga State financial aid office. As an NJCAA/JUCO program, athletic aid is limited (see scholarship notes); specific softball award amounts were not published on the pages fetched.",
+  "roster_size": 18,
+  "scholarship_count": null,
+  "facilities_notes": "Chattanooga State Tigers softball competes as an NJCAA program on the Chattanooga State campus in Chattanooga, TN. Specific stadium/field name and facility specifications were not enumerated on the official softball pages fetched (chattstatetigers.com, powered by PrestoSports). Athletics department social account: x.com/chattstathletic.",
+  "program_reputation": "Established NJCAA Region VII / TCCAA softball program with a strong history — the Tigers won the 2012 NJCAA Division I softball national championship. Head Coach Blythe Golden leads a staff of two assistant coaches for the 2025-26 season.",
+  "notes": "Coaching staff and roster captured live on 2026-07-30 from the official Chattanooga State athletics site (chattstatetigers.com, a PrestoSports-hosted site at chattanoogastatecc.prestosports.com). Softball coaches page (/sports/sball/coaches/index) lists 3 softball-specific staff: Head Coach Blythe Golden plus two Assistant Coaches (Brandon Carr, Aimie Davidson); no recruiting coordinator, director of player development, or graduate/volunteer assistant was separately listed. Roster_size = 18 active players from the 2025-26 roster page (/sports/sball/2025-26/roster). Conference confirmed as TCCAA / NJCAA Region VII from site metadata. No individual coach twitter/X handles were published (only the department account @chattstathletic). Tuition ($4,772 in-state) and out-of-state ($17,756) figures are from the U.S. Dept. of Education College Scorecard, not a live chattanoogastate.edu page (the college site returned HTTP 403 to automated fetches). scholarship_count left null — no verified NJCAA softball scholarship figure was publicly listed.",
+  "coaches": [
+    {
+      "name": "Blythe Golden",
+      "title": "Head Coach",
+      "email": "blythe.golden@chattanoogastate.edu",
+      "phone": "423-697-2415",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Official softball coaches page (chattstatetigers.com/sports/sball/coaches/index) parsed 2026-07-30; email and phone publicly listed, no individual twitter/X handle published."
+    },
+    {
+      "name": "Brandon Carr",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "865-335-1579",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Official softball coaches page parsed 2026-07-30; phone publicly listed, no public email or twitter/X handle listed."
+    },
+    {
+      "name": "Aimie Davidson",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Official softball coaches page parsed 2026-07-30; no public email, phone, or twitter/X handle listed for this coach."
+    }
+  ]
+}

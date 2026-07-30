@@ -1,0 +1,37 @@
+{
+  "sid": 47,
+  "name": "Berea College",
+  "division": "NCAA D3",
+  "conference": "Heartland Collegiate Athletic Conference",
+  "city": "Berea",
+  "state": "KY",
+  "website_url": "https://bereaathletics.com/sports/softball",
+  "academic_ranking": "Private liberal arts work college with 30+ fields of study; described as the most selective institution in Kentucky. 2025 recognition includes #1 Best College for Tuition and Tax Dollars (Washington Monthly), and U.S. News rankings of #5 in Social Mobility, #1 in service-learning, and #2 Most Innovative Schools.",
+  "tuition": 0,
+  "financial_aid": "Berea College is tuition-free and has not charged tuition since 1892. Every admitted student receives a full-tuition scholarship (Berea Tuition Promise); the college also assists with housing and meals per FAFSA. Students typically come from low-income families (avg family income under $32,000/yr). Additional support includes a professional clothing stipend and internship funding. As an NCAA D3 institution, no athletic scholarships are offered.",
+  "roster_size": 13,
+  "scholarship_count": null,
+  "facilities_notes": "Softball plays at Berea College's on-campus softball facility. Detailed facility specifications were not publicly listed on the softball program pages checked 2026-07.",
+  "program_reputation": "NCAA Division III program competing in the Heartland Collegiate Athletic Conference. Small roster (13 players in 2026). As a D3 program, no athletic aid is awarded; recruiting emphasis aligns with Berea's tuition-free, work-college mission.",
+  "notes": "Softball staff directory (bereaathletics.com/sports/softball/coaches) checked 2026-07; only two staff listed (head coach and one assistant). Conference confirmed on athletics roster/staff pages as Heartland Collegiate Athletic Conference. Team X/Twitter handle listed as @BereaSoftball; no individual coach social handles published. Tuition confirmed as $0 via berea.edu (tuition-free since 1892).",
+  "coaches": [
+    {
+      "name": "Angela Dean",
+      "title": "Head Coach",
+      "email": "deana2@berea.edu",
+      "phone": "859-985-3229",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Head coach listed on bereaathletics.com/sports/softball/coaches (checked 2026-07); email and phone publicly listed; no individual Twitter/X handle published."
+    },
+    {
+      "name": "Samantha Payne",
+      "title": "Assistant Coach",
+      "email": "paynes@berea.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Assistant coach listed on bereaathletics.com/sports/softball/coaches (checked 2026-07); email publicly listed; no public phone or Twitter/X handle listed."
+    }
+  ]
+}

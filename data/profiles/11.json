@@ -1,0 +1,37 @@
+{
+  "sid": 11,
+  "name": "Rhodes College",
+  "division": "NCAA D3",
+  "conference": "Southern Athletic Association",
+  "city": "Memphis",
+  "state": "TN",
+  "website_url": "https://gorhodeslynx.com/sports/softball",
+  "academic_ranking": "Private liberal arts college in Memphis, TN. Reported acceptance rate approximately 50% and 6-year graduation rate about 84-85%. Cited by EDsmart as ranking around #188 nationally. Known as a selective liberal arts institution. Exact figures vary by source and year.",
+  "tuition": 57110,
+  "financial_aid": "Reported 2025 tuition and fees approximately $57,110; total cost of attendance (on-campus) reported around $74,474 for 2024-2025. Average net price after aid reported near $30,590/year. Rhodes states it aims to make attendance possible for every admitted student through scholarships and grants. Source: third-party aggregators and Rhodes site via web search 2026-07; not confirmed on live rhodes.edu page (athletics domain blocked to fetch tool).",
+  "roster_size": null,
+  "scholarship_count": null,
+  "facilities_notes": "Softball is an NCAA Division III sport, so no athletic scholarships are awarded. Home games played on campus in Memphis, TN. Specific facility/field details not confirmed (gorhodeslynx.com could not be fetched live).",
+  "program_reputation": "NCAA Division III program competing in the Southern Athletic Association (SAA). Head coach Rebecca Arbino reported to be in her fourth season with the program (third as head coach) as of recent listings. Program participated in SAA competition through the 2025/2026 seasons.",
+  "notes": "IMPORTANT DATA-SOURCING CAVEAT: The official athletics site (gorhodeslynx.com) consistently refused connections to the fetch tool (ECONNREFUSED / bot protection) throughout research on 2026-07. Coach and profile data below were gathered via DuckDuckGo HTML search of official-page snippets, not by loading the live pages. Conference confirmed as Southern Athletic Association. Roster size could not be verified (roster page inaccessible), so set to null per rules. As D3, scholarship_count is null (no athletic scholarships). Tuition/aid figures from third-party aggregators and search snippets. Head coach Rebecca Arbino originally joined as pitching coach in 2021 and was later promoted to head coach; Luke Wagner appears to be a FORMER head coach (not current staff) per search snippets. Recommend re-verifying all coach contact details directly on gorhodeslynx.com/sports/softball/coaches when the site is reachable.",
+  "coaches": [
+    {
+      "name": "Rebecca Arbino",
+      "title": "Head Softball Coach",
+      "email": "arbinor@rhodes.edu",
+      "phone": "901-843-3015",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Name, title, email and phone from official staff-directory snippets via web search 2026-07 (gorhodeslynx.com not reachable by fetch tool to confirm live). No public Twitter/X handle found."
+    },
+    {
+      "name": "RT Cantillo",
+      "title": "Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Listed as current Assistant Softball Coach (with the program since August 2022; Ole Miss softball alum) per official-page snippets via web search 2026-07. No public email or phone listed; no Twitter/X found (Instagram @taycan23 exists but is not Twitter). Athletics site not reachable by fetch tool to confirm live."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "sid": 133,
+  "name": "West Virginia State University",
+  "division": "NCAA D2",
+  "conference": "Mountain East Conference",
+  "city": "Institute",
+  "state": "WV",
+  "website_url": "https://wvsuyellowjackets.com/sports/softball",
+  "academic_ranking": "West Virginia State University is a public, historically black (HBCU), land-grant university founded in 1891 in Institute, WV. Total enrollment ~3,458 (2023), including ~2,095 undergraduates. No specific national academic ranking confirmed from a live source during research (checked 2026-07).",
+  "tuition": null,
+  "financial_aid": "Approximately 48% of students received Pell grants per publicly available data. Specific annual tuition figures and detailed aid packages were not confirmed from a live official source during research (checked 2026-07); prospective recruits should confirm with the WVSU financial aid office and athletics compliance for scholarship/aid details.",
+  "roster_size": 21,
+  "scholarship_count": null,
+  "facilities_notes": "Softball home venue is Lady Jackets Field (listed among WVSU athletic facilities). Additional facility details not published on the softball program pages checked 2026-07.",
+  "program_reputation": "NCAA Division II program competing in the Mountain East Conference. Detailed program history/achievements were not populated on the softball program pages checked 2026-07.",
+  "notes": "Data sourced live from wvsuyellowjackets.com softball staff and roster pages (checked 2026-07). Coaching staff directory lists only a head coach and a graduate assistant; no additional assistant coaches or recruiting coordinators were publicly listed at the time of research. Tuition and scholarship_count set to null because they could not be verified from a live source.",
+  "coaches": [
+    {
+      "name": "Mattie Best",
+      "title": "Head Coach",
+      "email": "mattie.best@wvstateu.edu",
+      "phone": "951-537-8124",
+      "twitter": "@CoachBest_WVSU",
+      "sort_order": 0,
+      "source_note": "Softball staff directory wvsuyellowjackets.com checked 2026-07; email, phone, and twitter publicly listed."
+    },
+    {
+      "name": "Ajani Sanni",
+      "title": "Graduate Assistant",
+      "email": "asanni1@wvstateu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball staff directory wvsuyellowjackets.com checked 2026-07; email publicly listed, no public phone or twitter listed."
+    }
+  ]
+}

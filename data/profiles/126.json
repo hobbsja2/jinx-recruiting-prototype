@@ -1,0 +1,55 @@
+{
+  "sid": 126,
+  "name": "Indiana Institute of Technology",
+  "division": "NAIA",
+  "conference": "Wolverine-Hoosier Athletic Conference",
+  "city": "Fort Wayne",
+  "state": "IN",
+  "website_url": "https://indianatechwarriors.com/sports/softball",
+  "academic_ranking": "Private career-focused university in Fort Wayne, IN, organized into three colleges: College of Arts and Sciences, College of Business, and the Talwar College of Engineering and Computer Sciences. Known for industry-aligned, workforce-focused programs from certificates through doctoral degrees.",
+  "tuition": 32872,
+  "financial_aid": "2026-2027 traditional undergraduate tuition is $32,872/year (12-18 credits) plus a $560/year student services fee; part-time is $990/credit hour. Program-specific fees may apply (e.g., ~$2,106/year for Engineering/Computer/Other Sciences). School advertises up to $15,000 in merit scholarships with additional scholarship and aid programs available; net price calculators offered for freshmen and transfers.",
+  "roster_size": 37,
+  "scholarship_count": null,
+  "facilities_notes": "Indiana Tech Warriors softball competes at the NAIA level. No specific softball facility details were listed on the pages checked 2026-07.",
+  "program_reputation": "NAIA program competing in the Wolverine-Hoosier Athletic Conference (WHAC). Roster of 37 players for 2026.",
+  "notes": "Data sourced from indianatechwarriors.com softball coaches and roster pages and indianatech.edu financial services pages, checked 2026-07. Roster size (37) counted from listed players on the softball roster page. Scholarship count not publicly listed. Team general X/Twitter account is @INTechSoftball; no individual coach handles listed. Non-coaching support staff on the staff page (Chris Reff, Assistant Athletic Trainer; Mackenna Warren, Student Manager) were excluded from the coaches list.",
+  "coaches": [
+    {
+      "name": "Stephanie Zimny",
+      "title": "Head Coach",
+      "email": "smzimny@indianatech.edu",
+      "phone": "260-344-4793",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "staff directory checked 2026-07; email and phone publicly listed"
+    },
+    {
+      "name": "Sammy-Jo Mata",
+      "title": "Assistant Coach",
+      "email": "shm02@indianatech.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "staff directory checked 2026-07; email listed, no public phone listed"
+    },
+    {
+      "name": "Sydnie Foster",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "staff directory checked 2026-07; no public email or phone listed"
+    },
+    {
+      "name": "Allie Forster",
+      "title": "Graduate Assistant",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "staff directory checked 2026-07; no public email or phone listed"
+    }
+  ]
+}

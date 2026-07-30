@@ -1,0 +1,46 @@
+{
+  "sid": 155,
+  "name": "Otterbein University",
+  "division": "NCAA D3",
+  "conference": "Ohio Athletic Conference",
+  "city": "Westerville",
+  "state": "OH",
+  "website_url": "https://otterbeincardinals.com/sports/softball",
+  "academic_ranking": "Private liberal arts university in Westerville, OH. Nationally recognized regional university with reported career outcomes exceeding national averages; 100% of traditional first-year students receive institutional aid.",
+  "tuition": 37516,
+  "financial_aid": "As NCAA D3, no athletic scholarships are offered. Institutional aid is need- and merit-based: renewable four-year merit scholarships (financial need not a factor), FAFSA-based need aid (grants, loans, work-study), the statewide Opportunity Scholarship Gap Award covering direct tuition for qualifying Ohio residents (income <=$60,000 or Pell recipients), and a No Loan to Tuition program for Ohio residents receiving both the Pell grant and Ohio College Opportunity Grant. Otterbein reports awarding over $35 million yearly in merit scholarships and grants.",
+  "roster_size": 27,
+  "scholarship_count": null,
+  "facilities_notes": "NCAA Division III program competing in the Ohio Athletic Conference. Specific softball facility details not confirmed on official pages checked 2026-07.",
+  "program_reputation": "NCAA Division III women's softball program competing in the Ohio Athletic Conference (OAC).",
+  "notes": "Data sourced live from otterbeincardinals.com softball coaches page (/sports/softball/coaches/2025) and roster page (/sports/softball/roster), and otterbein.edu financial aid/affordability pages, checked 2026-07. Tuition figure $37,516 is 2026-2027 annual tuition (total cost of attendance approx. $51,714 including housing/meals/fees). As a D3 program, no athletic scholarships are awarded (scholarship_count = null).",
+  "coaches": [
+    {
+      "name": "Bruce Anderson",
+      "title": "Head Coach",
+      "email": "anderson26@otterbein.edu",
+      "phone": "614-823-3506",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball staff directory (otterbeincardinals.com/sports/softball/coaches) checked 2026-07; no individual X/Twitter handle listed (team account @OtterbeinSB)."
+    },
+    {
+      "name": "Sami Ange",
+      "title": "Assistant Coach",
+      "email": "ange1@otterbein.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball staff directory checked 2026-07; no public phone or X/Twitter handle listed."
+    },
+    {
+      "name": "Jenn Bucci",
+      "title": "Graduate Assistant",
+      "email": "bucci1@otterbein.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Softball staff directory checked 2026-07; no public phone or X/Twitter handle listed."
+    }
+  ]
+}

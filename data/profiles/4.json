@@ -1,0 +1,46 @@
+{
+  "sid": 4,
+  "name": "Lake Erie College",
+  "division": "NCAA D2",
+  "conference": "Great Midwest Athletic Conference (G-MAC)",
+  "city": "Painesville",
+  "state": "OH",
+  "website_url": "https://lakeeriestorm.com/sports/softball",
+  "academic_ranking": "Private liberal arts college founded in 1856 (originally Lake Erie Female Seminary; coeducational since 1985). Located on a suburban 52-acre campus in Painesville, OH. After a 2025 restructuring it comprises three academic schools: Education; Business and Professional Studies; and STREAMS (science, technology, research, engineering, animal and medical sciences). Popular majors include criminal justice, psychology, and English; the college is well known for its equine studies program (since 1955). The Business school is IACBE-accredited.",
+  "tuition": 37800,
+  "financial_aid": "FAFSA school code 003066. Aid includes merit scholarships based on GPA ranging from Leadership ($15,000) to Presidential ($23,000); specialty scholarships (Twin, Legacy, Equine Talent, and Athletic); regional awards (Cuyahoga Connect, Tri-County - $15,000/year for four years for commuters); Choose Ohio First (STEMM); and EmpowerVetEd. Grants include Federal Pell, OCOG, FSEOG, and TEACH. Federal Direct/PLUS loans and Federal Work Study also available. Specific percentage of students receiving aid not publicly stated (checked 2026-07).",
+  "roster_size": 16,
+  "scholarship_count": null,
+  "facilities_notes": "Athletics facilities associated with the program include Classic Park and Diamond 9 at Rec Park (Painesville Kiwanis Recreation Park), per lakeeriestorm.com (checked 2026-07). No dedicated softball-scholarship count is publicly listed.",
+  "program_reputation": "NCAA Division II member competing in the Great Midwest Athletic Conference (G-MAC). Teams are nicknamed the Storm. Softball carries a 16-player roster for 2026.",
+  "notes": "Sources conflict on the head coach: the athletics staff directory (lakeeriestorm.com/staff-directory) lists Courtney Orr as Softball Head Coach, while the softball coaches page (lakeeriestorm.com/sports/softball/coaches) does not show a head coach and lists only Adrianna Sluga (Assistant Coach) plus Athletic Trainer Abby Hicks. Both individuals are included below. Tuition is 2026-2027 full-time undergraduate rate of $37,800/year ($18,900/semester) plus general fees; verified at lec.edu/tuition-and-fees.",
+  "coaches": [
+    {
+      "name": "Courtney Orr",
+      "title": "Head Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Listed as Softball Head Coach in the athletics staff directory (lakeeriestorm.com/staff-directory), checked 2026-07; no public email or phone listed there. Not shown on the softball coaches page."
+    },
+    {
+      "name": "Adrianna Sluga",
+      "title": "Assistant Coach",
+      "email": "asluga@lec.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Listed on softball coaches page (lakeeriestorm.com/sports/softball/coaches), checked 2026-07; email listed, no public phone or X handle."
+    },
+    {
+      "name": "Abby Hicks",
+      "title": "Athletic Trainer",
+      "email": "ahicks@lec.edu",
+      "phone": "440.375.7481",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Listed under Support Staff on softball coaches page (lakeeriestorm.com/sports/softball/coaches), checked 2026-07; email and phone listed, no X handle."
+    }
+  ]
+}

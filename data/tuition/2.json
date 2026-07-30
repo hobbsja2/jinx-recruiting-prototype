@@ -1,0 +1,8 @@
+{
+  "sid": 2,
+  "name": "Cedarville University",
+  "in_state_tuition": 39500,
+  "housing_cost": 5386,
+  "housing_basis": "room only",
+  "tuition_note": "2026-27 (Fall 2026) figures from official Cedarville cost data (cedarville.edu/cost, loaded from /lib/costs.js). Private university with a single published rate. Tuition & fees annual = block tuition $19,600/semester x2 ($39,200) + Student Services Fee $150/semester x2 ($300) = $39,500. Housing (room only) = Residence Hall Standard Room $2,693/semester x2 = $5,386; board/food not included."
+}

@@ -1,0 +1,55 @@
+{
+  "sid": 53,
+  "name": "Murray State University",
+  "division": "NCAA D1",
+  "conference": "Missouri Valley Conference (MVC)",
+  "city": "Murray",
+  "state": "KY",
+  "website_url": "https://goracers.com/sports/softball",
+  "academic_ranking": "Recognized by U.S. News & World Report's Best Colleges as a top regional university (Regional Universities - South) for over 30 years; named #1 Best Value School in the South region in the 2025 rankings, and ranked by Forbes among America's Top Colleges since 2008. Total enrollment ~9,932 (fall 2025), including ~8,217 undergraduates.",
+  "tuition": 9900,
+  "financial_aid": "Published in-state undergraduate tuition and required fees ~$9,900 and out-of-state ~$19,836 for 2024-25 (NCES College Navigator). Murray State offers discounted 'regional' tuition rates to residents of nearby states (AL, AR, IL, IN, MO, MS, TN). The university is regularly cited as a strong-value public institution; NCAA D1 softball offers athletically related aid. Consult the Bursar's Office and Financial Aid office at murraystate.edu for current figures.",
+  "roster_size": 23,
+  "scholarship_count": null,
+  "facilities_notes": "Per Wikipedia, Murray State partnered with the city of Murray so the softball team could use a field at a city park, with facility upgrades remaining property of the city parks; the program played its first game in 2010. No separately named on-campus softball stadium is documented. Other Racer athletics facilities include Roy Stewart Stadium (football), CFSB Center (basketball), Reagan Field (baseball), and the Pat Spurgin Rifle Range.",
+  "program_reputation": "Murray State softball competes in NCAA Division I within the Missouri Valley Conference (MVC), which the university joined in 2022-23 (previously the Ohio Valley Conference). The program is relatively young, having begun play in 2010.",
+  "notes": "Coaching staff and roster confirmed live from goracers.com softball coaches page (title '2026 Softball Coaches') and roster page ('2026 Softball Roster') on 2026-07-30. Staff listing shows 4 softball staff members. Roster page lists 23 player profiles. No Twitter/X handles are published on the staff directory. Conference confirmed as Missouri Valley Conference. Tuition figures sourced from NCES College Navigator (2024-25); Murray State's own bursar pages returned 404 at the attempted URLs.",
+  "coaches": [
+    {
+      "name": "Kara Amundson",
+      "title": "Head Coach",
+      "email": "kamundson@murraystate.edu",
+      "phone": "(270) 809-3748",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "goracers.com softball coaches page fetched 2026-07-30; email and phone listed; no public Twitter/X handle listed"
+    },
+    {
+      "name": "Ashley Gilland",
+      "title": "Associate Head Coach",
+      "email": "agilland@murraystate.edu",
+      "phone": "(270) 809-6629",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "goracers.com softball coaches page fetched 2026-07-30; email and phone listed; no public Twitter/X handle listed"
+    },
+    {
+      "name": "Madi Eberle",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "goracers.com softball coaches page fetched 2026-07-30; no public email, phone, or Twitter/X handle listed"
+    },
+    {
+      "name": "Elizabeth Warwick",
+      "title": "Graduate Assistant",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "goracers.com softball coaches page fetched 2026-07-30; no public email, phone, or Twitter/X handle listed"
+    }
+  ]
+}

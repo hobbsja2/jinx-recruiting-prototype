@@ -1,0 +1,37 @@
+{
+  "sid": 119,
+  "name": "University of Saint Francis",
+  "division": "NAIA",
+  "conference": "Crossroads League",
+  "city": "Fort Wayne",
+  "state": "IN",
+  "website_url": "https://saintfranciscougars.com/sports/sball",
+  "academic_ranking": "Private Catholic university in Fort Wayne, IN. Comprises the Division of Creative Arts, the College of Health Sciences, and the College of Arts, Sciences and Business. Total enrollment approx 1,900 (about 1,576 undergraduate); ranked #85 regionally by U.S. News & World Report per Wikipedia.",
+  "tuition": 36260,
+  "financial_aid": "USF states it awards merit scholarships to 100 percent of full-time traditional undergraduate students; roughly 96-99 percent of undergraduates receive some form of financial aid per third-party aggregators. Reported average aid awards range from about $22,000 to $28,000 depending on source and year. Undergraduate tuition for 2025-26 is $36,260 per the official sf.edu site.",
+  "roster_size": null,
+  "scholarship_count": null,
+  "facilities_notes": "Softball is a varsity program under University of Saint Francis Athletics (Cougars) in Fort Wayne, IN. A specific softball field/facility name was not confirmed on a live page during research (2026-07).",
+  "program_reputation": "NAIA program competing in the Crossroads League. Recent individual recognition includes a player named NFCA All-Region First Team (school news, 2026-07), indicating regionally competitive play.",
+  "notes": "Data sourced from saintfranciscougars.com softball coaches page (/sports/sball/coaches/index), softball index/roster pages, sf.edu tuition info, and Wikipedia (checked 2026-07). The athletics site returned HTTP 403 to standard fetch and was retrieved live via browser user-agent. Only two staff members are listed on the current softball coaching staff page: Ryan Bolyn (head coach) and Doug Peterson (assistant). A former assistant (Molly Jacobson) appeared in cached search results but is not on the current staff page. Roster_size left null: the 2026 roster page (/sports/sball/2025-26/roster) renders player data client-side and no reliable server-side player count was obtainable. No softball-specific X/Twitter handles were listed for individual coaches; the athletics/team account is @sfcougars.",
+  "coaches": [
+    {
+      "name": "Ryan Bolyn",
+      "title": "Assistant Athletic Director | Head Softball Coach",
+      "email": "RBolyn@sf.edu",
+      "phone": "260-399-7700 ext 6231",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "saintfranciscougars.com softball coaching staff page checked 2026-07; email and phone (Fort Wayne area code 260) publicly listed; no individual X/Twitter handle listed."
+    },
+    {
+      "name": "Doug Peterson",
+      "title": "Assistant Softball Coach",
+      "email": "dpeterson@sf.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "saintfranciscougars.com softball coaching staff page checked 2026-07; email publicly listed; no public phone or X/Twitter handle listed."
+    }
+  ]
+}

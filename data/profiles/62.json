@@ -1,0 +1,28 @@
+{
+  "sid": 62,
+  "name": "Columbia State Community College",
+  "division": "JUCO",
+  "conference": "TCCAA / NJCAA Region VII",
+  "city": "Columbia",
+  "state": "TN",
+  "website_url": "https://athletics.columbiastate.edu/sports/sball/index",
+  "academic_ranking": "Public two-year community college in the Tennessee Board of Regents system. Serves a nine-county region of southern Middle Tennessee from its main campus in Columbia plus additional campuses/teaching sites. Offers associate degrees and certificates with common transfer pathways to four-year Tennessee universities. No national research ranking applies to a community college; open-admission institution.",
+  "tuition": 4728.0,
+  "financial_aid": "Tuition is charged per semester hour. In-state: $197 per semester hour (up to 12 hours), $44 per hour for additional hours (13+). Out-of-state: $342 per semester hour (up to 12 hours), $68 per hour for additional hours. Tennessee residents may qualify for TN Promise and TN Reconnect (last-dollar programs covering community-college tuition/fees), plus federal Pell Grants, TSAA state aid, and institutional/athletic assistance. Source: www.columbiastate.edu/tuition (checked 2026-07).",
+  "roster_size": null,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes as the Columbia State Lady Chargers. Main campus at 1665 Hampshire Pike, Columbia, TN 38401. Athletics main line 931.540.2630. Specific softball field/facility details were not published on the softball program pages checked 2026-07.",
+  "program_reputation": "Lady Chargers softball competes in the Tennessee Community College Athletic Association (TCCAA) and NJCAA Region VII. Program pages and roster/coach pages accessed 2026-07; no specific championship or national-ranking history was published on the accessible athletics pages.",
+  "notes": "Sources fetched live 2026-07: softball program page and 2025-26 roster (https://athletics.columbiastate.edu/sports/sball/2025-26/roster), softball coach bio page (https://athletics.columbiastate.edu/coaches/Womens_Softball_Coach), and tuition page (https://www.columbiastate.edu/tuition). tuition value 4728.0 = full-time in-state estimate ($197/semester hour x 12 hours x 2 semesters) before mandatory fees; per-credit-hour and out-of-state rates are in financial_aid. roster_size left null: the roster page renders players via JavaScript and served a different, rotating subset of players on each fetch (observed per-load counts of 12/17/20 and a union of 28+ distinct player bios across fetches), so no reliable exact count could be confirmed from the accessible HTML. scholarship_count not published (JUCO/NJCAA sport). Coaching staff captured from the official softball coach bio page: Head Coach Samantha King listed with phone/email; the Assistant Coach slot on that page is an unfilled placeholder ('-') with no name/email/phone. No Twitter/X handles were listed for staff.",
+  "coaches": [
+    {
+      "name": "Samantha King",
+      "title": "Head Coach",
+      "email": "sking47@columbiastate.edu",
+      "phone": "931-540-2632",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball coach bio page (athletics.columbiastate.edu/coaches/Womens_Softball_Coach) checked 2026-07; name, email, and phone publicly listed. No Twitter/X handle listed."
+    }
+  ]
+}

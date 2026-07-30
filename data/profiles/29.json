@@ -1,0 +1,46 @@
+{
+  "sid": 29,
+  "name": "Manchester University",
+  "division": "NCAA D3",
+  "conference": "Heartland Collegiate Athletic Conference",
+  "city": "North Manchester",
+  "state": "IN",
+  "website_url": "https://muspartans.com/sports/softball",
+  "academic_ranking": "Private nonprofit liberal arts university in North Manchester, IN, with 70+ undergraduate programs and graduate/professional/doctoral offerings (including a Doctor of Pharmacy, MBA, and a distinctive Peace Studies major). Emphasizes personalized, mentor-driven education. Students come from 21 states and 9 countries. No formal third-party ranking listed on official pages.",
+  "tuition": 36484,
+  "financial_aid": "Full-time undergraduate tuition is $36,484 for 2026-2027; full list price (tuition, housing, fees) is $51,714. School reports average annual cost after aid of $19,376, reflecting ~$25,058 in average MU scholarships/grants plus ~$7,280 in average federal/state grants. FAFSA required (school code 001820). Tuition guarantee held over four years.",
+  "roster_size": 24,
+  "scholarship_count": null,
+  "facilities_notes": "Softball plays home games at the MU Softball Field on the North Manchester campus.",
+  "program_reputation": "NCAA Division III program competing in the Heartland Collegiate Athletic Conference (HCAC); the university has earned HCAC conference championships and All-American honors across its athletics programs.",
+  "notes": "As an NCAA Division III institution, Manchester does not offer athletic scholarships (aid is academic/need-based only); scholarship_count set to null. Data gathered from muspartans.com softball staff and roster pages and manchester.edu on 2026-07. Roster size reflects 24 listed players (plus 1 student manager not counted).",
+  "coaches": [
+    {
+      "name": "Sara Emerich",
+      "title": "Head Softball Coach",
+      "email": "sjemerich@manchester.edu",
+      "phone": "260-982-5410",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "muspartans.com softball staff directory checked 2026-07; no public Twitter/X handle listed."
+    },
+    {
+      "name": "Rachel Oberholtzer",
+      "title": "Assistant Softball Coach",
+      "email": "rnoberholtzer@manchester.edu",
+      "phone": "260-982-5284",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "muspartans.com softball staff directory checked 2026-07; no public Twitter/X handle listed."
+    },
+    {
+      "name": "Josh Dzurick",
+      "title": "Associate Director of Athletics for Compliance & Head Women's Basketball Coach & Asst. Softball Coach",
+      "email": "jndzurick@manchester.edu",
+      "phone": "260-982-5379",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "muspartans.com softball staff directory checked 2026-07; no public Twitter/X handle listed."
+    }
+  ]
+}

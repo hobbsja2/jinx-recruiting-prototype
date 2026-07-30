@@ -1,0 +1,37 @@
+{
+  "sid": 97,
+  "name": "Alice Lloyd College",
+  "division": "NAIA",
+  "conference": "Continental Athletic Conference",
+  "city": "Pippa Passes",
+  "state": "KY",
+  "website_url": "https://alicelloydeagles.com/sports/sball/index",
+  "academic_ranking": "Small private four-year liberal arts college in Appalachian Kentucky (founded 1923). Known for its character-based, leadership-centered education and required Student Work Program; enrolls roughly 600 students, primarily from the Central Appalachian region.",
+  "tuition": null,
+  "financial_aid": "Alice Lloyd College operates a Tuition Guarantee: residents of 108 Central Appalachian counties who are admitted pay $0 out-of-pocket tuition regardless of income, funded by the College's endowment and donor support. All students participate in the mandatory Student Work Program to help offset costs. Standard federal aid (FAFSA/Pell), scholarships and awards, and a Net Price Calculator are also available. No published USD sticker-tuition figure was found on the official site (alc.edu, checked 2026-07).",
+  "roster_size": 18,
+  "scholarship_count": null,
+  "facilities_notes": "Softball is one of the varsity sports listed on the Alice Lloyd College (Eagles) athletics site. No dedicated softball facility description (field name/complex details) was published on the pages checked; the athletics facilities page was not available (2026-07).",
+  "program_reputation": "NAIA women's softball program at Alice Lloyd College (Eagles). The program has recent national recognition: a 2026 NAIA Softball All-American selection (Rife) was noted as a school-first honor on the athletics homepage.",
+  "notes": "Athletics site domain in discovery (alcgenerals.com) does not resolve (NXDOMAIN); the live Alice Lloyd athletics site is https://alicelloydeagles.com (Eagles), linked from https://alc.edu/athletics/. Data sourced from the live softball coaching staff page (https://alicelloydeagles.com/sports/sball/coaches/index), 2025-26 softball roster (https://alicelloydeagles.com/sports/sball/2025-26/roster), and alc.edu admissions/tuition pages. Note: the Sidearm-hosted coaches URL initially served cached content from another school; a cache-busted re-fetch returned the correct Alice Lloyd 'Softball Coaching Staff' page used here. Conference not printed on fetched athletics pages; retained discovery value 'Continental Athletic Conference'.",
+  "coaches": [
+    {
+      "name": "Nathan Hall",
+      "title": "Head Coach",
+      "email": "nathanhall@alc.edu",
+      "phone": "606-368-6125",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball Coaching Staff page (alicelloydeagles.com/sports/sball/coaches) checked 2026-07; no public twitter/X handle listed for coach."
+    },
+    {
+      "name": "Mason Schroeder",
+      "title": "Assistant Coach",
+      "email": "masonschroeder@alc.edu",
+      "phone": "606-368-6111",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball Coaching Staff page (alicelloydeagles.com/sports/sball/coaches) checked 2026-07; no public twitter/X handle listed for coach."
+    }
+  ]
+}

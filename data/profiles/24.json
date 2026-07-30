@@ -1,0 +1,28 @@
+{
+  "sid": 24,
+  "name": "Anderson University",
+  "division": "NCAA D3",
+  "conference": "Heartland Collegiate Athletic Conference",
+  "city": "Anderson",
+  "state": "IN",
+  "website_url": "https://athletics.anderson.edu/sports/sball/index",
+  "academic_ranking": "Private Christian university affiliated with the Church of God (Anderson, Indiana), founded 1917. Approximately 1,057 undergraduates (College Scorecard) with 60+ undergraduate majors across six schools. Overall admission rate ~79% (College Scorecard).",
+  "tuition": 37240,
+  "financial_aid": "Published tuition ~$37,240/yr; total cost of attendance ~$51,585/yr (College Scorecard, IPEDS 150066). Average net price for private-aid students ~$25,021. Pell grant recipient rate ~36%; federal loan rate ~58%. As an NCAA Division III institution, no athletic scholarships are awarded; aid is need- and merit-based academic aid.",
+  "roster_size": 19,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes on campus at Anderson University; program plays in the Heartland Collegiate Athletic Conference. Specific field/facility details not confirmed from a public athletics facilities page during research (2026-07).",
+  "program_reputation": "NCAA Division III program in the Heartland Collegiate Athletic Conference (HCAC). Head coach Tony Holloway is a long-tenured leader (17th year as head coach and 40th year at Anderson University as of the 2023-24 season per his athletics bio).",
+  "notes": "Softball coaches directory (https://athletics.anderson.edu/sports/sball/coaches/index) checked 2026-07 and lists only one softball-specific coach: Head Coach Tony Holloway. No assistant coaches, recruiting coordinators, or graduate/volunteer assistants were publicly listed at time of research. Roster_size = 19 reflects the most recently completed 2025-26 roster; the upcoming 2026-27 roster page currently lists 11 players (partial/in-progress). NCAA D3 = no athletic scholarships, so scholarship_count is null. Tuition and aid figures sourced from the U.S. Dept. of Education College Scorecard (IPEDS 150066) because anderson.edu cost pages blocked automated fetching.",
+  "coaches": [
+    {
+      "name": "Tony Holloway",
+      "title": "Head Coach",
+      "email": "tlholloway@anderson.edu",
+      "phone": "765-641-4538",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball coach bio page (https://athletics.anderson.edu/sports/sball/coaches/hollowayt) fetched 2026-07; email and phone publicly listed. No public Twitter/X handle listed for the coach."
+    }
+  ]
+}

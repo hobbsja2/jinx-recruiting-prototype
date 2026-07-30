@@ -1,0 +1,37 @@
+{
+  "sid": 136,
+  "name": "Shepherd University",
+  "division": "NCAA D2",
+  "conference": "Pennsylvania State Athletic Conference (PSAC)",
+  "city": "Shepherdstown",
+  "state": "WV",
+  "website_url": "https://shepherdrams.com/sports/softball",
+  "academic_ranking": "Public 4-year regional university in Shepherdstown, WV. Enrollment ~3,339 (about 3,032 undergraduate), student-to-faculty ratio 17:1, rural campus setting. Acceptance rate ~97%; 6-year graduation rate ~51%.",
+  "tuition": 9056.0,
+  "financial_aid": "In-state tuition and fees ~$9,056/yr; out-of-state ~$19,082/yr (NCES 2024-2025). ~98% of full-time beginning undergrads received some financial aid; ~96% received grant/scholarship aid (avg $8,241); ~40% received Pell grants; average net price ~$11,744.",
+  "roster_size": 21,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes at the Shepherd University softball complex on the Shepherdstown, WV campus. No detailed public facilities description captured from the softball program page (checked 2026-07).",
+  "program_reputation": "NCAA Division II program competing in the Pennsylvania State Athletic Conference (PSAC), one of the premier D2 conferences.",
+  "notes": "Staff directory and roster fetched from shepherdrams.com softball pages 2026-07. Coaching staff listed as head coach plus one assistant. Tuition/financial-aid figures sourced from NCES College Navigator (IPEDS ID 237792). Scholarship count not publicly listed.",
+  "coaches": [
+    {
+      "name": "Marissa Leslie",
+      "title": "Head Softball Coach",
+      "email": "mleslie@shepherd.edu",
+      "phone": "814-312-0499",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball staff directory checked 2026-07; no public twitter/X handle listed for individual coach."
+    },
+    {
+      "name": "Allison Baker",
+      "title": "Assistant Softball Coach",
+      "email": "abaker@shepherd.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball staff directory checked 2026-07; no public phone or twitter/X handle listed."
+    }
+  ]
+}

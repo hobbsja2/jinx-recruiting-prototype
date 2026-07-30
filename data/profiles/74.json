@@ -1,0 +1,46 @@
+{
+  "sid": 74,
+  "name": "Mount Vernon Nazarene University",
+  "division": "NAIA",
+  "conference": "Crossroads League",
+  "city": "Mount Vernon",
+  "state": "OH",
+  "website_url": "https://www.mvnucougars.com/sports/sball",
+  "academic_ranking": "Private Christian (Nazarene) liberal arts university. Fall 2022 enrollment ~1,941 total (~1,628 undergraduate). Student-to-faculty ratio 16:1; acceptance rate ~75.8%; retention ~79%; average ACT ~23 (2018 figures). Most popular majors: Business, Nursing, Education, Biology, Engineering. Organized into six schools.",
+  "tuition": 37784,
+  "financial_aid": "Annual traditional undergraduate tuition $37,784 (12-18 credit hours/semester); housing & food ~$11,434 (meal plan + double-occupancy room); books/supplies ~$1,400. MVNU states 100% of students receive some form of financial assistance. Source: mvnu.edu/traditional/financial-aid/ checked 2026-07.",
+  "roster_size": 16,
+  "scholarship_count": null,
+  "facilities_notes": "MVNU athletics facilities include a dedicated softball field on campus. Ariel Arena (opened 2013) is the primary indoor athletics facility, seating 2,100 for athletic events (3,000 for concerts) with auxiliary courts, cardio center, weight room, athletics offices and classrooms. Campus also includes baseball, tennis and soccer/lacrosse complexes.",
+  "program_reputation": "NAIA women's softball program competing in the Crossroads League, one of the strongest NAIA conferences nationally. Cougars compete among MVNU's 21 varsity sports. Specific softball scholarship counts not publicly listed.",
+  "notes": "Coaching staff, roster and profile fields sourced live from mvnucougars.com (softball path is /sports/sball/) and mvnu.edu on 2026-07-30. Coaches directory (/sports/sball/coaches) lists a three-person staff: Head Coach Mark Pratt and two Assistant Coaches (Regina Myers, Emily Clark-Lindsey); no recruiting coordinator, director of player development, or graduate/volunteer assistants were listed. No coach phone numbers or personal twitter/X handles are publicly listed on the site (department handle is @MVNU_Cougars). Roster size (16) from 2025-26 roster page. Conference confirmed as Crossroads League (NAIA).",
+  "coaches": [
+    {
+      "name": "Mark Pratt",
+      "title": "Head Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Staff directory and bio page checked 2026-07-30; no public email, phone, or twitter/X handle listed for the head coach."
+    },
+    {
+      "name": "Regina Myers",
+      "title": "Assistant Coach",
+      "email": "regina.myers@mvnu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Email from bio page (/sports/sball/coaches/Regina_Myers) checked 2026-07-30; no public phone or personal twitter/X handle listed."
+    },
+    {
+      "name": "Emily Clark-Lindsey",
+      "title": "Assistant Coach",
+      "email": "Emiclarklindsey@mvnu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Email from bio page (/sports/sball/coaches/Emily_Clark) checked 2026-07-30; no public phone or personal twitter/X handle listed."
+    }
+  ]
+}

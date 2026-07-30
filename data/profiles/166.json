@@ -1,0 +1,64 @@
+{
+  "sid": 166,
+  "name": "Franciscan University of Steubenville",
+  "division": "NCAA D3",
+  "conference": "Presidents' Athletic Conference",
+  "city": "Steubenville",
+  "state": "OH",
+  "website_url": "https://franciscanathletics.com/sports/softball",
+  "academic_ranking": "Private, Catholic liberal arts university founded in 1946 by the Franciscan Friars of the Third Order Regular. Known nationally for its Catholic identity, theology and catechetics programs, and strong faith-centered campus culture. Offers a broad range of undergraduate majors with a liberal arts core.",
+  "tuition": 34100,
+  "financial_aid": "Institutional and need-based aid available; as an NCAA Division III program, no athletic scholarships are awarded. Financial aid is limited to academic merit scholarships, need-based grants, and federal/state aid. Specific softball aid figures not publicly listed on athletics site (checked 2026-07).",
+  "roster_size": 13,
+  "scholarship_count": null,
+  "facilities_notes": "Softball played at the on-campus program under Franciscan Athletics. Specific facility name/details not confirmed from a live athletics page during this research (checked 2026-07).",
+  "program_reputation": "NCAA Division III program competing in the Presidents' Athletic Conference (PAC). Currently led by head coach Daniella Pillar (Franciscan '13), the program's eighth head coach, who was initially named interim head coach for 2023-24. Small roster (13 players for 2026 season).",
+  "notes": "Athletics website is franciscanathletics.com (the discovery domain franciscanbarons.com refused connections and appears outdated/incorrect). Coaching staff and roster confirmed from live franciscanathletics.com softball pages on 2026-07. Tuition ~$34,100 reflects 2024-25 undergraduate tuition & fees per multiple public sources; verify current-year figure with the university.",
+  "coaches": [
+    {
+      "name": "Daniella Pillar",
+      "title": "Head Softball Coach",
+      "email": "dpillar@franciscan.edu",
+      "phone": "(740) 284-5370",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "franciscanathletics.com/sports/softball/coaches checked 2026-07; email and phone publicly listed. Franciscan '13. No public twitter/X handle listed."
+    },
+    {
+      "name": "Andi Weaver",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "franciscanathletics.com/sports/softball/coaches checked 2026-07; no public email, phone, or twitter listed. Franciscan '21."
+    },
+    {
+      "name": "Dan Corbett",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "franciscanathletics.com/sports/softball/coaches checked 2026-07; no public email, phone, or twitter listed."
+    },
+    {
+      "name": "Ashley Kondracki",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "franciscanathletics.com/sports/softball/coaches checked 2026-07; no public email, phone, or twitter listed."
+    },
+    {
+      "name": "Fr. Patrick Whittle T.O.R.",
+      "title": "Athletic Chaplain",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "franciscanathletics.com/sports/softball/coaches checked 2026-07; listed on softball staff page as Athletic Chaplain; no public email, phone, or twitter listed."
+    }
+  ]
+}

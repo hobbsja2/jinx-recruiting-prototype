@@ -1,0 +1,46 @@
+{
+  "sid": 138,
+  "name": "Carson-Newman University",
+  "division": "NCAA D2",
+  "conference": "South Atlantic Conference",
+  "city": "Jefferson City",
+  "state": "TN",
+  "website_url": "https://www.cneagles.com/sports/w-softbl/index",
+  "academic_ranking": "Private Baptist-affiliated liberal arts university in Jefferson City, TN. Ranked by U.S. News & World Report at #358 (tie) of 395 among National Universities (per Wikipedia). Endowment approximately $75.5 million (2024).",
+  "tuition": 42500.0,
+  "financial_aid": "2026-27 full-time undergraduate tuition & fees are $42,500/year ($21,250/semester). Total billable cost of attendance (tuition, fees, room and meals) is approximately $55,100-$55,300/year. School states its tuition + fees are about $3,000 less than the median for similar colleges. Average financial aid received by undergraduate freshmen was $33,769 in 2022 (includes loans). Comprehensive scholarships, grants, loans, and work-study available based on need, academic ability, and special talents. New 2025-26 students who are Federal Pell recipients receive free standard on-campus housing. Source: cn.edu/tuition and cn.edu/financial-aid, checked 2026-07.",
+  "roster_size": 22,
+  "scholarship_count": null,
+  "facilities_notes": "Softball program is part of the Carson-Newman Athletic Department (2130 S. Branner Ave., Jefferson City, TN 37760). A specific named home softball stadium/field was not found on public pages checked (softball index, roster, schedule, coaches; cneagles.com). Note: NCAA Division II member fielding 21 varsity teams; campus baseball venue is the Silver Diamond Baseball Complex (per Wikipedia).",
+  "program_reputation": "NCAA Division II softball program competing in the South Atlantic Conference (SAC). Eagles athletics. No specific national ranking or recent postseason accolades were confirmed from the public pages checked.",
+  "notes": "Data sourced live 2026-07 from cneagles.com Sidearm site (softball coaches, roster, schedule pages) and cn.edu tuition/financial-aid pages, plus Wikipedia for academic ranking and division/conference confirmation. Roster size (22) counted from the 2025-26 softball roster page unique player bios. Coaches page lists 3 softball staff. No individual Twitter/X handles are published on the coach bio pages. Scholarship count not publicly listed; left null.",
+  "coaches": [
+    {
+      "name": "Michael Graves",
+      "title": "Head Coach",
+      "email": "mgraves@cn.edu",
+      "phone": "865-471-3424",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball coaches page and coach bio page (cneagles.com/sports/w-softbl/coaches/MGraves) checked 2026-07; email and phone publicly listed; no Twitter/X handle listed."
+    },
+    {
+      "name": "Holly Tucker-Vance",
+      "title": "Pitching Coach",
+      "email": "hvance@cn.edu",
+      "phone": "865-471-4289",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Coach bio page (cneagles.com/sports/w-softbl/coaches/HollyTucker-Vance) checked 2026-07; email and phone publicly listed; no Twitter/X handle listed."
+    },
+    {
+      "name": "Hayden Dye",
+      "title": "Graduate Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Coach bio page (cneagles.com/sports/w-softbl/coaches/Hayden_Dye) checked 2026-07; no public email, phone, or Twitter/X handle listed."
+    }
+  ]
+}

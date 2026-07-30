@@ -1,0 +1,55 @@
+{
+  "sid": 75,
+  "name": "Marshall University",
+  "division": "NCAA D1",
+  "conference": "Sun Belt Conference",
+  "city": "Huntington",
+  "state": "WV",
+  "website_url": "https://herdzone.com/sports/softball",
+  "academic_ranking": "Public research university founded in 1837. Ranked #318 of 436 National Universities in the U.S. News 2026 Best Colleges edition. Recognized for programs including computer science and cyber security.",
+  "tuition": 20342.0,
+  "financial_aid": "Public institution. Out-of-state tuition and fees approx. $20,342/yr; in-state (WV resident) approx. $9,162/yr (2024-25). Athletic scholarships available through the softball program; academic and need-based aid available through the university. Confirm current athletic aid directly with the coaching staff.",
+  "roster_size": null,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes at Dot Hicks Field on the Marshall University campus in Huntington, WV.",
+  "program_reputation": "NCAA Division I program competing in the Sun Belt Conference (moved from Conference USA in 2022). Led by head coach Morgan Zerkle, a former Marshall All-American. Program refreshed its coaching staff for the 2026 season.",
+  "notes": "Athletics content is hosted on herdzone.com (goherd.com refused direct connections during research on 2026-07). Coaching staff confirmed via herdzone.com news 'Herd Softball Finalizes 2026 Staff' (2025-07-23) and program social announcements. The staff directory and roster pages are JavaScript-rendered and did not expose emails, phones, twitter handles, or a countable roster list to automated fetching; roster_size and scholarship_count left null. Tuition and rankings sourced from public 2024-26 data. No data invented.",
+  "coaches": [
+    {
+      "name": "Morgan Zerkle",
+      "title": "Head Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Confirmed via herdzone.com and 2026 staff announcement; staff directory checked 2026-07, JS-rendered, no public email/phone/twitter exposed to fetch."
+    },
+    {
+      "name": "Drew Calloway",
+      "title": "Pitching Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Confirmed via 'Herd Softball Finalizes 2026 Staff' (herdzone.com, 2025-07-23); staff directory checked 2026-07, no public email/phone/twitter listed to fetch."
+    },
+    {
+      "name": "Riley Blampied",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Confirmed via 'Herd Softball Finalizes 2026 Staff' (herdzone.com, 2025-07-23); staff directory checked 2026-07, no public email/phone/twitter listed to fetch."
+    },
+    {
+      "name": "Olivia Bruno",
+      "title": "Graduate Assistant",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Confirmed via 'Herd Softball Finalizes 2026 Staff' (herdzone.com, 2025-07-23); staff directory checked 2026-07, no public email/phone/twitter listed to fetch."
+    }
+  ]
+}

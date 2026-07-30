@@ -1,0 +1,55 @@
+{
+  "sid": 84,
+  "name": "Tennessee State University",
+  "division": "NCAA D1",
+  "conference": "Ohio Valley Conference",
+  "city": "Nashville",
+  "state": "TN",
+  "website_url": "https://tsutigers.com/sports/softball",
+  "academic_ranking": "Tennessee State University is a public, historically Black land-grant university (HBCU) in Nashville, TN. It offers a broad range of undergraduate and graduate programs across colleges including Business, Engineering, Education, Health Sciences, and Agriculture. Regionally accredited (SACSCOC).",
+  "tuition": null,
+  "financial_aid": "As a public land-grant HBCU, TSU offers in-state and out-of-state tuition rates plus need- and merit-based aid, federal aid (Pell/loans), and athletic scholarships administered through the athletics department. Specific published tuition figures were not confirmable from a primary source during research (2026-07); left null rather than estimated.",
+  "roster_size": 20,
+  "scholarship_count": null,
+  "facilities_notes": "TSU softball competes as an NCAA Division I program within the Ohio Valley Conference. Specific softball facility details (home field/stadium) were not available on the softball program pages checked 2026-07.",
+  "program_reputation": "NCAA Division I women's softball program at an HBCU competing in the Ohio Valley Conference. Team social handle is @TNStateSoftball. No detailed recent-performance narrative was populated on the program pages checked 2026-07.",
+  "notes": "Data sourced live from tsutigers.com softball coaches and roster pages on 2026-07. Roster page listed 20 players. Tuition, scholarship count, and detailed facilities/reputation info were not confirmable from primary sources and were left null/qualitative to avoid fabrication.",
+  "coaches": [
+    {
+      "name": "Genee McRath",
+      "title": "Head Coach",
+      "email": "rmcrath@tnstate.edu",
+      "phone": "615-963-2577",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "tsutigers.com softball coaches page, checked 2026-07; email printed as rmcrath@tnstate.edu; no individual Twitter/X handle listed (team account @TNStateSoftball)."
+    },
+    {
+      "name": "Parker Dickerson",
+      "title": "Assistant Coach",
+      "email": "pdicker1@tnstate.edu",
+      "phone": "615-963-2577",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "tsutigers.com softball coaches page, checked 2026-07; no individual Twitter/X handle listed."
+    },
+    {
+      "name": "Anayah Baker-Rowell",
+      "title": "Graduate Assistant",
+      "email": "abakerro@my.tnstate.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "tsutigers.com softball coaches page, checked 2026-07; no public phone or Twitter/X handle listed."
+    },
+    {
+      "name": "Kavia Buckner",
+      "title": "Manager",
+      "email": "kbuckner@tnstate.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "tsutigers.com softball coaches page (support staff), checked 2026-07; no public phone or Twitter/X handle listed."
+    }
+  ]
+}

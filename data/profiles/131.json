@@ -1,0 +1,46 @@
+{
+  "sid": 131,
+  "name": "Glenville State University",
+  "division": "NCAA D2",
+  "conference": "Mountain East Conference",
+  "city": "Glenville",
+  "state": "WV",
+  "website_url": "https://gstatepioneers.com/sports/softball",
+  "academic_ranking": "Small public university (~1,500 students) founded 1872; known as \"West Virginia's only centrally located public university\" and the \"Lighthouse on the Hill.\" Average class size of ~15; students from 24 states and 3 countries. No specific national numeric ranking found on official site.",
+  "tuition": 8666,
+  "financial_aid": "In-state (WV resident) tuition ~$8,666/yr; out-of-state/international ~$10,478/yr (2026-27). Tuition billed by semester. University recommends its Net Price Calculator and Financial Aid office for aid planning. Athletic scholarship details not publicly itemized for softball.",
+  "roster_size": 28,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes on campus in Glenville, WV; specific softball facility details not published on the reviewed athletics pages.",
+  "program_reputation": "NCAA Division II program competing in the Mountain East Conference. Detailed public reputation/postseason history not confirmed on reviewed pages.",
+  "notes": "Data gathered 2026-07 from gstatepioneers.com softball coaches and roster pages plus glenville.edu tuition/about pages. Coaching staff page listed only three softball staff members. Tuition reflects in-state figure; out-of-state ~$10,478.",
+  "coaches": [
+    {
+      "name": "Sara Scoone",
+      "title": "Head Coach",
+      "email": "Sara.Scoone@glenville.edu",
+      "phone": "304-462-6229",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball staff directory (gstatepioneers.com) checked 2026-07; no public Twitter/X handle listed."
+    },
+    {
+      "name": "Tim White",
+      "title": "Assistant Coach",
+      "email": "Tim.White@glenville.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball staff directory checked 2026-07; no public phone or Twitter/X handle listed."
+    },
+    {
+      "name": "Makenna Negley",
+      "title": "Graduate Assistant",
+      "email": "Makenna.Negley@glenville.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Softball staff directory checked 2026-07; no public phone or Twitter/X handle listed."
+    }
+  ]
+}

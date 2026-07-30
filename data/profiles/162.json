@@ -1,0 +1,37 @@
+{
+  "sid": 162,
+  "name": "Wittenberg University",
+  "division": "NCAA D3",
+  "conference": "North Coast Athletic Conference",
+  "city": "Springfield",
+  "state": "OH",
+  "website_url": "https://wittenbergtigers.com/sports/sball/index",
+  "academic_ranking": "Private liberal arts university (founded 1845), affiliated with the ELCA. ~1,285 students (1,227 undergraduate), 12:1 student-faculty ratio, average class size 18. Offers 70+ majors and special programs. Member of the Annapolis Group; recognized in Princeton Review's Best 384 Colleges and Forbes' America's Top Colleges. Note: the Higher Learning Commission placed Wittenberg on probation in November 2025 over financial management concerns.",
+  "tuition": 47000,
+  "financial_aid": "More than 98% of Wittenberg students receive financial aid or scholarships. The university grants more than $40 million in scholarship and financial assistance annually. As an NCAA Division III institution, Wittenberg does NOT offer athletic scholarships; aid is need- and merit-based only. Full 2026-27 cost of attendance (tuition $47,000 + room/board/fees) totals $60,798/year. (Source: wittenberg.edu/administration/sfs/student-expenses, checked 2026-07.)",
+  "roster_size": 24,
+  "scholarship_count": null,
+  "facilities_notes": "Softball plays home games at the Bartow Softball Complex on the Wittenberg campus (250 Bill Edwards Dr., Springfield, OH 45503).",
+  "program_reputation": "Established NCAC program; Ashley Goodwin is the 10th head coach in program history. Under Goodwin the Tigers went 21-21 (2023-24), advanced to the NCAC Tournament as a No. 4 seed in 2024 and 2025 (27-14 in 2025), and in 2026 earned a share of the NCAC regular-season title, finishing 27-17 after losing the NCAC Tournament championship game to Denison.",
+  "notes": "Athletics site returned HTTP 403 to automated fetchers; data captured via direct HTTP fetch of the live pages with a browser user agent. Softball sport code on the site is 'sball'. Coaching staff (staff directory checked 2026-07) lists exactly two softball-specific staff: head coach Ashley Goodwin and assistant coach Dan Davis. No recruiting coordinator, director of player development, or graduate/volunteer assistants are listed. No coach-specific Twitter/X handles are published on the bio pages (only the department-wide @WittAthletics account). Team Instagram: instagram.com/wittsoftball.",
+  "coaches": [
+    {
+      "name": "Ashley Goodwin",
+      "title": "Head Coach",
+      "email": "purdygoodwina@wittenberg.edu",
+      "phone": "937-327-6460",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Email and phone published on official bio page wittenbergtigers.com/sports/sball/coaches/bios/Ashley_Goodwin (checked 2026-07). No public Twitter/X handle listed for this coach."
+    },
+    {
+      "name": "Dan Davis",
+      "title": "Assistant Coach",
+      "email": "davisd12@wittenberg.edu",
+      "phone": "937-327-6448",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Email and phone published on official bio page wittenbergtigers.com/sports/sball/coaches/bios/Dan_Davis (checked 2026-07). No public Twitter/X handle listed for this coach."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "sid": 101,
+  "name": "Ball State University",
+  "division": "NCAA D1",
+  "conference": "Mid-American Conference",
+  "city": "Muncie",
+  "state": "IN",
+  "website_url": "https://ballstatesports.com/sports/softball",
+  "academic_ranking": "Public R2 doctoral research university (High research activity). ~20,440 students (14,874 undergrad, fall 2023). 2024 acceptance rate ~68.9%; avg enrolled HS GPA 3.52; test-optional (submitters avg ~1180 SAT / 25 ACT). ~120 undergraduate majors across ten colleges; 16:1 student-faculty ratio. U.S. News (2021) ~#213 national universities; noted for social mobility and online master's programs.",
+  "tuition": 8284.0,
+  "financial_aid": "Public university with separate in-state (~$8,284/yr) and out-of-state (~$25,518/yr) undergraduate tuition (2021-22 figures per Wikipedia; verify current year with ballstate.edu). NCAA D1 athletic scholarships available for softball; institutional need- and merit-based aid also offered. Exact softball scholarship allocations not publicly listed.",
+  "roster_size": 27,
+  "scholarship_count": null,
+  "facilities_notes": "Team plays at the Ball State softball stadium on the Muncie campus (referenced on official roster/news pages; e.g., a walk-off victory over Kent State at the Ball State softball stadium). Detailed capacity/feature specs not published on the softball pages checked 2026-07.",
+  "program_reputation": "Established NCAA D1 program in the Mid-American Conference. Historic highlight: two Women's College World Series appearances (1973 and 1975, per Wikipedia). Competes annually in MAC softball.",
+  "notes": "Coaching staff, roster size (27), and contact info captured live from https://ballstatesports.com/sports/softball/coaches and /roster on 2026-07 (pages labeled '2027 Softball Staff/Roster'). Only three softball-specific coaching staff are listed (head coach, assistant coach, graduate assistant); the athletics site also lists shared athletic-department support staff (sports medicine, communications, strength & conditioning, academics, sports psychology) who are not softball-only coaches and are excluded from the coaches list. No coach Twitter/X handles are published on the staff page. Tuition/academic figures sourced from Wikipedia and should be reconfirmed against ballstate.edu for the current year.",
+  "coaches": [
+    {
+      "name": "Helen Peña",
+      "title": "Head Coach",
+      "email": "helen.pena@bsu.edu",
+      "phone": "765-285-5137",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "ballstatesports.com softball staff page fetched 2026-07; no public Twitter/X handle listed"
+    },
+    {
+      "name": "Aaron Longenecker",
+      "title": "Assistant Coach",
+      "email": "aaron.longenecker@bsu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "ballstatesports.com softball staff page fetched 2026-07; no public phone or Twitter/X handle listed"
+    },
+    {
+      "name": "Jadeyn Merrill",
+      "title": "Graduate Assistant",
+      "email": "jadeyn.merrill@bsu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "ballstatesports.com softball staff page fetched 2026-07; no public phone or Twitter/X handle listed"
+    }
+  ]
+}

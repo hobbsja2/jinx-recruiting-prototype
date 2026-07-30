@@ -1,0 +1,37 @@
+{
+  "sid": 10,
+  "name": "Maryville College",
+  "division": "NCAA D3",
+  "conference": "Collegiate Conference of the South",
+  "city": "Maryville",
+  "state": "TN",
+  "website_url": "https://mcscots.com/sports/softball",
+  "academic_ranking": "Private liberal arts college founded 1819 (over 200 years old), affiliated with the Presbyterian Church (USA). Offers 60+ majors and seven pre-professional programs on a 263-acre campus near the Great Smoky Mountains. Describes itself as a nationally-ranked institution; specific numeric ranking not published on reviewed pages.",
+  "tuition": 41300,
+  "financial_aid": "100% of undergraduate students receive financial aid (scholarships, grants, awards, or need-based assistance). On-campus scholarships range from $16,000 to full tuition. Source: maryvillecollege.edu tuition-and-fees page, 2026-2027 academic year.",
+  "roster_size": 22,
+  "scholarship_count": null,
+  "facilities_notes": "Softball plays home games on campus in Maryville, TN. Specific facility details (field name, seating) not published on reviewed athletics pages.",
+  "program_reputation": "NCAA Division III program competing in the Collegiate Conference of the South (CCS). Finished the 2026 season with an 11-5 conference record and appeared in the CCS Championship tournament in Oxford, Alabama.",
+  "notes": "Conference confirmed as Collegiate Conference of the South via 2026 schedule (games marked 'CCS'); some site footer text still references the Southern Athletic Association. Roster size (22) from softball roster page. Team social: X @mcscotssb, Instagram @mcscotssoftball. Data collected 2026-07 from mcscots.com and maryvillecollege.edu.",
+  "coaches": [
+    {
+      "name": "Bayleigh Masterson",
+      "title": "Head Softball Coach",
+      "email": "bayleigh.masterson@maryvillecollege.edu",
+      "phone": "(865) 981-8228",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball staff directory (mcscots.com/sports/softball/coaches) checked 2026-07; no individual Twitter/X handle listed."
+    },
+    {
+      "name": "Jenica Brown",
+      "title": "Assistant Softball Coach",
+      "email": "jenica.brown@maryvillecollege.edu",
+      "phone": "(865) 981-8059",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball staff directory (mcscots.com/sports/softball/coaches) checked 2026-07; no individual Twitter/X handle listed."
+    }
+  ]
+}

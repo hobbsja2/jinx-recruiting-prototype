@@ -1,0 +1,46 @@
+{
+  "sid": 8,
+  "name": "Ursuline College",
+  "division": "NCAA D2",
+  "conference": "Great Midwest Athletic Conference (G-MAC)",
+  "city": "Pepper Pike",
+  "state": "OH",
+  "website_url": "https://ursulinearrows.com/sports/softball",
+  "academic_ranking": "Private Catholic liberal arts college founded by the Ursuline Sisters; ranked the #1 most affordable private liberal arts college in Ohio (U.S. Dept. of Education College Scorecard) for three consecutive years and #1 college in Ohio for student upward mobility. Known for the Breen School of Nursing (reports 100% nursing grad employment post-licensure), healthcare programs, and a nationally noted Counseling & Art Therapy master's program.",
+  "tuition": 40440.0,
+  "financial_aid": "2026-2027 full-time undergraduate tuition is $40,440 (12-18 credits/semester); part-time rate $1,348/credit. Ursuline is recognized as the most affordable private liberal arts college in Ohio for three consecutive years. Detailed scholarship award amounts not published on the tuition page; net price calculator and scholarship pages referenced (ursuline.edu/cost-aid).",
+  "roster_size": 20,
+  "scholarship_count": null,
+  "facilities_notes": "Softball program page (ursulinearrows.com/sports/softball) does not detail a dedicated softball facility; specific field/facility information not publicly listed on the athletics site as of research date.",
+  "program_reputation": "NCAA Division II member competing in the Great Midwest Athletic Conference (G-MAC). Softball roster of ~20 for the 2026 season. Small women's-focused Catholic institution athletics program (Arrows).",
+  "notes": "Coaching staff verified against ursulinearrows.com softball coaches page and athletics staff directory (checked 2026-07). NOTE: automated fetches of the coaches page reported coach emails on a '@gannon.edu' domain, which is inconsistent with Ursuline College (gannon.edu belongs to a different institution, Gannon University); these could not be verified as genuinely published Ursuline emails, so emails were left blank rather than risk propagating incorrect data. Conference confirmed as G-MAC. Roster size (20) from softball roster page.",
+  "coaches": [
+    {
+      "name": "Danielle L'Argent",
+      "title": "Head Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "@DLargent17",
+      "sort_order": 0,
+      "source_note": "Ursuline softball coaches directory checked 2026-07; listed as head coach. Email/phone shown by automated fetch used a '@gannon.edu' domain inconsistent with Ursuline College and could not be verified as genuine, so left blank. Twitter handle @DLargent17 appeared consistently across fetches."
+    },
+    {
+      "name": "Abby Trahan",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Ursuline softball coaches directory checked 2026-07; no verifiable public email/phone listed (fetch-reported '@gannon.edu' email inconsistent with Ursuline, not used); no twitter listed."
+    },
+    {
+      "name": "Pat McKinley",
+      "title": "Volunteer Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Ursuline softball coaches directory checked 2026-07; no verifiable public email/phone listed (fetch-reported '@gannon.edu' email inconsistent with Ursuline, not used); no twitter listed."
+    }
+  ]
+}

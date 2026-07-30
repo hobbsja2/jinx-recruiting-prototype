@@ -1,0 +1,55 @@
+{
+  "sid": 71,
+  "name": "Shawnee State University",
+  "division": "NAIA",
+  "conference": "River States Conference",
+  "city": "Portsmouth",
+  "state": "OH",
+  "website_url": "https://www.ssubears.com/sports/softball",
+  "academic_ranking": "Shawnee State University is a public four-year institution located in Portsmouth, Ohio. It offers a range of undergraduate and graduate programs with an open/accessible admissions profile typical of a regional public university.",
+  "tuition": null,
+  "financial_aid": "As a public university, Shawnee State offers need- and merit-based financial aid, grants, and scholarships. NAIA institutions may offer athletic scholarships in softball. Specific figures not confirmed from a live page during research (2026-07).",
+  "roster_size": 22,
+  "scholarship_count": null,
+  "facilities_notes": "The Bears softball team competes as part of Shawnee State athletics in Portsmouth, OH. Specific softball facility details not confirmed from a live page during research (2026-07).",
+  "program_reputation": "Shawnee State University Bears softball competes at the NAIA level in the River States Conference.",
+  "notes": "Coaching staff and roster size (22) confirmed live from ssubears.com softball pages on 2026-07. Tuition and scholarship figures could not be confirmed from a live page and are left null to avoid guessing.",
+  "coaches": [
+    {
+      "name": "Kristen Bradshaw",
+      "title": "Head Softball Coach",
+      "email": "kbradshaw@shawnee.edu",
+      "phone": "(740) 351-3691",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Confirmed from ssubears.com softball coaches page 2026-07."
+    },
+    {
+      "name": "Carrie Kyne",
+      "title": "Assistant Coach",
+      "email": "ckyne@shawnee.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Staff directory checked 2026-07; no public phone or X handle listed."
+    },
+    {
+      "name": "Cassie Berry",
+      "title": "Assistant Coach",
+      "email": "berryc7@mymail.shawnee.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Staff directory checked 2026-07; no public phone or X handle listed."
+    },
+    {
+      "name": "Brittani Wolfenbarker",
+      "title": "Assistant Coach",
+      "email": "wolfenbarkerb2@mymail.shawnee.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Staff directory checked 2026-07; no public phone or X handle listed."
+    }
+  ]
+}

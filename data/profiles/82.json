@@ -1,0 +1,73 @@
+{
+  "sid": 82,
+  "name": "Middle Tennessee State University",
+  "division": "NCAA D1",
+  "conference": "Conference USA",
+  "city": "Murfreesboro",
+  "state": "TN",
+  "website_url": "https://goblueraiders.com/sports/softball",
+  "academic_ranking": "Middle Tennessee State University is a large public doctoral research university and the largest undergraduate university in Tennessee. It offers 300+ programs across colleges including Business (Jones College of Business), Media and Entertainment, Behavioral and Health Sciences, and Basic and Applied Sciences. Total enrollment is roughly 20,000 students.",
+  "tuition": 31574,
+  "financial_aid": "Public university; in-state tuition and required fees approximately $10,266 and out-of-state approximately $31,574 for 2024-25 (source: NCES College Navigator). MTSU reports about 80% of students receive some form of financial aid. Athletic scholarships administered through the athletics department; academic and need-based aid available via mtsu.edu/financial-aid.",
+  "roster_size": 20,
+  "scholarship_count": null,
+  "facilities_notes": "Blue Raiders softball plays home games at the MTSU Softball Field on the Murfreesboro campus. Athletics facilities are branded under goblueraiders.com; specific softball facility upgrade details not confirmed on the staff/roster pages checked 2026-07.",
+  "program_reputation": "NCAA Division I program competing in Conference USA (C-USA). Middle Tennessee softball is one of the Blue Raiders' varsity sports; program history and championship details were not detailed on the pages fetched. Reputation as an established mid-major C-USA program.",
+  "notes": "Data captured from live fetch of goblueraiders.com softball coaches and roster pages on 2026-07. Roster size (20) counted from unique player profile links on the softball roster page. Conference (Conference USA) confirmed on the athletics site. Tuition figures from NCES College Navigator (2024-25). Head coach phone listed on site as '898-5018'; MTSU main line area code is 615, so recorded as (615) 898-5018.",
+  "coaches": [
+    {
+      "name": "Jeff Breeden",
+      "title": "Head Softball Coach",
+      "email": "jeff.breeden@mtsu.edu",
+      "phone": "(615) 898-5018",
+      "twitter": "@JBMTSUSoftball",
+      "sort_order": 0,
+      "source_note": "Listed on goblueraiders.com softball coaches page, fetched 2026-07."
+    },
+    {
+      "name": "Bryce Brentz",
+      "title": "Assistant Softball Coach",
+      "email": "Bryce.Brentz@mtsu.edu",
+      "phone": "(865) 806-2744",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Listed on goblueraiders.com softball coaches page, fetched 2026-07; no twitter listed."
+    },
+    {
+      "name": "Estelle Czech",
+      "title": "Assistant Coach",
+      "email": "eczech@mtsu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Listed on goblueraiders.com softball coaches page, fetched 2026-07; no public phone or twitter listed."
+    },
+    {
+      "name": "Ansley Blevins",
+      "title": "Assistant Coach",
+      "email": "agb6m@mtmail.mtsu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Listed on goblueraiders.com softball coaches page, fetched 2026-07; no public phone or twitter listed."
+    },
+    {
+      "name": "Dylan Radke",
+      "title": "Assistant Athletic Trainer (Softball)",
+      "email": "dylan.radke@mtsu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "Listed under Support Staff on goblueraiders.com softball coaches page, fetched 2026-07; no public phone or twitter listed."
+    },
+    {
+      "name": "Gavin Wright",
+      "title": "Student Manager",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 50,
+      "source_note": "Listed under Support Staff on goblueraiders.com softball coaches page, fetched 2026-07; no public email, phone, or twitter listed."
+    }
+  ]
+}

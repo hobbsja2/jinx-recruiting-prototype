@@ -1,0 +1,8 @@
+{
+  "sid": 41,
+  "name": "Freed-Hardeman University",
+  "in_state_tuition": 25620,
+  "housing_cost": 8740,
+  "housing_basis": "room + board",
+  "tuition_note": "2024-25 tuition & fees ($25,620) and on-campus room & board ($8,740) from NCES College Navigator (federal IPEDS data, unitid 220215). FHU is a private university charging one tuition rate to all students. FHU's own fhu.edu tuition/cost pages returned HTTP 403 to automated fetching, so official federal IPEDS-reported figures were used; room-only figure not separately published, so combined room+board is used."
+}

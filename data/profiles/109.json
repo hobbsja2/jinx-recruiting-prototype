@@ -1,0 +1,46 @@
+{
+  "sid": 109,
+  "name": "Edison State Community College",
+  "division": "JUCO",
+  "conference": "Ohio Community College Athletic Conference (OCCAC)",
+  "city": "Piqua",
+  "state": "OH",
+  "website_url": "https://athletics.edisonohio.edu/sports/sball/index",
+  "academic_ranking": "Public two-year community college in Piqua, OH (Miami County) with a total enrollment of approximately 4,624 and a 23:1 student-to-faculty ratio. Grants associate degrees; most popular programs include Liberal Arts & Sciences, Registered Nursing, and Business Administration/Management. Emphasizes career pathways and transfer preparation.",
+  "tuition": 4499,
+  "financial_aid": "Tuition and fees approximately $4,499/year for Ohio residents and $8,346/year for out-of-state students (2024-25). College offers grants, FAFSA-based aid, loans, and scholarships; about 54% of undergraduates receive grants or scholarships, with an average aid amount of about $2,159.",
+  "roster_size": null,
+  "scholarship_count": null,
+  "facilities_notes": "Softball is part of the Edison State Chargers (Lady Chargers) athletics program based in Piqua, OH. Specific softball facility details were not publicly verifiable; athletics site (athletics.edisonohio.edu) was not directly accessible during research (HTTP 403).",
+  "program_reputation": "NJCAA-level women's softball program competing in the Ohio Community College Athletic Conference (OCCAC). Head coach Miranda Huddle is in her fourth year with the program and third year as head coach (as of 2026 season). Team social handle @ESCCSoftball; athletics department @ESCC_Chargers.",
+  "notes": "Athletics site (athletics.edisonohio.edu), OCCAC.org, and ProductiveRecruit all returned HTTP 403 to direct fetch during research on 2026-07-30; coaching and contact details were gathered from OCCAC coach bio snippets and other public search results. Roster size could not be verified from public sources (live roster page blocked) and is left null. Scholarship count not publicly listed; left null. Tuition reflects Ohio in-state rate.",
+  "coaches": [
+    {
+      "name": "Miranda Huddle",
+      "title": "Head Softball Coach",
+      "email": "mhuddle@edisonohio.edu",
+      "phone": "937-467-6430",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Email/phone/title from OCCAC coach bio (occac.org/members/edison/bios/MirandaHuddle) via public search snippets, 2026-07; no personal Twitter/X handle listed (team handle @ESCCSoftball)."
+    },
+    {
+      "name": "Brad Huddle",
+      "title": "Assistant Softball Coach",
+      "email": "huddle9500@yahoo.com",
+      "phone": "937-778-7932",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Email/phone/title from OCCAC coach bio via public search snippets, 2026-07; no Twitter/X handle listed."
+    },
+    {
+      "name": "Bob Claudy",
+      "title": "Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Listed as assistant coach on Edison State softball coaches page and OCCAC bio; staff sources checked 2026-07, no public email/phone/Twitter listed."
+    }
+  ]
+}

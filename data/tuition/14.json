@@ -1,0 +1,8 @@
+{
+  "sid": 14,
+  "name": "University of Akron",
+  "in_state_tuition": 13135,
+  "housing_cost": 11904,
+  "housing_basis": "room + board",
+  "tuition_note": "uakron.edu is behind a JavaScript bot-challenge (HTTP 403 to WebFetch/curl), so figures are from NCES College Navigator (id 200800), corroborated by CollegeTuitionCompare, for the 2024-25 academic year: in-state tuition & fees $13,135; on-campus food & housing published only as a combined room+board figure of $11,904 (no room-only figure broken out)."
+}

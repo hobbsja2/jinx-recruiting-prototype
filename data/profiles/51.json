@@ -1,0 +1,55 @@
+{
+  "sid": 51,
+  "name": "Eastern Kentucky University",
+  "division": "NCAA D1",
+  "conference": "ASUN Conference",
+  "city": "Richmond",
+  "state": "KY",
+  "website_url": "https://ekusports.com/sports/softball",
+  "academic_ranking": "Public university in Richmond, KY. Fall 2024 enrollment ~15,673 total (~13,448 undergraduate). Ranked #329 (tie) nationally by U.S. News & World Report; accredited by the Southern Association of Colleges and Schools. Branch campuses in Corbin, Hazard, and Manchester plus 40+ online degree options.",
+  "tuition": null,
+  "financial_aid": "About 41% of EKU students receive an income-based federal Pell grant (classified as low-income). Athletic scholarships for softball are governed by NCAA D1 limits (up to 12 equivalency scholarships). Specific 2026 tuition figure not confirmed from a live source; institutional and need-based aid available via eku.edu financial aid office.",
+  "roster_size": 13,
+  "scholarship_count": null,
+  "facilities_notes": "Softball plays home games at Gertrude Hood Field. Program also has a dedicated indoor Softball Hitting Facility (per ekusports.com facilities listing).",
+  "program_reputation": "NCAA Division I women's softball program competing in the ASUN Conference. EKU joined the ASUN in 2021-22. Coaching staff led by head coach Jane Worthington.",
+  "notes": "Coaching staff and roster captured from ekusports.com softball pages, verified via the athletics staff directory (checked 2026-07). No public phone numbers or individual coach Twitter/X handles listed; team account @eku_softball appears on the coaches page. Tuition set to null because no reliable live figure could be confirmed without guessing.",
+  "coaches": [
+    {
+      "name": "Jane Worthington",
+      "title": "Head Coach",
+      "email": "jane.worthington@eku.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "ekusports.com softball coaches page 2026-07; email listed, no public phone or personal Twitter/X listed"
+    },
+    {
+      "name": "Zoe Schafer",
+      "title": "Associate Head Coach - Hitting",
+      "email": "zoe.schafer@eku.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "ekusports.com softball coaches page 2026-07; email listed, no public phone or personal Twitter/X listed"
+    },
+    {
+      "name": "Mollie Paulick",
+      "title": "Associate Head Coach - Pitching",
+      "email": "mollie.paulick@eku.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "ekusports.com softball coaches page 2026-07; email listed, no public phone or personal Twitter/X listed"
+    },
+    {
+      "name": "Sammi Miller",
+      "title": "Assistant Coach",
+      "email": "samantha.miller@eku.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "ekusports.com softball coaches page 2026-07; email listed, no public phone or personal Twitter/X listed"
+    }
+  ]
+}

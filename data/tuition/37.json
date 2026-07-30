@@ -1,0 +1,8 @@
+{
+  "sid": 37,
+  "name": "Thomas More University",
+  "in_state_tuition": 39800,
+  "housing_cost": 9900,
+  "housing_basis": "room + board",
+  "tuition_note": "Private university with a single tuition rate for all students. 2024-25 tuition & required fees ($39,800) and on-campus food & housing ($9,900) from NCES College Navigator/IPEDS (id 157809); tuition figure corroborated by collegetuitioncompare.com (2024-25 tuition & fees $39,025, room & board $9,900). Official thomasmore.edu cost page returned HTTP 403 and could not be fetched directly. Housing figure is combined food & housing (room + board); room-only not separately published."
+}

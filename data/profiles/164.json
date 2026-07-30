@@ -1,0 +1,37 @@
+{
+  "sid": 164,
+  "name": "Bluffton University",
+  "division": "NCAA D3",
+  "conference": "Heartland Collegiate Athletic Conference (HCAC)",
+  "city": "Bluffton",
+  "state": "OH",
+  "website_url": "https://blufftonbeavers.com/sports/sball/index",
+  "academic_ranking": "Small private university (United Methodist / Mennonite affiliated liberal arts) in Bluffton, OH. Total enrollment approximately 867 with an 11:1 student-to-faculty ratio and roughly 67% acceptance rate (source: College Factual, checked 2026-07).",
+  "tuition": 37362,
+  "financial_aid": "As an NCAA Division III program, Bluffton does not offer athletic scholarships; aid is need- and merit-based academic/institutional financial aid. Average net cost reported around $19,943/year (College Factual, checked 2026-07). Tuition & fees figure ($37,362, 2024-25) is a combined tuition-and-fees sticker price per Univstats.",
+  "roster_size": 19,
+  "scholarship_count": null,
+  "facilities_notes": "Softball played at Bluffton University's on-campus softball facility. Official athletics site (blufftonbeavers.com) blocked automated fetch (HTTP 403) at time of research 2026-07; specific facility details not independently confirmed from a live page.",
+  "program_reputation": "NCAA Division III program competing in the Heartland Collegiate Athletic Conference (HCAC). Paige Jansen has led the program as head coach since being named in August 2021.",
+  "notes": "Official athletics domain is blufftonbeavers.com (the provided gobeavers.bluffton.edu host did not resolve). Live official coaches/roster pages returned HTTP 403 to automated fetch; coaching staff and roster size were corroborated via third-party recruiting/statistics directories (OfferSecured verified March 2026, College Factual) and DuckDuckGo search snippets. Two-person softball staff confirmed by multiple sources; no graduate assistants, volunteer coaches, or separate recruiting coordinator listed. Roster size 19 per College Factual participant count.",
+  "coaches": [
+    {
+      "name": "Paige Jansen",
+      "title": "Head Coach",
+      "email": "jansenp@bluffton.edu",
+      "phone": "419-358-3378",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Head coach since Aug 2021. Email/phone from OfferSecured staff directory (verified March 2026) and corroborated by search snippets; official coaches page (blufftonbeavers.com) returned HTTP 403 to automated fetch 2026-07. No public twitter/X handle found."
+    },
+    {
+      "name": "Mitchell Baker",
+      "title": "Assistant Coach",
+      "email": "mabakerm@bluffton.edu",
+      "phone": "419-358-3354",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Assistant coach; email and phone from OfferSecured staff directory (verified March 2026). Email format 'mabakerm@bluffton.edu' not independently confirmed on official site (blufftonbeavers.com returned HTTP 403); phone follows program 419-358-33xx pattern. No public twitter/X handle found."
+    }
+  ]
+}

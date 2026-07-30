@@ -1,0 +1,73 @@
+{
+  "sid": 13,
+  "name": "Ohio State University",
+  "division": "NCAA D1",
+  "conference": "Big Ten Conference",
+  "city": "Columbus",
+  "state": "OH",
+  "website_url": "https://ohiostatebuckeyes.com/sports/softball/",
+  "academic_ranking": "Ohio State is a large public flagship research university (member of the Association of American Universities). It is commonly ranked among the top public universities in the U.S. (frequently in the top 15-20 public national universities per U.S. News). Strong programs in business (Fisher), engineering, and the sciences. Exact ranking not verified live during this research pass.",
+  "tuition": 12485.0,
+  "financial_aid": "Athletic scholarships (softball is an NCAA D1 head-count/equivalency sport limited to 12 full scholarships) are administered through OSU Athletics. Extensive need- and merit-based institutional aid, federal aid, and grants available through the OSU Office of Student Financial Aid. Tuition figure listed is the approximate in-state undergraduate base rate; out-of-state tuition is substantially higher (approx. $35,000+/yr). Figures not confirmed on a live OSU financial-aid page during this research pass.",
+  "roster_size": 22,
+  "scholarship_count": 12,
+  "facilities_notes": "Ohio State softball plays at Buckeye Field on the OSU campus in Columbus. The program has access to the broader OSU Athletics support infrastructure including athletic training, strength and conditioning, and equipment services. Detailed facility specs not enumerated on the pages fetched.",
+  "program_reputation": "Established Big Ten Conference softball program. Head coach Kirin Kumar leads the staff (with recently announced assistant hires including Crissy Strimple). Competes in one of the premier D1 conferences.",
+  "notes": "Coaching staff and roster captured live from the Sidearm/Nuxt-powered official site (https://ohiostatebuckeyes.com/sports/softball/roster/ and /roster/coaches/) on 2026-07-30 by parsing the __NUXT_DATA__ payload. Roster_size = 22 active players. Softball-specific coaches: Head Coach Kirin Kumar plus three Assistant Coaches. Publicly listed coach email is the shared program address ath-softball@osu.edu; individual coach direct emails/phones/twitter were not publicly listed for the on-field coaches. Support-staff entries (Director of Operations, Athletic Trainer) included with sort_order after coaches. Scholarship_count reflects the NCAA D1 softball limit of 12, not a school-confirmed figure. Tuition is an approximate in-state base rate, not confirmed on a live OSU page this pass.",
+  "coaches": [
+    {
+      "name": "Kirin Kumar",
+      "title": "Head Coach",
+      "email": "ath-softball@osu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Official softball staff page (ohiostatebuckeyes.com) parsed 2026-07-30; only shared program email ath-softball@osu.edu listed, no direct phone/twitter published."
+    },
+    {
+      "name": "Crissy Strimple",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Official softball staff page parsed 2026-07-30; recently announced hire, no public email/phone/twitter listed in staff record."
+    },
+    {
+      "name": "Courtney Vierstra",
+      "title": "Assistant Coach",
+      "email": "ath-softball@osu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Official softball staff page parsed 2026-07-30; shared program email listed, no direct phone/twitter published."
+    },
+    {
+      "name": "Karli Spaid",
+      "title": "Assistant Coach",
+      "email": "ath-softball@osu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Official softball staff page parsed 2026-07-30; shared program email listed, no direct phone/twitter published."
+    },
+    {
+      "name": "Megan Smith",
+      "title": "Director of Operations",
+      "email": "ath-softball@osu.edu",
+      "phone": "247-5363",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "Official softball staff page parsed 2026-07-30; softball-specific support staff. Phone listed as 247-5363 (OSU 614 area/campus prefix), no twitter published."
+    },
+    {
+      "name": "Jamie Posner",
+      "title": "Staff Athletic Trainer",
+      "email": "posner.36@osu.edu",
+      "phone": "614-292-1165",
+      "twitter": "",
+      "sort_order": 50,
+      "source_note": "Official softball staff page parsed 2026-07-30; softball-assigned athletic training support staff."
+    }
+  ]
+}

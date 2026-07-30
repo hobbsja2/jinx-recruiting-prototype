@@ -1,0 +1,46 @@
+{
+  "sid": 28,
+  "name": "Hanover College",
+  "division": "NCAA D3",
+  "conference": "Heartland Collegiate Athletic Conference",
+  "city": "Hanover",
+  "state": "IN",
+  "website_url": "https://athletics.hanover.edu/sports/softball",
+  "academic_ranking": "Private liberal arts college with ~1,070 undergraduates. Ranked tied for #103 of 211 in National Liberal Arts Colleges by U.S. News & World Report (2025). Offers ~40 undergraduate majors plus DPT and OTD graduate programs; students may design their own major.",
+  "tuition": 46232,
+  "financial_aid": "Tuition rate locked for four years. The college states 100% of Hanover students receive financial aid, and all undergraduates receive a merit-based scholarship ranging from $20,000 to $36,000 based on GPA. All forms of aid and grants cannot exceed the cost of tuition. Select Pell-eligible students from all 50 states may receive full tuition through combined aid (conditions apply). 2026-2027 total cost of attendance for residential first-year students is $63,819 before aid.",
+  "roster_size": 16,
+  "scholarship_count": null,
+  "facilities_notes": "Softball team plays at Kops-Bedel Stadium. Other campus athletic facilities include Alumni Stadium, Collier Arena, K.T. Young Ballpark (baseball), Horner Health & Recreation Center with weight room, cross country course, golf facilities, soccer complex, and Zeddies Tennis Center.",
+  "program_reputation": "NCAA Division III program competing in the Heartland Collegiate Athletic Conference (HCAC). As a D3 program, no athletic scholarships are offered; financial support is need- and merit-based academic aid.",
+  "notes": "Data gathered from athletics.hanover.edu softball coaches and roster pages and hanover.edu cost/financial aid pages, checked 2026-07. Team X/Twitter account @HanoverSBall appears in site navigation but is not tied to any individual coach. As an NCAA D3 program, athletic scholarships are not permitted (scholarship_count null).",
+  "coaches": [
+    {
+      "name": "Cori Collinsworth",
+      "title": "Head Softball Coach",
+      "email": "collinsworth@hanover.edu",
+      "phone": "(812) 866-6822",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball coaches directory checked 2026-07; email and phone publicly listed. No personal Twitter/X listed."
+    },
+    {
+      "name": "Duane Ralston",
+      "title": "Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball coaches directory checked 2026-07; no public email, phone, or Twitter/X listed."
+    },
+    {
+      "name": "Ryan Schuler",
+      "title": "Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Softball coaches directory checked 2026-07; no public email, phone, or Twitter/X listed."
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "sid": 18,
+  "name": "Ohio University",
+  "division": "NCAA D1",
+  "conference": "Mid-American Conference",
+  "city": "Athens",
+  "state": "OH",
+  "website_url": "https://ohiobobcats.com/sports/softball",
+  "academic_ranking": "Public research university in Athens, OH, founded in 1804 (the first university established in the former Northwest Territory). Carnegie-classified R1 (Doctoral Universities - Very high research). U.S. News ranked it #198 nationally (tie); noted subject strengths include Fine Arts, Rehabilitation Counseling, and Physical Therapy, plus nationally recognized journalism, business, and medicine programs. Home to the Heritage College of Osteopathic Medicine. Athens campus enrollment about 24,900 (roughly 19,100 undergraduates) as of fall 2023. Academic profile gathered from en.wikipedia.org/wiki/Ohio_University checked 2026-07.",
+  "tuition": 15018,
+  "financial_aid": "Ohio University Athens Campus 2026-2027 annual undergraduate tuition and fees: Ohio residents (in-state) $15,018; out-of-state residents $26,792. The tuition field above uses the in-state resident rate ($15,018); out-of-state is $26,792. These figures cover tuition and fees only, not room, meals, or other costs. Program- and team-specific financial aid/gift aid figures were not published on the pages checked. Source: ohio.edu/admissions/tuition checked 2026-07.",
+  "roster_size": 20,
+  "scholarship_count": null,
+  "facilities_notes": "NCAA Division I program competing in the Mid-American Conference. Specific softball venue name was not captured from the athletics pages fetched (ohiobobcats.com softball pages checked 2026-07). NCAA D1 softball programs are limited to 12 athletic scholarships, but Ohio's exact scholarship count was not publicly published on the pages checked, so scholarship_count is set to null.",
+  "program_reputation": "NCAA Division I women's softball program (Ohio Bobcats) competing in the Mid-American Conference. Ohio is a charter member of the MAC. The 2026 softball coaching staff consists of a head coach and two assistant coaches. Detailed recent competitive accolades were not captured from the pages fetched; reputation info based on ohiobobcats.com softball pages checked 2026-07.",
+  "notes": "Data gathered live 2026-07 from ohiobobcats.com (softball coaches and roster pages, server-rendered HTML retrieved via HTTP because the pages are JavaScript-rendered), ohio.edu/admissions/tuition (tuition), and en.wikipedia.org (academic profile). Roster size (20) counted from distinct player profile links on the softball roster page. Tuition field uses the Ohio resident (in-state) rate of $15,018; out-of-state rate is $26,792. No individual twitter/X handles are listed for the softball coaches on the staff directory (the team account is @Ohiobobcatsb). Coaches list emails but no direct phone numbers on the softball staff directory. In addition to the three softball coaches, the following softball-assigned support staff are listed and included as sort_order 30+: Senior Director of Athletics Communications (softball media contact), Ohio Athletics Sports Dietitian, and Staff Athletic Trainer (softball).",
+  "coaches": [
+    {
+      "name": "Paige McMenemy",
+      "title": "Head Coach",
+      "email": "mcmenemy@ohio.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "ohiobobcats.com softball coaches page checked 2026-07; email listed, no public phone or twitter/X handle listed"
+    },
+    {
+      "name": "Avrey Steiner",
+      "title": "Assistant Coach",
+      "email": "asteiner@ohio.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "ohiobobcats.com softball coaches page checked 2026-07; email listed, no public phone or twitter/X handle listed"
+    },
+    {
+      "name": "Alexandria Whitmore",
+      "title": "Assistant Coach",
+      "email": "whitmorea8@ohio.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "ohiobobcats.com softball coaches page checked 2026-07; email listed, no public phone or twitter/X handle listed"
+    },
+    {
+      "name": "Sara Legarsky",
+      "title": "Senior Director of Athletics Communications (Men's Basketball, Field Hockey, Swimming and Diving, Softball)",
+      "email": "legarsky@ohio.edu",
+      "phone": "740-597-1837",
+      "twitter": "@Legarsky22",
+      "sort_order": 30,
+      "source_note": "ohiobobcats.com softball staff directory checked 2026-07; softball media/communications contact, email and phone listed, twitter handle @Legarsky22 noted in bio"
+    },
+    {
+      "name": "Jessica Arquette MS, RDN, CSSD, LD",
+      "title": "Ohio Athletics Sports Dietitian",
+      "email": "arquette@ohio.edu",
+      "phone": "740-593-0131",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "ohiobobcats.com softball staff directory checked 2026-07; sports dietitian assigned to softball, email and phone listed, no public twitter/X handle listed"
+    },
+    {
+      "name": "Ashley Pepper",
+      "title": "Staff Athletic Trainer (Softball, Soccer)",
+      "email": "peppera@ohio.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 50,
+      "source_note": "ohiobobcats.com softball staff directory checked 2026-07; athletic trainer assigned to softball, email listed, no public phone or twitter/X handle listed"
+    }
+  ]
+}

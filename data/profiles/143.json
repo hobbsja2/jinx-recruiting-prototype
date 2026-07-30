@@ -1,0 +1,28 @@
+{
+  "sid": 143,
+  "name": "LeMoyne-Owen College",
+  "division": "NCAA D2",
+  "conference": "Southern Intercollegiate Athletic Conference",
+  "city": "Memphis",
+  "state": "TN",
+  "website_url": "https://athletics.loc.edu/sports/softball",
+  "academic_ranking": "Private historically black college (HBCU) in Memphis, TN, affiliated with the United Church of Christ. Formed in 1968 from the merger of LeMoyne College (1871) and Owen College (1947). Small liberal arts institution; notable alumni include former NAACP executive director Benjamin Hooks and former Washington, D.C. mayor Marion Barry.",
+  "tuition": 14160.0,
+  "financial_aid": "Tuition is billed per credit hour at $472/credit (Fall 2026, per official loc.edu cost page); the $14,160 figure reflects a standard full-time load of 30 credits/year. Additional fees include a $125 student activity fee, $200 student health fee, and books at $25.50/credit. As an HBCU serving a high-need population, the college relies heavily on federal aid; endowment was boosted by a $40M pledge from the Community Foundation of Greater Memphis in 2020 (~$2M contributed annually). Exact institutional aid percentages not published on pages checked 2026-07.",
+  "roster_size": 13,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes as part of LeMoyne-Owen College Athletics (nickname: Magicians) in Memphis, TN. No dedicated softball facility details published on athletics.loc.edu as of 2026-07.",
+  "program_reputation": "NCAA Division II member competing in the Southern Intercollegiate Athletic Conference (SIAC). LeMoyne-Owen is best known athletically for its 1975 NCAA Division III men's basketball national championship (cited as the only HBCU to win a national title at that level). Softball is a smaller program with a 13-player roster; no recent conference or national accolades found on pages checked 2026-07.",
+  "notes": "Data gathered 2026-07-30 from official sources: athletics.loc.edu softball roster page (roster size 13), athletics.loc.edu staff directory (coaching staff), loc.edu cost page (tuition), and Wikipedia (academic/institutional profile). The athletics staff directory lists only one softball staff member (head coach); no assistant coaches, recruiting coordinators, or graduate assistants were listed for softball as of the date checked. No public email, phone, or Twitter/X handle is listed for the head coach in the staff directory. Department-wide contact: (901) 435-1235; athletics X account @locmagicians. Tuition is per-credit-hour; annual figure is a computed full-time estimate (see financial_aid).",
+  "coaches": [
+    {
+      "name": "Reginald Morris",
+      "title": "Assistant Director of Athletics / Head Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "athletics.loc.edu staff directory checked 2026-07-30; listed as 'Assistant Director of Athletics / Head Softball Coach'; no public email, phone, or Twitter/X handle listed"
+    }
+  ]
+}

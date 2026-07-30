@@ -1,0 +1,55 @@
+{
+  "sid": 153,
+  "name": "Muskingum University",
+  "division": "NCAA D3",
+  "conference": "Ohio Athletic Conference",
+  "city": "New Concord",
+  "state": "OH",
+  "website_url": "https://fightingmuskies.com/sports/sball/index",
+  "academic_ranking": "Private nonprofit liberal arts university founded in 1837 in New Concord, OH. Acceptance rate ~82% (test-optional admissions, accepts Common Application). Undergraduate enrollment roughly 1,400. Graduation rate ~57%. U.S. News/EDsmart place it in the mid-tier of national/regional institutions (EDsmart ~#691 nationally). Noted academic areas include liberal arts & social sciences, environmental science, and computer science.",
+  "tuition": 31701.0,
+  "financial_aid": "Muskingum promotes itself as a strong value (ranked #1 Best Value among Ohio universities per its own site) and offers a Net Price Calculator. As an NCAA Division III program, no athletic scholarships are awarded; aid is merit- and need-based academic scholarships and grants. Reported average net tuition after aid is around $8,900. Figures vary by reporting year.",
+  "roster_size": null,
+  "scholarship_count": 0,
+  "facilities_notes": "Softball competes as part of Muskingum Athletics; coaching offices are located in the John Glenn Gymnasium complex (e.g., office 319C). Roster/facilities page hosted on fightingmuskies.com. Specific stadium/field details not confirmed from a live public page during 2026-07 check (athletics site blocked automated access).",
+  "program_reputation": "Historically successful OAC program: the school cites 19 conference championships, 8 NCAA Regional Championships, and 1 National Championship. Recent success includes a 29-9 overall / 12-4 OAC season, a No. 2 OAC Tournament seed, multiple All-OAC honorees, and several Academic All-OAC honor roll selections. Picked third in a recent OAC Softball Preseason Poll.",
+  "notes": "Researched 2026-07. The official athletics site (fightingmuskies.com; formerly muskies.muskingum.edu) blocks automated fetching (HTTP 403 / bot verification), so coaching-staff details were verified via the Muskingum University online directory (muskingum.edu/directory) and indexed search results of the official coaches page. Roster size could not be verified from a live public page (roster page blocked; search snippets were unreliable/conflicting), so roster_size is null rather than guessed. scholarship_count set to 0 because NCAA Division III programs do not offer athletic scholarships. Kylee Marcum was recently elevated from assistant to head coach.",
+  "coaches": [
+    {
+      "name": "Kylee Marcum",
+      "title": "Head Coach - Softball",
+      "email": "kmarcum@muskingum.edu",
+      "phone": "740-826-6176",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Verified via Muskingum University directory (muskingum.edu/directory/marcum-kylee) 2026-07; email and phone publicly listed. Office 319C John Glenn Gymnasium. No public personal Twitter/X handle found."
+    },
+    {
+      "name": "Kaitlyn Stufft",
+      "title": "Assistant Softball Coach",
+      "email": "kstufft1@muskingum.edu",
+      "phone": "740-826-6102",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Verified via Muskingum University directory (muskingum.edu/directory/stufft-kaitlyn) 2026-07; email and phone publicly listed. No public Twitter/X handle found."
+    },
+    {
+      "name": "Kayley Snider",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Confirmed as softball assistant coach (returning alum, first season) via official coaches page indexed search 2026-07; directory profile not found and no public email/phone listed. Athletics site blocked automated access, so contact details could not be verified."
+    },
+    {
+      "name": "Adam Biehl",
+      "title": "Head Strength & Conditioning Coach",
+      "email": "abiehl@muskingum.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Verified via Muskingum University directory (muskingum.edu/directory/biehl-adam) 2026-07; email publicly listed, no individual phone listed (general line 740-826-8211). Department-wide strength coach listed on the softball staff page, not softball-specific. No public Twitter/X handle found."
+    }
+  ]
+}

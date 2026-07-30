@@ -1,0 +1,55 @@
+{
+  "sid": 122,
+  "name": "Indiana University Southeast",
+  "division": "NAIA",
+  "conference": "River States Conference",
+  "city": "New Albany",
+  "state": "IN",
+  "website_url": "https://iusathletics.com/sports/softball",
+  "academic_ranking": "Public regional campus of Indiana University in New Albany, IN. Total enrollment roughly 5,000 students (predominantly undergraduate) with a low student-to-faculty ratio. Offers 55+ degree programs across six schools (Arts and Letters, Business, Education, Natural Sciences, Nursing, Social Sciences). Programmatic accreditations include AACSB (Business), CAEP (Education), CCNE (Nursing), and ACS (Biochemistry). Not a formally nationally ranked research institution; recognized regionally for business, nursing, and education programs.",
+  "tuition": 8424,
+  "financial_aid": "In-state undergraduate tuition and fees approximately $8,424/yr; out-of-state approximately $22,811/yr (2024-25, per univstats.com aggregation of IPEDS data). Markets itself as the most affordable four-year degree in the Kentuckiana region. Kentucky residents in reciprocity counties (e.g., Bullitt, Jefferson, Oldham) may qualify for in-state tuition; Indiana Partner Program and Midwest Student Exchange Program (MSEP) offer reduced nonresident rates; KEES Match Scholarship available to eligible KY students. Employer tuition benefits available via partners including Amazon and UPS. Official IU Southeast pages use an interactive cost calculator and do not list flat figures.",
+  "roster_size": 18,
+  "scholarship_count": null,
+  "facilities_notes": "IU Southeast softball competes at its on-campus softball complex on the New Albany, IN campus (athletics site: iusathletics.com). Specific facility naming/details not confirmed on the softball program pages checked 2026-07.",
+  "program_reputation": "NAIA program competing in the River States Conference. Detailed championship/tournament history not captured from the pages fetched; conference affiliation confirmed via softball roster/program pages.",
+  "notes": "Researched 2026-07. Sources: iusathletics.com softball coaches page (https://iusathletics.com/sports/softball/coaches) and roster page (https://iusathletics.com/sports/softball/roster); IU Southeast admissions/cost pages (southeast.iu.edu); Wikipedia for academic profile; univstats.com for tuition figures. Roster size (18) counted from the 2025-26 roster page. No phone numbers or Twitter/X handles were published for any softball staff member. Scholarship count not publicly listed.",
+  "coaches": [
+    {
+      "name": "Courtney Holm",
+      "title": "Head Coach",
+      "email": "caholm@iu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "iusathletics.com softball coaches page fetched 2026-07; email listed, no public phone or Twitter/X."
+    },
+    {
+      "name": "Olivia Stansbury",
+      "title": "Assistant Coach",
+      "email": "olstansb@iu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "iusathletics.com softball coaches page fetched 2026-07; email listed, no public phone or Twitter/X."
+    },
+    {
+      "name": "Chris Bush",
+      "title": "Assistant Coach",
+      "email": "cbush@scsc.school",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "iusathletics.com softball coaches page fetched 2026-07; email listed, no public phone or Twitter/X."
+    },
+    {
+      "name": "Brian Tackett",
+      "title": "Assistant Coach",
+      "email": "tackett_13@comcast.net",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "iusathletics.com softball coaches page fetched 2026-07; email listed, no public phone or Twitter/X."
+    }
+  ]
+}

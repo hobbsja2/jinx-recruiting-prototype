@@ -1,0 +1,7 @@
+{
+  "sid": 125,
+  "name": "Indiana University South Bend",
+  "out_of_state_tuition": 22811,
+  "is_private_single_rate": false,
+  "oos_note": "Public university. Out-of-state (non-resident) undergraduate tuition & fees = $22,811 for 2024-25; in-state = $8,424 (matches the known in-state figure, confirming tuition & fees basis). Official bursar pages (southbend.iu.edu/administration/bursar/tuition-and-fees) use a JS fee estimator with no static figures; the $22,811 non-resident amount is corroborated by two aggregator sources (collegetuitioncompare.com and univstats.com) both citing IUSB 2024-25 tuition & fees of $8,424 in-state / $22,811 out-of-state. 2025-26 non-resident figure not published in a directly fetchable static form."
+}

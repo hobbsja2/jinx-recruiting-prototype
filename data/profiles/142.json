@@ -1,0 +1,73 @@
+{
+  "sid": 142,
+  "name": "Lee University",
+  "division": "NCAA D2",
+  "conference": "Gulf South Conference",
+  "city": "Cleveland",
+  "state": "TN",
+  "website_url": "https://www.leeuflames.com/sports/softball",
+  "academic_ranking": "Private Christian university affiliated with the Church of God (Cleveland, TN). Founded 1918; university status since 1997. Ranked #31 of 123 in its regional category by U.S. News & World Report. ~3,680 students (fall 2023). Six academic divisions including Colleges of Arts & Sciences and Education and Schools of Business, Music, Nursing, and Theology & Ministry. Motto: 'Where Christ is King.'",
+  "tuition": 31800,
+  "financial_aid": "Tuition is charged per credit hour ($1,060/credit hour for 2026-2027; $1,005 for 2025-2026); full-time load is 12-16 hours. Annual tuition figure of ~$31,800 is an estimate based on 30 credit hours/year at the 2026-2027 rate. Aid includes federal Pell/SEOG/TEACH grants, Work-Study, and Direct/PLUS loans; veteran benefits (Post-9/11 GI Bill, Yellow Ribbon); and numerous institutional/endowed scholarships (e.g., Poiema, Asian Pacific, Lettie Pate Whitehead, Hicks Scholars) plus a Family Tuition Discount. FAFSA Title IV code 003500; priority deadline Feb 1.",
+  "roster_size": 21,
+  "scholarship_count": null,
+  "facilities_notes": "Lee softball is part of the Lee University Flames athletics program in Cleveland, TN. Softball-specific facility details could not be verified from a live page (facility page returned a server error during research 2026-07).",
+  "program_reputation": "NCAA Division II program competing in the Gulf South Conference. Part of the Lee University Flames, which field 18 varsity sports at the D2 level.",
+  "notes": "Data fetched live from leeuflames.com softball coaches and roster pages and leeuniversity.edu cost/aid page on 2026-07. Roster size (21) confirmed from the 2026 softball roster page. Conference (Gulf South) confirmed from roster page. Tuition is per-credit-hour; annual value is an estimate (see financial_aid). No individual coach Twitter/X handles are listed on the staff directory (team account is @LeeUSoftball). Scholarship count not publicly listed.",
+  "coaches": [
+    {
+      "name": "Emily Russell",
+      "title": "Softball Head Coach",
+      "email": "erussell@leeuniversity.edu",
+      "phone": "(423) 614-8456",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Staff directory checked 2026-07; email and phone listed publicly."
+    },
+    {
+      "name": "Kelly Golden-Neer",
+      "title": "Softball Assistant Coach",
+      "email": "kneer@leeuniversity.edu",
+      "phone": "(423) 614-8456",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Staff directory checked 2026-07; email and phone listed publicly."
+    },
+    {
+      "name": "Ashley Sermons",
+      "title": "Softball Volunteer Assistant Coach",
+      "email": "",
+      "phone": "(423) 614-8456",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Staff directory checked 2026-07; no public email listed. Phone is shared athletics/softball office line."
+    },
+    {
+      "name": "Madison Barnett",
+      "title": "Softball Graduate Assistant",
+      "email": "",
+      "phone": "(423) 614-8456",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Staff directory checked 2026-07; no public email listed. Phone is shared athletics/softball office line."
+    },
+    {
+      "name": "Ana Macha",
+      "title": "Softball Graduate Assistant",
+      "email": "",
+      "phone": "(423) 614-8456",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "Staff directory checked 2026-07; no public email listed. Phone is shared athletics/softball office line."
+    },
+    {
+      "name": "Bradey Ann Saxon",
+      "title": "Softball Student Assistant",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 50,
+      "source_note": "Staff directory checked 2026-07; no public email or phone listed."
+    }
+  ]
+}

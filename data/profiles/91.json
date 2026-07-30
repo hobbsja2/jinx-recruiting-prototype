@@ -1,0 +1,55 @@
+{
+  "sid": 91,
+  "name": "Lindsey Wilson College",
+  "division": "NAIA",
+  "conference": "Mid-South Conference",
+  "city": "Columbia",
+  "state": "KY",
+  "website_url": "https://lindseyathletics.com/sports/softball",
+  "academic_ranking": "Private four-year, not-for-profit liberal arts college affiliated with the United Methodist Church. Located in Columbia, KY. Offers undergraduate and graduate programs with a strong emphasis on counseling and human development. No specific national academic ranking captured from official sources.",
+  "tuition": 28656,
+  "financial_aid": "More than 99% of undergraduate students receive some form of financial assistance, per the Lindsey Wilson College admissions site. Full cost-of-attendance (FY27, 9-month resident budget) totals approximately $49,329 including housing, food, fees and indirect costs. Athletic scholarships available as an NAIA program.",
+  "roster_size": 22,
+  "scholarship_count": null,
+  "facilities_notes": "Softball plays at the Lindsey Wilson Softball Complex on the Columbia, KY campus. A dedicated Softball Complex facilities page is linked on the athletics site.",
+  "program_reputation": "Competitive NAIA program in the Mid-South Conference; nationally ranked #17 (per NAIA/coaches ranking referenced on the athletics site during the 2026 cycle).",
+  "notes": "Staff directory and roster checked 2026-07 at lindseyathletics.com/sports/softball/coaches and /roster/2026. The coaches page displays apparent name/email mismatches (e.g., head coach Callum Maskill shown with email pilgrimc@lindsey.edu; assistant Annabelle Sharber shown with ramireza@lindsey.edu), which suggests the email fields are misbound in the site template; therefore those two emails were NOT trusted/attributed and left empty. Shared department phone 270-384-8598 listed for head coach and assistant. Team X/Twitter account is @LWUsoftball; no verified individual staff handles listed.",
+  "coaches": [
+    {
+      "name": "Callum Maskill",
+      "title": "Head Coach",
+      "email": "",
+      "phone": "270-384-8598",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "lindseyathletics.com/sports/softball/coaches checked 2026-07; phone is shared softball office line. Email on page (pilgrimc@lindsey.edu) appears misbound to another person, so not attributed; no verified individual email."
+    },
+    {
+      "name": "Annabelle Sharber",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "270-384-8598",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "coaches page checked 2026-07; email on page (ramireza@lindsey.edu) appears misbound, not attributed; shared office phone listed."
+    },
+    {
+      "name": "Brylee Pickerell",
+      "title": "Graduate Assistant Coach",
+      "email": "brylee.pickerell@lindsey.edu",
+      "phone": "270-384-8076",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "coaches page checked 2026-07; email brylee.pickerell@lindsey.edu matches name and appears reliably attributed."
+    },
+    {
+      "name": "K'Asia Palmer",
+      "title": "Student Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "coaches page checked 2026-07; no public email or phone listed for this staff member."
+    }
+  ]
+}

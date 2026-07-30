@@ -1,0 +1,37 @@
+{
+  "sid": 85,
+  "name": "Tennessee Technological University",
+  "division": "NCAA D1",
+  "conference": "Ohio Valley Conference",
+  "city": "Cookeville",
+  "state": "TN",
+  "website_url": "https://www.ttusports.com/sports/sball/index",
+  "academic_ranking": "Tennessee Tech is a public research university (Carnegie R2: Doctoral Universities - High research activity) in Cookeville, TN, founded in 1915. Enrollment is roughly 10,700 students (fall 2025). It is known for strong engineering, technology, computer science and other STEM programs, and also offers business, nursing, education, agriculture, and liberal arts. U.S. News & World Report ranked it #288 (tie) among National Universities.",
+  "tuition": 11926.0,
+  "financial_aid": "Tennessee Tech uses a flat-rate tuition model (pay tuition only up to 12 hours/semester; additional hours are free). Full-time tuition and mandatory fees run about $5,963/semester in-state and $8,063/semester domestic out-of-state (roughly $11,926 and $16,126 annually; international out-of-state is higher). Aid includes the Presidential Scholars program for freshmen, the Flight to Tech Scholarship for transfers (3.0+ GPA, 12+ transferable hours), the HOPE Scholarship, Tennessee Tech Promise, grants, loans, and Federal Work Study. FAFSA School Code 003523. Rates are subject to yearly change. Source: tntech.edu financial aid / paying for college page, checked 2026-07.",
+  "roster_size": 28,
+  "scholarship_count": null,
+  "facilities_notes": "Tennessee Tech softball (Golden Eagles) competes in NCAA Division I within the Ohio Valley Conference. Specific softball facility/stadium details were not populated from a primary source on the program pages checked 2026-07.",
+  "program_reputation": "NCAA Division I women's softball program competing in the Ohio Valley Conference. Team social handle is @TTU_Softball. No detailed recent-performance narrative was available on the program pages checked 2026-07.",
+  "notes": "Data sourced live from the official athletics site ttusports.com (the domain tntechsports.com currently returns a 'Launching Soon' placeholder). Softball coaches page (ttusports.com/sports/sball/coaches/index) and 2025-26 roster page (ttusports.com/sports/sball/2025-26/roster) were fetched 2026-07. Roster page listed 28 players. The coaches directory listed a head coach (Danielle Penner) and one assistant coach shown as 'TBA' at time of check; no individual coach emails or phones were publicly listed on the coach cards. Third-party news (Herald-Citizen / d1softball) referenced additional assistant hires (e.g., Alli Robinson, Abigail Knight), but these were not confirmed as named cards on the official directory at check time and were not fabricated here. Tuition figures from tntech.edu; academic profile from Wikipedia. Scholarship count and facilities details were not confirmable from primary sources and left null/qualitative to avoid fabrication.",
+  "coaches": [
+    {
+      "name": "Danielle Penner",
+      "title": "Head Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "ttusports.com softball coaches page, checked 2026-07; listed as Head Coach. No public email or phone listed on the coach card; no individual Twitter/X handle listed (team account @TTU_Softball)."
+    },
+    {
+      "name": "TBA",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "ttusports.com softball coaches page, checked 2026-07; assistant coach position listed as 'TBA' (no named individual). No public email, phone, or Twitter/X handle listed. Third-party news referenced assistant hires (Alli Robinson, Abigail Knight) but these were not confirmed on the official directory at check time."
+    }
+  ]
+}

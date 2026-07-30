@@ -1,0 +1,55 @@
+{
+  "sid": 100,
+  "name": "University of Notre Dame",
+  "division": "NCAA D1",
+  "conference": "Atlantic Coast Conference",
+  "city": "Notre Dame",
+  "state": "IN",
+  "website_url": "https://fightingirish.com/sports/softball",
+  "academic_ranking": "Nationally ranked private Catholic research university; consistently ranked among the top ~20 national universities (e.g., #12 per College Consensus 2025) and a member of the Association of American Universities (AAU).",
+  "tuition": null,
+  "financial_aid": "Notre Dame meets 100% of every admitted student's demonstrated financial need and offers 'No Loan' aid packages. Over 70% of undergraduates receive some form of financial aid. Under the new Pathways to Notre Dame program (2026-27), families earning up to $150,000 pay $0 tuition and families up to $200,000 receive aid covering at least half tuition. Athletic scholarships are limited by NCAA D1 softball rules.",
+  "roster_size": 20,
+  "scholarship_count": null,
+  "facilities_notes": "Home games are played at Melissa Cook Stadium on the Notre Dame campus (capacity ~1,250 spectators), the dedicated softball facility for the Fighting Irish.",
+  "program_reputation": "NCAA Division I program competing in the Atlantic Coast Conference. Strong combination of athletic and academic performance - nine Irish earned ACC All-Academic Team honors in 2026, and players earned All-ACC and NFCA All-Region recognition. Currently rebuilding under head coach Kris Ganeff, competed in the 2026 ACC Softball Championships.",
+  "notes": "Softball staff/coaches sourced from the Notre Dame athletics staff directory (fightingirish.com), checked 2026-07. The dedicated softball coaches page (fightingirish.com/sports/softball/coaches) returned HTTP 502 during research; staff data obtained from the athletics staff directory. Roster size (20) from the 2025-26 softball roster page. No individual coach Twitter/X handles were publicly listed; team account is @NDsoftball. Exact tuition and softball scholarship count could not be confirmed from a primary source and are left null to avoid guessing.",
+  "coaches": [
+    {
+      "name": "Kris Ganeff",
+      "title": "Head Softball Coach",
+      "email": "ganeff.2@nd.edu",
+      "phone": "574-631-9125",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "ND athletics staff directory, checked 2026-07; no public Twitter/X handle listed."
+    },
+    {
+      "name": "Boo De Oliveira",
+      "title": "Assistant Coach",
+      "email": "bgillett@nd.edu",
+      "phone": "574-631-8295",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "ND athletics staff directory, checked 2026-07; no public Twitter/X handle listed."
+    },
+    {
+      "name": "Mike Perniciaro",
+      "title": "Assistant Coach",
+      "email": "mpernici@nd.edu",
+      "phone": "574-631-8845",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "ND athletics staff directory, checked 2026-07; no public Twitter/X handle listed."
+    },
+    {
+      "name": "Jamie Spitale",
+      "title": "Director of Player Personnel and Operations",
+      "email": "jmandari@nd.edu",
+      "phone": "574-631-3750",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "ND athletics staff directory, checked 2026-07; no public Twitter/X handle listed."
+    }
+  ]
+}

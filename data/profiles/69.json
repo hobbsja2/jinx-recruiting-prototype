@@ -1,0 +1,37 @@
+{
+  "sid": 69,
+  "name": "Walters State Community College",
+  "division": "JUCO",
+  "conference": "TCCAA / NJCAA Region VII",
+  "city": "Morristown",
+  "state": "TN",
+  "website_url": "https://www.wsccathletics.com/sports/sball/index",
+  "academic_ranking": "Public two-year community college founded in 1970, part of the Tennessee Board of Regents system; serves ten predominantly rural East Tennessee counties across five campus locations. Enrollment approximately 6,980 students (~6,200 degree-seeking). Offers 100+ programs including transfer pathways to four-year universities, associate degrees, and technical certificates. Accredited by the Southern Association of Colleges and Schools. Nominated for Tennessee Board of Regents SOAR 'Community College of the Year' in 2022 and 2023. As a community college it carries no traditional national academic ranking.",
+  "tuition": 5154,
+  "financial_aid": "2025-26 in-state (Tennessee resident) maintenance fee (tuition and fees) is $5,154.00 for two semesters at 15 credit hours. Per-credit-hour rates: $191/hr in-state, $331/hr out-of-state (eRate $287/hr for all-online out-of-state). Financial aid includes federal grants, loans, scholarships, and work study; FAFSA-based aid available. As an NJCAA member, any athletics-based aid is governed by NJCAA rules. Tuition/fees figures from ws.edu/cost-aid/tuition-fees (checked 2026-07-30).",
+  "roster_size": 20,
+  "scholarship_count": null,
+  "facilities_notes": "No dedicated softball facilities description found publicly on the athletics site as of 2026-07-30. Program is based at the Morristown main campus. Athletics site: wsccathletics.com (Senators / Lady Senators).",
+  "program_reputation": "NJCAA / TCCAA (NJCAA Region VII) women's softball program at Walters State Community College (Lady Senators), Morristown, TN. 2025-26 roster carries 20 players. Staff listed publicly is a compact two-person coaching staff: Head Coach Britney Purser and Assistant Coach Emma Frost.",
+  "notes": "All data fetched live 2026-07-30 from wsccathletics.com (PrestoSports platform). Softball Coaches page (https://www.wsccathletics.com/sports/sball/coaches) lists exactly two coaches: Britney Purser (Head Softball Coach) and Emma Frost (Assistant Softball Coach); no recruiting coordinators, directors of player development, or graduate/volunteer assistants are publicly listed for softball. Coach emails and phone taken from individual bio pages (/sports/sball/coaches/Britney_Purser and /sports/sball/coaches/Emma_Frost). Both bio pages list the same office phone 423-318-2745; a separate department/footer number 423-585-6754 also appears. No coach-specific Twitter/X handles are listed (site-wide handle is @WaltersStSports). Conference confirmed as TCCAA / NJCAA Region VII from the softball index page. Roster size (20) counted from distinct player IDs on the 2025-26 roster page (https://www.wsccathletics.com/sports/sball/2025-26/roster). Note: an early curl fetch of the coaches URL returned cached content belonging to Ohio Dominican University via a shared CDN; that data was discarded and NOT used. Tuition from ws.edu/cost-aid/tuition-fees.",
+  "coaches": [
+    {
+      "name": "Britney Purser",
+      "title": "Head Softball Coach",
+      "email": "britney.Purser@ws.edu",
+      "phone": "423-318-2745",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "wsccathletics.com softball coaches + bio page checked 2026-07-30; email and phone from coach bio page. Phone 423-318-2745 is the softball office line shared with the assistant. No public Twitter/X handle listed."
+    },
+    {
+      "name": "Emma Frost",
+      "title": "Assistant Softball Coach",
+      "email": "emma.frost@ws.edu",
+      "phone": "423-318-2745",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "wsccathletics.com softball coaches + bio page checked 2026-07-30; email and phone from coach bio page. Phone 423-318-2745 is the softball office line shared with the head coach. No public Twitter/X handle listed."
+    }
+  ]
+}

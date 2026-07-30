@@ -1,0 +1,64 @@
+{
+  "sid": 31,
+  "name": "Saint Mary's College",
+  "division": "NCAA D3",
+  "conference": "Michigan Intercollegiate Athletic Association (MIAA)",
+  "city": "Notre Dame",
+  "state": "IN",
+  "website_url": "https://belles.saintmarys.edu/sports/softball",
+  "academic_ranking": "Private Catholic women's liberal arts college. U.S. News 2026: #84 of 207 National Liberal Arts Colleges (was #80 in 2025). Also cited among Best Value Schools (~#42-46) and strong on social mobility. Acceptance rate ~87%.",
+  "tuition": 55552,
+  "financial_aid": "As an NCAA Division III program there are no athletic scholarships; all aid is need- and merit-based academic aid. Roughly 96% of students receive some form of financial aid. Room ~$10,234 and board ~$5,814 additional; a general semester fee (~$1,194) also applies. School promotes a Net Price Calculator and notes actual cost varies by aid awarded. (Tuition figure ~$55,552 for 2026-27; verify with Student Accounts Office.)",
+  "roster_size": 19,
+  "scholarship_count": 0,
+  "facilities_notes": "Softball is part of the Saint Mary's Belles athletics program. Athletics facilities reference the Purcell Athletic Fields on the Notre Dame, IN campus. No detailed softball-specific facility description was published on the roster/coaches pages checked 2026-07.",
+  "program_reputation": "Division III program competing in the MIAA. Rebuilding under head coach Jordyn Walter (hired Aug 2024). Prior 2024 season record was 10-22 (5-11 MIAA), missing the conference tournament. Team account: @Belles_Softball.",
+  "notes": "Saint Mary's College is a women's college; the athletics brand is the 'Belles.' Official athletics site resolves to belles.saintmarys.edu (the saintmarysbelles.com host was unreachable when checked 2026-07). Do not confuse with Saint Mary's College of California (Gaels) or St. Mary's University (Rattlers). Roster size 19 taken from the 2026 softball roster page. Head coach Jordyn Walter is a Western Michigan University graduate who previously assisted at Lake Michigan College.",
+  "coaches": [
+    {
+      "name": "Jordyn Walter",
+      "title": "Head Softball Coach",
+      "email": "jwalter@saintmarys.edu",
+      "phone": "(574) 284-4910",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "belles.saintmarys.edu softball coaches page checked 2026-07; email and phone publicly listed. No individual X/Twitter handle listed (team account @Belles_Softball)."
+    },
+    {
+      "name": "Ashley Legus",
+      "title": "Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball coaches page checked 2026-07; no public email, phone, or X handle listed for this assistant."
+    },
+    {
+      "name": "Scott Meredith",
+      "title": "Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Softball coaches page checked 2026-07; no public email, phone, or X handle listed for this assistant."
+    },
+    {
+      "name": "Cameron Barrier",
+      "title": "Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Softball coaches page checked 2026-07; no public email, phone, or X handle listed for this assistant."
+    },
+    {
+      "name": "Lane Bender",
+      "title": "Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "Softball coaches page checked 2026-07; no public email, phone, or X handle listed for this assistant."
+    }
+  ]
+}

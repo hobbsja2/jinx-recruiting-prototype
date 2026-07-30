@@ -1,0 +1,100 @@
+{
+  "sid": 81,
+  "name": "University of Memphis",
+  "division": "NCAA D1",
+  "conference": "American Athletic Conference",
+  "city": "Memphis",
+  "state": "TN",
+  "website_url": "https://gotigersgo.com/sports/softball",
+  "academic_ranking": "Public research university (R1/Carnegie high research activity). Fall 2024 admissions per NCES College Navigator: acceptance rate ~72% (15,084 applicants), test-optional. Middle-50% ACT Composite 18-24 (median 21); SAT EBRW 480-600, SAT Math 435-580. Most enrolled students submit ACT scores.",
+  "tuition": 15384,
+  "financial_aid": "Public university; in-state tuition & fees ~$10,728 and out-of-state ~$15,384 (NCES College Navigator, 2024-25). Athletic aid administered through Memphis Athletics; academic and need-based aid via the Office of Student Financial Aid (901-678-4825). Tuition figure stored is the out-of-state published rate.",
+  "roster_size": 25,
+  "scholarship_count": null,
+  "facilities_notes": "Home venue is the Tigers Softball Complex. 2016 renovations funded largely by the Helen and Jabie Hardin Charitable Trust added a 10,000-sq-ft complex addition with coaches' offices, coaches' locker room, team meeting room, training room, indoor hitting and pitching area, laundry room and storage; a separate ~5,000-sq-ft indoor training facility (two hitting/pitching cages, team lounge, coaching offices) opened January 2016. 2026 was the program's first ticketed season, with a record attendance of 551 vs. Oklahoma on March 18, 2026; temporary bleachers beyond the outfield wall added for marquee games. Source: gotigersgo.com facilities page, checked 2026-07.",
+  "program_reputation": "NCAA Division I program competing in the American Athletic Conference. Growing program that reached a milestone with its first ticketed season and record on-campus attendance in 2026, hosting Power-conference opponents (Oklahoma, Ole Miss). Reputation based on official athletics site content; no championship claims verified.",
+  "notes": "Researched live from gotigersgo.com softball coaches and roster pages on 2026-07-30. Coaches staff page is JavaScript-rendered; data extracted from the server-rendered staff table (2 tables: 4 coaching staff, 5 softball-support staff). No phone numbers are publicly listed for any staff member. Note: an earlier plain curl of the coaches URL followed a redirect into a shared Sidearm template for a different school (Ohio Dominican) whose data was discarded; the profile below uses only verified @memphis.edu records. Tuition and academic profile sourced from NCES College Navigator (id 220862), 2024-25. Roster size counted from 25 unique player links on the softball roster page.",
+  "coaches": [
+    {
+      "name": "Trena Prater",
+      "title": "Head Coach",
+      "email": "tprater1@memphis.edu",
+      "phone": "",
+      "twitter": "@PeelPrater",
+      "sort_order": 0,
+      "source_note": "gotigersgo.com softball coaches page, checked 2026-07; no public phone listed"
+    },
+    {
+      "name": "Cassady Brewer",
+      "title": "Assistant Coach (Hitting)",
+      "email": "cbrewer9@memphis.edu",
+      "phone": "",
+      "twitter": "@cassady_brewer",
+      "sort_order": 10,
+      "source_note": "gotigersgo.com softball coaches page, checked 2026-07; no public phone listed"
+    },
+    {
+      "name": "Sierra Vanzant-Cheek",
+      "title": "Assistant Coach (Pitching)",
+      "email": "K.Vanzant-Cheek@memphis.edu",
+      "phone": "",
+      "twitter": "@sierravanzant",
+      "sort_order": 20,
+      "source_note": "gotigersgo.com softball coaches page, checked 2026-07; no public phone listed"
+    },
+    {
+      "name": "Bry Castro",
+      "title": "Assistant Coach (Defense)",
+      "email": "bdcastro@memphis.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "gotigersgo.com softball coaches page, checked 2026-07; no public phone or twitter listed"
+    },
+    {
+      "name": "Bailey Honne",
+      "title": "Director of Softball Operations",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "gotigersgo.com softball staff table, checked 2026-07; no public email, phone or twitter listed"
+    },
+    {
+      "name": "Michelle Gersuk",
+      "title": "Assistant Athletic Trainer (Softball, Rifle)",
+      "email": "megersuk@memphis.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 50,
+      "source_note": "gotigersgo.com softball staff table, checked 2026-07; no public phone or twitter listed"
+    },
+    {
+      "name": "Nic Higgins",
+      "title": "Assistant Athletic Director, Athletic Performance, Olympic Sports (Softball, Volleyball, Track and Field)",
+      "email": "njhggins@memphis.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 60,
+      "source_note": "gotigersgo.com softball staff table, checked 2026-07; no public phone or twitter listed"
+    },
+    {
+      "name": "Ries Wynn-Foster",
+      "title": "Associate Director, Athletic Academic Services (Women's Soccer, Softball, Tennis)",
+      "email": "ries.wynn.foster@memphis.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 70,
+      "source_note": "gotigersgo.com softball staff table, checked 2026-07; no public phone or twitter listed"
+    },
+    {
+      "name": "Steven Spehar",
+      "title": "Assistant Director, Integrated Communications (Football [2nd], Softball, Men's Soccer, Rifle)",
+      "email": "ssspehar@memphis.edu",
+      "phone": "",
+      "twitter": "@steven_spehar19",
+      "sort_order": 80,
+      "source_note": "gotigersgo.com softball staff table, checked 2026-07; no public phone listed"
+    }
+  ]
+}

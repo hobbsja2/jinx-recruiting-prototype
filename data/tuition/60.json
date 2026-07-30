@@ -1,0 +1,8 @@
+{
+  "sid": 60,
+  "name": "Chattanooga State Community College",
+  "in_state_tuition": 4772,
+  "housing_cost": null,
+  "housing_basis": "",
+  "tuition_note": "In-state tuition & fees $4,772 for 2024-25 from NCES College Navigator (id 219824), consistent with CollegeSimply/CollegeFactual aggregators. Official chattanoogastate.edu tuition pages returned HTTP 403 and could not be fetched live. Housing: NCES reports the college does not offer on-campus housing (commuter community college), so no room cost is published; housing_cost is null."
+}

@@ -1,0 +1,37 @@
+{
+  "sid": 48,
+  "name": "Centre College",
+  "division": "NCAA D3",
+  "conference": "Southern Athletic Association",
+  "city": "Danville",
+  "state": "KY",
+  "website_url": "https://centrecolonels.com/sports/softball",
+  "academic_ranking": "Highly regarded national liberal arts college. U.S. News & World Report 2025 ranked Centre tied for No. 59 among national liberal arts colleges, No. 19 for Best Value, and tied for No. 22 for Study Abroad. Four-year graduation rate exceeds 80% (reportedly the highest of any Kentucky college or university).",
+  "tuition": null,
+  "financial_aid": "Centre College offers need-based and merit-based aid. A verified current tuition/aid dollar figure could not be confirmed from an authoritative live source during research (2026-07); official figures should be confirmed at centre.edu/admission-aid. Endowment reported at $414.3M (2025).",
+  "roster_size": 25,
+  "scholarship_count": null,
+  "facilities_notes": "Softball is played at Centre's on-campus softball facility. Specific facility details were not confirmed from a live public source during research (2026-07).",
+  "program_reputation": "NCAA Division III program competing in the Southern Athletic Association (SAA) as the Centre Colonels. Team social account: @CentreCSoftball.",
+  "notes": "As an NCAA Division III institution, Centre College does not award athletic scholarships (scholarship_count = null); aid is need- and merit-based only. Undergraduate enrollment ~1,356 (fall 2023). Located in Danville, KY. Coaching staff and roster verified via centrecolonels.com (2026-07). Tuition left null because no authoritative live figure could be confirmed (do-not-guess rule).",
+  "coaches": [
+    {
+      "name": "Laura Villagrana",
+      "title": "Head Coach",
+      "email": "laura.villagrana@centre.edu",
+      "phone": "(859) 238-5859",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "centrecolonels.com softball coaches page checked 2026-07; email and phone publicly listed. No individual Twitter/X handle listed (team account @CentreCSoftball)."
+    },
+    {
+      "name": "Kennady Warder",
+      "title": "Assistant Coach",
+      "email": "kennady.warder@centre.edu",
+      "phone": "(859) 238-6545",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "centrecolonels.com softball coaches page checked 2026-07; email and phone publicly listed. No individual Twitter/X handle listed (team account @CentreCSoftball)."
+    }
+  ]
+}

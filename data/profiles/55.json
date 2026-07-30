@@ -1,0 +1,55 @@
+{
+  "sid": 55,
+  "name": "Northern Kentucky University",
+  "division": "NCAA D1",
+  "conference": "Horizon League",
+  "city": "Highland Heights",
+  "state": "KY",
+  "website_url": "https://nkunorse.com/sports/softball",
+  "academic_ranking": "Public university; ~10,300 undergraduates (fall 2024), total enrollment ~15,370. Open-access admissions with an acceptance rate around 90%. Organized into seven colleges including the Haile College of Business, College of Informatics, and Salmon P. Chase College of Law. National rankings: U.S. News & World Report #382 (tie), Forbes #640, Washington Monthly #338.",
+  "tuition": 21912.0,
+  "financial_aid": "Public tuition varies by residency: approximately $11,088/year for Kentucky residents and $21,912/year for out-of-state students (2024-25). About 30% of students are Pell grant (low-income) recipients. NCAA D1 athletic scholarships available for softball; combine athletic aid with academic and need-based aid.",
+  "roster_size": 20,
+  "scholarship_count": null,
+  "facilities_notes": "NKU softball plays home games at Bill Aker Softball Field on the Highland Heights campus. Specific capacity and feature details were not confirmed on the live facilities page (checked 2026-07).",
+  "program_reputation": "NCAA Division I program competing in the Horizon League. Represents Northern Kentucky University in the Cincinnati metropolitan area.",
+  "notes": "Researched 2026-07 from live nkunorse.com softball staff and roster pages plus NKU/enrollment sources. Coaching staff directory lists four coaches (head coach + three assistants); no director of operations, graduate assistants, or volunteer staff were listed. Roster page listed 20 players. Only two coach emails were publicly posted. Team X/Twitter account is @NKUNorseSB. Tuition value stored is out-of-state; in-state noted in financial_aid. scholarship_count not publicly published.",
+  "coaches": [
+    {
+      "name": "Morgan Gerak",
+      "title": "Head Softball Coach",
+      "email": "gerakm4@nku.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "nkunorse.com softball coaches page checked 2026-07; no public phone or personal Twitter listed"
+    },
+    {
+      "name": "Maddie Lacer",
+      "title": "Assistant Coach",
+      "email": "lacerm1@nku.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "nkunorse.com softball coaches page checked 2026-07; no public phone or Twitter listed"
+    },
+    {
+      "name": "Jackson Laumann",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "nkunorse.com softball coaches page checked 2026-07; no public email, phone, or Twitter listed"
+    },
+    {
+      "name": "Emily Allphin",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "nkunorse.com softball coaches page checked 2026-07; no public email, phone, or Twitter listed"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "sid": 130,
+  "name": "Fairmont State University",
+  "in_state_tuition": 9080,
+  "housing_cost": 6710,
+  "housing_basis": "room only",
+  "tuition_note": "In-state (resident) tuition & fees annual $9,080 from fairmontstate.edu Student Accounts 'Estimated Costs for Undergraduates Living On Campus' table (aligns with 2026-27 full-time resident $4,536/semester = $9,072). Housing room only (Bryant Place, Double Room) $6,710/yr from same table; board/meal plan (Eating Made Easy) $4,770 not included in housing_cost."
+}

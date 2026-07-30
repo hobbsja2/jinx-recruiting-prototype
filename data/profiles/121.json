@@ -1,0 +1,46 @@
+{
+  "sid": 121,
+  "name": "Indiana University Columbus",
+  "division": "NAIA",
+  "conference": "River States Conference",
+  "city": "Columbus",
+  "state": "IN",
+  "website_url": "https://iuccrimsonpride.com/sports/softball",
+  "academic_ranking": "Regional campus of Indiana University located in Columbus, IN (formerly IUPUC, rebranded as IU Columbus in 2024). Offers IU degrees in a smaller-campus setting; not a national research-ranked institution but part of the Indiana University system with programs in business, education, nursing, and the liberal arts.",
+  "tuition": 9517.92,
+  "financial_aid": "IU Columbus 2025-26 full-time banded undergraduate tuition is approximately $4,758.96 per semester for Indiana residents (~$9,518/year) and $16,991.66 per semester for nonresidents (~$33,983/year), excluding program and mandatory fees. A discounted 'In Partner Rate' of $7,138.44 per semester is available to eligible students from participating states (minimum GPA required). The campus directs students to scholarships, financial aid, and a cost calculator. As an NAIA program, softball athletic scholarship allocation is governed by NAIA limits rather than NCAA rules; specific athletic aid amounts not publicly listed.",
+  "roster_size": 24,
+  "scholarship_count": null,
+  "facilities_notes": "IU Columbus (Crimson Pride) athletics venues linked from the athletics site include Cera Sports Park, the Circle K Fieldhouse at NexusPark, and the AEI Fitness Center. A dedicated softball field/stadium name was not explicitly confirmed on the softball program page.",
+  "program_reputation": "NAIA women's softball program competing in the River States Conference. The athletics program (branded 'Crimson Pride') is a young/relatively new program following the IUPUC-to-IU Columbus rebrand; it fields a full 24-player roster for the 2026 season under head coach Tommi Stowers.",
+  "notes": "Coaching staff and roster sourced live from the IU Columbus athletics site (iuccrimsonpride.com/sports/softball/coaches and /roster), checked 2026-07. Roster size (24) from the 2026 softball roster page. The coaches array lists softball-specific coaching staff (head coach + two assistant coaches); support staff Tim Lappin (Athletic Trainer, talappin@iu.edu) and Seth Majewski (Assistant Sport & Performance Coach, smajews@iu.edu) are listed on the softball staff page but are shared/support roles, not softball coaches. No phone numbers or individual coach Twitter/X handles were publicly listed on the staff directory; team account is @iupucsb. Tuition figures from columbus.iu.edu/admissions/affordability-aid/tuition-fees.html (in-state per-year estimate used, ~$9,517.92). Softball scholarship count not publicly listed; left null to avoid guessing.",
+  "coaches": [
+    {
+      "name": "Tommi Stowers",
+      "title": "Head Softball Coach",
+      "email": "tlstower@iu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "IU Columbus softball staff directory (iuccrimsonpride.com), checked 2026-07; no public phone or Twitter/X handle listed."
+    },
+    {
+      "name": "Erica Henry",
+      "title": "Assistant Softball Coach",
+      "email": "henryem@iu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "IU Columbus softball staff directory (iuccrimsonpride.com), checked 2026-07; no public phone or Twitter/X handle listed."
+    },
+    {
+      "name": "Kaylee Cole",
+      "title": "Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "IU Columbus softball staff directory (iuccrimsonpride.com), checked 2026-07; no public email, phone, or Twitter/X handle listed."
+    }
+  ]
+}

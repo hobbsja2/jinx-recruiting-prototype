@@ -1,0 +1,46 @@
+{
+  "sid": 130,
+  "name": "Fairmont State University",
+  "division": "NCAA D2",
+  "conference": "Mountain East Conference",
+  "city": "Fairmont",
+  "state": "WV",
+  "website_url": "https://fightingfalcons.com/sports/softball",
+  "academic_ranking": "Fairmont State University is a public 4-year institution in Fairmont, West Virginia, offering undergraduate and graduate programs across colleges including Business & Aviation, Education, Liberal Arts, Science & Technology, and Nursing. Regionally accredited by the Higher Learning Commission. Open-to-moderately selective admissions typical of a regional public university.",
+  "tuition": 9080,
+  "financial_aid": "Official 2026-27 tuition and mandatory fees: $9,080 (WV resident) / $13,710 (non-resident). Estimated total cost of attendance (on campus) ~$26,885 (resident) / ~$31,515 (non-resident). The university offers grants, loans, scholarships, and work programs via its Financial Aid office; no specific aid-recipient percentage published on the cost-of-attendance page (checked 2026-07).",
+  "roster_size": 30,
+  "scholarship_count": null,
+  "facilities_notes": "Fairmont State softball competes as part of the Fighting Falcons athletics program. Specific softball facility details (field name/complex) were not confirmed on the pages reviewed 2026-07.",
+  "program_reputation": "NCAA Division II program competing in the Mountain East Conference (MEC). Roster of 30 for the 2026 season.",
+  "notes": "Staff directory (https://fightingfalcons.com/sports/softball/coaches) and roster page checked 2026-07-30. Coaching staff listed: Head Coach Brooke Lowery and Assistant Coach Amy Hills, plus student manager Kamron Dawson. No recruiting coordinator or graduate/volunteer assistant listed. Tuition figures from Fairmont State official cost-of-attendance page (2026-27); College Scorecard reported comparable prior-year figures ($8,708 in-state / $18,924 out-of-state). No Twitter/X handles published in the staff directory.",
+  "coaches": [
+    {
+      "name": "Brooke Lowery",
+      "title": "Head Softball Coach",
+      "email": "Brooke.Lowery@fairmontstate.edu",
+      "phone": "(304) 367-4962",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "fightingfalcons.com softball staff directory, checked 2026-07-30; no public twitter/X handle listed"
+    },
+    {
+      "name": "Amy Hills",
+      "title": "Assistant Softball Coach",
+      "email": "Amy.Hills@fairmontstate.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "fightingfalcons.com softball staff directory, checked 2026-07-30; no public phone or twitter/X handle listed"
+    },
+    {
+      "name": "Kamron Dawson",
+      "title": "Student Manager",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "fightingfalcons.com softball staff directory, checked 2026-07-30; no public email, phone, or twitter/X handle listed"
+    }
+  ]
+}

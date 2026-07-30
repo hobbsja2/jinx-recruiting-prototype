@@ -1,0 +1,82 @@
+{
+  "sid": 80,
+  "name": "Lipscomb University",
+  "division": "NCAA D1",
+  "conference": "ASUN Conference",
+  "city": "Nashville",
+  "state": "TN",
+  "website_url": "https://lipscombsports.com/sports/softball",
+  "academic_ranking": "Private Christian university in Nashville, TN, affiliated with the Churches of Christ, founded in 1891 (originally the Nashville Bible School). Fall 2025 enrollment was 4,549 (2,867 undergraduate, 1,682 graduate). Ranked #212 of 443 in U.S. News & World Report National Universities per Wikipedia (checked 2026-07). Endowment approximately $131.9 million (2025). Undergraduate-focused private institution; specific student-faculty ratio and average class size were not confirmed on live pages checked 2026-07.",
+  "tuition": 44486,
+  "financial_aid": "Undergraduate tuition and fees listed at $44,486 per year for 2026-2027 ($22,243 per semester); total with room and board approximately $59,998 per year (lipscomb.edu/admission/tuition-and-financial-aid, checked 2026-07). Lipscomb uses a block tuition rate for students enrolled 12-18 credit hours. School states 99 percent of undergraduates receive some form of financial help, with an average aid package of about $24,000; aid types include merit-based scholarships, work-study, and federal grants.",
+  "roster_size": 20,
+  "scholarship_count": null,
+  "facilities_notes": "NCAA Division I softball program. A distinct softball home venue name was not explicitly labeled on the softball landing, roster, or coaches pages at lipscombsports.com as of 2026-07; facilities page did not surface a softball-specific field name in the fetched content. Not confirming a facility name to avoid inventing data.",
+  "program_reputation": "NCAA Division I women's softball program competing in the ASUN Conference. Lipscomb (the Bisons) made its first NCAA tournament appearance in 2018 (athletics-wide milestone) and the athletics program won a second ASUN championship in 2025 per Wikipedia. Head coach Kristin Ryman, a Lipscomb Hall of Fame athlete, leads the program in her 17th season (per lipscombsports.com bio checked 2026-07). Coaching staff for 2026 includes a head coach and two assistant coaches (one pitching-focused).",
+  "notes": "Data gathered live 2026-07 from lipscombsports.com (softball coaches and roster pages, retrieved via HTTP with embedded page data parsed) and lipscomb.edu/admission/tuition-and-financial-aid (tuition/financial aid), with academic/reputation context from the Lipscomb University Wikipedia article. Roster size (20) taken from the 2026 softball roster page (unique player entries counted). The three softball-specific coaches are Kristin Ryman (Head Coach), Ally Ivey (Assistant Coach - Pitching), and Lauren Higginbotham (Assistant Coach). Additional support staff listed on the softball staff page (strength & conditioning, sports nutrition, athletic training, communications) are shared across multiple sports and are included with their exact titles for completeness. No individual coach twitter/X handles are publicly listed (staff records show no personal handle; @lipscombsb is the team account, not an individual coach). scholarship_count set to null (D1 softball NCAA limit not confirmed as an institution-specific figure on the pages checked).",
+  "coaches": [
+    {
+      "name": "Kristin Ryman",
+      "title": "Head Coach",
+      "email": "kristin.ryman@lipscomb.edu",
+      "phone": "(615) 966-5889",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "lipscombsports.com softball coaches page checked 2026-07; name, title, email, and phone listed; no individual twitter/X handle listed"
+    },
+    {
+      "name": "Ally Ivey",
+      "title": "Assistant Coach - Pitching",
+      "email": "ally.ivey@lipscomb.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "lipscombsports.com softball coaches page checked 2026-07; name, title, and email listed; no public phone or individual twitter/X handle listed"
+    },
+    {
+      "name": "Lauren Higginbotham",
+      "title": "Assistant Coach",
+      "email": "Lhigginbotham@lipscomb.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "lipscombsports.com softball coaches page checked 2026-07; name, title, and email listed; no public phone or individual twitter/X handle listed"
+    },
+    {
+      "name": "William Vantrease",
+      "title": "Strength and Conditioning Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "lipscombsports.com softball staff page checked 2026-07; shared support staff (strength & conditioning) listed on the softball staff directory; no public email, phone, or twitter/X handle listed"
+    },
+    {
+      "name": "Alyssa Salsman",
+      "title": "Assistant Director of Sports Nutrition",
+      "email": "alyssa.salsman@lipscomb.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "lipscombsports.com softball staff page checked 2026-07; shared support staff (sports nutrition, covers multiple sports incl. softball); email listed, no public phone or twitter/X handle listed"
+    },
+    {
+      "name": "Erin Ezell",
+      "title": "Assistant Athletic Trainer - MS, LAT, ATC",
+      "email": "erezell@lipscomb.edu",
+      "phone": "615-966-7046",
+      "twitter": "",
+      "sort_order": 50,
+      "source_note": "lipscombsports.com softball staff page checked 2026-07; shared support staff (athletic trainer) listed on the softball staff directory; email and phone listed, no twitter/X handle listed"
+    },
+    {
+      "name": "Lauren Weiss",
+      "title": "Athletic Communications Assistant (WSOC, XC/TF, SB)",
+      "email": "leweiss@lipscomb.edu",
+      "phone": "(904)-707-7251",
+      "twitter": "",
+      "sort_order": 60,
+      "source_note": "lipscombsports.com softball staff page checked 2026-07; shared communications staff covering softball (SB); email and phone listed, no twitter/X handle listed"
+    }
+  ]
+}

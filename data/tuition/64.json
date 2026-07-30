@@ -1,0 +1,8 @@
+{
+  "sid": 64,
+  "name": "Jackson State Community College",
+  "in_state_tuition": 4894,
+  "housing_cost": null,
+  "housing_basis": "",
+  "tuition_note": "In-state tuition & fees from FY 2025-2026 (Fall & Spring) Fee Schedule PDF at jscc.edu/costs-and-aid/tuition. Full-time in-state total cost = $2,447/semester (12 credit hours, incl. maintenance/tuition + technology, activity, program services, and international education fees); x2 semesters = $4,894/year. Jackson State is a commuter community college with no on-campus housing/dorms published, so housing_cost is null."
+}

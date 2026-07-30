@@ -1,0 +1,64 @@
+{
+  "sid": 46,
+  "name": "Asbury University",
+  "division": "NCAA D3",
+  "conference": "Collegiate Conference of the South",
+  "city": "Wilmore",
+  "state": "KY",
+  "website_url": "https://asburyeagles.com/sports/softball",
+  "academic_ranking": "Private Christian liberal arts university. U.S. News 2025: No. 31 Regional Universities South, No. 14 Best Value Schools. 12:1 student-to-faculty ratio, 82% of faculty hold terminal degrees, 82% retention rate. Test-blind admissions; 2024 acceptance rate approx. 64%, admitted students averaged 3.65 HS GPA. Offers 59 undergraduate majors.",
+  "tuition": 48770,
+  "financial_aid": "Per NCES (2023-24), 100% of full-time beginning undergraduates received financial aid; 100% received grant or scholarship aid averaging approx. $39,001. Institutional grants/scholarships awarded to 99%, state/local grants to 71%, federal Pell grants to 48%, and 50% took student loans. Endowment approx. $78.15M (2024).",
+  "roster_size": 17,
+  "scholarship_count": null,
+  "facilities_notes": "Softball plays at the Cecil Zweifel Baseball & Softball Fields within the Kirkland Complex on the Asbury campus in Wilmore, KY. No additional facility feature details are published on the athletics facilities page.",
+  "program_reputation": "NCAA Division III program in the Collegiate Conference of the South (also affiliated with NCCAA). Program maintains a published softball record book. No notable national ranking data found publicly as of research date.",
+  "notes": "Data compiled from asburyeagles.com softball coaches/roster/facilities pages, asbury.edu, NCES College Navigator, and Wikipedia, researched 2026-07. Tuition value ($48,770) is the NCES 2024-25 published tuition-and-fees figure; tuition-only figure not separately published on the school site. NCAA D3 schools do not offer athletic scholarships, so scholarship_count is null.",
+  "coaches": [
+    {
+      "name": "Ally Moore",
+      "title": "Head Coach",
+      "email": "allyson.moore@asbury.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Email from asburyeagles.com softball coaches page (checked 2026-07); no public phone or personal X handle listed."
+    },
+    {
+      "name": "Jenn Sarver",
+      "title": "Associate Head Coach",
+      "email": "jennifer.sarver@asbury.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Email from asburyeagles.com softball coaches page (checked 2026-07); no public phone or personal X handle listed."
+    },
+    {
+      "name": "Chris Moore",
+      "title": "Volunteer Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "asburyeagles.com staff directory / softball coaches page checked 2026-07; no public email, phone, or X handle listed."
+    },
+    {
+      "name": "Taylor Enlow",
+      "title": "Assistant Coach",
+      "email": "taylor.enlow@asbury.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Email from asburyeagles.com softball coaches page (checked 2026-07); no public phone or personal X handle listed."
+    },
+    {
+      "name": "Samantha Cole",
+      "title": "Team Manager",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "Listed as support staff on asburyeagles.com softball coaches page (checked 2026-07); no public email, phone, or X handle listed."
+    }
+  ]
+}

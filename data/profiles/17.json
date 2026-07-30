@@ -1,0 +1,55 @@
+{
+  "sid": 17,
+  "name": "Miami University",
+  "division": "NCAA D1",
+  "conference": "Mid-American Conference",
+  "city": "Oxford",
+  "state": "OH",
+  "website_url": "https://miamiredhawks.com/sports/softball",
+  "academic_ranking": "Public research university in Oxford, OH, part of Ohio's public university system. Recognized as a 'Public Ivy' and ranked among the top public universities for undergraduate teaching. The Princeton Review ranked Miami among its 'Best Value Public Colleges' (Top 30, 2024). Specific national ranking numbers and student-faculty ratio were not captured from the softball/athletics pages; general reputation info gathered from miamioh.edu admissions pages checked 2026-07.",
+  "tuition": 42882,
+  "financial_aid": "Miami University Oxford campus 2027-2028 estimated tuition and fees: Ohio/Reciprocal residents $18,890; Non-Ohio residents $42,882 (figures listed here reflect the non-resident rate). Housing and food estimated at $17,668 separately. Estimates based on actual costs for students who entered in 2026-2027 and subject to change. School reports 95% of first-year students received gift aid (funds not repaid) in Fall 2025. Financial Aid One Stop office: 513-529-0001, OneStop@MiamiOH.edu. Source: miamioh.edu cost-of-attendance page checked 2026-07.",
+  "roster_size": 23,
+  "scholarship_count": null,
+  "facilities_notes": "NCAA Division I program competing in the Mid-American Conference. Specific softball venue name was not captured from the pages fetched; softball program information taken from miamiredhawks.com softball pages checked 2026-07. NCAA D1 softball programs are limited to 12 athletic scholarships, but Miami's exact scholarship count was not publicly published on the pages checked (scholarship_count set to null).",
+  "program_reputation": "NCAA Division I women's softball program (Miami RedHawks) in the Mid-American Conference. Per the athletics site, the RedHawks captured a MAC regular-season title and MAC Tournament Championship and defeated North Carolina in the NCAA Tournament in a recent season; the team led the MAC in home runs, runs scored, and slugging percentage that year. Coaching staff of four for the 2026 season.",
+  "notes": "Data gathered live 2026-07 from miamiredhawks.com (softball coaches and roster pages, rendered HTML retrieved via HTTP) and miamioh.edu (tuition/financial aid). Roster size (23) counted from distinct player profile links on the 2026 softball roster page. Tuition field uses the non-resident (out-of-state) rate of $42,882; Ohio resident rate is $18,890. All four coaches share the general softball office phone 513-529-3999 except the noted extension; no individual twitter/X handles are listed on the staff directory.",
+  "coaches": [
+    {
+      "name": "Mandy Gardner-Colegate",
+      "title": "Head Coach",
+      "email": "mandy.colegate@miamioh.edu",
+      "phone": "513-529-3999",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "miamiredhawks.com softball coaches page checked 2026-07; email and general office phone listed, no public twitter/X handle listed"
+    },
+    {
+      "name": "Alivia Forshey",
+      "title": "Associate Head Coach",
+      "email": "alivia.forshey@miamioh.edu",
+      "phone": "513-529-3999",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "miamiredhawks.com softball coaches page checked 2026-07; email and general office phone listed, no public twitter/X handle listed"
+    },
+    {
+      "name": "Emerald Doria",
+      "title": "Assistant Coach",
+      "email": "doriae@miamioh.edu",
+      "phone": "513-529-3999",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "miamiredhawks.com softball coaches page checked 2026-07; email and general office phone listed, no public twitter/X handle listed"
+    },
+    {
+      "name": "Jenna Golembiewski",
+      "title": "Assistant Coach",
+      "email": "golembjm@miamioh.edu",
+      "phone": "513-529-3113",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "miamiredhawks.com softball coaches page checked 2026-07; email and phone listed, no public twitter/X handle listed"
+    }
+  ]
+}

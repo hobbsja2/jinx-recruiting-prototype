@@ -1,0 +1,37 @@
+{
+  "sid": 154,
+  "name": "Ohio Northern University",
+  "division": "NCAA D3",
+  "conference": "Ohio Athletic Conference",
+  "city": "Ada",
+  "state": "OH",
+  "website_url": "https://onusports.com/sports/sball/index",
+  "academic_ranking": "Ohio Northern University is a private university in Ada, OH, comprising the Colleges of Arts & Sciences, Business Administration, Engineering, Pharmacy, and Law. It is known for strong professional and pre-professional programs (notably its highly regarded pharmacy and engineering programs) and reports a roughly 95% job and graduate-school placement rate for graduates.",
+  "tuition": 41720,
+  "financial_aid": "99.6% of students receive financial support, with roughly $59-72M awarded annually in scholarships and grants and average financial support in the ~$28,000-32,500 range (per onu.edu). Merit scholarships for 2026-27 first-year students: Presidential $28,000-31,000, Trustees $27,000-30,000, Deans $25,000-28,000, Faculty $22,000-24,500 (higher amounts in the College of Pharmacy). FAFSA required (school code 003089); apply by Dec. 1 for maximum consideration. As an NCAA Division III institution, ONU does not offer athletic scholarships; aid is need- and merit-based.",
+  "roster_size": 23,
+  "scholarship_count": null,
+  "facilities_notes": "Softball program competes as part of ONU Athletics in Ada, OH. Specific softball facility details were not enumerated on the softball program pages checked 2026-07.",
+  "program_reputation": "NCAA Division III program competing in the Ohio Athletic Conference (OAC). The team pages reference an OAC Tournament and NCAA Tournament history section, indicating postseason participation.",
+  "notes": "Sources fetched 2026-07-30: softball program pages at https://onusports.com/sports/sball/index, coaches at https://onusports.com/sports/sball/coaches (and individual bios /coaches/collins and /coaches/biggs), roster at https://onusports.com/sports/sball/2025-26/roster (23 players). Tuition from https://www.onu.edu/admissions-aid/financial-aid/tuition-and-fees (2026-27 Arts & Sciences tuition and fees $41,720; Engineering and Pharmacy tuition are higher). Conference confirmed as Ohio Athletic Conference (OAC). As NCAA D3, no athletic scholarships (scholarship_count null).",
+  "coaches": [
+    {
+      "name": "Summer Collins",
+      "title": "Head Softball Coach",
+      "email": "s-collins.5@onu.edu",
+      "phone": "419-772-2459",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "https://onusports.com/sports/sball/coaches/collins fetched 2026-07-30; email and phone publicly listed; no individual twitter/X handle listed."
+    },
+    {
+      "name": "Taylor Biggs",
+      "title": "Assistant Softball Coach",
+      "email": "t-biggs-specht@onu.edu",
+      "phone": "419-772-1070",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "https://onusports.com/sports/sball/coaches/biggs fetched 2026-07-30; email and phone publicly listed; no individual twitter/X handle listed. Softball staff directory lists only the head coach and this assistant coach."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "sid": 5,
+  "name": "Malone University",
+  "division": "NCAA D2",
+  "conference": "Great Midwest Athletic Conference (G-MAC)",
+  "city": "Canton",
+  "state": "OH",
+  "website_url": "https://malonepioneers.com/sports/softball",
+  "academic_ranking": "Private, Christian (Quaker tradition) university in Canton, OH; member of the Council for Christian Colleges and Universities (CCCU) and accredited by the Higher Learning Commission (HLC). Offers 48 undergraduate and 5 graduate programs across fields such as nursing, business, biology, education, and ministry.",
+  "tuition": null,
+  "financial_aid": "Malone is a private Christian university that offers institutional financial aid and scholarships; specific figures were not confirmable on a live public page as of 2026-07. Prospective student-athletes should confirm current tuition and aid packages directly with the admissions/financial aid office.",
+  "roster_size": 28,
+  "scholarship_count": null,
+  "facilities_notes": "NCAA Division II program in the G-MAC. Specific softball facility/field name was not confirmed on the live softball pages checked (coaches and roster pages) as of 2026-07.",
+  "program_reputation": "NCAA Division II women's softball program competing in the Great Midwest Athletic Conference (G-MAC). Malone fields 20 varsity teams at the Division II level.",
+  "notes": "Data sourced live from malonepioneers.com softball coaches and roster pages and malone.edu about page on 2026-07-30. Coaching staff page lists three softball staff members. Tuition and scholarship counts could not be confirmed from a live public page and are left null per accuracy-over-completeness rules.",
+  "coaches": [
+    {
+      "name": "Jeff Hite",
+      "title": "Head Coach",
+      "email": "jhite@malone.edu",
+      "phone": "330-471-8294",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "malonepioneers.com softball coaches page, checked 2026-07; no public twitter/X handle listed"
+    },
+    {
+      "name": "Jerry Reynolds",
+      "title": "Assistant Coach",
+      "email": "jreynolds@malone.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "malonepioneers.com softball coaches page, checked 2026-07; no public phone or twitter/X listed"
+    },
+    {
+      "name": "Ella Collinsworth",
+      "title": "Graduate Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "malonepioneers.com softball coaches page, checked 2026-07; no public email, phone, or twitter/X listed"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "sid": 64,
+  "name": "Jackson State Community College",
+  "division": "JUCO",
+  "conference": "TCCAA / NJCAA Region VII",
+  "city": "Jackson",
+  "state": "TN",
+  "website_url": "https://www.jsccgreenjays.com/sports/sball/index",
+  "academic_ranking": "Public two-year community college, part of the Tennessee Board of Regents system. Accredited by the Southern Association of Colleges and Schools Commission on Colleges (SACSCOC) since 1969. Offers associate degrees (arts, science, applied science). Fall 2024 total enrollment approximately 3,518 undergraduates; student-to-faculty ratio about 23:1. Main campus in Jackson, TN with branch locations in Lexington, Savannah, and Trenton.",
+  "tuition": 4740,
+  "financial_aid": "As a Tennessee public community college, JSCC students are eligible for Tennessee Promise and Tennessee Reconnect (last-dollar scholarship programs), federal aid (Pell, FSEOG), state grants, and institutional/foundation scholarships. Financial aid details listed at jscc.edu/costs-and-aid. In-state tuition and required fees approx $4,740/year; out-of-state approx $17,724/year (NCES College Navigator, 2024-25). As a JUCO, athletic aid is governed by NJCAA rules.",
+  "roster_size": 17,
+  "scholarship_count": null,
+  "facilities_notes": "Green Jays softball competes as a JSCC (Jackson State Community College) NJCAA/TCCAA program. Specific softball facility details (field name, seating) not published on the program pages reviewed 2026-07.",
+  "program_reputation": "Member of the Tennessee Junior and Community College Athletic Association (TCCAA) and NJCAA Region VII. One of six JSCC 'Green Jays' athletic programs. Serves as a two-year pathway for softball student-athletes seeking to transfer to four-year programs.",
+  "notes": "Researched 2026-07-30 from live jsccgreenjays.com pages. Note: the jsccgreenjays.com athletics site (Sidearm-hosted) intermittently served cached content from other schools (Motlow State, Walters State) on some requests; pages were re-fetched until verified as Jackson State content (title and JSCC references confirmed) before extracting data. Coaching staff (1 head + 3 assistants) taken from /sports/sball/coaches/index and individual bio pages. Emails confirmed via mailto links on individual coach bio pages. No public phone numbers or personal Twitter/X handles were listed for any coach. Roster size (17 players) counted from verified /sports/sball/2025-26/roster page. Tuition from NCES College Navigator (IPEDS ID 220400), 2024-25 in-state figure.",
+  "coaches": [
+    {
+      "name": "Beth Barcroft",
+      "title": "Head Softball Coach",
+      "email": "bbarcroft1@jscc.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Name, title, and email from jsccgreenjays.com softball coaches directory and bio page (Beth_Barcroft), verified Jackson State content 2026-07; no public phone or Twitter/X listed."
+    },
+    {
+      "name": "Jadelyn Snider",
+      "title": "Assistant Softball Coach",
+      "email": "jsnider11@jscc.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Name, title, and email from jsccgreenjays.com softball coaches directory and bio page (Jadelyn_Snider), verified 2026-07; no public phone or Twitter/X listed."
+    },
+    {
+      "name": "Gracie Ausley",
+      "title": "Assistant Softball Coach",
+      "email": "gausley@jscc.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Name, title, and email from jsccgreenjays.com softball coaches directory and bio page (Gracie_Ausley), verified 2026-07; no public phone or Twitter/X listed."
+    },
+    {
+      "name": "Rylie Bearden",
+      "title": "Assistant Softball Coach",
+      "email": "rbearden5@jscc.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Name, title, and email from jsccgreenjays.com softball coaches directory and bio page (Rylie_Bearden), verified 2026-07; no public phone or Twitter/X listed."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "sid": 145,
+  "name": "Trevecca Nazarene University",
+  "division": "NCAA D2",
+  "conference": "Gulf South Conference",
+  "city": "Nashville",
+  "state": "TN",
+  "website_url": "https://tnutrojans.com/sports/softball",
+  "academic_ranking": "Private Christian (Church of the Nazarene) university in Nashville, TN. Offers 100+ degree programs including 75+ undergraduate majors, 25 master's programs, and 3 doctoral programs across fields such as Business, Education, Engineering, Healthcare, Music, Science, and Theology. Emphasizes rigorous curriculum, credentialed faculty, and a faith-based, supportive learning environment. Cited in Money.com's 2026 Best Colleges list for affordability. No specific national/regional numeric ranking published on the school site.",
+  "tuition": null,
+  "financial_aid": "The university states costs are kept 'below the national average for private universities' and that more than 99% of students receive financial aid. Aid options include federal/state grants and federal student loans, employer tuition reimbursement, and interest-free monthly payment plans. Accepts military benefits (GI Bill, Yellow Ribbon). Tennessee-specific programs include the TSAC Grant and Tennessee HOPE scholarship; federal Pell Grants available. FAFSA school code 003526. No specific published tuition dollar figure was found on accessible pages.",
+  "roster_size": 24,
+  "scholarship_count": null,
+  "facilities_notes": "Softball home venue is the Trevecca Softball Complex in Nashville, TN (per softball schedule page). The athletics site's dedicated facilities page listed no detailed facility descriptions at time of check (2026-07).",
+  "program_reputation": "Competitive NCAA Division II program in the Gulf South Conference. Advanced to within one victory of the 2024 NCAA Division II World Series. Reached the Gulf South Conference championship game (falling to West Alabama), finishing a recent season 22-19.",
+  "notes": "Researched 2026-07-30. Note: the athletics site is hosted at tnutrojans.com (the treveccatrojans.com domain given in discovery did not resolve from the research environment). Coaching staff, roster count (24), and facility name sourced from tnutrojans.com softball coaches/roster/schedule pages. School profile and financial aid details sourced from trevecca.edu. No specific annual tuition dollar figure was publicly listed on accessible school pages, so tuition left null rather than guessed. Scholarship count not published, left null.",
+  "coaches": [
+    {
+      "name": "Ben Tyree",
+      "title": "Head Coach",
+      "email": "btyree@trevecca.edu",
+      "phone": "615-248-1277",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "tnutrojans.com softball coaches page checked 2026-07; email and phone publicly listed. No individual X handle listed (team account @TNUsoftball)."
+    },
+    {
+      "name": "Sarah Daws",
+      "title": "Associate Head Coach",
+      "email": "sedaws@trevecca.edu",
+      "phone": "615-248-1277",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "tnutrojans.com softball coaches page checked 2026-07; email and phone publicly listed. No individual X handle listed."
+    },
+    {
+      "name": "Malone Thrift",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "tnutrojans.com softball coaches/staff directory checked 2026-07; title confirmed as Assistant Coach, but no public email or phone listed. No individual X handle listed."
+    }
+  ]
+}

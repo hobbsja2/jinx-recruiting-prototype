@@ -1,0 +1,46 @@
+{
+  "sid": 157,
+  "name": "Denison University",
+  "division": "NCAA D3",
+  "conference": "North Coast Athletic Conference",
+  "city": "Granville",
+  "state": "OH",
+  "website_url": "https://denisonbigred.com/sports/softball",
+  "academic_ranking": "Private liberal arts college in Granville, OH (founded 1831). Ranked tied for #34 among National Liberal Arts Colleges (US News 2025). ~2,400 undergraduates, 9:1 student-to-faculty ratio. Selective admissions (~17% acceptance rate for fall 2023). Endowment ~$1.1 billion (2025). QuestBridge partner.",
+  "tuition": 92400,
+  "financial_aid": "Denison meets 100% of demonstrated financial need and is need-blind for domestic applicants. Awards nearly $70 million in financial aid annually. QuestBridge partner college; meets financial need of admitted students including international students. As an NCAA Division III institution, no athletic scholarships are offered; aid is need-based and merit-based only.",
+  "roster_size": 18,
+  "scholarship_count": null,
+  "facilities_notes": "Softball team plays at the Denison Softball Field on the Granville, OH campus. (denisonbigred.com softball facilities page)",
+  "program_reputation": "NCAA Division III program competing in the North Coast Athletic Conference (NCAC). Team active on social media (@DenisonSoftball on X, denisonsoftball on Instagram).",
+  "notes": "Data gathered live 2026-07 from denisonbigred.com softball coaches/roster pages, denison.edu, and Wikipedia. Tuition value reflects the comprehensive cost of attendance figure of $92,400 for the 2026-27 academic year (Wikipedia); a separate tuition-only breakdown was not confirmed from a live official source (denison.edu cost-of-attendance page returned 404). Roster size (18) from the 2027 softball roster page. Coaching staff includes one assistant listed as TBA at time of check.",
+  "coaches": [
+    {
+      "name": "Kirstin Mapes",
+      "title": "Head Softball Coach",
+      "email": "mapesk@denison.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Email listed on denisonbigred.com softball coaches page (checked 2026-07); no public phone or personal X handle listed. Team account @DenisonSoftball."
+    },
+    {
+      "name": "Brian Ledford",
+      "title": "Asst. Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Staff/coaches directory checked 2026-07; no public email, phone, or X handle listed."
+    },
+    {
+      "name": "TBA",
+      "title": "Asst. Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Position listed as TBA on softball coaches page (checked 2026-07); no name, email, phone, or X handle available."
+    }
+  ]
+}

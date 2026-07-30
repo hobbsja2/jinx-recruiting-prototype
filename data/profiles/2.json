@@ -1,0 +1,37 @@
+{
+  "sid": 2,
+  "name": "Cedarville University",
+  "division": "NCAA D2",
+  "conference": "Great Midwest Athletic Conference (G-MAC)",
+  "city": "Cedarville",
+  "state": "OH",
+  "website_url": "https://yellowjackets.cedarville.edu/sports/softball",
+  "academic_ranking": "Private Baptist Christian university (est. 1887) in Cedarville, OH, accredited by the Higher Learning Commission. Enrollment ~6,384 total (~4,024 undergraduates). Offers 150+ programs of study. Recognized by The Wall Street Journal as one of the top three evangelical Christian universities in the U.S. All students complete a 15-credit-hour Bible minor and attend chapel.",
+  "tuition": null,
+  "financial_aid": "Academic scholarships for new residential freshmen range from $15,000 to $25,000 per year, renewable up to four years with GPA requirements maintained. Also offers need-based scholarships and grants, academic program scholarships (e.g., music, pharmacy), athletic scholarships, and federal student loans via FAFSA. Recently all new residential freshmen received aid, with average awards exceeding $26,800. Source: cedarville.edu/cost, checked 2026-07.",
+  "roster_size": 18,
+  "scholarship_count": null,
+  "facilities_notes": "Yellow Jackets softball competes at the NCAA Division II level. 441-acre rural campus; ~80% of students live on campus. Specific softball facility details not confirmed on the live athletics site as of 2026-07.",
+  "program_reputation": "NCAA Division II women's softball program competing in the Great Midwest Athletic Conference (G-MAC); Cedarville is also a member of the National Christian College Athletic Association (NCCAA). Team nickname: Yellow Jackets.",
+  "notes": "Coaching staff and roster confirmed live from yellowjackets.cedarville.edu softball pages on 2026-07. Staff directory listed only a head coach and one assistant coach; no recruiting coordinator, volunteer, graduate assistant, or director of player development listed. No individual Twitter/X handles listed for coaches. Exact annual tuition not retrievable from an authoritative live source at research time, so left null to avoid guessing.",
+  "coaches": [
+    {
+      "name": "Kelsey Chapman",
+      "title": "Head Coach",
+      "email": "klchapman@cedarville.edu",
+      "phone": "937-766-4973",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "yellowjackets.cedarville.edu softball coaches page, checked 2026-07; no public Twitter/X handle listed"
+    },
+    {
+      "name": "Morgan Zaborowski",
+      "title": "Assistant Coach",
+      "email": "mzaborowski@cedarville.edu",
+      "phone": "937-766-4445",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "yellowjackets.cedarville.edu softball coaches page, checked 2026-07; no public Twitter/X handle listed"
+    }
+  ]
+}

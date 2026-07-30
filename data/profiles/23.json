@@ -1,0 +1,18 @@
+{
+  "sid": 23,
+  "name": "Youngstown State University",
+  "division": "NCAA D1",
+  "conference": "Horizon League",
+  "city": "Youngstown",
+  "state": "OH",
+  "website_url": "https://ysusports.com/sports/softball",
+  "academic_ranking": "Youngstown State University is a public research university (Doctoral/Professional) in Youngstown, Ohio. Not independently verified in this research session; official academic profile not captured from a live authoritative source.",
+  "tuition": null,
+  "financial_aid": "Not verified from a live authoritative source in this research session. Athletic scholarship/financial aid details for the softball program could not be confirmed because the official athletics site was not serving genuine YSU content (see notes).",
+  "roster_size": null,
+  "scholarship_count": null,
+  "facilities_notes": "The YSU softball team competes at the YSU Softball Complex (per Wikipedia). Detailed facilities information not confirmed from the official athletics site because it was serving incorrect content at time of research.",
+  "program_reputation": "Youngstown State (Penguins) competes in NCAA Division I in the Horizon League. The softball program won its first Horizon League championship in 2006 as the No. 5 seed and qualified for the NCAA regional tournament (per Wikipedia). Current-season reputation details not verified from a live official source.",
+  "notes": "DATA INTEGRITY ISSUE: On 2026-07-30 the official YSU athletics domain https://ysusports.com (confirmed by Wikipedia as Youngstown State's official athletics site and in the Horizon League) was serving Ohio Dominican University softball content instead of Youngstown State's. The /sports/softball/coaches and /sports/softball/roster pages returned Ohio Dominican staff (Marcella Vanlandingham - Head Coach, McKenzie Bump - Assistant Coach, Madison Kennedy - Graduate Assistant, all with @ohiodominican.edu emails; footer showed 'Ohio Dominican University, 1216 Sunbury Rd, Columbus, OH 43219', NCAA Division II, Great Midwest Athletic Conference). This is clearly NOT Youngstown State data, so it was NOT recorded to avoid misattribution. HTTP returned 200 with no redirect; page <title> tags said 'Youngstown State University' but body content was entirely Ohio Dominican. No genuine YSU softball coaching staff, roster, tuition, or scholarship data could be captured. All coach fields and unverified numerics left empty/null per the 'never invent data' rule. Recommend re-running once ysusports.com serves correct Youngstown State content.",
+  "coaches": []
+}

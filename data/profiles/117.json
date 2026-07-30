@@ -1,0 +1,91 @@
+{
+  "sid": 117,
+  "name": "Indiana Wesleyan University",
+  "division": "NAIA",
+  "conference": "Crossroads League",
+  "city": "Marion",
+  "state": "IN",
+  "website_url": "https://iwuwildcats.com/sports/softball",
+  "academic_ranking": "Private evangelical Christian university affiliated with The Wesleyan Church; largest private university in Indiana and largest CCCU member. Total enrollment ~15,000 (about 2,000 traditional residential undergraduates on the Marion campus, ~12,000 adult/online learners, ~700 seminary graduate students). Offers 80+ undergraduate degrees and 87 majors. Ranked 13th in the Midwest by U.S. News & World Report (2022). Endowment ~$309.9 million (2025). (Source: Wikipedia / indwes.edu, checked 2026-07.)",
+  "tuition": null,
+  "financial_aid": "IWU invests over $25,000,000 annually in institutional aid based on merit, need, and other factors. Average financial aid package to campus students is $21,249. Aid types include scholarships, grants, work-study, and federal/state (Indiana) loans and grants. Updated academic scholarships arriving fall 2026. (Source: indwes.edu/admissions/tuition-aid, checked 2026-07.)",
+  "roster_size": 30,
+  "scholarship_count": null,
+  "facilities_notes": "Softball home field name not published on the softball program pages checked (iwuwildcats.com, 2026-07). Team is part of IWU Wildcats athletics on the Marion, IN campus.",
+  "program_reputation": "Nationally competitive NAIA program competing in the Crossroads League. Ranked #4 nationally as displayed on the program pages (2025-26). (Source: iwuwildcats.com softball pages, checked 2026-07.)",
+  "notes": "Athletics site: https://iwuwildcats.com. Softball program page: https://iwuwildcats.com/sports/softball. Team social: X/Twitter and Instagram @indwessoftball, Facebook IndWesSoftball. Exact residential annual tuition could not be confirmed from a fetched authoritative source, so tuition left null rather than guessed (indwes.edu tuition pages direct to a net price calculator). Coaching staff, emails, phone, and roster size (30) captured from live iwuwildcats.com pages on 2026-07.",
+  "coaches": [
+    {
+      "name": "Kelsey Kooistra",
+      "title": "Head Coach",
+      "email": "kelsey.kooistra@indwes.edu",
+      "phone": "765-677-2319",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "iwuwildcats.com softball coaches page, checked 2026-07; no individual X/Twitter handle listed."
+    },
+    {
+      "name": "Kevin Juber",
+      "title": "Assistant Coach",
+      "email": "kevin.juber@indwes.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "iwuwildcats.com softball coaches page, checked 2026-07; no public phone or X/Twitter handle listed."
+    },
+    {
+      "name": "Evelyn Waymire",
+      "title": "Assistant Coach",
+      "email": "iwusoftball@indwes.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "iwuwildcats.com softball coaches page, checked 2026-07; email listed is the shared program inbox; no public phone or X/Twitter handle listed."
+    },
+    {
+      "name": "Joshua Tew",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "iwuwildcats.com softball coaches page, checked 2026-07; no public email, phone, or X/Twitter handle listed."
+    },
+    {
+      "name": "McKenzey King",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "iwuwildcats.com softball coaches page, checked 2026-07; no public email, phone, or X/Twitter handle listed."
+    },
+    {
+      "name": "Rebecca Schrad",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 50,
+      "source_note": "iwuwildcats.com softball coaches page, checked 2026-07; no public email, phone, or X/Twitter handle listed."
+    },
+    {
+      "name": "Jolie Groeneveld",
+      "title": "Graduate Assistant Coach",
+      "email": "jolie.groeneveld@indwes.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 60,
+      "source_note": "iwuwildcats.com softball coaches page, checked 2026-07; no public phone or X/Twitter handle listed."
+    },
+    {
+      "name": "Bobby Wyatt",
+      "title": "Student Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 70,
+      "source_note": "iwuwildcats.com softball coaches page, checked 2026-07; no public email, phone, or X/Twitter handle listed."
+    }
+  ]
+}

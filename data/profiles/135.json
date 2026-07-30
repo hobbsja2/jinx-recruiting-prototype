@@ -1,0 +1,55 @@
+{
+  "sid": 135,
+  "name": "Wheeling University",
+  "division": "NCAA D2",
+  "conference": "Mountain East Conference",
+  "city": "Wheeling",
+  "state": "WV",
+  "website_url": "https://wucardinals.com/sports/softball",
+  "academic_ranking": "Private university in Wheeling, WV (founded 1954 as Wheeling College; formerly Jesuit until 2019). Small enrollment (~774 students in fall 2024, ~619 undergraduate). Average incoming freshman HS GPA around 3.5; Princeton Review selectivity ~81/100. Accredited by the Higher Learning Commission.",
+  "tuition": null,
+  "financial_aid": "Offers institutional scholarships and need-based aid. Notable named award: the $10,000 Mount de Chantal Scholarship for one incoming female freshman, renewable annually. Athletic scholarships available for D2 softball. Confirm specifics with the WU financial aid office.",
+  "roster_size": 27,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes as the Wheeling Cardinals. Facility details not confirmed from a live source during this research (softball page checked 2026-07).",
+  "program_reputation": "NCAA Division II program competing in the Mountain East Conference (MEC), which Wheeling joined as a founding member in 2013-14. Team social account @WheelingU_SB.",
+  "notes": "Coaching staff and roster captured live from wucardinals.com softball pages on 2026-07. Roster size (27) from the 2026 softball roster page. Tuition left null - no authoritative live figure confirmed without guessing (official tuition page returned 404, College Navigator did not list a figure). Scholarship count not publicly listed.",
+  "coaches": [
+    {
+      "name": "Mallory Chapman",
+      "title": "Head Softball Coach",
+      "email": "mchapman@wheeling.edu",
+      "phone": "304-243-2102",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball coaches page checked 2026-07; email and phone publicly listed. No personal Twitter/X handle listed."
+    },
+    {
+      "name": "Courtney Rogers",
+      "title": "Graduate Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball coaches page checked 2026-07; no public email, phone, or Twitter/X listed."
+    },
+    {
+      "name": "Cassie Minder",
+      "title": "Volunteer Assistant Softball Coach",
+      "email": "softball@wheeling.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Softball coaches page checked 2026-07; shared team email listed, no phone or Twitter/X."
+    },
+    {
+      "name": "Chris Minder",
+      "title": "Volunteer Assistant Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Softball coaches page checked 2026-07; no public email, phone, or Twitter/X listed."
+    }
+  ]
+}

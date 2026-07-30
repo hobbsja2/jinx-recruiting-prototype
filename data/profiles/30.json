@@ -1,0 +1,37 @@
+{
+  "sid": 30,
+  "name": "Rose-Hulman Institute of Technology",
+  "division": "NCAA D3",
+  "conference": "Heartland Collegiate Athletic Conference (HCAC)",
+  "city": "Terre Haute",
+  "state": "IN",
+  "website_url": "https://athletics.rose-hulman.edu/sports/softball",
+  "academic_ranking": "Rose-Hulman is a small, highly regarded private institute of technology focused on undergraduate engineering, science, and mathematics education. It is widely recognized (notably by U.S. News & World Report) as one of the top undergraduate engineering programs in the nation among schools whose highest degree is a bachelor's or master's, and was recognized in The Wall Street Journal's America's Best Colleges 2025. Its 'Learn it, Do it!' philosophy emphasizes hands-on, applied learning with popular programs in Mechanical, Chemical, Civil, Electrical, Computer, Biomedical, and Optical Engineering, plus Computer Science, AI, Physics, and Mathematics.",
+  "tuition": 59772,
+  "financial_aid": "2026-27 tuition & fees listed at $59,772; housing and food roughly $18,534-$19,482 for students living independently. Aid offered via scholarships, grants, loans, and work study. More than half of students participate in Federal Work Study or the Rose-Hulman Work Opportunity program. 2025 average scholarship awards ranged from about $25,000 to $44,500 depending on family income, with merit-based awards extended even to the highest income brackets. As an NCAA Division III school, no athletic scholarships are awarded; aid is need- and merit-based only. Source: rose-hulman.edu tuition-and-fees and financial-aid pages checked 2026-07.",
+  "roster_size": 17,
+  "scholarship_count": null,
+  "facilities_notes": "Softball team (Fightin' Engineers) plays home games at the Rose-Hulman Softball Field on the Terre Haute, IN campus. Source: athletics.rose-hulman.edu softball page checked 2026-07.",
+  "program_reputation": "NCAA Division III program competing in the Heartland Collegiate Athletic Conference (HCAC). As a DIII institution, the program combines competitive softball with Rose-Hulman's rigorous, nationally ranked STEM academics; no athletic scholarships are offered.",
+  "notes": "Researched from live athletics.rose-hulman.edu and rose-hulman.edu pages on 2026-07. Head softball coach position is currently vacant/unannounced (listed as 'TBA' on the 2027 softball coaches page). Only one softball-specific coach (Assistant Coach Kelsey Young) is publicly listed. Roster size (17) taken from the 2027 softball roster page. As DIII, scholarship_count is null (no athletic scholarships). No public phone numbers or Twitter/X handles listed for softball coaching staff.",
+  "coaches": [
+    {
+      "name": "TBA (position vacant)",
+      "title": "Head Softball Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball coaches page checked 2026-07; head coach listed as 'TBA' (position currently unfilled/unannounced). No name, email, or phone publicly listed."
+    },
+    {
+      "name": "Kelsey Young",
+      "title": "Assistant Softball Coach",
+      "email": "young2@rose-hulman.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball coaches page checked 2026-07; email listed publicly. No phone or Twitter/X handle listed."
+    }
+  ]
+}

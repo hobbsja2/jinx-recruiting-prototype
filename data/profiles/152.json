@@ -1,0 +1,55 @@
+{
+  "sid": 152,
+  "name": "University of Mount Union",
+  "division": "NCAA D3",
+  "conference": "Ohio Athletic Conference",
+  "city": "Alliance",
+  "state": "OH",
+  "website_url": "https://athletics.mountunion.edu/sports/softball",
+  "academic_ranking": "Private liberal arts university founded in 1846, located in Alliance, OH. Enrollment ~2,169 (about 1,927 undergraduates). Offers 46 undergraduate majors, 47 minors, and 13 master's programs plus a Doctor of Physical Therapy program; ~85% of faculty hold a terminal degree. U.S. News (2024) ranked it tied for No. 24 among Regional Universities Midwest, No. 9 for Best Value, and tied for No. 59 in Social Mobility. Test-optional; 2024 acceptance rate ~75.7% with average incoming GPA ~3.33.",
+  "tuition": 38300,
+  "financial_aid": "Approximately 99% of students receive some form of financial aid and 83% receive need-based aid; about $44 million awarded annually through grants and scholarships. Aid includes scholarships, grants, loans, Federal Work Study, and the Raider Ready program (covers textbooks, lab manuals, and access codes for most undergrads). Office of Student Financial Aid: (330) 823-2674, finaid@mountunion.edu.",
+  "roster_size": 27,
+  "scholarship_count": null,
+  "facilities_notes": "Softball team plays home games at the 23rd Street Softball Field on the Mount Union campus in Alliance, OH.",
+  "program_reputation": "NCAA Division III program competing in the Ohio Athletic Conference (OAC). As a D3 program, no athletic scholarships are offered; recruits are supported through academic and need-based aid.",
+  "notes": "Researched live from athletics.mountunion.edu on 2026-07-30. Coaching staff and roster (27 players) taken from the official softball coaches and roster pages. Tuition ($38,300) is the 2026-2027 full-time undergraduate figure from the official Mount Union tuition page. Scholarship_count set to null: NCAA Division III does not award athletic scholarships.",
+  "coaches": [
+    {
+      "name": "Meghan Simons",
+      "title": "Head Coach",
+      "email": "softball@mountunion.edu",
+      "phone": "(330) 823-4779",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Official softball coaches page checked 2026-07-30; email listed as program address softball@mountunion.edu; no Twitter/X handle listed."
+    },
+    {
+      "name": "Jillia Cook",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball coaches page checked 2026-07-30; no public email, phone, or Twitter/X handle listed."
+    },
+    {
+      "name": "Erika Warren",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Softball coaches page checked 2026-07-30; no public email, phone, or Twitter/X handle listed."
+    },
+    {
+      "name": "Zoey Devore",
+      "title": "Student Assistant",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Softball coaches page checked 2026-07-30; no public email, phone, or Twitter/X handle listed."
+    }
+  ]
+}

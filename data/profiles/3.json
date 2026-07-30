@@ -1,0 +1,64 @@
+{
+  "sid": 3,
+  "name": "University of Findlay",
+  "division": "NCAA D2",
+  "conference": "Great Midwest Athletic Conference (G-MAC)",
+  "city": "Findlay",
+  "state": "OH",
+  "website_url": "https://findlayoilers.com/sports/softball",
+  "academic_ranking": "Private university founded in 1882; ranked #359 (tied) of 436 national universities in the 2025 U.S. News & World Report rankings. Offers nearly 80 undergraduate programs, 11 master's, and 5 doctoral programs; accredited by the Higher Learning Commission. Notable for equestrian studies and the Mazza Museum.",
+  "tuition": 40698.0,
+  "financial_aid": "Approximately 93% of Findlay students receive financial aid. Both merit-based (ACT/SAT-driven) and need-based (FAFSA) aid offered, plus federal/state grants and loans. FAFSA federal school code 003045. Financial aid contact: finaid@findlay.edu, (419) 434-4791.",
+  "roster_size": 35,
+  "scholarship_count": null,
+  "facilities_notes": "76-acre main campus in Findlay, OH, plus five off-campus facilities. Specific softball facility details not confirmed from public pages checked 2026-07.",
+  "program_reputation": "NCAA Division II program competing in the Great Midwest Athletic Conference (G-MAC) as the Findlay Oilers.",
+  "notes": "Data gathered 2026-07 from findlayoilers.com softball coaches and roster pages and findlay.edu tuition/financial-aid pages. Tuition figure $40,698 reflects 2026-27 undergraduate rate ($908/credit hour). No Twitter/X handles listed for any softball staff. Scholarship count not publicly disclosed.",
+  "coaches": [
+    {
+      "name": "Danielle Lowe",
+      "title": "Head Coach",
+      "email": "lowed@findlay.edu",
+      "phone": "419-434-6544",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "findlayoilers.com softball coaches page checked 2026-07; email and phone publicly listed; no Twitter/X handle listed"
+    },
+    {
+      "name": "Annika Gels",
+      "title": "Assistant Coach",
+      "email": "annika.gels@findlay.edu",
+      "phone": "419-434-4197",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "findlayoilers.com softball coaches page checked 2026-07; email and phone publicly listed; no Twitter/X handle listed"
+    },
+    {
+      "name": "Tim Babcock",
+      "title": "Assistant Coach",
+      "email": "babcockt@findlay.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "findlayoilers.com softball coaches page checked 2026-07; email publicly listed; no public phone or Twitter/X handle listed"
+    },
+    {
+      "name": "Ron Ammons",
+      "title": "Volunteer Assistant",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "findlayoilers.com softball coaches page checked 2026-07; no public email, phone, or Twitter/X handle listed"
+    },
+    {
+      "name": "Lauren Hoffman",
+      "title": "Volunteer Assistant",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "findlayoilers.com softball coaches page checked 2026-07; no public email, phone, or Twitter/X handle listed"
+    }
+  ]
+}

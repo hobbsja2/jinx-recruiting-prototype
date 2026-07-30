@@ -1,0 +1,73 @@
+{
+  "sid": 16,
+  "name": "Kent State University",
+  "division": "NCAA D1",
+  "conference": "Mid-American Conference",
+  "city": "Kent",
+  "state": "OH",
+  "website_url": "https://kentstatesports.com/sports/softball",
+  "academic_ranking": "R1 doctoral university (very high research activity); tied for No. 227 among National Universities in the 2024 U.S. News & World Report rankings. Admissions rated 'selective' (Carnegie/U.S. News); ~87% admit rate for the 2023 entering class, average high school GPA ~3.51, middle-50% SAT 1010-1230 / ACT 18-25. Over 25,000 students at the main Kent campus (~33,000 systemwide).",
+  "tuition": 24298.00,
+  "financial_aid": "Public university; NCAA D1 softball is an equivalency sport (NCAA limit of up to 12 athletics scholarships). Kent State's specific softball athletic scholarship count is not publicly published. In-state (Ohio resident) undergraduate tuition is $13,848.40 for 2026-27; academic and need-based aid available through the university financial aid office in addition to athletic aid.",
+  "roster_size": 16,
+  "scholarship_count": null,
+  "facilities_notes": "Home games at the Judith K. Devine Diamond (Devine Diamond), located next to Dix Stadium on the Kent campus. Opened in 1999, renovated in 2023; capacity approximately 500.",
+  "program_reputation": "Established MAC program (softball added as a MAC sport in 1982). Program has won six regular-season MAC titles, ten MAC East Division titles, and three MAC Tournament championships. Peak season was 1990 (43-9), when the team won its first MAC title and an NCAA regional championship, reached the Women's College World Series, and finished 7th nationally. Additional NCAA Tournament appearances in 2006, 2008, and 2017.",
+  "notes": "Data sourced live from kentstatesports.com softball coaches and roster pages (Nuxt-embedded data), the school's tuition page (kent.edu/tuition), and Wikipedia for academic and facilities/reputation context. Researched 2026-07. Jexx Varner was announced as the eighth head softball coach in program history in July 2026. Only two softball-specific on-field coaches are currently listed (head coach and associate head coach); no dedicated recruiting coordinator or volunteer/graduate assistant is separately listed. Remaining staff (sport administrator, academic services, athletic trainer, athletic communications) are support staff assigned to softball and included as listed in the softball staff directory. Roster size of 16 reflects the softball roster page at time of research (offseason).",
+  "coaches": [
+    {
+      "name": "Jexx Varner",
+      "title": "Head Softball Coach",
+      "email": "mvarner3@kent.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball coaches directory checked 2026-07; email listed, no public phone or Twitter/X handle listed."
+    },
+    {
+      "name": "Elysse Petrie",
+      "title": "Associate Head Coach",
+      "email": "epetrie@kent.edu",
+      "phone": "330-672-8463",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball coaches directory checked 2026-07; email and phone listed, no public Twitter/X handle listed. Primarily works with the pitching staff."
+    },
+    {
+      "name": "Amy Densevich",
+      "title": "Sport Administrator",
+      "email": "adensevi@kent.edu",
+      "phone": "330-672-2961",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Support staff listed on softball coaches directory checked 2026-07 (Associate AD for Student-Athlete Support / sport administrator for softball); email and phone listed, no public Twitter/X handle."
+    },
+    {
+      "name": "Jana Ashley",
+      "title": "Academic Services (Athletic Academic Counselor)",
+      "email": "jashle14@kent.edu",
+      "phone": "330-672-4730",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Support staff listed on softball coaches directory checked 2026-07; email and phone listed, no public Twitter/X handle."
+    },
+    {
+      "name": "Amanda Dixon",
+      "title": "Athletic Trainer",
+      "email": "adixon18@kent.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "Support staff listed on softball coaches directory checked 2026-07; email listed, no public phone or Twitter/X handle."
+    },
+    {
+      "name": "Kellan Godfrey",
+      "title": "Assistant Director, Athletic Communications",
+      "email": "kgodfre4@kent.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 50,
+      "source_note": "Support staff (softball SID contact) listed on softball coaches directory checked 2026-07; email listed, no public phone or Twitter/X handle."
+    }
+  ]
+}

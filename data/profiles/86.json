@@ -1,0 +1,46 @@
+{
+  "sid": 86,
+  "name": "University of Tennessee at Martin",
+  "division": "NCAA D1",
+  "conference": "Ohio Valley Conference",
+  "city": "Martin",
+  "state": "TN",
+  "website_url": "https://utmsports.com/sports/softball",
+  "academic_ranking": "Public regional university (UT System). U.S. News ranked UT Martin tied for #27 in Regional Universities South (2024). Fall 2024 enrollment ~7,507 (~6,817 undergraduate). Known for undergraduate agriculture, business, engineering, nursing, and an active ROTC program; a top feeder to UT Health Science Center in Memphis.",
+  "tuition": 17188.0,
+  "financial_aid": "Out-of-state undergraduate tuition and mandatory fees ~$17,188 and in-state ~$11,148 for the 2026-27 academic year (full-time, per utm.edu). Financial Aid and Scholarships office: (731) 881-4677, financialaid@utm.edu. About 46% of undergraduates received income-based Pell grants (Fall 2023). Total aid (scholarships, grants, loans, work-study) is capped at the student's cost of attendance.",
+  "roster_size": 26,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes for the Skyhawks at Bettye Giles Field on the UT Martin campus in Martin, TN. Program-specific facility detail not enumerated on the softball pages checked 2026-07.",
+  "program_reputation": "NCAA Division I program competing in the Ohio Valley Conference (OVC member since 1991). Led by head coach Chelsea Farmer, who was named permanent head coach in June 2024 after serving as acting head coach; the team recorded a 30-win season in 2024.",
+  "notes": "Data sourced live from utmsports.com softball coaches and roster pages and utm.edu tuition page, July 2026. Roster size (26) counted from distinct player profiles on the softball roster page. Coaching staff listed consists of head coach Chelsea Farmer and assistant coaches Daniel Farmer and Alli Hissam; no volunteer/graduate assistant, director of operations, or recruiting-coordinator title was listed on the staff directory checked 2026-07. NCAA D1 softball scholarship limit is 12 equivalencies; the program's actual funded scholarship count is not publicly listed, so scholarship_count is null. No personal Twitter/X handles were listed for individual coaches (team account: @UTMSoftball).",
+  "coaches": [
+    {
+      "name": "Chelsea Farmer",
+      "title": "Head Coach",
+      "email": "cfarme21@utm.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball staff directory (utmsports.com/sports/softball/coaches) checked 2026-07; email listed, no direct phone or personal Twitter/X listed in her row."
+    },
+    {
+      "name": "Daniel Farmer",
+      "title": "Assistant Coach",
+      "email": "dfarmer7@utm.edu",
+      "phone": "731-881-7162",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball staff directory (utmsports.com/sports/softball/coaches) checked 2026-07; email and phone listed, no personal Twitter/X listed."
+    },
+    {
+      "name": "Alli Hissam",
+      "title": "Assistant Coach",
+      "email": "ahissam@utm.edu",
+      "phone": "(731) 881-7608",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Softball staff directory (utmsports.com/sports/softball/coaches) checked 2026-07; email and phone listed, no personal Twitter/X listed."
+    }
+  ]
+}

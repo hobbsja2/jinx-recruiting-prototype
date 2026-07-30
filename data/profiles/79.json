@@ -1,0 +1,37 @@
+{
+  "sid": 79,
+  "name": "East Tennessee State University",
+  "division": "NCAA D1",
+  "conference": "Southern Conference",
+  "city": "Johnson City",
+  "state": "TN",
+  "website_url": "https://etsubucs.com/sports/softball",
+  "academic_ranking": "Public research university (Carnegie R2: Doctoral Universities - High research activity), founded 1911, ~13,500 students. Notable programs include the James H. Quillen College of Medicine (often ranked among the top U.S. schools for rural medicine and primary care), the nation's only master's in Storytelling, and accredited Bluegrass/Old Time/Country Music and Appalachian Studies programs.",
+  "tuition": null,
+  "financial_aid": "Athletic scholarships available for softball (NCAA D1). Institutional need- and merit-based aid administered through the ETSU Office of Financial Aid; specific tuition/aid figures not confirmed from an authoritative source during research (2026-07).",
+  "roster_size": 28,
+  "scholarship_count": null,
+  "facilities_notes": "Softball plays home games at Betty Basler Field on the ETSU campus in Johnson City, TN (listed among ETSU Athletics facilities on etsubucs.com).",
+  "program_reputation": "NCAA Division I Southern Conference (SoCon) program. In 2026, under Head Coach Cheryl Milligan, ETSU posted its first 20+ win season since 2019 (14th such season in program history), started 9-1, and won three SoCon series (over Furman, Wofford, and Mercer) - the most conference series wins since 2016-2017. Head coach Milligan earned her 600th career win in 2026. Players Abigail Taylor (All-SoCon Second Team) and Hailey Porter and Riley Croley (SoCon All-Freshman Team) earned conference honors.",
+  "notes": "Coaching staff and roster verified live from etsubucs.com on 2026-07. Softball coaches page lists a two-person coaching staff. Team X/Twitter account is @ETSUSoftball; no individual coach handles or phone numbers publicly listed. Tuition, scholarship count, and specific financial aid figures were not confirmed from an authoritative source and are left null to avoid guessing.",
+  "coaches": [
+    {
+      "name": "Cheryl Milligan",
+      "title": "Head Coach",
+      "email": "softball@etsu.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Verified from softball coaches page and coach bio (etsubucs.com) 2026-07. Named interim head coach Dec. 14, 2022; 2026 was her fourth season. Email softball@etsu.edu listed as program contact; no phone or personal Twitter/X handle publicly listed."
+    },
+    {
+      "name": "Rick Wagner",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Verified from softball coaches page and coach bio (etsubucs.com) 2026-07. No public email, phone, or Twitter/X handle listed."
+    }
+  ]
+}

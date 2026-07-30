@@ -1,0 +1,46 @@
+{
+  "sid": 159,
+  "name": "Kenyon College",
+  "division": "NCAA D3",
+  "conference": "North Coast Athletic Conference",
+  "city": "Gambier",
+  "state": "OH",
+  "website_url": "https://athletics.kenyon.edu/sports/softball",
+  "academic_ranking": "Highly selective private liberal arts college. Ranked #45 among national liberal arts colleges by U.S. News & World Report (2025) and 33rd among liberal-arts colleges by Forbes (2025). Named a \"New Ivy\" by Newsweek and listed among the \"Hidden Ivies.\" ~1,877 undergraduates, 10:1 student-faculty ratio, 99% of faculty hold a Ph.D. or terminal degree. Founded 1824; Ohio's oldest private college.",
+  "tuition": null,
+  "financial_aid": "Approximately 85% of students receive some form of financial aid. Kenyon meets 100% of demonstrated financial need for all four years for qualifying students. Merit scholarships (up to $35K for top academic scholarships) are awarded automatically based on academic achievement, leadership, and potential; talent awards available in art, music, and writing. As an NCAA D3 program, no athletic scholarships are offered.",
+  "roster_size": 18,
+  "scholarship_count": null,
+  "facilities_notes": "Softball team (nicknamed the Owls) plays home games at the Kenyon Softball Complex in Gambier, OH. The broader Kenyon athletics campus includes Mavec Field, McBride Field, McCloskey Field, The Field at Benson Bowl, Wilder Track, Steen Aquatic Center, Toan Indoor Track, Tomsich Arena, Jasper Tennis Center, and a Golf Performance Lab.",
+  "program_reputation": "NCAA Division III program competing in the North Coast Athletic Conference (NCAC). Part of a strong Division III liberal arts athletics profile emphasizing the student-athlete balance at an academically selective institution.",
+  "notes": "Data gathered from Kenyon Athletics site (athletics.kenyon.edu) and Kenyon admissions/Wikipedia on 2026-07. Tuition figure not published on the pages fetched, so left null rather than guessed. Softball staff directory checked 2026-07: no individual Twitter/X handles listed for staff (team account @KenyonSoftball exists). No recruiting coordinator, volunteer/graduate assistant, or director of player development listed.",
+  "coaches": [
+    {
+      "name": "Emily Miller",
+      "title": "Head Coach",
+      "email": "miller17@kenyon.edu",
+      "phone": "740-427-5263",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Kenyon softball coaches page, checked 2026-07; no public Twitter/X handle listed."
+    },
+    {
+      "name": "Riley Zana",
+      "title": "Assistant Coach",
+      "email": "zana1@kenyon.edu",
+      "phone": "740-427-5252",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Kenyon softball coaches page, checked 2026-07; no public Twitter/X handle listed."
+    },
+    {
+      "name": "Sam Ekstrand",
+      "title": "Team Manager",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Kenyon softball coaches page, checked 2026-07; no public email, phone, or Twitter/X handle listed."
+    }
+  ]
+}

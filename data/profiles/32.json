@@ -1,0 +1,73 @@
+{
+  "sid": 32,
+  "name": "Trine University",
+  "division": "NCAA D3",
+  "conference": "Michigan Intercollegiate Athletic Association (MIAA)",
+  "city": "Angola",
+  "state": "IN",
+  "website_url": "https://trinethunder.com/sports/softball",
+  "academic_ranking": "Trine University is a private university in Angola, Indiana, known for strong programs in engineering, business, and health sciences. It offers small class sizes and a hands-on, career-focused education. Standard full-time undergraduate tuition for 2026-2027 is $37,750 (engineering majors $40,850).",
+  "tuition": 37750,
+  "financial_aid": "Trine offers merit scholarships and need-based aid administered through its admission and financial aid office. Resources include FAFSA, the Net Price Calculator, and the myTrineFA portal. As an NCAA Division III institution, no athletic scholarships are awarded.",
+  "roster_size": 23,
+  "scholarship_count": null,
+  "facilities_notes": "Trine Thunder softball plays on campus in Angola, IN. Detailed facility specifications were not published on the softball facilities page reviewed 2026-07.",
+  "program_reputation": "Trine University softball competes in NCAA Division III as a member of the Michigan Intercollegiate Athletic Association (MIAA). Specific recent championship or record details were not published on the pages reviewed 2026-07.",
+  "notes": "Data compiled 2026-07 from trinethunder.com softball coaches/roster pages and trine.edu tuition pages. NCAA D3: athletic scholarships are not offered, so scholarship_count is null. No individual coach Twitter/X handles are listed; the team account is @TrineSoftball.",
+  "coaches": [
+    {
+      "name": "Donnie Danklefsen",
+      "title": "Head Coach",
+      "email": "danklefsend@trine.edu",
+      "phone": "260.665.4444",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Softball coaches page, trinethunder.com, checked 2026-07"
+    },
+    {
+      "name": "Dennis Smith",
+      "title": "Assistant Coach",
+      "email": "smithd@trine.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Softball coaches page checked 2026-07; no public phone listed"
+    },
+    {
+      "name": "Zech Huston",
+      "title": "Assistant Coach",
+      "email": "hustonz@trine.edu",
+      "phone": "260.665.4872",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Softball coaches page, trinethunder.com, checked 2026-07"
+    },
+    {
+      "name": "Lauren Clausen",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Softball coaches page checked 2026-07; no public email or phone listed"
+    },
+    {
+      "name": "Alexis Michon",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "Softball coaches page checked 2026-07; no public email or phone listed"
+    },
+    {
+      "name": "Stephanie Lohman",
+      "title": "Assistant Athletic Trainer (SB, WBB)",
+      "email": "lohmans@trine.edu",
+      "phone": "260.665.4846",
+      "twitter": "",
+      "sort_order": 50,
+      "source_note": "Softball support staff, trinethunder.com coaches page, checked 2026-07"
+    }
+  ]
+}

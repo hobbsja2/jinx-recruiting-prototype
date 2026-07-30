@@ -1,0 +1,55 @@
+{
+  "sid": 56,
+  "name": "Bellarmine University",
+  "division": "NCAA D1",
+  "conference": "ASUN Conference",
+  "city": "Louisville",
+  "state": "KY",
+  "website_url": "https://athletics.bellarmine.edu/sports/softball",
+  "academic_ranking": "Private Catholic university (Doctoral/Professional Universities). U.S. News & World Report National University ranking #280; Washington Monthly #331. Accredited by SACSCOC; business school AACSB-accredited. ~3,077 students (2,365 undergraduate) as of fall 2025, offering 50+ majors and seven doctoral programs.",
+  "tuition": 48770,
+  "financial_aid": "Published undergraduate tuition and fees of $48,770 for 2024-2025 (source: NCES College Navigator, unitid 156286). As a private institution, Bellarmine offers merit- and need-based institutional aid; specific package figures not confirmed from a live source during this research.",
+  "roster_size": 22,
+  "scholarship_count": null,
+  "facilities_notes": "Softball competes at the NCAA Division I level in the ASUN Conference; specific softball facility details not confirmed from a live source during this research.",
+  "program_reputation": "NCAA Division I women's softball program competing in the ASUN Conference. Bellarmine athletics transitioned to Division I in 2020.",
+  "notes": "Coaching staff and roster captured live from the official athletics site on 2026-07-30. Softball coaches page (https://athletics.bellarmine.edu/sports/softball/coaches) lists 4 staff. Roster page listed 22 players. Tuition ($48,770, 2024-2025) sourced from NCES College Navigator (unitid 156286) as the school's own tuition page was not reachable. No Twitter/X handles were listed on the staff directory.",
+  "coaches": [
+    {
+      "name": "Whitney Arion",
+      "title": "Head Coach, Softball",
+      "email": "warion@bellarmine.edu",
+      "phone": "502-272-8041",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Official softball staff directory checked 2026-07-30; email and phone publicly listed. No public Twitter/X handle listed."
+    },
+    {
+      "name": "Paige Murphy",
+      "title": "Assistant Coach, Softball",
+      "email": "emurphy5@bellarmine.edu",
+      "phone": "502-272-8041",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Official softball staff directory checked 2026-07-30; email and phone publicly listed. No public Twitter/X handle listed."
+    },
+    {
+      "name": "Andrew Hundley",
+      "title": "Assistant Coach, Softball",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Official softball staff directory checked 2026-07-30; no public email, phone, or Twitter/X handle listed."
+    },
+    {
+      "name": "Kelsie Houchens",
+      "title": "Graduate Assistant/Pitching Coach, Softball",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Official softball staff directory checked 2026-07-30; no public email, phone, or Twitter/X handle listed."
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "sid": 168,
+  "name": "Case Western Reserve University",
+  "division": "NCAA D3",
+  "conference": "University Athletic Association",
+  "city": "Cleveland",
+  "state": "OH",
+  "website_url": "https://athletics.case.edu/sports/softball",
+  "academic_ranking": "Private research university in Cleveland, OH; highly selective and consistently ranked among the top ~50 national universities. Strong reputation in engineering, sciences, pre-med/nursing, and business.",
+  "tuition": 71410,
+  "financial_aid": "As an NCAA Division III institution, CWRU does not offer athletic scholarships. Financial aid is need- and merit-based; eligibility is calculated by subtracting expected family contribution from cost of attendance. CWRU follows the College Cost Transparency Initiative Principles & Standards. Office of University Financial Aid: 216.368.4530, financialaid@case.edu. Total 2026-27 first-year cost of attendance approx. $95,704 (residential) / $80,364 (commuter).",
+  "roster_size": 23,
+  "scholarship_count": 0,
+  "facilities_notes": "Spartans play home softball games on campus at the Case Western Reserve softball field within the university's athletics complex. Detailed facility specs not published on the softball program page; staff directory/site checked 2026-07.",
+  "program_reputation": "NCAA Division III program competing in the highly competitive University Athletic Association (UAA), a conference of academically elite private research institutions. Combines rigorous academics with competitive D3 softball.",
+  "notes": "Coaching staff and roster captured from athletics.case.edu softball pages (2026 season) on 2026-07. Roster size of 23 taken from the 2026 softball roster page. No athletic scholarships offered (D3). Team social account: CWRU_Softball.",
+  "coaches": [
+    {
+      "name": "Josie Henry",
+      "title": "Head Coach",
+      "email": "josephine.henry@case.edu",
+      "phone": "216-368-5685",
+      "twitter": "",
+      "sort_order": 0,
+      "source_note": "Staff directory checked 2026-07; email and phone publicly listed. No individual X/Twitter handle listed."
+    },
+    {
+      "name": "Roni Lipinski",
+      "title": "Assistant Coach",
+      "email": "vll21@case.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 10,
+      "source_note": "Staff directory checked 2026-07; email listed, no public phone or X/Twitter handle listed."
+    },
+    {
+      "name": "Ashley Parello",
+      "title": "Assistant Coach",
+      "email": "aep57@case.edu",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 20,
+      "source_note": "Staff directory checked 2026-07; email listed, no public phone or X/Twitter handle listed."
+    },
+    {
+      "name": "Jenna Jaklich",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 30,
+      "source_note": "Staff directory checked 2026-07; no public email, phone, or X/Twitter handle listed."
+    },
+    {
+      "name": "Isabella Russo",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 40,
+      "source_note": "Staff directory checked 2026-07; no public email, phone, or X/Twitter handle listed."
+    },
+    {
+      "name": "Kylie Hosey",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 50,
+      "source_note": "Staff directory checked 2026-07; no public email, phone, or X/Twitter handle listed."
+    },
+    {
+      "name": "Olivia Whitecar",
+      "title": "Assistant Coach",
+      "email": "",
+      "phone": "",
+      "twitter": "",
+      "sort_order": 60,
+      "source_note": "Staff directory checked 2026-07; no public email, phone, or X/Twitter handle listed."
+    }
+  ]
+}

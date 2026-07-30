@@ -1,0 +1,8 @@
+{
+  "sid": 65,
+  "name": "Motlow State Community College",
+  "in_state_tuition": 5064,
+  "housing_cost": null,
+  "housing_basis": "",
+  "tuition_note": "Full-time annual in-state (Tennessee resident) maintenance fees (tuition) & mandatory fees of $5,064 from official motlow.edu/financial/tuition-costs-fees page (in-state rate $197/credit hour up to 12 hours; figure shown for Fall 2026-Summer 2027 Cost of Attendance, same $197/hr rate as 2025-26). Motlow State is a commuter community college with multiple campuses and does NOT offer college-owned on-campus housing/dorms; the site lists only estimated 'Living Expenses (room and board)' budget figures, not billed housing charges, so housing_cost is null."
+}
