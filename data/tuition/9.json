@@ -1,0 +1,8 @@
+{
+  "sid": 9,
+  "name": "Walsh University",
+  "in_state_tuition": 36800,
+  "housing_cost": 15552,
+  "housing_basis": "room + board",
+  "tuition_note": "Private university, single published rate for all students. Tuition & general fees (combined) $36,800 for 2026-27 from walsh.edu cost-of-attendance page (full-time 12-credit on-campus student). Housing/food combined $15,552 (room only not published separately), so housing_cost is room + board."
+}

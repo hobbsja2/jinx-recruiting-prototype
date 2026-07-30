@@ -7,3 +7,5 @@ jinx_recruiting.db
 # Scratch pages fetched during research runs (agents save HTML to the repo root)
 /*.html
 _tmp/
+# Stray research files agents occasionally write to data/ root instead of subdirs
+/data/*.json

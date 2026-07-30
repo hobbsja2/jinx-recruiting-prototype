@@ -1,0 +1,8 @@
+{
+  "sid": 92,
+  "name": "Brescia University",
+  "in_state_tuition": 31550,
+  "housing_cost": 13200,
+  "housing_basis": "room + board",
+  "tuition_note": "Private institution (single published rate used as in_state_tuition). 2024-25 tuition & fees ($31,550) and on-campus room & board ($13,200) from NCES College Navigator / IPEDS (id 156356). Brescia's own brescia.edu tuition pages returned HTTP 403 and could not be fetched to confirm a 2025-26 figure; only room+board combined is published, not room-only."
+}

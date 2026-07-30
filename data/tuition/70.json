@@ -1,0 +1,8 @@
+{
+  "sid": 70,
+  "name": "University of Rio Grande",
+  "in_state_tuition": 13240,
+  "housing_cost": 10500,
+  "housing_basis": "room + board",
+  "tuition_note": "In-state tuition: Ohio Resident yearly average $13,240 for 2026-27 from rio.edu/affordability-aid/tuition-fees (tuition only; page states fees/room/board not included; Rio Grande publishes residency-tiered rates due to its public-private partnership, in-district $12,790, WV $14,950, out-of-state $20,000). Housing: rio.edu does not publish a room dollar amount, so used federal IPEDS/College Navigator (id=205203) 2024-25 on-campus 'Food and Housing' $10,500, which is a combined room + board figure (room-only not published)."
+}

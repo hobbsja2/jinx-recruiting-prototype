@@ -1,0 +1,8 @@
+{
+  "sid": 146,
+  "name": "Tusculum University",
+  "in_state_tuition": 32250,
+  "housing_cost": 6100,
+  "housing_basis": "room only",
+  "tuition_note": "2026-27 tuition & fees ($31,250 tuition + $1,000 Student General Fee = $32,250) from official Cost of Attendance PDF linked from site.tusculum.edu/financial-aid/coa/ (26-27-COA.pdf). Private university; PDF states 'Tusculum does not bill an out-of-state tuition rate for non-Tennessee Residents,' so single rate used as in_state_tuition. Housing is room only: Standard Dorm $6,100 (Apartment $8,300); Food ($5,600) is a separate line and excluded."
+}

@@ -10,7 +10,7 @@ from fastapi import Depends, FastAPI, HTTPException, Query, Request
 from fastapi.responses import RedirectResponse, Response
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from sqlalchemy import func, select
+from sqlalchemy import func, or_, select
 from sqlalchemy.orm import Session, selectinload
 
 from .database import Base, engine, get_db, sync_sqlite_columns
@@ -150,10 +150,25 @@ def dashboard(request: Request, db: Session = Depends(get_db)):
 
 
 @app.get("/colleges")
-def colleges(request: Request, db: Session = Depends(get_db)):
-    items = db.scalars(select(College).order_by(College.name)).all()
-    rows = "".join(f'<tr><td><a href="/colleges/{c.id}">{esc(c.name)}</a></td><td>{esc(c.division)}</td><td>{esc(c.city)}, {esc(c.state)}</td><td>{("$" + format(c.tuition, ",.0f")) if c.tuition else "—"}</td><td>{esc(c.head_coach)}</td></tr>' for c in items) or '<tr><td colspan="5">No colleges added.</td></tr>'
-    body = f'<div class="toolbar"><a class="button" href="/colleges/new">Add college</a></div><table><tr><th>College</th><th>Division</th><th>Location</th><th>Tuition</th><th>Head coach</th></tr>{rows}</table>'
+def colleges(request: Request, division: list[str] = Query(default=[]), state: list[str] = Query(default=[]), max_tuition: str = "", db: Session = Depends(get_db)):
+    divisions = [d for d in division if d]; states = [s for s in state if s]
+    query = select(College).order_by(College.name)
+    if divisions: query = query.where(College.division.in_(divisions))
+    if states: query = query.where(College.state.in_(states))
+    if max_tuition:
+        # Blank tuition is unknown, not expensive: keep those colleges visible.
+        try: query = query.where(or_(College.tuition <= float(max_tuition), College.tuition.is_(None)))
+        except ValueError: pass
+    items = db.scalars(query).all()
+    filter_form = (f'<form class="filters" method="get">'
+                   f'{checkbox_dropdown("division", "Division", distinct_values(db, College.division), divisions, "divisions")}'
+                   f'{checkbox_dropdown("state", "State", distinct_values(db, College.state), states, "states")}'
+                   f'<label class="stack">Maximum tuition<input name="max_tuition" placeholder="e.g. 30000" value="{esc(max_tuition)}"></label>'
+                   f'<button>Apply filters</button><a class="button secondary" href="/colleges">Clear</a></form>')
+    rows = "".join(f'<tr><td><a href="/colleges/{c.id}">{esc(c.name)}</a></td><td>{esc(c.division)}</td><td>{esc(c.city)}, {esc(c.state)}</td><td>{("$" + format(c.tuition, ",.0f")) if c.tuition else "—"}</td><td>{esc(c.head_coach)}</td></tr>' for c in items) or '<tr><td colspan="5">No colleges match the selected filters.</td></tr>'
+    body = (f'<div class="toolbar"><a class="button" href="/colleges/new">Add college</a>'
+            f'<span class="muted">{len(items)} college(s)</span></div>{filter_form}'
+            f'<table><tr><th>College</th><th>Division</th><th>Location</th><th>Tuition</th><th>Head coach</th></tr>{rows}</table>')
     return page(request, "Colleges", body, "Academic, financial, and coaching profiles")
 
 
@@ -337,7 +352,8 @@ def school_list_matches(db: Session, player: Player, divisions: list[str], state
     if divisions: query = query.where(College.division.in_(divisions))
     if states: query = query.where(College.state.in_(states))
     if max_tuition:
-        try: query = query.where(College.tuition <= float(max_tuition))
+        # Blank tuition is unknown, not expensive: keep those colleges visible.
+        try: query = query.where(or_(College.tuition <= float(max_tuition), College.tuition.is_(None)))
         except ValueError: pass
     rows = []
     for need in db.scalars(query.order_by(College.name)).all():

@@ -15,7 +15,11 @@ class College(Base):
     city: Mapped[str | None] = mapped_column(String(100))
     state: Mapped[str | None] = mapped_column(String(30))
     academic_ranking: Mapped[str | None] = mapped_column(Text)
+    # tuition holds the combined in-state tuition + housing cost (its sum), so the
+    # existing school-list filter and PDF keep working; the components are stored too.
     tuition: Mapped[float | None] = mapped_column(Float)
+    in_state_tuition: Mapped[float | None] = mapped_column(Float)
+    housing_cost: Mapped[float | None] = mapped_column(Float)
     financial_aid: Mapped[str | None] = mapped_column(Text)
     head_coach: Mapped[str | None] = mapped_column(Text)
     recruiting_coordinator: Mapped[str | None] = mapped_column(Text)

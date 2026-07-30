@@ -1,0 +1,8 @@
+{
+  "sid": 27,
+  "name": "Franklin College",
+  "in_state_tuition": 38710,
+  "housing_cost": 12405,
+  "housing_basis": "room + board",
+  "tuition_note": "Franklin College is a private institution charging a single tuition rate to all students; used as in_state_tuition. Figures for academic year 2024-25 from U.S. Dept. of Education NCES College Navigator (IPEDS ID 150604): tuition & fees $38,710; combined food & housing $12,405 (room-only not separately published). The official franklincollege.edu tuition-and-costs page is JS-rendered and behind a security check, so it could not be fetched live; a 2026-27 tuition page exists but numbers were not extractable."
+}

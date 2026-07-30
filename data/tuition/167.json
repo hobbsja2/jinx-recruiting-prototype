@@ -1,0 +1,8 @@
+{
+  "sid": 167,
+  "name": "Hiram College",
+  "in_state_tuition": 27600,
+  "housing_cost": 11850,
+  "housing_basis": "room + board",
+  "tuition_note": "Private college, single published rate used as in_state_tuition. Figures are 2024-25 tuition & fees ($27,600) and combined on-campus food & housing ($11,850) from the federal College Navigator/IPEDS record for Hiram College, Hiram OH (nces.ed.gov/collegenavigator id=203128). Hiram's own tuition-fees page (hiram.edu/admissions-aid/tuition-fees/) returned HTTP 403/empty to automated fetch, so the authoritative federal IPEDS data was used. IPEDS reports room and board only as a combined figure, so housing_basis is room + board."
+}

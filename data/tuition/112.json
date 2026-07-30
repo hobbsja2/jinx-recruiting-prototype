@@ -1,0 +1,8 @@
+{
+  "sid": 112,
+  "name": "Owens Community College",
+  "in_state_tuition": 5870,
+  "housing_cost": null,
+  "housing_basis": "",
+  "tuition_note": "Public 2-year college. In-state (Ohio resident) tuition & fees ~$5,870/yr for 2024-25 (per Univstats; consistent with ~$178/credit-hour Ohio resident rate reported by CollegeTuitionCompare 2025). owens.edu official tuition page could not be fetched live due to a TLS certificate verification error; figures sourced from aggregators citing IPEDS. Owens does NOT offer on-campus housing (confirmed by NCES College Navigator 'no campus housing' and Univstats), so housing_cost is null."
+}
