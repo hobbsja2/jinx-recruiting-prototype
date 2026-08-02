@@ -1,0 +1,15 @@
+# Ignore files that don't need to be sent to Docker build context
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+env
+.venv
+venv
+*.db
+jinx_recruiting.db
+.git
+.gitignore
+node_modules
+*.env
+*.sqlite3
