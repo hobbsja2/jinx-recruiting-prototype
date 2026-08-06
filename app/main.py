@@ -15,7 +15,7 @@ from fastapi.templating import Jinja2Templates
 from sqlalchemy import func, or_, select
 from sqlalchemy.orm import Session, selectinload
 
-from .database import Base, engine, get_db, sync_sqlite_columns
+from .database import Base, DATABASE_URL, engine, get_db, sync_sqlite_columns
 from .email_templates import TEMPLATES as EMAIL_TEMPLATES, render_template
 from .models import ActivityLog, College, Player, PlayerIntake, TeamNeed
 from .reports import school_list_pdf
@@ -228,6 +228,14 @@ def dashboard(request: Request, db: Session = Depends(get_db)):
     rows = "".join(f'<tr><td>{esc(a.created_at.strftime("%b %d, %Y"))}</td><td><span class="pill">{esc(a.kind)}</span></td><td>{esc(a.detail)}</td></tr>' for a in activities) or '<tr><td colspan="3">No activity yet.</td></tr>'
     body = f'<section class="stats">{cards}</section><div class="toolbar"><a class="button" href="/players/new">Add player</a><a class="button secondary" href="/colleges/new">Add college</a></div><section class="card"><h2>Recent local activity</h2><table><tr><th>Date</th><th>Type</th><th>Detail</th></tr>{rows}</table></section>'
     return page(request, "Admin Dashboard", body, "Recruiting pipeline overview")
+
+
+@app.get("/debug-db")
+def debug_db(request: Request, db: Session = Depends(get_db)):
+    college_count = db.scalar(select(func.count()).select_from(College))
+    player_count = db.scalar(select(func.count()).select_from(Player))
+    team_need_count = db.scalar(select(func.count()).select_from(TeamNeed))
+    return Response(f"DB={DATABASE_URL}\ncolleges={college_count}\nplayers={player_count}\nteam_needs={team_need_count}\n", media_type="text/plain")
 
 
 @app.get("/colleges")

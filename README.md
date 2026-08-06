@@ -24,6 +24,21 @@ py -m uvicorn app.main:app --reload
 
 Open `http://127.0.0.1:8000`. The SQLite database (`jinx_recruiting.db`) is created in the working directory and is seeded only when it has no colleges.
 
+### Using Neon Postgres
+
+The app can also connect to a Neon-hosted Postgres database by setting `DATABASE_URL` in `.env` or your environment. The project already supports Postgres URLs and will use SQLite only when `DATABASE_URL` is absent.
+
+Example `.env` values:
+
+```env
+DATABASE_URL=postgresql+psycopg://<username>:<password>@ep-wandering-dream-au7b7026.neonauth.c-10.us-east-1.aws.neon.tech/neondb
+NEON_AUTH_URL=https://ep-wandering-dream-au7b7026.neonauth.c-10.us-east-1.aws.neon.tech/neondb/auth
+NEON_JWKS_URL=https://ep-wandering-dream-au7b7026.neonauth.c-10.us-east-1.aws.neon.tech/neondb/auth/.well-known/jwks.json
+NEON_API_URL=https://ep-wandering-dream-au7b7026.apirest.c-10.us-east-1.aws.neon.tech/neondb/rest/v1
+```
+
+Restart the server after updating `.env`.
+
 To reset the demo data, stop the server and delete `jinx_recruiting.db`, then start it again.
 
 ## Deliberately deferred
