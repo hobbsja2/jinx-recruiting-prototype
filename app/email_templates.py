@@ -150,5 +150,5 @@ def render_template(template: EmailTemplate, college, player, form_url: str = ""
     body = template.body.format(**context)
     standard_closing = f"{SENDER_NAME}\n{TEAM_NAME}"
     if body.endswith(standard_closing):
-        body = body[:-len(standard_closing)] + EMAIL_SIGNATURE
+        body = body[:-len(standard_closing)] + "\n" + EMAIL_SIGNATURE
     return subject, body
