@@ -18,7 +18,7 @@ from sqlalchemy.orm import Session, selectinload
 from starlette.middleware.sessions import SessionMiddleware
 
 from .database import Base, engine, get_db, sync_sqlite_columns
-from .email_templates import TEMPLATES as EMAIL_TEMPLATES, render_template
+from .email_templates import EMAIL_SIGNATURE, TEMPLATES as EMAIL_TEMPLATES, render_template
 from .intake_invitations import active_invitation, claim_invitation, create_invitation
 from .models import ActivityLog, College, Player, PlayerIntake, TeamNeed
 from .outlook import (
@@ -906,7 +906,8 @@ def notify_intake_submission(request: Request, db: Session, intake: PlayerIntake
     detail_url = f"{public_base_url(request)}/intakes/{intake.id}"
     message = (f"A new player and parent intake form was submitted.\n\n"
                f"Player: {intake.player_name}\nClass: {intake.grad_year}\n"
-               f"Position: {intake.primary_position}\n\nReview the protected submission:\n{detail_url}")
+               f"Position: {intake.primary_position}\n\nReview the protected submission:\n{detail_url}\n\n"
+               f"{EMAIL_SIGNATURE}")
     try:
         request_id = send_mail(db, expected_sender(), subject, message)
     except OutlookError as exc:

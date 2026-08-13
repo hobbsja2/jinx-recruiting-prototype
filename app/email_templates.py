@@ -4,7 +4,8 @@ from __future__ import annotations
 from dataclasses import dataclass
 
 TEAM_NAME = "Jinx Softball"
-SENDER_NAME = "Jinx Recruiting Staff"
+SENDER_NAME = "Andy Hobbs"
+EMAIL_SIGNATURE = "Andy Hobbs\nRecruiting Coordinator\nJinx Fastpitch HSD"
 
 
 @dataclass(frozen=True)
@@ -145,4 +146,9 @@ def render_template(template: EmailTemplate, college, player, form_url: str = ""
         "highlights": highlights,
         "form_url": form_url or "(intake form link)",
     }
-    return template.subject.format(**context), template.body.format(**context)
+    subject = template.subject.format(**context)
+    body = template.body.format(**context)
+    standard_closing = f"{SENDER_NAME}\n{TEAM_NAME}"
+    if body.endswith(standard_closing):
+        body = body[:-len(standard_closing)] + EMAIL_SIGNATURE
+    return subject, body
