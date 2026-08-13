@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from datetime import datetime
-from sqlalchemy import CheckConstraint, DateTime, Float, ForeignKey, Integer, String, Text
+from sqlalchemy import Boolean, CheckConstraint, DateTime, Float, ForeignKey, Integer, String, Text, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from .database import Base
 
@@ -35,6 +35,8 @@ class College(Base):
     needs: Mapped[list[TeamNeed]] = relationship(back_populates="college", cascade="all, delete-orphan")
     coaches: Mapped[list[Coach]] = relationship(
         back_populates="college", cascade="all, delete-orphan", order_by="Coach.sort_order")
+    programs: Mapped[list[CollegeProgram]] = relationship(
+        back_populates="college", cascade="all, delete-orphan")
 
 
 class Coach(Base):
@@ -59,6 +61,35 @@ class Coach(Base):
     college: Mapped[College] = relationship(back_populates="coaches")
 
 
+class AcademicProgram(Base):
+    """Canonical four-digit CIP field of study shared across colleges."""
+    __tablename__ = "academic_programs"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    cip_code: Mapped[str] = mapped_column(String(10), unique=True, index=True)
+    name: Mapped[str] = mapped_column(String(240), index=True)
+    college_programs: Mapped[list[CollegeProgram]] = relationship(back_populates="program")
+
+
+class CollegeProgram(Base):
+    """An active undergraduate credential reported for a college and CIP field."""
+    __tablename__ = "college_programs"
+    __table_args__ = (
+        UniqueConstraint("college_id", "program_id", "credential_level", name="uq_college_program_credential"),
+    )
+    id: Mapped[int] = mapped_column(primary_key=True)
+    college_id: Mapped[int] = mapped_column(ForeignKey("colleges.id", ondelete="CASCADE"), index=True)
+    program_id: Mapped[int] = mapped_column(ForeignKey("academic_programs.id"), index=True)
+    credential_level: Mapped[int] = mapped_column(Integer)
+    credential_title: Mapped[str] = mapped_column(String(80))
+    scorecard_unit_id: Mapped[int] = mapped_column(Integer, index=True)
+    source_name: Mapped[str] = mapped_column(String(240))
+    source_url: Mapped[str] = mapped_column(String(500))
+    retrieved_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    active: Mapped[bool] = mapped_column(Boolean, default=True, index=True)
+    college: Mapped[College] = relationship(back_populates="programs")
+    program: Mapped[AcademicProgram] = relationship(back_populates="college_programs")
+
+
 class TeamNeed(Base):
     __tablename__ = "team_needs"
     id: Mapped[int] = mapped_column(primary_key=True)
@@ -80,6 +111,7 @@ class Player(Base):
     secondary_position: Mapped[str | None] = mapped_column(String(30))
     # Home/school state (2-letter). Drives in-state vs out-of-state tuition display.
     home_state: Mapped[str | None] = mapped_column(String(30))
+    intended_major: Mapped[str | None] = mapped_column(String(160))
     player_email: Mapped[str | None] = mapped_column(String(160))
     parent_email: Mapped[str | None] = mapped_column(String(160))
     gpa: Mapped[float | None] = mapped_column(Float)

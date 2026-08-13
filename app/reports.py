@@ -14,7 +14,7 @@ from reportlab.platypus import Image, Paragraph, SimpleDocTemplate, Spacer, Tabl
 from .tuition import is_out_of_state, tuition_for
 
 LOGO = Path(__file__).resolve().parent.parent / "static" / "jinx-logo.jpg"
-HEADERS = ["College", "Division", "State", "Tuition", "Coach email", "Matching need", "Fit"]
+HEADERS = ["College", "Degree offered", "Division", "State", "Tuition", "Coach email", "Matching need", "Fit"]
 
 
 def money(amount: float | None) -> str:
@@ -28,7 +28,7 @@ def tuition_display(college, player) -> str:
     return f"<b>{text} *</b>" if oos else text
 
 
-def school_list_pdf(player, matches, filter_summary: str) -> bytes:
+def school_list_pdf(player, matches, filter_summary: str, program=None) -> bytes:
     """Render the generated school list as a PDF document and return its bytes."""
     buffer = BytesIO()
     doc = SimpleDocTemplate(buffer, pagesize=landscape(letter), title=f"School List - {player.name}",
@@ -48,15 +48,17 @@ def school_list_pdf(player, matches, filter_summary: str) -> bytes:
 
     data = [[Paragraph(f"<b>{h}</b>", cell) for h in HEADERS]]
     any_oos = False
-    for college, need, score in matches:
+    for college, need, score, credentials in matches:
         any_oos = any_oos or is_out_of_state(player, college)
+        degree = f"{program.name} · {credentials}" if program and credentials else "—"
+        need_text = f"{need.position} &middot; {need.class_year}" if need else "No matching need recorded"
         data.append([Paragraph(str(v), cell) for v in (
-            college.name, college.division or "—", college.state or "—", tuition_display(college, player),
-            college.coach_emails or "—", f"{need.position} &middot; {need.class_year}", score)])
+            college.name, degree, college.division or "—", college.state or "—", tuition_display(college, player),
+            college.coach_emails or "—", need_text, score)])
     if len(data) == 1:
-        data.append([Paragraph("No matching colleges for the selected filters.", cell)] + [""] * 6)
+        data.append([Paragraph("No matching colleges for the selected filters.", cell)] + [""] * 7)
 
-    table = Table(data, colWidths=[2.1 * inch, 1.15 * inch, 0.6 * inch, 0.9 * inch, 2.3 * inch, 1.5 * inch, 0.5 * inch], repeatRows=1)
+    table = Table(data, colWidths=[1.65 * inch, 1.75 * inch, 0.9 * inch, 0.5 * inch, 0.8 * inch, 1.9 * inch, 1.35 * inch, 0.45 * inch], repeatRows=1)
     table.setStyle(TableStyle([
         ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#16213A")),
         ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),

@@ -38,6 +38,18 @@ Use a separate Microsoft identity app registration for mail delivery; do not reu
 
 The Outlook password is never handled by this application. Microsoft Graph HTTP 202 means a message was accepted for processing, not proof of final delivery. If a network timeout occurs, check Outlook Sent Items before retrying. Rotating the Fernet key invalidates the saved token cache and requires reconnecting Outlook.
 
+## Undergraduate degree catalog
+
+The school-interest workflow uses a normalized catalog of associate and bachelor's fields from the [U.S. Department of Education College Scorecard](https://collegescorecard.ed.gov/data/). A selected major is the primary school-list constraint; an exact recruiting class/position need adds to the fit score but does not hide academically matching colleges. College detail pages display the reported credential and four-digit CIP code.
+
+Refresh the catalog with:
+
+```cmd
+.venv\Scripts\python.exe load_programs.py
+```
+
+The loader downloads the official current institution and field-of-study ZIPs, is idempotent, preserves source metadata, and marks prior associations inactive only after a successful institution match. Reviewed name differences are bound to explicit Scorecard UNITIDs instead of relaxing fuzzy-match confidence. The summary reports matched institutions that have no distinct field-of-study rows; those colleges remain visibly uncataloged rather than inheriting another campus's programs. `COLLEGE_SCORECARD_API_KEY` is needed only when using the optional `--api` fallback. College Scorecard field-of-study data can lag newly introduced or discontinued programs, so verify final availability with each college.
+
 ## Intake invitation security
 
 Family emails receive a random, expiring, one-time URL. Only its SHA-256 hash is stored. Submitting the form atomically consumes the invitation; invalid, expired, or reused links return HTTP 410. Intake data is committed before a notification attempt, so a mail failure does not discard the submission.
