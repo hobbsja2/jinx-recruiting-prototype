@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from datetime import datetime
-from sqlalchemy import DateTime, Float, ForeignKey, Integer, String, Text
+from sqlalchemy import CheckConstraint, DateTime, Float, ForeignKey, Integer, String, Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from .database import Base
 
@@ -105,6 +105,30 @@ class ActivityLog(Base):
     kind: Mapped[str] = mapped_column(String(50))
     detail: Mapped[str] = mapped_column(Text)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+
+
+class MicrosoftConnection(Base):
+    """Encrypted delegated OAuth token cache for the one recruiting mailbox."""
+    __tablename__ = "microsoft_connections"
+    __table_args__ = (CheckConstraint("id = 1", name="ck_microsoft_connection_singleton"),)
+    id: Mapped[int] = mapped_column(primary_key=True)
+    account_email: Mapped[str] = mapped_column(String(320), unique=True)
+    home_account_id: Mapped[str] = mapped_column(String(200))
+    encrypted_cache: Mapped[str] = mapped_column(Text)
+    connected_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    updated_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+
+
+class IntakeInvitation(Base):
+    """One-time, expiring public link sent to a player's family."""
+    __tablename__ = "intake_invitations"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    token_hash: Mapped[str] = mapped_column(String(64), unique=True, index=True)
+    player_id: Mapped[int] = mapped_column(ForeignKey("players.id", ondelete="CASCADE"), index=True)
+    recipients: Mapped[str] = mapped_column(String(500))
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    expires_at: Mapped[datetime] = mapped_column(DateTime)
+    used_at: Mapped[datetime | None] = mapped_column(DateTime)
 
 
 class PlayerIntake(Base):

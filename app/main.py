@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import html
 import os
+import secrets
 from contextlib import asynccontextmanager
 from io import BytesIO
 from pathlib import Path
@@ -14,10 +15,23 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from sqlalchemy import func, or_, select
 from sqlalchemy.orm import Session, selectinload
+from starlette.middleware.sessions import SessionMiddleware
 
 from .database import Base, engine, get_db, sync_sqlite_columns
 from .email_templates import TEMPLATES as EMAIL_TEMPLATES, render_template
+from .intake_invitations import active_invitation, claim_invitation, create_invitation
 from .models import ActivityLog, College, Player, PlayerIntake, TeamNeed
+from .outlook import (
+    OutlookError,
+    complete_authorization,
+    disconnect as disconnect_outlook,
+    expected_sender,
+    protect_authorization_flow,
+    send_mail,
+    start_authorization,
+    status as outlook_status,
+    unprotect_authorization_flow,
+)
 from .reports import school_list_pdf
 from .tuition import is_out_of_state, norm_state, tuition_for
 from .seed import backfill_demo_contacts, seed_demo_data
@@ -28,6 +42,17 @@ STATIC_ROOT = (ROOT / "static").resolve()
 PHOTO_DIR = STATIC_ROOT / "uploads" / "players"
 MAX_PHOTO_BYTES = 8 * 1024 * 1024
 THUMB_SIZE = (480, 480)
+INTAKE_LINK_PLACEHOLDER = "[A secure one-time intake link will be inserted when this email is sent]"
+LOCAL_SESSION_SECRET = secrets.token_urlsafe(48)
+
+
+def production_setting(name: str, local_default: str = "") -> str:
+    value = os.environ.get(name, "").strip()
+    if value:
+        return value
+    if os.environ.get("WEBSITE_SITE_NAME"):
+        raise RuntimeError(f"{name} must be configured in Azure App Service.")
+    return local_default
 
 
 @asynccontextmanager
@@ -44,6 +69,12 @@ async def lifespan(_: FastAPI):
 
 
 app = FastAPI(title="Jinx Recruiting", lifespan=lifespan)
+app.add_middleware(
+    SessionMiddleware,
+    secret_key=production_setting("SESSION_SECRET", LOCAL_SESSION_SECRET),
+    https_only=bool(os.environ.get("WEBSITE_SITE_NAME")) or os.environ.get("SESSION_COOKIE_SECURE") == "1",
+    same_site="lax",
+)
 app.mount("/static", StaticFiles(directory=str(ROOT / "static")), name="static")
 
 
@@ -99,6 +130,24 @@ def redirect(path: str, notice: str = "") -> RedirectResponse:
 
 def page(request: Request, title: str, body: str, subtitle: str = "", notice: str = ""):
     return TEMPLATES.TemplateResponse(request, "page.html", {"title": title, "subtitle": subtitle, "body": body, "notice": notice or request.query_params.get("notice", "")})
+
+
+def csrf_token(request: Request) -> str:
+    token = request.session.get("csrf_token")
+    if not token:
+        token = secrets.token_urlsafe(32)
+        request.session["csrf_token"] = token
+    return token
+
+
+def verify_csrf(request: Request, submitted: str) -> None:
+    expected = request.session.get("csrf_token", "")
+    if not expected or not secrets.compare_digest(expected, submitted):
+        raise HTTPException(status_code=403, detail="The form expired. Reload the page and try again.")
+
+
+def public_base_url(request: Request) -> str:
+    return production_setting("PUBLIC_BASE_URL", str(request.base_url)).rstrip("/")
 
 
 def get_or_404(db: Session, model, item_id: int):
@@ -578,6 +627,24 @@ def school_list_download(player_id: int, division: list[str] = Query(default=[])
 
 @app.get("/integrations")
 def integrations(request: Request, db: Session = Depends(get_db)):
+    connection = outlook_status(db)
+    token = csrf_token(request)
+    if connection.connected:
+        outlook_card = (
+            f'<section class="card"><h2>Microsoft Outlook</h2><p class="pill">Connected</p>'
+            f'<p>Messages are sent through Microsoft Graph as <b>{esc(connection.account_email)}</b>.</p>'
+            f'<form method="post" action="/integrations/outlook/disconnect">'
+            f'<input type="hidden" name="csrf_token" value="{esc(token)}"><button class="button secondary">Disconnect Outlook</button></form></section>')
+    elif connection.configured:
+        outlook_card = (
+            f'<section class="card"><h2>Microsoft Outlook</h2><p class="pill">Not connected</p>'
+            f'<p>{esc(connection.detail)} The connection requests permission to send mail only; it cannot read the inbox.</p>'
+            f'<a class="button" href="/integrations/outlook/connect">Connect {esc(expected_sender())}</a></section>')
+    else:
+        outlook_card = (
+            f'<section class="card"><h2>Microsoft Outlook</h2><p class="pill">Configuration required</p>'
+            f'<p>{esc(connection.detail)}</p></section>')
+
     colleges = db.scalars(select(College).order_by(College.name)).all()
     first = next((c.id for c in colleges if primary_email(c)), None)
     cards = "".join(
@@ -585,10 +652,46 @@ def integrations(request: Request, db: Session = Depends(get_db)):
         f'<p class="pill">{esc(t.attachments or "No attachment")}</p>'
         f'<div class="actions"><a class="button" href="/email/compose?template={t.key}{f"&college_id={first}" if first else ""}">Use this email</a></div></div>'
         for t in EMAIL_TEMPLATES.values())
-    body = (f'<section class="card"><h2>Pre-generated coach emails</h2><p>Select a template, choose a coach email address, and the salutation is filled in with that school\'s head coach. '
-            f'Sending, PDF export, and workflow automation are simulated locally: no messages, files, or credentials leave this machine.</p></section>'
-            f'<section class="cards">{cards}</section>')
-    return page(request, "Integrations", body, "Selectable outreach templates and local-only stubs")
+    body = (outlook_card
+            + '<section class="card"><h2>Pre-generated emails</h2><p>Select a template and recipient. '
+              'Player and parent intake messages receive a one-time, expiring form link when sent.</p></section>'
+            + f'<section class="cards">{cards}</section>')
+    return page(request, "Integrations", body, "Microsoft Graph delivery and recruiting outreach templates")
+
+
+@app.get("/integrations/outlook/connect")
+def outlook_connect(request: Request):
+    try:
+        flow = start_authorization()
+        request.session["outlook_auth_flow"] = protect_authorization_flow(flow)
+    except OutlookError as exc:
+        return redirect("/integrations", str(exc))
+    return RedirectResponse(flow["auth_uri"], status_code=302)
+
+
+@app.get("/integrations/outlook/callback")
+def outlook_callback(request: Request, db: Session = Depends(get_db)):
+    protected_flow = request.session.pop("outlook_auth_flow", None)
+    if not protected_flow:
+        return redirect("/integrations", "The Outlook connection expired. Start it again.")
+    try:
+        flow = unprotect_authorization_flow(str(protected_flow))
+        connection = complete_authorization(db, flow, dict(request.query_params))
+    except OutlookError as exc:
+        db.rollback()
+        return redirect("/integrations", str(exc))
+    log(db, "email_connection", f"Connected Microsoft Outlook account {connection.account_email}.")
+    return redirect("/integrations", f"Outlook connected as {connection.account_email}.")
+
+
+@app.post("/integrations/outlook/disconnect")
+async def outlook_disconnect(request: Request, db: Session = Depends(get_db)):
+    form = await request.form()
+    verify_csrf(request, str(form.get("csrf_token", "")))
+    account = outlook_status(db).account_email or expected_sender()
+    disconnect_outlook(db)
+    log(db, "email_connection", f"Disconnected Microsoft Outlook account {account}.")
+    return redirect("/integrations", "Outlook disconnected. Microsoft account consent can also be revoked in account settings.")
 
 
 @app.get("/flyers/player/{player_id}")
@@ -625,6 +728,7 @@ def college_for_email(db: Session, email: str) -> College | None:
 @app.get("/email/compose")
 def email_compose(request: Request, template: str = "intro", player_id: int | None = None, college_id: int | None = None, db: Session = Depends(get_db)):
     chosen = EMAIL_TEMPLATES.get(template, EMAIL_TEMPLATES["intro"])
+    connection = outlook_status(db)
     family = chosen.audience == "family"
     colleges = [c for c in db.scalars(select(College).order_by(College.name)).all() if primary_email(c)]
     players = db.scalars(select(Player).order_by(Player.name)).all()
@@ -632,7 +736,7 @@ def email_compose(request: Request, template: str = "intro", player_id: int | No
     player = get_or_404(db, Player, player_id) if player_id else None
     if family and player is None:
         player = next((p for p in players if p.player_email or p.parent_email), players[0] if players else None)
-    form_url = str(request.base_url).rstrip("/") + "/intake"
+    form_url = INTAKE_LINK_PLACEHOLDER if chosen.embeds_form else public_base_url(request) + "/intake"
     subject, message = render_template(chosen, college, player, form_url)
     recipient = ", ".join(a for a in [getattr(player, "player_email", None), getattr(player, "parent_email", None)] if a) if family else primary_email(college)
 
@@ -660,46 +764,81 @@ def email_compose(request: Request, template: str = "intro", player_id: int | No
         coach_line = f'Salutation uses {esc(college.head_coach or "an unnamed head coach")}, head coach at {esc(college.name)}.' if college else "Add a college with a coach email to resolve the salutation."
     embedded = ""
     if chosen.embeds_form:
-        embedded = ('<section class="card"><h2>Embedded fillable form</h2>'
-                    '<p class="muted">This is the live form recipients complete. Gmail, Outlook, and most mail clients strip '
-                    '<code>&lt;form&gt;</code> elements for security, so the email includes the link above as the reliable path. '
-                    'Submissions land under Intake Forms.</p>'
-                    f'<iframe class="embed-frame" src="/intake?embed=1" title="Player and parent intake form"></iframe>'
-                    f'<div class="actions"><a class="button secondary" href="/intake" target="_blank" rel="noopener">Open form in a new tab</a>'
-                    f'<a class="button secondary" href="/intakes">View submissions</a></div></section>')
-    attachment_row = f'<label class="wide">Attachments (simulated)<input name="attachments" value="{esc(chosen.attachments)}"></label>'
-    hidden = f'<input type="hidden" name="player_id" value="{player.id if player else ""}"><input type="hidden" name="college_id" value="{college.id if college else ""}"><input type="hidden" name="template" value="{chosen.key}">'
+        embedded = ('<section class="card"><h2>Intake form preview</h2>'
+                    '<p class="muted">The sent message receives a unique, one-time link that expires automatically. '
+                    'Email clients strip embedded forms, so recipients complete the secure web form instead.</p>'
+                    '<iframe class="embed-frame" src="/intake?embed=1" title="Player and parent intake form"></iframe>'
+                    '<div class="actions"><a class="button secondary" href="/intake" target="_blank" rel="noopener">Open admin preview</a>'
+                    '<a class="button secondary" href="/intakes">View submissions</a></div></section>')
+    attachment_note = (f'<div class="wide notice">{esc(chosen.attachments)} is a template label only and is not attached yet.</div>'
+                       if chosen.attachments else "")
+    hidden = (f'<input type="hidden" name="csrf_token" value="{esc(csrf_token(request))}">'
+              f'<input type="hidden" name="player_id" value="{player.id if player else ""}">'
+              f'<input type="hidden" name="college_id" value="{college.id if college else ""}">'
+              f'<input type="hidden" name="template" value="{chosen.key}">')
+    send_control = ('<button>Send with Outlook</button>' if connection.connected
+                    else '<a class="button" href="/integrations">Connect Outlook to send</a>')
     compose = (f'<div class="card"><form class="grid" method="post" action="/email/send">{hidden}'
                f'<label class="wide">To<input name="recipients" value="{esc(recipient)}" required></label>'
                f'<label class="wide">Subject<input name="subject" value="{esc(subject)}" required></label>'
-               f'{attachment_row}'
+               f'{attachment_note}'
                f'<label class="wide">Message<textarea name="body" rows="16">{esc(message)}</textarea></label>'
-               f'<div class="wide actions"><a class="button secondary" href="/integrations">Back to templates</a><button>Simulate send</button></div></form></div>')
-    body = (f'<div class="notice">Local email stub: submitting only records simulated activity. Nothing is sent.</div>'
-            f'{picker}<p class="muted">{esc(chosen.purpose)} {coach_line}</p>{compose}{embedded}')
-    return page(request, "Email Center", body, "Pre-generated coach outreach templates")
+               f'<div class="wide actions"><a class="button secondary" href="/integrations">Back to templates</a>{send_control}</div></form></div>')
+    state_notice = (f'Connected as {esc(connection.account_email)}. Messages are saved in Outlook Sent Items.'
+                    if connection.connected else 'Outlook is not connected; sending is disabled.')
+    body = (f'<div class="notice">{state_notice}</div>{picker}'
+            f'<p class="muted">{esc(chosen.purpose)} {coach_line}</p>{compose}{embedded}')
+    return page(request, "Email Center", body, "Microsoft Graph email delivery")
 
 
 @app.post("/email/send")
-async def email_send_stub(request: Request, db: Session = Depends(get_db)):
+async def email_send(request: Request, db: Session = Depends(get_db)):
     form = await request.form()
-    recipient = str(form.get("recipients", "")).strip(); subject = str(form.get("subject", "")).strip()
-    if not recipient or not subject: raise HTTPException(status_code=422, detail="Recipient and subject are required")
+    verify_csrf(request, str(form.get("csrf_token", "")))
+    recipient = str(form.get("recipients", "")).strip()
+    subject = str(form.get("subject", "")).strip()
+    body = str(form.get("body", "")).strip()
+    if not recipient or not subject or not body:
+        raise HTTPException(status_code=422, detail="Recipient, subject, and message are required")
     template_key = str(form.get("template", "intro")).strip()
     chosen = EMAIL_TEMPLATES.get(template_key, EMAIL_TEMPLATES["intro"])
-    attachments = str(form.get("attachments", "")).strip()
     matched = None if chosen.audience == "family" else college_for_email(db, recipient)
-    if chosen.audience == "family":
-        detail = f'Simulated "{chosen.label}" email to {recipient}: {subject}'
-    else:
-        coach = (matched.head_coach if matched and matched.head_coach else "unmatched coach")
-        detail = f'Simulated "{chosen.label}" email to {coach} at {recipient}: {subject}'
-    if attachments: detail += f" [attachments: {attachments}]"
-    log(db, "email_stub", detail)
+    player_id = str(form.get("player_id", "")).strip()
+
+    if chosen.embeds_form:
+        if not player_id.isdigit():
+            raise HTTPException(status_code=422, detail="Choose a player before sending an intake invitation.")
+        player = get_or_404(db, Player, int(player_id))
+        _, invitation_token = create_invitation(db, player.id, recipient)
+        invitation_url = f"{public_base_url(request)}/intake/invitation/{invitation_token}"
+        body = body.replace(INTAKE_LINK_PLACEHOLDER, invitation_url)
+        if invitation_url not in body:
+            body += f"\n\nSecure intake form: {invitation_url}"
+
     target = f"/email/compose?template={template_key}"
-    if matched: target += f"&college_id={matched.id}"
-    elif chosen.audience == "family" and str(form.get("player_id", "")).strip().isdigit(): target += f"&player_id={form.get('player_id')}"
-    return redirect(target, "Email simulated and logged locally. Nothing was sent.")
+    if matched:
+        target += f"&college_id={matched.id}"
+    elif chosen.audience == "family" and player_id.isdigit():
+        target += f"&player_id={player_id}"
+
+    # Persist any invitation before contacting Graph. A Graph timeout is
+    # ambiguous; committing first ensures any link Microsoft accepted remains valid.
+    db.commit()
+    try:
+        request_id = send_mail(db, recipient, subject, body)
+    except OutlookError as exc:
+        db.rollback()
+        log(db, "email_failed", f'Failed "{chosen.label}" email to {recipient}: {exc}')
+        return redirect(target, str(exc))
+
+    coach = (matched.head_coach if matched and matched.head_coach else "family" if chosen.audience == "family" else "recipient")
+    detail = f'Microsoft Graph accepted "{chosen.label}" email to {coach} at {recipient}.'
+    if request_id:
+        detail += f" Microsoft request {request_id}."
+    db.add(ActivityLog(kind="email_sent", detail=detail))
+    db.commit()
+    attachment_notice = f" {chosen.attachments} was not attached." if chosen.attachments else ""
+    return redirect(target, f"Email accepted by Outlook.{attachment_notice}")
 
 
 @app.post("/workflow/start")
@@ -710,26 +849,35 @@ async def workflow_stub(request: Request, db: Session = Depends(get_db)):
 
 
 # --- Player & parent intake form -------------------------------------------------
-# NOTE: /intake and /intake/thanks are intentionally public so families can submit
-# without an account. This prototype has no authentication of any kind, so anyone
-# who can reach the port can post an intake. Add auth or a per-family token before
-# exposing this beyond localhost.
+# /intake is an authenticated admin preview. Families receive one-time links under
+# /intake/invitation/{token}; Azure Easy Auth exposes only those tokenized routes.
 
-def intake_form_html(action: str, submit_label: str = "Submit my information") -> str:
+def intake_form_html(
+    action: str,
+    submit_label: str = "Submit my information",
+    defaults: dict[str, object] | None = None,
+    csrf: str = "",
+) -> str:
+    defaults = defaults or {}
     controls = []
     for key, label, kind, required, options in INTAKE_FIELDS:
         required_mark = " required" if required else ""
+        current = "" if defaults.get(key) is None else str(defaults[key])
         if kind == "checkdrop":
-            controls.append(checkbox_dropdown(key, label, options or [], [], "divisions"))
+            selected = [part.strip() for part in current.split(",") if part.strip()]
+            controls.append(checkbox_dropdown(key, label, options or [], selected, "divisions"))
         elif kind == "select":
-            opts = "".join(f'<option value="{esc(o)}">{esc(o) if o else "— select —"}</option>' for o in (options or []))
-            controls.append(f'<label class="stack">{esc(label)}<select name="{key}">{opts}</select></label>')
+            opts = "".join(
+                f'<option value="{esc(option)}"{" selected" if option == current else ""}>{esc(option) if option else "— select —"}</option>'
+                for option in (options or []))
+            controls.append(f'<label class="stack">{esc(label)}<select name="{key}"{required_mark}>{opts}</select></label>')
         elif kind == "textarea":
-            controls.append(f'<label class="wide">{esc(label)}<textarea name="{key}"></textarea></label>')
+            controls.append(f'<label class="wide">{esc(label)}<textarea name="{key}">{esc(current)}</textarea></label>')
         else:
             step = ' step="any"' if key in {"gpa", "max_tuition"} else ""
-            controls.append(f'<label>{esc(label)}<input type="{kind}" name="{key}"{step}{required_mark}></label>')
-    return (f'<form class="grid" method="post" action="{action}">{"".join(controls)}'
+            controls.append(f'<label>{esc(label)}<input type="{kind}" name="{key}" value="{esc(current)}"{step}{required_mark}></label>')
+    hidden = f'<input type="hidden" name="csrf_token" value="{esc(csrf)}">' if csrf else ""
+    return (f'<form class="grid" method="post" action="{esc(action)}">{hidden}{"".join(controls)}'
             f'<div class="wide actions"><button>{esc(submit_label)}</button></div></form>')
 
 
@@ -753,11 +901,69 @@ async def intake_payload(request: Request) -> dict:
     return data
 
 
+def notify_intake_submission(request: Request, db: Session, intake: PlayerIntake) -> None:
+    subject = f"New Jinx intake: {intake.player_name} ({intake.grad_year})"
+    detail_url = f"{public_base_url(request)}/intakes/{intake.id}"
+    message = (f"A new player and parent intake form was submitted.\n\n"
+               f"Player: {intake.player_name}\nClass: {intake.grad_year}\n"
+               f"Position: {intake.primary_position}\n\nReview the protected submission:\n{detail_url}")
+    try:
+        request_id = send_mail(db, expected_sender(), subject, message)
+    except OutlookError as exc:
+        db.rollback()
+        log(db, "intake_notification_failed", f"Intake #{intake.id} was saved, but Outlook notification failed: {exc}")
+        return
+    detail = f"Microsoft Graph accepted the intake notification for #{intake.id} to {expected_sender()}."
+    if request_id:
+        detail += f" Microsoft request {request_id}."
+    log(db, "intake_notification_sent", detail)
+
+
+def invitation_defaults(player: Player) -> dict[str, object]:
+    keys = ("grad_year", "primary_position", "secondary_position", "home_state", "player_email", "gpa", "sat_act",
+            "height", "weight", "throwing_hand", "batting_side", "home_to_first", "exit_velo", "pop_time",
+            "pitching_velo", "highlight_link")
+    defaults = {key: getattr(player, key) for key in keys if getattr(player, key, None) is not None}
+    defaults["player_name"] = player.name
+    defaults["parent_email"] = player.parent_email or ""
+    return defaults
+
+
+@app.get("/intake/invitation/{token}")
+def invited_intake_form(token: str, request: Request, db: Session = Depends(get_db)):
+    invitation = active_invitation(db, token)
+    if not invitation:
+        raise HTTPException(status_code=410, detail="This intake invitation is invalid, expired, or already used.")
+    player = get_or_404(db, Player, invitation.player_id)
+    intro = (f"<p>Please complete the recruiting profile and college preferences for <b>{esc(player.name)}</b>. "
+             "This one-time form link expires automatically after submission.</p>")
+    form = intake_form_html(f"/intake/invitation/{token}", defaults=invitation_defaults(player))
+    response = TEMPLATES.TemplateResponse(request, "embed.html", {"title": "Player & Parent Intake", "body": intro + form})
+    response.headers["Cache-Control"] = "no-store"
+    response.headers["Referrer-Policy"] = "no-referrer"
+    return response
+
+
+@app.post("/intake/invitation/{token}")
+async def invited_intake_submit(token: str, request: Request, db: Session = Depends(get_db)):
+    data = await intake_payload(request)
+    invitation = claim_invitation(db, token)
+    if not invitation:
+        db.rollback()
+        raise HTTPException(status_code=410, detail="This intake invitation is invalid, expired, or already used.")
+    intake = PlayerIntake(**data)
+    db.add(intake)
+    db.commit()
+    log(db, "intake", f"Secure intake form submitted for {intake.player_name} (class of {intake.grad_year}).")
+    notify_intake_submission(request, db, intake)
+    return redirect("/intake/thanks")
+
+
 @app.get("/intake")
 def intake_form(request: Request, embed: int = 0):
     intro = ("<p>Please share your athlete's profile and college preferences. "
              "It takes about five minutes, and anything that does not apply yet can be left blank.</p>")
-    form = intake_form_html("/intake" + ("?embed=1" if embed else ""))
+    form = intake_form_html("/intake" + ("?embed=1" if embed else ""), csrf=csrf_token(request))
     if embed:
         return TEMPLATES.TemplateResponse(request, "embed.html", {"title": "Player & Parent Intake", "body": intro + form})
     return page(request, "Player & Parent Intake", f'<section class="card">{intro}{form}</section>',
@@ -766,10 +972,13 @@ def intake_form(request: Request, embed: int = 0):
 
 @app.post("/intake")
 async def intake_submit(request: Request, embed: int = 0, db: Session = Depends(get_db)):
+    form = await request.form()
+    verify_csrf(request, str(form.get("csrf_token", "")))
     data = await intake_payload(request)
     intake = PlayerIntake(**data)
     db.add(intake); db.commit()
     log(db, "intake", f"Intake form submitted for {intake.player_name} (class of {intake.grad_year}).")
+    notify_intake_submission(request, db, intake)
     return redirect(f"/intake/thanks{'?embed=1' if embed else ''}")
 
 
@@ -777,9 +986,10 @@ async def intake_submit(request: Request, embed: int = 0, db: Session = Depends(
 def intake_thanks(request: Request, embed: int = 0):
     message = ("<h2>Thank you</h2><p>Your information was received. We will use it to build school lists "
                "and coach outreach for your athlete.</p>")
-    if embed:
-        return TEMPLATES.TemplateResponse(request, "embed.html", {"title": "Submission received", "body": message})
-    return page(request, "Submission Received", f'<section class="card">{message}<div class="actions"><a class="button secondary" href="/intake">Submit another</a></div></section>')
+    response = TEMPLATES.TemplateResponse(request, "embed.html", {"title": "Submission received", "body": message})
+    response.headers["Cache-Control"] = "no-store"
+    response.headers["Referrer-Policy"] = "no-referrer"
+    return response
 
 
 @app.get("/intakes")
