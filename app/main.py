@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import html
+import math
 import os
 import secrets
 from contextlib import asynccontextmanager
@@ -9,7 +10,7 @@ from pathlib import Path
 from urllib.parse import quote
 
 from PIL import Image as PILImage, ImageOps
-from fastapi import Depends, FastAPI, File, HTTPException, Query, Request, UploadFile
+from fastapi import Depends, FastAPI, File, Form, HTTPException, Query, Request, UploadFile
 from fastapi.responses import RedirectResponse, Response
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -267,6 +268,32 @@ def thumbnail_html(player: Player, size: str = "thumb-lg") -> str:
     return f'<span class="{size} thumb-placeholder" aria-hidden="true">{esc(initials)}</span>'
 
 
+def thumbnail_crop_box(image: PILImage.Image, values: tuple[str, str, str, str]) -> tuple[int, int, int, int]:
+    """Convert browser-normalized crop values into a validated source-pixel box."""
+    if not all(value.strip() for value in values):
+        side = min(image.width, image.height)
+        left = (image.width - side) // 2
+        top = (image.height - side) // 2
+        return left, top, left + side, top + side
+    try:
+        x, y, width, height = (float(value) for value in values)
+    except ValueError:
+        raise HTTPException(status_code=422, detail="The thumbnail crop values are invalid.")
+    numbers = (x, y, width, height)
+    if (not all(math.isfinite(value) for value in numbers) or x < 0 or y < 0 or
+            width <= 0 or height <= 0 or x + width > 1.001 or y + height > 1.001):
+        raise HTTPException(status_code=422, detail="The thumbnail crop is outside the image.")
+    pixel_width = width * image.width
+    pixel_height = height * image.height
+    if abs(pixel_width - pixel_height) > max(pixel_width, pixel_height) * 0.03:
+        raise HTTPException(status_code=422, detail="The thumbnail crop must be square.")
+    left = max(0, min(image.width - 1, round(x * image.width)))
+    top = max(0, min(image.height - 1, round(y * image.height)))
+    right = max(left + 1, min(image.width, round((x + width) * image.width)))
+    bottom = max(top + 1, min(image.height, round((y + height) * image.height)))
+    return left, top, right, bottom
+
+
 def log(db: Session, kind: str, detail: str) -> None:
     db.add(ActivityLog(kind=kind, detail=detail)); db.commit()
 
@@ -463,14 +490,24 @@ async def player_create(request: Request, db: Session = Depends(get_db)):
 @app.get("/players/{player_id}")
 def player_detail(player_id: int, request: Request, db: Session = Depends(get_db)):
     player = get_or_404(db, Player, player_id)
-    remove_button = (f'<form method="post" action="/players/{player.id}/photo/delete"><button class="button secondary">Remove</button></form>'
+    remove_button = (f'<form method="post" action="/players/{player.id}/photo/delete" class="photo-remove">'
+                     f'<button class="button secondary">Remove current thumbnail</button></form>'
                      if photo_url(player) else "")
     body = (f'<section class="player-head">{thumbnail_html(player)}'
             f'<div class="photo-upload"><h2>{esc(player.name)}</h2>'
-            f'<form method="post" action="/players/{player.id}/photo" enctype="multipart/form-data" class="actions">'
-            f'<input type="file" name="photo" accept="image/*" required>'
-            f'<button>Upload thumbnail</button>{remove_button}</form>'
-            f'<p class="muted">JPEG, PNG, WebP, or GIF up to 8 MB. Resized to a {THUMB_SIZE[0]}px thumbnail on upload.</p>'
+            f'<form method="post" action="/players/{player.id}/photo" enctype="multipart/form-data" data-photo-crop>'
+            f'<div class="actions"><input type="file" name="photo" accept="image/jpeg,image/png,image/webp,image/gif" required>'
+            f'<button>Save selected thumbnail</button></div>'
+            f'<div class="crop-editor" data-crop-editor hidden>'
+            f'<p><b>Select the thumbnail area.</b> Drag the square window over the picture. Use the slider to resize it.</p>'
+            f'<div class="crop-stage" data-crop-stage><img data-crop-image alt="Selected image preview">'
+            f'<div class="crop-window" data-crop-window tabindex="0" role="application" aria-label="Thumbnail crop area"></div></div>'
+            f'<label class="crop-size">Crop window size<input type="range" min="20" max="100" value="100" data-crop-size></label>'
+            f'</div>'
+            f'<input type="hidden" name="crop_x"><input type="hidden" name="crop_y">'
+            f'<input type="hidden" name="crop_width"><input type="hidden" name="crop_height">'
+            f'</form>{remove_button}'
+            f'<p class="muted">JPEG, PNG, WebP, or GIF up to 8 MB. Your selected area is saved as a {THUMB_SIZE[0]}×{THUMB_SIZE[1]}px thumbnail.</p>'
             f'</div></section>')
     body += f'<div class="actions"><a class="button" href="/players/{player.id}/edit">Edit player</a><a class="button secondary" href="/players/{player.id}/metrics">Metrics dashboard</a><a class="button secondary" href="/school-lists/{player.id}">Recommended schools</a><a class="button secondary" href="/flyers/player/{player.id}">Flyer preview</a><a class="button secondary" href="/email/compose?player_id={player.id}">Compose email</a><form method="post" action="/players/{player.id}/delete"><button class="button danger">Delete</button></form></div>'
     body += facts(player, [("grad_year", "Graduation year"), ("primary_position", "Primary position"), ("secondary_position", "Secondary position"), ("home_state", "Home state"), ("intended_major", "Intended major"), ("player_email", "Player email"), ("parent_email", "Parent email"), ("gpa", "GPA"), ("sat_act", "SAT / ACT"), ("height", "Height"), ("weight", "Weight"), ("throwing_hand", "Throws"), ("batting_side", "Bats"), ("highlight_link", "Highlight video"), ("social_handles", "Social"), ("notes", "Notes")])
@@ -497,12 +534,16 @@ def player_delete(player_id: int, db: Session = Depends(get_db)):
 
 
 @app.post("/players/{player_id}/photo")
-async def player_photo_upload(player_id: int, photo: UploadFile = File(...), db: Session = Depends(get_db)):
-    """Store an uploaded picture as the player's thumbnail.
-
-    The upload is re-encoded through Pillow, so only genuine images are saved, the
-    file name is generated server-side, and camera metadata is dropped.
-    """
+async def player_photo_upload(
+    player_id: int,
+    photo: UploadFile = File(...),
+    crop_x: str = Form(""),
+    crop_y: str = Form(""),
+    crop_width: str = Form(""),
+    crop_height: str = Form(""),
+    db: Session = Depends(get_db),
+):
+    """Validate an uploaded image and store the exact user-selected square crop."""
     player = get_or_404(db, Player, player_id)
     data = await photo.read(MAX_PHOTO_BYTES + 1)
     if not data:
@@ -515,14 +556,15 @@ async def player_photo_upload(player_id: int, photo: UploadFile = File(...), db:
         image = ImageOps.exif_transpose(image).convert("RGB")
     except Exception:
         raise HTTPException(status_code=422, detail="That file could not be read as an image.")
-    image.thumbnail(THUMB_SIZE)
+    box = thumbnail_crop_box(image, (crop_x, crop_y, crop_width, crop_height))
+    image = image.crop(box).resize(THUMB_SIZE, PILImage.Resampling.LANCZOS)
     PHOTO_DIR.mkdir(parents=True, exist_ok=True)
     target = PHOTO_DIR / f"player-{player.id}.jpg"
-    image.save(target, "JPEG", quality=85, optimize=True)
+    image.save(target, "JPEG", quality=88, optimize=True)
     player.photo_path = f"uploads/players/{target.name}"
     db.commit()
-    log(db, "photo", f"Uploaded thumbnail for {player.name}.")
-    return redirect(f"/players/{player.id}", "Thumbnail updated.")
+    log(db, "photo", f"Uploaded selected thumbnail crop for {player.name}.")
+    return redirect(f"/players/{player.id}", "Thumbnail crop updated.")
 
 
 @app.post("/players/{player_id}/photo/delete")

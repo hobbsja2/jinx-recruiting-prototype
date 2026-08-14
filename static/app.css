@@ -39,3 +39,16 @@ code{background:#eef2f7;border-radius:3px;padding:1px 4px}
 .thumb-lg.thumb-placeholder{font-size:42px}
 .thumb-sm.thumb-placeholder{font-size:15px}
 @media(max-width:800px){.player-head{flex-direction:column;align-items:flex-start}}
+
+.crop-editor{background:#f3f6fa;border:1px solid #c7d0dd;border-radius:8px;margin-top:14px;padding:14px}
+.crop-editor[hidden]{display:none}
+.crop-editor p{margin:0 0 10px}
+.crop-stage{background:#111;border-radius:6px;display:inline-block;line-height:0;max-width:100%;overflow:hidden;position:relative;user-select:none}
+.crop-stage img{display:block;height:auto;max-height:440px;max-width:100%;pointer-events:none;width:auto}
+.crop-window{border:3px solid #7ed957;box-shadow:0 0 0 9999px rgba(0,0,0,.52);box-sizing:border-box;cursor:move;left:0;position:absolute;top:0;touch-action:none;will-change:transform}
+.crop-window::after{border:1px dashed rgba(255,255,255,.85);content:"";inset:33.333%;position:absolute}
+.crop-window:focus{outline:3px solid #fff;outline-offset:-6px}
+.crop-window.dragging{cursor:grabbing}
+.crop-size{display:flex;flex-direction:column;font-weight:600;gap:5px;margin-top:10px;max-width:440px}
+.crop-size input{width:100%}
+.photo-remove{margin-top:8px}
