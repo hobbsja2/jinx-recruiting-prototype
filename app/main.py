@@ -160,6 +160,28 @@ def get_or_404(db: Session, model, item_id: int):
     return item
 
 
+def optional_query_id(value: str | None, field: str) -> int | None:
+    """Treat a blank optional ID as absent while rejecting malformed values."""
+    text = (value or "").strip()
+    if not text:
+        return None
+    try:
+        item_id = int(text)
+    except ValueError:
+        raise HTTPException(status_code=422, detail=f"{field} must be a valid integer.")
+    if item_id < 1:
+        raise HTTPException(status_code=422, detail=f"{field} must be a positive integer.")
+    return item_id
+
+
+def optional_player_id(player_id: str | None = None) -> int | None:
+    return optional_query_id(player_id, "player_id")
+
+
+def optional_college_id(college_id: str | None = None) -> int | None:
+    return optional_query_id(college_id, "college_id")
+
+
 def value(item: object | None, key: str) -> str:
     return "" if item is None or getattr(item, key, None) is None else str(getattr(item, key))
 
@@ -380,7 +402,9 @@ async def college_create(request: Request, db: Session = Depends(get_db)):
 
 
 @app.get("/colleges/{college_id}")
-def college_detail(college_id: int, request: Request, player_id: int | None = None, db: Session = Depends(get_db)):
+def college_detail(college_id: int, request: Request,
+                   player_id: int | None = Depends(optional_player_id),
+                   db: Session = Depends(get_db)):
     college = get_or_404(db, College, college_id)
     player = db.get(Player, player_id) if player_id else None
     need_rows = "".join(f'<tr><td>{esc(n.class_year)}</td><td>{esc(n.position)}</td><td>{esc(n.pitching_profile or n.hitting_profile)}</td><td><a href="/needs/{n.id}/edit">Edit</a></td></tr>' for n in college.needs) or '<tr><td colspan="4">No team needs recorded.</td></tr>'
@@ -1013,7 +1037,13 @@ def college_for_email(db: Session, email: str) -> College | None:
 
 
 @app.get("/email/compose")
-def email_compose(request: Request, template: str = "intro", player_id: int | None = None, college_id: int | None = None, db: Session = Depends(get_db)):
+def email_compose(
+    request: Request,
+    template: str = "intro",
+    player_id: int | None = Depends(optional_player_id),
+    college_id: int | None = Depends(optional_college_id),
+    db: Session = Depends(get_db),
+):
     chosen = EMAIL_TEMPLATES.get(template, EMAIL_TEMPLATES["intro"])
     connection = outlook_status(db)
     family = chosen.audience == "family"
