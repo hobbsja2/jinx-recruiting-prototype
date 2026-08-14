@@ -10,6 +10,7 @@ A FastAPI + Jinja2 recruiting workflow application backed by SQLite locally or N
 - Database-backed cropped player thumbnails that survive App Service restarts and deployments
 - Microsoft Outlook OAuth with delegated `Mail.Send` only
 - Real email delivery through Microsoft Graph (no mailbox-read permission)
+- Optional local PDF/image attachment on every email template, streamed to Graph without application storage
 - Random one-time intake invitation links stored as SHA-256 hashes
 - Encrypted MSAL token-cache storage using Fernet
 - Intake submission notifications sent to `jinxhsdrecruiting@outlook.com`
@@ -37,7 +38,7 @@ Use a separate Microsoft identity app registration for mail delivery; do not reu
 5. Generate independent strong values for `SESSION_SECRET` and `OUTLOOK_TOKEN_ENCRYPTION_KEY`.
 6. Open **Integrations**, select **Connect Outlook**, sign in as `jinxhsdrecruiting@outlook.com`, and complete Microsoft consent.
 
-The Outlook password is never handled by this application. Microsoft Graph HTTP 202 means a message was accepted for processing, not proof of final delivery. If a network timeout occurs, check Outlook Sent Items before retrying. Rotating the Fernet key invalidates the saved token cache and requires reconnecting Outlook.
+The Outlook password is never handled by this application. Every email template accepts one optional PDF, PNG, JPG, or JPEG attachment up to 2 MB; the request-scoped file is sent directly to Microsoft Graph and is not retained by the application. Microsoft Graph HTTP 202 means a message was accepted for processing, not proof of final delivery. If a network timeout occurs, check Outlook Sent Items before retrying. Rotating the Fernet key invalidates the saved token cache and requires reconnecting Outlook.
 
 ## Undergraduate degree catalog
 
@@ -75,4 +76,4 @@ The existing Azure staging application runs on Linux App Service F1. Store secre
 
 ## Still deferred
 
-Automatic file attachments, QR codes, charts, unattended external-data scheduling, and scheduled recruiting sequences are not enabled.
+Automatically generated attachments, QR codes, charts, unattended external-data scheduling, and scheduled recruiting sequences are not enabled.

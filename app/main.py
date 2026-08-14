@@ -16,6 +16,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from sqlalchemy import and_, func, or_, select
 from sqlalchemy.orm import Session, selectinload
+from starlette.datastructures import UploadFile as StarletteUploadFile
 from starlette.middleware.sessions import SessionMiddleware
 
 from .database import Base, engine, get_db, sync_sqlite_columns
@@ -26,6 +27,7 @@ from .models import (
     CollegeProgram, CollegeProgramDetail, Player, PlayerIntake, PlayerPhoto, TeamNeed,
 )
 from .outlook import (
+    MailAttachment,
     OutlookError,
     complete_authorization,
     disconnect as disconnect_outlook,
@@ -44,6 +46,13 @@ ROOT = Path(__file__).resolve().parent.parent
 TEMPLATES = Jinja2Templates(directory=str(ROOT / "templates"))
 STATIC_ROOT = (ROOT / "static").resolve()
 MAX_PHOTO_BYTES = 8 * 1024 * 1024
+MAX_EMAIL_ATTACHMENT_BYTES = 2 * 1024 * 1024
+EMAIL_ATTACHMENT_TYPES = {
+    ".pdf": "application/pdf",
+    ".png": "image/png",
+    ".jpg": "image/jpeg",
+    ".jpeg": "image/jpeg",
+}
 THUMB_SIZE = (480, 480)
 INTAKE_LINK_PLACEHOLDER = "[A secure one-time intake link will be inserted when this email is sent]"
 LOCAL_SESSION_SECRET = secrets.token_urlsafe(48)
@@ -174,12 +183,46 @@ def optional_query_id(value: str | None, field: str) -> int | None:
     return item_id
 
 
-def optional_player_id(player_id: str | None = None) -> int | None:
-    return optional_query_id(player_id, "player_id")
-
-
-def optional_college_id(college_id: str | None = None) -> int | None:
-    return optional_query_id(college_id, "college_id")
+async def email_attachment(form) -> MailAttachment | None:
+    """Validate one optional request-scoped attachment and close its upload."""
+    uploads = [item for item in form.getlist("attachment") if isinstance(item, StarletteUploadFile)]
+    selected = [item for item in uploads if (item.filename or "").strip()]
+    try:
+        if len(selected) > 1:
+            raise HTTPException(status_code=422, detail="Attach no more than one file.")
+        if not selected:
+            return None
+        upload = selected[0]
+        name = (upload.filename or "").strip()
+        if (len(name) > 120 or name in {".", ".."} or "/" in name or "\\" in name or
+                any(ord(character) < 32 for character in name)):
+            raise HTTPException(status_code=422, detail="The attachment filename is invalid.")
+        suffix = Path(name).suffix.lower()
+        content_type = EMAIL_ATTACHMENT_TYPES.get(suffix)
+        if content_type is None:
+            raise HTTPException(status_code=422, detail="Attach a PDF, PNG, JPG, or JPEG file.")
+        claimed_type = (upload.content_type or "").lower()
+        valid_claims = {"", "application/octet-stream", content_type}
+        if suffix in {".jpg", ".jpeg"}:
+            valid_claims.add("image/jpg")
+        if claimed_type not in valid_claims:
+            raise HTTPException(status_code=422, detail="The attachment type does not match its filename.")
+        content = await upload.read(MAX_EMAIL_ATTACHMENT_BYTES + 1)
+        if not content:
+            raise HTTPException(status_code=422, detail="The attachment is empty.")
+        if len(content) > MAX_EMAIL_ATTACHMENT_BYTES:
+            raise HTTPException(status_code=413, detail="The attachment is larger than the 2 MB limit.")
+        valid_signature = (
+            (suffix == ".pdf" and content.startswith(b"%PDF-")) or
+            (suffix == ".png" and content.startswith(b"\x89PNG\r\n\x1a\n")) or
+            (suffix in {".jpg", ".jpeg"} and content.startswith(b"\xff\xd8\xff"))
+        )
+        if not valid_signature:
+            raise HTTPException(status_code=422, detail="The attachment content does not match its file type.")
+        return MailAttachment(name=name, content_type=content_type, content=content)
+    finally:
+        for upload in uploads:
+            await upload.close()
 
 
 def value(item: object | None, key: str) -> str:
@@ -403,10 +446,11 @@ async def college_create(request: Request, db: Session = Depends(get_db)):
 
 @app.get("/colleges/{college_id}")
 def college_detail(college_id: int, request: Request,
-                   player_id: int | None = Depends(optional_player_id),
+                   player_id: str | None = None,
                    db: Session = Depends(get_db)):
     college = get_or_404(db, College, college_id)
-    player = db.get(Player, player_id) if player_id else None
+    selected_player_id = optional_query_id(player_id, "player_id")
+    player = db.get(Player, selected_player_id) if selected_player_id else None
     need_rows = "".join(f'<tr><td>{esc(n.class_year)}</td><td>{esc(n.position)}</td><td>{esc(n.pitching_profile or n.hitting_profile)}</td><td><a href="/needs/{n.id}/edit">Edit</a></td></tr>' for n in college.needs) or '<tr><td colspan="4">No team needs recorded.</td></tr>'
     degree_rows = db.execute(
         select(AcademicProgram, CollegeProgram)
@@ -1040,17 +1084,19 @@ def college_for_email(db: Session, email: str) -> College | None:
 def email_compose(
     request: Request,
     template: str = "intro",
-    player_id: int | None = Depends(optional_player_id),
-    college_id: int | None = Depends(optional_college_id),
+    player_id: str | None = None,
+    college_id: str | None = None,
     db: Session = Depends(get_db),
 ):
+    selected_player_id = optional_query_id(player_id, "player_id")
+    selected_college_id = optional_query_id(college_id, "college_id")
     chosen = EMAIL_TEMPLATES.get(template, EMAIL_TEMPLATES["intro"])
     connection = outlook_status(db)
     family = chosen.audience == "family"
     colleges = [c for c in db.scalars(select(College).order_by(College.name)).all() if primary_email(c)]
     players = db.scalars(select(Player).order_by(Player.name)).all()
-    college = get_or_404(db, College, college_id) if college_id else (None if family else (colleges[0] if colleges else None))
-    player = get_or_404(db, Player, player_id) if player_id else None
+    college = get_or_404(db, College, selected_college_id) if selected_college_id else (None if family else (colleges[0] if colleges else None))
+    player = get_or_404(db, Player, selected_player_id) if selected_player_id else None
     if family and player is None:
         player = next((p for p in players if p.player_email or p.parent_email), players[0] if players else None)
     form_url = INTAKE_LINK_PLACEHOLDER if chosen.embeds_form else public_base_url(request) + "/intake"
@@ -1087,18 +1133,23 @@ def email_compose(
                     '<iframe class="embed-frame" src="/intake?embed=1" title="Player and parent intake form"></iframe>'
                     '<div class="actions"><a class="button secondary" href="/intake" target="_blank" rel="noopener">Open admin preview</a>'
                     '<a class="button secondary" href="/intakes">View submissions</a></div></section>')
-    attachment_note = (f'<div class="wide notice">{esc(chosen.attachments)} is a template label only and is not attached yet.</div>'
-                       if chosen.attachments else "")
+    attachment_note = (f'<div class="wide notice">Suggested attachment: {esc(chosen.attachments)}. '
+                       'Select it below if you want it included.</div>' if chosen.attachments else "")
+    attachment_control = (
+        '<label class="wide">Attach flyer or file (optional)'
+        '<input type="file" name="attachment" accept=".pdf,.png,.jpg,.jpeg,application/pdf,image/png,image/jpeg"></label>'
+        '<p class="wide muted">PDF, PNG, JPG, or JPEG up to 2 MB. The file is sent directly to Outlook and is not stored by this site.</p>'
+    )
     hidden = (f'<input type="hidden" name="csrf_token" value="{esc(csrf_token(request))}">'
               f'<input type="hidden" name="player_id" value="{player.id if player else ""}">'
               f'<input type="hidden" name="college_id" value="{college.id if college else ""}">'
               f'<input type="hidden" name="template" value="{chosen.key}">')
     send_control = ('<button>Send with Outlook</button>' if connection.connected
                     else '<a class="button" href="/integrations">Connect Outlook to send</a>')
-    compose = (f'<div class="card"><form class="grid" method="post" action="/email/send">{hidden}'
+    compose = (f'<div class="card"><form class="grid" method="post" action="/email/send" enctype="multipart/form-data">{hidden}'
                f'<label class="wide">To<input name="recipients" value="{esc(recipient)}" required></label>'
                f'<label class="wide">Subject<input name="subject" value="{esc(subject)}" required></label>'
-               f'{attachment_note}'
+               f'{attachment_note}{attachment_control}'
                f'<label class="wide">Message<textarea name="body" rows="16">{esc(message)}</textarea></label>'
                f'<div class="wide actions"><a class="button secondary" href="/integrations">Back to templates</a>{send_control}</div></form></div>')
     state_notice = (f'Connected as {esc(connection.account_email)}. Messages are saved in Outlook Sent Items.'
@@ -1112,6 +1163,7 @@ def email_compose(
 async def email_send(request: Request, db: Session = Depends(get_db)):
     form = await request.form()
     verify_csrf(request, str(form.get("csrf_token", "")))
+    attachment = await email_attachment(form)
     recipient = str(form.get("recipients", "")).strip()
     subject = str(form.get("subject", "")).strip()
     body = str(form.get("body", "")).strip()
@@ -1142,20 +1194,23 @@ async def email_send(request: Request, db: Session = Depends(get_db)):
     # ambiguous; committing first ensures any link Microsoft accepted remains valid.
     db.commit()
     try:
-        request_id = send_mail(db, recipient, subject, body)
+        request_id = send_mail(db, recipient, subject, body, attachment)
     except OutlookError as exc:
         db.rollback()
         log(db, "email_failed", f'Failed "{chosen.label}" email to {recipient}: {exc}')
-        return redirect(target, str(exc))
+        retry_note = " Reselect the attachment before retrying." if attachment else ""
+        return redirect(target, f"{exc}{retry_note}")
 
     coach = (matched.head_coach if matched and matched.head_coach else "family" if chosen.audience == "family" else "recipient")
     detail = f'Microsoft Graph accepted "{chosen.label}" email to {coach} at {recipient}.'
+    if attachment:
+        detail += f' Attached file "{attachment.name}".'
     if request_id:
         detail += f" Microsoft request {request_id}."
     db.add(ActivityLog(kind="email_sent", detail=detail))
     db.commit()
-    attachment_notice = f" {chosen.attachments} was not attached." if chosen.attachments else ""
-    return redirect(target, f"Email accepted by Outlook.{attachment_notice}")
+    attachment_notice = f' with {attachment.name} attached' if attachment else ""
+    return redirect(target, f"Email{attachment_notice} accepted by Outlook.")
 
 
 @app.post("/workflow/start")

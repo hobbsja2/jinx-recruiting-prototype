@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import base64
 import json
 import os
 import re
@@ -21,6 +22,7 @@ DEFAULT_SENDER = "jinxhsdrecruiting@outlook.com"
 EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 MAX_SUBJECT_LENGTH = 998
 MAX_BODY_LENGTH = 100_000
+MAX_GRAPH_PAYLOAD_BYTES = 3_500_000
 
 
 class OutlookError(RuntimeError):
@@ -37,6 +39,14 @@ class OutlookStatus:
     connected: bool
     account_email: str = ""
     detail: str = ""
+
+
+@dataclass(frozen=True)
+class MailAttachment:
+    """Validated in-memory file to add to a Microsoft Graph message."""
+    name: str
+    content_type: str
+    content: bytes
 
 
 def expected_sender() -> str:
@@ -201,7 +211,13 @@ def _graph_error(exc: HTTPError) -> OutlookError:
     return OutlookError(f"Microsoft Graph could not accept the message ({code}, HTTP {exc.code}).")
 
 
-def send_mail(db: Session, recipient_text: str, subject: str, body: str) -> str:
+def send_mail(
+    db: Session,
+    recipient_text: str,
+    subject: str,
+    body: str,
+    attachment: MailAttachment | None = None,
+) -> str:
     connection = _connection(db)
     if not connection or connection.account_email.lower() != expected_sender():
         raise OutlookReconnectRequired("Connect the configured Outlook account before sending email.")
@@ -245,9 +261,19 @@ def send_mail(db: Session, recipient_text: str, subject: str, body: str) -> str:
         },
         "saveToSentItems": True,
     }
+    if attachment is not None:
+        payload["message"]["attachments"] = [{
+            "@odata.type": "#microsoft.graph.fileAttachment",
+            "name": attachment.name,
+            "contentType": attachment.content_type,
+            "contentBytes": base64.b64encode(attachment.content).decode("ascii"),
+        }]
+    encoded_payload = json.dumps(payload).encode("utf-8")
+    if len(encoded_payload) > MAX_GRAPH_PAYLOAD_BYTES:
+        raise OutlookError("The attachment and message are too large to send together. Choose a smaller file.")
     request = Request(
         GRAPH_SEND_URL,
-        data=json.dumps(payload).encode("utf-8"),
+        data=encoded_payload,
         headers={"Authorization": f"Bearer {result['access_token']}", "Content-Type": "application/json"},
         method="POST",
     )
