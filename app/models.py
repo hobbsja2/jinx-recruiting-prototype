@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from datetime import datetime
-from sqlalchemy import Boolean, CheckConstraint, DateTime, Float, ForeignKey, Integer, String, Text, UniqueConstraint
+from sqlalchemy import Boolean, CheckConstraint, DateTime, Float, ForeignKey, Integer, LargeBinary, String, Text, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from .database import Base
 
@@ -183,6 +183,23 @@ class Player(Base):
     photo_path: Mapped[str | None] = mapped_column(String(400))
     social_handles: Mapped[str | None] = mapped_column(String(300))
     notes: Mapped[str | None] = mapped_column(Text)
+
+
+class PlayerPhoto(Base):
+    """Persistent cropped thumbnail bytes for a player.
+
+    Keeping runtime uploads in the database prevents App Service deployments or
+    instance changes from discarding files while the player row survives.
+    """
+    __tablename__ = "player_photos"
+    player_id: Mapped[int] = mapped_column(
+        ForeignKey("players.id", ondelete="CASCADE"), primary_key=True,
+    )
+    content: Mapped[bytes] = mapped_column(LargeBinary)
+    content_type: Mapped[str] = mapped_column(String(80), default="image/jpeg")
+    updated_at: Mapped[datetime] = mapped_column(
+        DateTime, default=datetime.utcnow, onupdate=datetime.utcnow,
+    )
 
 
 class ActivityLog(Base):

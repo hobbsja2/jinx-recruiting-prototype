@@ -23,7 +23,7 @@ from .email_templates import EMAIL_SIGNATURE, TEMPLATES as EMAIL_TEMPLATES, rend
 from .intake_invitations import active_invitation, claim_invitation, create_invitation
 from .models import (
     AcademicProgram, AcademicProgramDetail, ActivityLog, College, CollegeMinor,
-    CollegeProgram, CollegeProgramDetail, Player, PlayerIntake, TeamNeed,
+    CollegeProgram, CollegeProgramDetail, Player, PlayerIntake, PlayerPhoto, TeamNeed,
 )
 from .outlook import (
     OutlookError,
@@ -43,7 +43,6 @@ from .seed import backfill_demo_contacts, seed_demo_data
 ROOT = Path(__file__).resolve().parent.parent
 TEMPLATES = Jinja2Templates(directory=str(ROOT / "templates"))
 STATIC_ROOT = (ROOT / "static").resolve()
-PHOTO_DIR = STATIC_ROOT / "uploads" / "players"
 MAX_PHOTO_BYTES = 8 * 1024 * 1024
 THUMB_SIZE = (480, 480)
 INTAKE_LINK_PLACEHOLDER = "[A secure one-time intake link will be inserted when this email is sent]"
@@ -243,14 +242,13 @@ def player_sort_key(player: Player) -> tuple:
 
 
 def photo_url(player: Player) -> str:
-    """Return a cache-busted URL for the player's stored thumbnail, or "" if none exists.
-
-    Paths are confined to the static directory so a stray database value cannot
-    point the page at an arbitrary file on disk.
-    """
+    """Return the player's persistent thumbnail URL, with legacy-file support."""
     relative = (getattr(player, "photo_path", "") or "").strip().replace("\\", "/")
     if not relative:
         return ""
+    if relative.startswith("db:"):
+        version = quote(relative.removeprefix("db:"), safe="")
+        return f"/players/{player.id}/thumbnail?v={version}"
     try:
         resolved = (STATIC_ROOT / relative).resolve()
     except (OSError, ValueError):
@@ -258,6 +256,18 @@ def photo_url(player: Player) -> str:
     if not resolved.is_file() or STATIC_ROOT not in resolved.parents:
         return ""
     return f"/static/{resolved.relative_to(STATIC_ROOT).as_posix()}?v={int(resolved.stat().st_mtime)}"
+
+
+def delete_stored_photo(db: Session, player: Player) -> None:
+    """Delete a database-backed thumbnail or a confined legacy local file."""
+    relative = (player.photo_path or "").strip().replace("\\", "/")
+    if relative.startswith("db:"):
+        stored = db.get(PlayerPhoto, player.id)
+        if stored is not None:
+            db.delete(stored)
+    elif photo_url(player):
+        (STATIC_ROOT / relative).unlink(missing_ok=True)
+    player.photo_path = None
 
 
 def thumbnail_html(player: Player, size: str = "thumb-lg") -> str:
@@ -476,6 +486,22 @@ def players(request: Request, db: Session = Depends(get_db)):
     return page(request, "Players", body, "Manage athlete profiles and recruiting materials")
 
 
+@app.get("/players/{player_id}/thumbnail")
+def player_thumbnail(player_id: int, db: Session = Depends(get_db)):
+    """Serve a persisted player thumbnail without relying on App Service disk."""
+    photo = db.get(PlayerPhoto, player_id)
+    if photo is None:
+        raise HTTPException(status_code=404, detail="Thumbnail not found.")
+    return Response(
+        content=photo.content,
+        media_type=photo.content_type,
+        headers={
+            "Cache-Control": "private, max-age=31536000, immutable",
+            "X-Content-Type-Options": "nosniff",
+        },
+    )
+
+
 @app.get("/players/new")
 def player_new(request: Request):
     return page(request, "Add Player", form_html("/players", PLAYER_FIELDS, None, "/players", "Save player"))
@@ -529,7 +555,10 @@ async def player_update(player_id: int, request: Request, db: Session = Depends(
 
 @app.post("/players/{player_id}/delete")
 def player_delete(player_id: int, db: Session = Depends(get_db)):
-    db.delete(get_or_404(db, Player, player_id)); db.commit()
+    player = get_or_404(db, Player, player_id)
+    delete_stored_photo(db, player)
+    db.delete(player)
+    db.commit()
     return redirect("/players", "Player deleted.")
 
 
@@ -558,10 +587,22 @@ async def player_photo_upload(
         raise HTTPException(status_code=422, detail="That file could not be read as an image.")
     box = thumbnail_crop_box(image, (crop_x, crop_y, crop_width, crop_height))
     image = image.crop(box).resize(THUMB_SIZE, PILImage.Resampling.LANCZOS)
-    PHOTO_DIR.mkdir(parents=True, exist_ok=True)
-    target = PHOTO_DIR / f"player-{player.id}.jpg"
-    image.save(target, "JPEG", quality=88, optimize=True)
-    player.photo_path = f"uploads/players/{target.name}"
+    encoded = BytesIO()
+    image.save(encoded, "JPEG", quality=88, optimize=True)
+    stored = db.get(PlayerPhoto, player.id)
+    if stored is None:
+        stored = PlayerPhoto(
+            player_id=player.id,
+            content=encoded.getvalue(),
+            content_type="image/jpeg",
+        )
+        db.add(stored)
+    else:
+        stored.content = encoded.getvalue()
+        stored.content_type = "image/jpeg"
+    # The opaque version marker changes on every upload so browsers never reuse
+    # an older crop. Image bytes themselves live in the persistent database.
+    player.photo_path = f"db:{secrets.token_urlsafe(12)}"
     db.commit()
     log(db, "photo", f"Uploaded selected thumbnail crop for {player.name}.")
     return redirect(f"/players/{player.id}", "Thumbnail crop updated.")
@@ -570,10 +611,7 @@ async def player_photo_upload(
 @app.post("/players/{player_id}/photo/delete")
 def player_photo_delete(player_id: int, db: Session = Depends(get_db)):
     player = get_or_404(db, Player, player_id)
-    url = photo_url(player)
-    if url:
-        (STATIC_ROOT / (player.photo_path or "").replace("\\", "/")).unlink(missing_ok=True)
-    player.photo_path = None
+    delete_stored_photo(db, player)
     db.commit()
     return redirect(f"/players/{player.id}", "Thumbnail removed.")
 

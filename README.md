@@ -7,6 +7,7 @@ A FastAPI + Jinja2 recruiting workflow application backed by SQLite locally or N
 - College, coach, player, and team-need management
 - Dashboard, player metrics, school-list matching, and PDF reports
 - Player/parent intake review and player-record creation
+- Database-backed cropped player thumbnails that survive App Service restarts and deployments
 - Microsoft Outlook OAuth with delegated `Mail.Send` only
 - Real email delivery through Microsoft Graph (no mailbox-read permission)
 - Random one-time intake invitation links stored as SHA-256 hashes
