@@ -90,7 +90,7 @@ def healthz(db: Session = Depends(get_db)):
 
 
 COLLEGE_FIELDS = [("name", "College name", "text", True), ("division", "Division", "text", True), ("conference", "Conference", "text", False), ("city", "City", "text", False), ("state", "State", "text", False), ("academic_ranking", "Academic profile", "text", False), ("tuition", "Annual tuition (in-state + housing)", "number", False), ("in_state_tuition", "In-state tuition", "number", False), ("out_of_state_tuition", "Out-of-state tuition", "number", False), ("housing_cost", "Housing cost", "number", False), ("financial_aid", "Financial aid", "textarea", False), ("head_coach", "Head coach", "text", False), ("recruiting_coordinator", "Recruiting coordinator", "text", False), ("coach_emails", "Coach emails", "text", False), ("coach_phones", "Coach phones", "text", False), ("roster_size", "Roster size", "number", False), ("scholarship_count", "Scholarships", "number", False), ("facilities_notes", "Facilities notes", "textarea", False), ("program_reputation", "Program reputation", "textarea", False), ("website_url", "Website", "url", False), ("notes", "Recruiting notes", "textarea", False)]
-PLAYER_FIELDS = [("name", "Player name", "text", True), ("grad_year", "Graduation year", "number", True), ("primary_position", "Primary position", "text", True), ("secondary_position", "Secondary position", "text", False), ("home_state", "Home state", "select", False), ("intended_major", "Intended major / field of study", "text", False), ("player_email", "Player email", "email", False), ("parent_email", "Parent/guardian email", "email", False), ("gpa", "GPA", "number", False), ("sat_act", "SAT / ACT", "text", False), ("height", "Height", "text", False), ("weight", "Weight", "text", False), ("throwing_hand", "Throwing hand", "text", False), ("batting_side", "Batting side", "text", False), ("home_to_first", "Home-to-first", "text", False), ("exit_velo", "Exit velocity", "text", False), ("pop_time", "Pop time", "text", False), ("pitching_velo", "Pitching velocity", "text", False), ("highlight_link", "Highlight link", "url", False), ("transcript_path", "Transcript path", "text", False), ("social_handles", "Social handles", "text", False), ("notes", "Recruiting notes", "textarea", False)]
+PLAYER_FIELDS = [("name", "Player name", "text", True), ("grad_year", "Graduation year", "number", True), ("primary_position", "Primary position", "text", True), ("secondary_position", "Secondary position", "text", False), ("home_state", "Home state", "select", False), ("intended_major", "Intended major / field of study", "text", False), ("player_email", "Player email", "email", False), ("parent_email", "Parent/guardian email", "email", False), ("gpa", "GPA", "number", False), ("sat_act", "SAT / ACT", "text", False), ("height", "Height", "text", False), ("throwing_hand", "Throwing hand", "text", False), ("batting_side", "Batting side", "text", False), ("home_to_first", "Home-to-first", "text", False), ("exit_velo", "Exit velocity", "text", False), ("pop_time", "Pop time", "text", False), ("pitching_velo", "Pitching velocity", "text", False), ("highlight_link", "Highlight link", "url", False), ("transcript_path", "Transcript path", "text", False), ("social_handles", "Social handles", "text", False), ("notes", "Recruiting notes", "textarea", False)]
 US_STATES = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA",
              "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM",
              "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA",
@@ -106,7 +106,7 @@ INTAKE_FIELDS = [
     ("parent_email", "Parent/guardian email", "email", False, None), ("phone", "Best phone number", "text", False, None),
     ("home_state", "Home state", "select", False, [""] + US_STATES),
     ("gpa", "GPA", "number", False, None), ("sat_act", "SAT / ACT", "text", False, None),
-    ("height", "Height", "text", False, None), ("weight", "Weight", "text", False, None),
+    ("height", "Height", "text", False, None),
     ("throwing_hand", "Throwing hand", "select", False, ["", "R", "L"]),
     ("batting_side", "Batting side", "select", False, ["", "R", "L", "Switch"]),
     ("home_to_first", "Home-to-first time", "text", False, None), ("exit_velo", "Exit velocity", "text", False, None),
@@ -510,7 +510,7 @@ def player_detail(player_id: int, request: Request, db: Session = Depends(get_db
             f'<p class="muted">JPEG, PNG, WebP, or GIF up to 8 MB. Your selected area is saved as a {THUMB_SIZE[0]}×{THUMB_SIZE[1]}px thumbnail.</p>'
             f'</div></section>')
     body += f'<div class="actions"><a class="button" href="/players/{player.id}/edit">Edit player</a><a class="button secondary" href="/players/{player.id}/metrics">Metrics dashboard</a><a class="button secondary" href="/school-lists/{player.id}">Recommended schools</a><a class="button secondary" href="/flyers/player/{player.id}">Flyer preview</a><a class="button secondary" href="/email/compose?player_id={player.id}">Compose email</a><form method="post" action="/players/{player.id}/delete"><button class="button danger">Delete</button></form></div>'
-    body += facts(player, [("grad_year", "Graduation year"), ("primary_position", "Primary position"), ("secondary_position", "Secondary position"), ("home_state", "Home state"), ("intended_major", "Intended major"), ("player_email", "Player email"), ("parent_email", "Parent email"), ("gpa", "GPA"), ("sat_act", "SAT / ACT"), ("height", "Height"), ("weight", "Weight"), ("throwing_hand", "Throws"), ("batting_side", "Bats"), ("highlight_link", "Highlight video"), ("social_handles", "Social"), ("notes", "Notes")])
+    body += facts(player, [("grad_year", "Graduation year"), ("primary_position", "Primary position"), ("secondary_position", "Secondary position"), ("home_state", "Home state"), ("intended_major", "Intended major"), ("player_email", "Player email"), ("parent_email", "Parent email"), ("gpa", "GPA"), ("sat_act", "SAT / ACT"), ("height", "Height"), ("throwing_hand", "Throws"), ("batting_side", "Bats"), ("highlight_link", "Highlight video"), ("social_handles", "Social"), ("notes", "Notes")])
     return page(request, player.name, body, "Player recruiting profile")
 
 
@@ -1171,7 +1171,7 @@ def notify_intake_submission(request: Request, db: Session, intake: PlayerIntake
 
 def invitation_defaults(player: Player) -> dict[str, object]:
     keys = ("grad_year", "primary_position", "secondary_position", "home_state", "player_email", "gpa", "sat_act",
-            "height", "weight", "throwing_hand", "batting_side", "home_to_first", "exit_velo", "pop_time",
+            "height", "throwing_hand", "batting_side", "home_to_first", "exit_velo", "pop_time",
             "pitching_velo", "highlight_link")
     defaults = {key: getattr(player, key) for key in keys if getattr(player, key, None) is not None}
     defaults["player_name"] = player.name
@@ -1268,7 +1268,7 @@ def intake_detail(intake_id: int, request: Request, db: Session = Depends(get_db
     body += facts(intake, [("grad_year", "Graduation year"), ("primary_position", "Primary position"), ("secondary_position", "Secondary position"),
                            ("home_state", "Home state"),
                            ("player_email", "Player email"), ("parent_name", "Parent/guardian"), ("parent_email", "Parent email"), ("phone", "Phone"),
-                           ("gpa", "GPA"), ("sat_act", "SAT / ACT"), ("height", "Height"), ("weight", "Weight"),
+                           ("gpa", "GPA"), ("sat_act", "SAT / ACT"), ("height", "Height"),
                            ("throwing_hand", "Throws"), ("batting_side", "Bats"), ("home_to_first", "Home-to-first"),
                            ("exit_velo", "Exit velocity"), ("pop_time", "Pop time"), ("pitching_velo", "Pitching velocity"),
                            ("highlight_link", "Highlight link"), ("intended_major", "Intended major"), ("max_tuition", "Maximum tuition"),
@@ -1281,7 +1281,7 @@ def intake_detail(intake_id: int, request: Request, db: Session = Depends(get_db
 def intake_create_player(intake_id: int, db: Session = Depends(get_db)):
     intake = get_or_404(db, PlayerIntake, intake_id)
     carried = ["grad_year", "primary_position", "secondary_position", "home_state", "intended_major", "player_email", "parent_email", "gpa", "sat_act",
-               "height", "weight", "throwing_hand", "batting_side", "home_to_first", "exit_velo", "pop_time",
+               "height", "throwing_hand", "batting_side", "home_to_first", "exit_velo", "pop_time",
                "pitching_velo", "highlight_link"]
     preferences = " | ".join(part for part in [
         f"Major: {intake.intended_major}" if intake.intended_major else "",
