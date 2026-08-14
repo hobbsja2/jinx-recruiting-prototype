@@ -20,7 +20,10 @@ from starlette.middleware.sessions import SessionMiddleware
 from .database import Base, engine, get_db, sync_sqlite_columns
 from .email_templates import EMAIL_SIGNATURE, TEMPLATES as EMAIL_TEMPLATES, render_template
 from .intake_invitations import active_invitation, claim_invitation, create_invitation
-from .models import AcademicProgram, ActivityLog, College, CollegeProgram, Player, PlayerIntake, TeamNeed
+from .models import (
+    AcademicProgram, AcademicProgramDetail, ActivityLog, College, CollegeMinor,
+    CollegeProgram, CollegeProgramDetail, Player, PlayerIntake, TeamNeed,
+)
 from .outlook import (
     OutlookError,
     complete_authorization,
@@ -288,11 +291,17 @@ def dashboard(request: Request, db: Session = Depends(get_db)):
 
 
 @app.get("/colleges")
-def colleges(request: Request, cip_code: str = "", division: list[str] = Query(default=[]), state: list[str] = Query(default=[]), max_tuition: str = "", db: Session = Depends(get_db)):
+def colleges(request: Request, cip_code: str = "", cip6_code: str = "", division: list[str] = Query(default=[]), state: list[str] = Query(default=[]), max_tuition: str = "", db: Session = Depends(get_db)):
     divisions = [d for d in division if d]; states = [s for s in state if s]
-    selected_program = db.scalar(select(AcademicProgram).where(AcademicProgram.cip_code == cip_code)) if cip_code else None
+    selected_detail = db.scalar(select(AcademicProgramDetail).where(AcademicProgramDetail.cip_code == cip6_code)) if cip6_code else None
+    selected_program = (db.get(AcademicProgram, selected_detail.parent_program_id) if selected_detail else
+                        (db.scalar(select(AcademicProgram).where(AcademicProgram.cip_code == cip_code)) if cip_code else None))
     query = select(College).order_by(College.name)
-    if selected_program:
+    if selected_detail:
+        query = (query.join(CollegeProgramDetail, CollegeProgramDetail.college_id == College.id)
+                 .where(CollegeProgramDetail.detail_program_id == selected_detail.id,
+                        CollegeProgramDetail.active.is_(True)))
+    elif selected_program:
         query = (query.join(CollegeProgram, CollegeProgram.college_id == College.id)
                  .where(CollegeProgram.program_id == selected_program.id, CollegeProgram.active.is_(True)))
     if divisions: query = query.where(College.division.in_(divisions))
@@ -303,10 +312,14 @@ def colleges(request: Request, cip_code: str = "", division: list[str] = Query(d
         except ValueError: pass
     items = db.scalars(query).unique().all()
     degree_options = '<option value="">All undergraduate majors</option>' + "".join(
-        f'<option value="{esc(p.cip_code)}"{" selected" if selected_program and p.id == selected_program.id else ""}>{esc(p.name)}</option>'
+        f'<option value="{esc(p.cip_code)}"{" selected" if selected_program and not selected_detail and p.id == selected_program.id else ""}>{esc(p.name)}</option>'
         for p in program_choices(db))
+    detail_options = '<option value="">All detailed fields / specializations</option>' + "".join(
+        f'<option value="{esc(p.cip_code)}"{" selected" if selected_detail and p.id == selected_detail.id else ""}>{esc(p.name)} ({esc(p.cip_code)})</option>'
+        for p in detail_choices(db))
     filter_form = (f'<form class="filters" method="get">'
-                   f'<label class="stack">Undergraduate major<select name="cip_code">{degree_options}</select></label>'
+                   f'<label class="stack">Detailed field / specialization<select name="cip6_code">{detail_options}</select></label>'
+                   f'<label class="stack">Broad undergraduate major<select name="cip_code">{degree_options}</select></label>'
                    f'{checkbox_dropdown("division", "Division", distinct_values(db, College.division), divisions, "divisions")}'
                    f'{checkbox_dropdown("state", "State", distinct_values(db, College.state), states, "states")}'
                    f'<label class="stack">Maximum tuition<input name="max_tuition" placeholder="e.g. 30000" value="{esc(max_tuition)}"></label>'
@@ -344,6 +357,29 @@ def college_detail(college_id: int, request: Request, player_id: int | None = No
         f'<tr><td>{esc(program.name)}</td><td>{esc(offering.credential_title)}</td><td>{esc(program.cip_code)}</td></tr>'
         for program, offering in degree_rows
     ) or '<tr><td colspan="3">No undergraduate catalog has been loaded for this college.</td></tr>'
+    detail_rows = db.execute(
+        select(AcademicProgramDetail, CollegeProgramDetail, AcademicProgram)
+        .join(CollegeProgramDetail, CollegeProgramDetail.detail_program_id == AcademicProgramDetail.id)
+        .join(AcademicProgram, AcademicProgram.id == AcademicProgramDetail.parent_program_id)
+        .where(CollegeProgramDetail.college_id == college.id, CollegeProgramDetail.active.is_(True))
+        .order_by(AcademicProgram.name, AcademicProgramDetail.name, CollegeProgramDetail.credential_level)
+    ).all()
+    detail_table = "".join(
+        f'<tr><td>{esc(detail.name)}</td><td>{esc(parent.name)}</td>'
+        f'<td>{esc(offering.credential_title)}</td><td>{esc(detail.cip_code)}</td>'
+        f'<td>{offering.completion_count}</td></tr>'
+        for detail, offering, parent in detail_rows
+    ) or '<tr><td colspan="5">No recent IPEDS detailed-field evidence has been loaded.</td></tr>'
+    minor_rows = db.scalars(
+        select(CollegeMinor)
+        .where(CollegeMinor.college_id == college.id, CollegeMinor.active.is_(True))
+        .order_by(CollegeMinor.name)
+    ).all()
+    minor_table = "".join(
+        f'<tr><td>{esc(minor.name)}</td><td>{esc(minor.catalog_year) or "—"}</td>'
+        f'<td><a href="{esc(minor.source_url)}" target="_blank" rel="noopener">{esc(minor.source_name)}</a></td></tr>'
+        for minor in minor_rows
+    ) or '<tr><td colspan="3">No reviewed official-catalog minors have been loaded.</td></tr>'
     body = f'<div class="actions"><a class="button" href="/colleges/{college.id}/edit">Edit college</a><a class="button secondary" href="/needs/college/{college.id}/new">Add team need</a><form method="post" action="/colleges/{college.id}/delete"><button class="button danger">Delete</button></form></div>'
 
     # "View costs for player" selector: picking a player recomputes tuition in/out-of-state.
@@ -376,6 +412,12 @@ def college_detail(college_id: int, request: Request, player_id: int | None = No
 
     body += (f'<h2>Undergraduate degrees</h2><p class="muted">Federal College Scorecard field-of-study data; verify current availability with the college.</p>'
              f'<table><tr><th>Field of study</th><th>Credential</th><th>CIP</th></tr>{degree_table}</table>')
+    body += (f'<h2>Detailed degree fields and specializations</h2>'
+             f'<p class="muted">Six-digit CIP fields with 2024 IPEDS completions. These are recent completion evidence, not a complete or current catalog; verify named concentrations with the college.</p>'
+             f'<table><tr><th>Detailed field</th><th>Major family</th><th>Credential</th><th>CIP</th><th>Recent completions</th></tr>{detail_table}</table>')
+    body += (f'<h2>Available minors</h2>'
+             f'<p class="muted">Only minors reviewed against an official institutional catalog are shown. Missing data does not mean a college offers no minors.</p>'
+             f'<table><tr><th>Minor</th><th>Catalog year</th><th>Official source</th></tr>{minor_table}</table>')
     body += f'<h2>Team needs</h2><table><tr><th>Class</th><th>Position</th><th>Profile</th><th></th></tr>{need_rows}</table>'
     return page(request, college.name, body, "College recruiting profile")
 
@@ -592,7 +634,37 @@ def program_choices(db: Session) -> list[AcademicProgram]:
     ).all()
 
 
-def resolve_program(db: Session, player: Player, cip_code: str) -> AcademicProgram | None:
+def detail_choices(db: Session) -> list[AcademicProgramDetail]:
+    return db.scalars(
+        select(AcademicProgramDetail)
+        .join(CollegeProgramDetail)
+        .where(CollegeProgramDetail.active.is_(True))
+        .distinct()
+        .order_by(AcademicProgramDetail.name)
+    ).all()
+
+
+def resolve_detail(db: Session, player: Player, cip6_code: str) -> AcademicProgramDetail | None:
+    if cip6_code:
+        return db.scalar(select(AcademicProgramDetail).where(AcademicProgramDetail.cip_code == cip6_code))
+    intended = (player.intended_major or "").strip().lower()
+    if not intended:
+        return None
+    exact = db.scalar(select(AcademicProgramDetail).where(func.lower(AcademicProgramDetail.name) == intended))
+    if exact:
+        return exact
+    return db.scalar(
+        select(AcademicProgramDetail)
+        .where(func.lower(AcademicProgramDetail.name).contains(intended))
+        .order_by(func.length(AcademicProgramDetail.name))
+        .limit(1)
+    )
+
+
+def resolve_program(db: Session, player: Player, cip_code: str,
+                    detail: AcademicProgramDetail | None = None) -> AcademicProgram | None:
+    if detail:
+        return db.get(AcademicProgram, detail.parent_program_id)
     if cip_code:
         return db.scalar(select(AcademicProgram).where(AcademicProgram.cip_code == cip_code))
     intended = (player.intended_major or "").strip().lower()
@@ -616,9 +688,27 @@ def school_list_matches(
     states: list[str],
     max_tuition: str,
     program: AcademicProgram | None,
+    detail: AcademicProgramDetail | None = None,
 ):
     rows = []
-    if program:
+    offering_model = None
+    if detail:
+        offering_model = CollegeProgramDetail
+        query = (
+            select(College, CollegeProgramDetail, TeamNeed)
+            .join(CollegeProgramDetail, CollegeProgramDetail.college_id == College.id)
+            .outerjoin(TeamNeed, and_(
+                TeamNeed.college_id == College.id,
+                TeamNeed.class_year == player.grad_year,
+                TeamNeed.position == player.primary_position,
+            ))
+            .where(
+                CollegeProgramDetail.detail_program_id == detail.id,
+                CollegeProgramDetail.active.is_(True),
+            )
+        )
+    elif program:
+        offering_model = CollegeProgram
         query = (
             select(College, CollegeProgram, TeamNeed)
             .join(CollegeProgram, CollegeProgram.college_id == College.id)
@@ -629,31 +719,6 @@ def school_list_matches(
             ))
             .where(CollegeProgram.program_id == program.id, CollegeProgram.active.is_(True))
         )
-        if divisions: query = query.where(College.division.in_(divisions))
-        if states: query = query.where(College.state.in_(states))
-        if max_tuition:
-            try: query = query.where(or_(College.tuition <= float(max_tuition), College.tuition.is_(None)))
-            except ValueError: pass
-        # A CIP may be reported at both associate and bachelor levels. Collapse
-        # those associations so each college appears once while retaining every
-        # reported credential in the displayed degree label.
-        matches_by_college: dict[int, dict] = {}
-        for college, offering, need in db.execute(
-            query.order_by(College.name, CollegeProgram.credential_level)
-        ).all():
-            match = matches_by_college.setdefault(
-                college.id,
-                {"college": college, "need": need, "credentials": set()},
-            )
-            if need is not None:
-                match["need"] = need
-            match["credentials"].add(offering.credential_title)
-        for match in matches_by_college.values():
-            college = match["college"]
-            need = match["need"]
-            score = 100 + (25 if need else 0) + (5 if college.tuition and college.tuition < 30000 else 0)
-            credentials = " / ".join(sorted(match["credentials"]))
-            rows.append((college, need, score, credentials))
     else:
         query = (select(TeamNeed).join(TeamNeed.college).options(selectinload(TeamNeed.college))
                  .where(TeamNeed.class_year == player.grad_year, TeamNeed.position == player.primary_position))
@@ -666,12 +731,38 @@ def school_list_matches(
             college = need.college
             score = 100 + (5 if college.tuition and college.tuition < 30000 else 0)
             rows.append((college, need, score, None))
+        rows.sort(key=lambda row: (-row[2], row[0].name))
+        return rows
+
+    if divisions: query = query.where(College.division.in_(divisions))
+    if states: query = query.where(College.state.in_(states))
+    if max_tuition:
+        try: query = query.where(or_(College.tuition <= float(max_tuition), College.tuition.is_(None)))
+        except ValueError: pass
+    matches_by_college: dict[int, dict] = {}
+    for college, offering, need in db.execute(
+        query.order_by(College.name, offering_model.credential_level)
+    ).all():
+        match = matches_by_college.setdefault(
+            college.id, {"college": college, "need": need, "credentials": set()},
+        )
+        if need is not None:
+            match["need"] = need
+        match["credentials"].add(offering.credential_title)
+    for match in matches_by_college.values():
+        college = match["college"]
+        need = match["need"]
+        score = 100 + (25 if need else 0) + (5 if college.tuition and college.tuition < 30000 else 0)
+        rows.append((college, need, score, " / ".join(sorted(match["credentials"]))))
     rows.sort(key=lambda row: (-row[2], row[0].name))
     return rows
 
 
-def filter_summary(divisions: list[str], states: list[str], max_tuition: str, program: AcademicProgram | None) -> str:
-    parts = [f"Major: {program.name if program else 'Not selected'}",
+def filter_summary(divisions: list[str], states: list[str], max_tuition: str,
+                   program: AcademicProgram | None, detail: AcademicProgramDetail | None = None) -> str:
+    interest = detail.name if detail else (program.name if program else "Not selected")
+    label = "Specialization" if detail else "Major"
+    parts = [f"{label}: {interest}",
              f"Divisions: {', '.join(divisions) if divisions else 'All'}",
              f"States: {', '.join(states) if states else 'All'}"]
     if max_tuition: parts.append(f"Maximum tuition: ${max_tuition}")
@@ -679,17 +770,22 @@ def filter_summary(divisions: list[str], states: list[str], max_tuition: str, pr
 
 
 @app.get("/school-lists/{player_id}")
-def school_list(player_id: int, request: Request, cip_code: str = "", division: list[str] = Query(default=[]), state: list[str] = Query(default=[]), max_tuition: str = "", db: Session = Depends(get_db)):
+def school_list(player_id: int, request: Request, cip_code: str = "", cip6_code: str = "", division: list[str] = Query(default=[]), state: list[str] = Query(default=[]), max_tuition: str = "", db: Session = Depends(get_db)):
     player = get_or_404(db, Player, player_id)
     divisions = [d for d in division if d]; states = [s for s in state if s]
-    selected_program = resolve_program(db, player, cip_code)
-    matches = school_list_matches(db, player, divisions, states, max_tuition, selected_program)
-    programs = program_choices(db)
-    program_options = '<option value="">— select a major —</option>' + "".join(
-        f'<option value="{esc(p.cip_code)}"{" selected" if selected_program and p.id == selected_program.id else ""}>{esc(p.name)}</option>'
-        for p in programs)
+    selected_detail = resolve_detail(db, player, cip6_code) if cip6_code or not cip_code else None
+    selected_program = resolve_program(db, player, cip_code, selected_detail)
+    selected_interest = selected_detail or selected_program
+    matches = school_list_matches(db, player, divisions, states, max_tuition, selected_program, selected_detail)
+    program_options = '<option value="">— select a broad major —</option>' + "".join(
+        f'<option value="{esc(p.cip_code)}"{" selected" if selected_program and not selected_detail and p.id == selected_program.id else ""}>{esc(p.name)}</option>'
+        for p in program_choices(db))
+    detail_options = '<option value="">— select a detailed field / specialization —</option>' + "".join(
+        f'<option value="{esc(p.cip_code)}"{" selected" if selected_detail and p.id == selected_detail.id else ""}>{esc(p.name)} ({esc(p.cip_code)})</option>'
+        for p in detail_choices(db))
     filter_form = (f'<form class="filters" method="get">'
-                   f'<label class="stack">Undergraduate major<select name="cip_code">{program_options}</select></label>'
+                   f'<label class="stack">Detailed field / specialization<select name="cip6_code">{detail_options}</select></label>'
+                   f'<label class="stack">Broad undergraduate major<select name="cip_code">{program_options}</select></label>'
                    f'{checkbox_dropdown("division", "Division", distinct_values(db, College.division), divisions, "divisions")}'
                    f'{checkbox_dropdown("state", "State", distinct_values(db, College.state), states, "states")}'
                    f'<label class="stack">Maximum tuition<input name="max_tuition" placeholder="e.g. 30000" value="{esc(max_tuition)}"></label>'
@@ -701,28 +797,35 @@ def school_list(player_id: int, request: Request, cip_code: str = "", division: 
     for college, need, score, credentials in matches:
         cell = tuition_cell(college, player)
         any_oos = any_oos or is_out_of_state(player, college)
-        degree = f'{esc(selected_program.name)} · {esc(credentials)}' if selected_program and credentials else "—"
+        degree = f'{esc(selected_interest.name)} · {esc(credentials)}' if selected_interest and credentials else "—"
         need_text = f'{esc(need.position)} · {need.class_year}' if need else "No matching need recorded"
         rows.append(f'<tr><td><a href="/colleges/{college.id}?player_id={player.id}">{esc(college.name)}</a></td><td>{degree}</td><td>{esc(college.division)}</td><td>{esc(college.state)}</td>{cell}<td>{esc(college.coach_emails)}</td><td>{need_text}</td><td><span class="pill">{score}</span></td><td><a href="/email/compose?player_id={player.id}&college_id={college.id}">Email</a></td></tr>')
-    empty = "No colleges offer the selected major with these filters." if selected_program else "Select a major to make academics the primary filter, or review the direct athletic-need matches below."
+    empty = "No colleges report the selected specialization with these filters." if selected_detail else ("No colleges offer the selected major with these filters." if selected_program else "Select a specialization or major to make academics the primary filter, or review direct athletic-need matches below.")
     table = "".join(rows) or f'<tr><td colspan="9">{esc(empty)}</td></tr>'
     toolbar = f'<div class="toolbar">{download}<span class="muted">{len(matches)} matching college(s)</span></div>' if matches else ""
     home_note = f' Home state: <b>{esc(player.home_state)}</b>.' if norm_state(player.home_state) else ' No home state on file — showing in-state tuition.'
-    academic_note = (f' Showing colleges that report <b>{esc(selected_program.name)}</b>; exact class/position need adds 25 fit points.'
-                     if selected_program else ' Choose an undergraduate major above to filter by academic offering first.')
+    academic_note = (f' Showing colleges with recent IPEDS evidence for <b>{esc(selected_detail.name)}</b>; exact class/position need adds 25 fit points.' if selected_detail else
+                     (f' Showing colleges that report <b>{esc(selected_program.name)}</b>; exact class/position need adds 25 fit points.' if selected_program else
+                      ' Choose a specialization or undergraduate major above to filter by academics first.'))
     oos_legend = '<p class="muted"><strong>Bold *</strong> tuition = out-of-state rate (college is outside the player\'s home state).</p>' if any_oos else ""
     body = filter_form + f'<p class="muted">School-interest list for {esc(player.name)}: {player.grad_year} {esc(player.primary_position)}.{academic_note}{home_note}</p>{oos_legend}{toolbar}<table><tr><th>College</th><th>Degree offered</th><th>Division</th><th>State</th><th>Tuition</th><th>Coach email</th><th>Matching need</th><th>Fit score</th><th></th></tr>{table}</table>'
-    return page(request, f"School List · {player.name}", body, "Academic program match first; recruiting need second")
+    return page(request, f"School List · {player.name}", body, "Academic specialization or major match first; recruiting need second")
 
 
 @app.get("/school-lists/{player_id}/pdf")
-def school_list_download(player_id: int, cip_code: str = "", division: list[str] = Query(default=[]), state: list[str] = Query(default=[]), max_tuition: str = "", db: Session = Depends(get_db)):
+def school_list_download(player_id: int, cip_code: str = "", cip6_code: str = "", division: list[str] = Query(default=[]), state: list[str] = Query(default=[]), max_tuition: str = "", db: Session = Depends(get_db)):
     """Return the filtered school list as a PDF attachment."""
     player = get_or_404(db, Player, player_id)
     divisions = [d for d in division if d]; states = [s for s in state if s]
-    selected_program = resolve_program(db, player, cip_code)
-    matches = school_list_matches(db, player, divisions, states, max_tuition, selected_program)
-    pdf = school_list_pdf(player, matches, filter_summary(divisions, states, max_tuition, selected_program), selected_program)
+    selected_detail = resolve_detail(db, player, cip6_code) if cip6_code or not cip_code else None
+    selected_program = resolve_program(db, player, cip_code, selected_detail)
+    selected_interest = selected_detail or selected_program
+    matches = school_list_matches(db, player, divisions, states, max_tuition, selected_program, selected_detail)
+    pdf = school_list_pdf(
+        player, matches,
+        filter_summary(divisions, states, max_tuition, selected_program, selected_detail),
+        selected_interest,
+    )
     safe_name = "".join(ch if ch.isalnum() else "-" for ch in player.name).strip("-") or "player"
     log(db, "school_list_pdf", f"Downloaded school list PDF for {player.name} ({len(matches)} colleges).")
     return Response(content=pdf, media_type="application/pdf",

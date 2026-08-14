@@ -37,6 +37,10 @@ class College(Base):
         back_populates="college", cascade="all, delete-orphan", order_by="Coach.sort_order")
     programs: Mapped[list[CollegeProgram]] = relationship(
         back_populates="college", cascade="all, delete-orphan")
+    program_details: Mapped[list[CollegeProgramDetail]] = relationship(
+        back_populates="college", cascade="all, delete-orphan")
+    minors: Mapped[list[CollegeMinor]] = relationship(
+        back_populates="college", cascade="all, delete-orphan")
 
 
 class Coach(Base):
@@ -88,6 +92,57 @@ class CollegeProgram(Base):
     active: Mapped[bool] = mapped_column(Boolean, default=True, index=True)
     college: Mapped[College] = relationship(back_populates="programs")
     program: Mapped[AcademicProgram] = relationship(back_populates="college_programs")
+
+
+class AcademicProgramDetail(Base):
+    """Canonical six-digit CIP field linked to its four-digit major family."""
+    __tablename__ = "academic_program_details"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    cip_code: Mapped[str] = mapped_column(String(10), unique=True, index=True)
+    parent_program_id: Mapped[int] = mapped_column(ForeignKey("academic_programs.id"), index=True)
+    name: Mapped[str] = mapped_column(String(240), index=True)
+    parent_program: Mapped[AcademicProgram] = relationship()
+    college_details: Mapped[list[CollegeProgramDetail]] = relationship(back_populates="detail_program")
+
+
+class CollegeProgramDetail(Base):
+    """A detailed undergraduate field evidenced by recent IPEDS completions."""
+    __tablename__ = "college_program_details"
+    __table_args__ = (
+        UniqueConstraint("college_id", "detail_program_id", "credential_level",
+                         name="uq_college_program_detail_credential"),
+    )
+    id: Mapped[int] = mapped_column(primary_key=True)
+    college_id: Mapped[int] = mapped_column(ForeignKey("colleges.id", ondelete="CASCADE"), index=True)
+    detail_program_id: Mapped[int] = mapped_column(ForeignKey("academic_program_details.id"), index=True)
+    credential_level: Mapped[int] = mapped_column(Integer)
+    credential_title: Mapped[str] = mapped_column(String(80))
+    completion_count: Mapped[int] = mapped_column(Integer, default=0)
+    dataset_year: Mapped[str] = mapped_column(String(20))
+    source_name: Mapped[str] = mapped_column(String(240))
+    source_url: Mapped[str] = mapped_column(String(500))
+    retrieved_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    active: Mapped[bool] = mapped_column(Boolean, default=True, index=True)
+    college: Mapped[College] = relationship(back_populates="program_details")
+    detail_program: Mapped[AcademicProgramDetail] = relationship(back_populates="college_details")
+
+
+class CollegeMinor(Base):
+    """An institution-authored minor from a reviewed official catalog source."""
+    __tablename__ = "college_minors"
+    __table_args__ = (
+        UniqueConstraint("college_id", "normalized_name", name="uq_college_minor_name"),
+    )
+    id: Mapped[int] = mapped_column(primary_key=True)
+    college_id: Mapped[int] = mapped_column(ForeignKey("colleges.id", ondelete="CASCADE"), index=True)
+    name: Mapped[str] = mapped_column(String(240), index=True)
+    normalized_name: Mapped[str] = mapped_column(String(240))
+    catalog_year: Mapped[str | None] = mapped_column(String(40))
+    source_name: Mapped[str] = mapped_column(String(240))
+    source_url: Mapped[str] = mapped_column(String(500))
+    retrieved_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
+    active: Mapped[bool] = mapped_column(Boolean, default=True, index=True)
+    college: Mapped[College] = relationship(back_populates="minors")
 
 
 class TeamNeed(Base):

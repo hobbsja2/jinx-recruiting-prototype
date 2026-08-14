@@ -50,6 +50,18 @@ Refresh the catalog with:
 
 The loader downloads the official current institution and field-of-study ZIPs, is idempotent, preserves source metadata, and marks prior associations inactive only after a successful institution match. Reviewed name differences are bound to explicit Scorecard UNITIDs instead of relaxing fuzzy-match confidence. The summary reports matched institutions that have no distinct field-of-study rows; those colleges remain visibly uncataloged rather than inheriting another campus's programs. `COLLEGE_SCORECARD_API_KEY` is needed only when using the optional `--api` fallback. College Scorecard field-of-study data can lag newly introduced or discontinued programs, so verify final availability with each college.
 
+### Detailed fields, specializations, and minors
+
+Load six-digit detailed fields with:
+
+```cmd
+.venv\Scripts\python.exe load_ipeds_programs.py
+```
+
+This importer uses the pinned 2024 NCES IPEDS Completions archive and the official CIP-2020 taxonomy. It keeps the four-digit Scorecard major as the broad filter while allowing a six-digit field to become the more specific school-list filter. A detailed field is evidence that the institution recently reported completions; it does not prove that a similarly named concentration is currently accepting students.
+
+Minors are intentionally separate from majors and CIP data. `load_minors.py` reads `data/minors/manifest.json`, and each college entry must provide an official HTTPS catalog URL, catalog year, and explicit minor names. Empty coverage is displayed as unknown—not as proof that no minors are offered. The loader is idempotent and retains source attribution for every displayed minor.
+
 ## Intake invitation security
 
 Family emails receive a random, expiring, one-time URL. Only its SHA-256 hash is stored. Submitting the form atomically consumes the invitation; invalid, expired, or reused links return HTTP 410. Intake data is committed before a notification attempt, so a mail failure does not discard the submission.
@@ -62,4 +74,4 @@ The existing Azure staging application runs on Linux App Service F1. Store secre
 
 ## Still deferred
 
-Automatic file attachments, QR codes, charts, external college-data synchronization, and scheduled recruiting sequences are not enabled.
+Automatic file attachments, QR codes, charts, unattended external-data scheduling, and scheduled recruiting sequences are not enabled.
