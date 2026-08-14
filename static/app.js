@@ -33,9 +33,17 @@ document.addEventListener('click', function (event) {
   });
 });
 
-// Reload pre-generated email templates as soon as a selection changes.
+// Reload auto-submit forms as soon as a selection changes. Blank selects are
+// disabled first so native GET serialization omits them instead of sending
+// values such as player_id=, which optional integer query fields cannot parse.
 document.querySelectorAll('form[data-autosubmit] select').forEach(function (select) {
-  select.addEventListener('change', function () { select.form.submit(); });
+  select.addEventListener('change', function () {
+    var form = select.form;
+    form.querySelectorAll('select[name]').forEach(function (control) {
+      control.disabled = control.value === '';
+    });
+    form.submit();
+  });
 });
 
 
