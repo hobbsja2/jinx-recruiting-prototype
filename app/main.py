@@ -8,15 +8,18 @@ from pathlib import Path
 from urllib.parse import quote
 
 from PIL import Image as PILImage, ImageOps
-from fastapi import Depends, FastAPI, File, HTTPException, Query, Request, UploadFile
-from fastapi.responses import RedirectResponse, Response
+from fastapi import Depends, FastAPI, File, HTTPException, Query, Request, Response, UploadFile
+from fastapi.responses import RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from sqlalchemy import func, or_, select
 from sqlalchemy.orm import Session, selectinload
 
+from .auth import (AuthUser, SESSION_DURATION_SECONDS, create_session_cookie,
+                   verify_password, verify_session_cookie)
 from .database import Base, DATABASE_URL, engine, get_db, sync_sqlite_columns
 from .email_templates import TEMPLATES as EMAIL_TEMPLATES, render_template
+from .email import send_email
 from .models import ActivityLog, College, Player, PlayerIntake, TeamNeed
 from .reports import school_list_pdf
 from .tuition import is_out_of_state, norm_state, tuition_for
@@ -28,6 +31,12 @@ STATIC_ROOT = (ROOT / "static").resolve()
 PHOTO_DIR = STATIC_ROOT / "uploads" / "players"
 MAX_PHOTO_BYTES = 8 * 1024 * 1024
 THUMB_SIZE = (480, 480)
+AUTH_COOKIE_NAME = "jinx_session"
+AUTH_EXEMPT_PATHS = ("/login", "/logout", "/intake", "/intake/thanks", "/static")
+
+
+def get_current_user(request: Request) -> AuthUser | None:
+    return verify_session_cookie(request.cookies.get(AUTH_COOKIE_NAME))
 
 
 @asynccontextmanager
@@ -44,6 +53,18 @@ async def lifespan(_: FastAPI):
 
 
 app = FastAPI(title="Jinx Recruiting", lifespan=lifespan)
+
+
+@app.middleware("http")
+async def authentication_middleware(request: Request, call_next):
+    path = request.url.path
+    if any(path == allowed or path.startswith(allowed + "/") for allowed in AUTH_EXEMPT_PATHS):
+        return await call_next(request)
+    if get_current_user(request) is None:
+        return RedirectResponse("/login", status_code=303)
+    return await call_next(request)
+
+
 app.mount("/static", StaticFiles(directory=str(ROOT / "static")), name="static")
 
 COLLEGE_FIELDS = [("name", "College name", "text", True), ("division", "Division", "text", True), ("conference", "Conference", "text", False), ("city", "City", "text", False), ("state", "State", "text", False), ("academic_ranking", "Academic profile", "text", False), ("tuition", "Annual tuition (in-state + housing)", "number", False), ("in_state_tuition", "In-state tuition", "number", False), ("out_of_state_tuition", "Out-of-state tuition", "number", False), ("housing_cost", "Housing cost", "number", False), ("financial_aid", "Financial aid", "textarea", False), ("head_coach", "Head coach", "text", False), ("recruiting_coordinator", "Recruiting coordinator", "text", False), ("coach_emails", "Coach emails", "text", False), ("coach_phones", "Coach phones", "text", False), ("roster_size", "Roster size", "number", False), ("scholarship_count", "Scholarships", "number", False), ("facilities_notes", "Facilities notes", "textarea", False), ("program_reputation", "Program reputation", "textarea", False), ("website_url", "Website", "url", False), ("notes", "Recruiting notes", "textarea", False)]
@@ -56,6 +77,7 @@ US_STATES = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "
 SELECT_OPTIONS = {"home_state": US_STATES}
 DIVISION_OPTIONS = ["NCAA D1", "NCAA D2", "NCAA D3", "NAIA", "JUCO"]
 CAMPUS_OPTIONS = ["", "Urban", "Suburban", "Rural", "Small campus", "Large campus"]
+MAJOR_GROUP_OPTIONS = ["Business", "STEM", "Health Sciences", "Education", "Liberal Arts"]
 INTAKE_FIELDS = [
     ("player_name", "Player name", "text", True, None), ("grad_year", "Graduation year", "number", True, None),
     ("primary_position", "Primary position", "text", True, None), ("secondary_position", "Secondary position", "text", False, None),
@@ -90,7 +112,13 @@ def redirect(path: str, notice: str = "") -> RedirectResponse:
 
 
 def page(request: Request, title: str, body: str, subtitle: str = "", notice: str = ""):
-    return TEMPLATES.TemplateResponse(request, "page.html", {"title": title, "subtitle": subtitle, "body": body, "notice": notice or request.query_params.get("notice", "")})
+    return TEMPLATES.TemplateResponse(request, "page.html", {
+        "title": title,
+        "subtitle": subtitle,
+        "body": body,
+        "notice": notice or request.query_params.get("notice", ""),
+        "user": get_current_user(request),
+    })
 
 
 def get_or_404(db: Session, model, item_id: int):
@@ -214,6 +242,43 @@ def log(db: Session, kind: str, detail: str) -> None:
 @app.get("/")
 def home():
     return redirect("/admin")
+
+
+@app.get("/login")
+def login_form(request: Request):
+    return TEMPLATES.TemplateResponse(request, "login.html", {
+        "request": request,
+        "title": "Sign in",
+        "subtitle": "Admin login",
+        "notice": request.query_params.get("notice", ""),
+    })
+
+
+@app.post("/login")
+async def login(request: Request):
+    form = await request.form()
+    username = str(form.get("username", "")).strip()
+    password = str(form.get("password", "")).strip()
+    if not verify_password(username, password):
+        return redirect("/login", "Invalid username or password.")
+    token = create_session_cookie(username)
+    response = redirect("/admin")
+    response.set_cookie(
+        AUTH_COOKIE_NAME,
+        token,
+        httponly=True,
+        samesite="lax",
+        secure=False,
+        max_age=SESSION_DURATION_SECONDS,
+    )
+    return response
+
+
+@app.get("/logout")
+def logout():
+    response = redirect("/login", "Signed out successfully.")
+    response.delete_cookie(AUTH_COOKIE_NAME)
+    return response
 
 
 @app.get("/admin")
@@ -494,6 +559,56 @@ def school_list_choose(player_id: int):
     return redirect(f"/school-lists/{player_id}")
 
 
+def major_group_for_value(value: str | None) -> str:
+    """Normalize detailed academic majors to a single broader option.
+
+    The recruiting app historically stores free-form intended majors, but for
+    broad filters we want a single business selection that includes any related
+    detail such as accounting, marketing, finance, economics, etc.
+    """
+    text = (value or "").strip().lower()
+    if not text:
+        return ""
+    business_keywords = (
+        "business", "business administration", "accounting", "accounting and finance",
+        "finance", "financial", "financial planning", "marketing", "management",
+        "economics", "entrepreneurship", "hospitality management", "human resources",
+        "international business", "logistics", "supply chain", "administration",
+    )
+    if any(keyword in text for keyword in business_keywords):
+        return "Business"
+    stem_keywords = ("engineering", "computer science", "software", "math", "physics",
+                     "cyber", "technology", "statistics", "biomedical", "data science")
+    if any(keyword in text for keyword in stem_keywords):
+        return "STEM"
+    health_keywords = ("nursing", "health", "medicine", "pre-med", "exercise science",
+                      "kinesiology", "physical therapy", "dietetics")
+    if any(keyword in text for keyword in health_keywords):
+        return "Health Sciences"
+    education_keywords = ("education", "teaching", "elementary education", "special education")
+    if any(keyword in text for keyword in education_keywords):
+        return "Education"
+    liberal_arts_keywords = ("history", "political science", "english", "psychology",
+                             "sociology", "communications", "art", "music", "philosophy")
+    if any(keyword in text for keyword in liberal_arts_keywords):
+        return "Liberal Arts"
+    return value.strip()
+
+
+def dedupe_school_rows(rows: list[tuple]) -> list[tuple]:
+    """Collapse duplicate colleges into a single row, keeping the strongest match."""
+    by_college: dict[int, tuple] = {}
+    for college, need, score in rows:
+        college_id = getattr(college, "id", None)
+        if college_id is None:
+            by_college.setdefault(id(college), (college, need, score))
+            continue
+        current = by_college.get(college_id)
+        if current is None or score > current[2]:
+            by_college[college_id] = (college, need, score)
+    return list(by_college.values())
+
+
 def distinct_values(db: Session, column) -> list[str]:
     return [v for v in db.scalars(select(column).distinct().order_by(column)).all() if v]
 
@@ -513,7 +628,24 @@ def checkbox_dropdown(name: str, label: str, options: list[str], selected: list[
             f'</details></label>')
 
 
-def school_list_matches(db: Session, player: Player, divisions: list[str], states: list[str], max_tuition: str):
+def major_matches_selected(college: College, need: TeamNeed, selected_majors: set[str]) -> bool:
+    if not selected_majors:
+        return True
+    searchable = " ".join(
+        part or "" for part in [
+            getattr(college, "notes", None),
+            getattr(college, "program_reputation", None),
+            getattr(need, "notes", None),
+            getattr(need, "pitching_profile", None),
+            getattr(need, "hitting_profile", None),
+        ]
+    ).lower()
+    if not searchable:
+        return False
+    return any(major_group_for_value(value) in selected_majors for value in [searchable, *selected_majors])
+
+
+def school_list_matches(db: Session, player: Player, divisions: list[str], states: list[str], max_tuition: str, majors: list[str] | None = None):
     query = (select(TeamNeed).join(TeamNeed.college).options(selectinload(TeamNeed.college))
              .where(TeamNeed.class_year == player.grad_year, TeamNeed.position == player.primary_position))
     if divisions: query = query.where(College.division.in_(divisions))
@@ -523,28 +655,34 @@ def school_list_matches(db: Session, player: Player, divisions: list[str], state
         try: query = query.where(or_(College.tuition <= float(max_tuition), College.tuition.is_(None)))
         except ValueError: pass
     rows = []
+    selected_majors = {major for major in (majors or []) if major}
     for need in db.scalars(query.order_by(College.name)).all():
         college = need.college
+        if selected_majors and not major_matches_selected(college, need, selected_majors):
+            continue
         score = 100 + (5 if college.tuition and college.tuition < 30000 else 0) + (3 if player.gpa and player.gpa >= 3.5 else 0)
         rows.append((college, need, score))
     rows.sort(key=lambda row: (-row[2], row[0].name))
-    return rows
+    return dedupe_school_rows(rows)
 
 
-def filter_summary(divisions: list[str], states: list[str], max_tuition: str) -> str:
+def filter_summary(divisions: list[str], states: list[str], max_tuition: str, majors: list[str] | None = None) -> str:
     parts = [f"Divisions: {', '.join(divisions) if divisions else 'All'}", f"States: {', '.join(states) if states else 'All'}"]
+    if majors:
+        parts.append(f"Majors: {', '.join(majors)}")
     if max_tuition: parts.append(f"Maximum tuition: ${max_tuition}")
     return " | ".join(parts)
 
 
 @app.get("/school-lists/{player_id}")
-def school_list(player_id: int, request: Request, division: list[str] = Query(default=[]), state: list[str] = Query(default=[]), max_tuition: str = "", db: Session = Depends(get_db)):
+def school_list(player_id: int, request: Request, division: list[str] = Query(default=[]), state: list[str] = Query(default=[]), major: list[str] = Query(default=[]), max_tuition: str = "", db: Session = Depends(get_db)):
     player = get_or_404(db, Player, player_id)
-    divisions = [d for d in division if d]; states = [s for s in state if s]
-    matches = school_list_matches(db, player, divisions, states, max_tuition)
+    divisions = [d for d in division if d]; states = [s for s in state if s]; majors = [m for m in major if m]
+    matches = school_list_matches(db, player, divisions, states, max_tuition, majors)
     filter_form = (f'<form class="filters" method="get">'
                    f'{checkbox_dropdown("division", "Division", distinct_values(db, College.division), divisions, "divisions")}'
                    f'{checkbox_dropdown("state", "State", distinct_values(db, College.state), states, "states")}'
+                   f'{checkbox_dropdown("major", "Major", MAJOR_GROUP_OPTIONS, majors, "majors")}'
                    f'<label class="stack">Maximum tuition<input name="max_tuition" placeholder="e.g. 30000" value="{esc(max_tuition)}"></label>'
                    f'<button>Apply filters</button><a class="button secondary" href="/school-lists/{player.id}">Clear</a></form>')
     query_string = request.url.query
@@ -564,12 +702,12 @@ def school_list(player_id: int, request: Request, division: list[str] = Query(de
 
 
 @app.get("/school-lists/{player_id}/pdf")
-def school_list_download(player_id: int, division: list[str] = Query(default=[]), state: list[str] = Query(default=[]), max_tuition: str = "", db: Session = Depends(get_db)):
+def school_list_download(player_id: int, division: list[str] = Query(default=[]), state: list[str] = Query(default=[]), major: list[str] = Query(default=[]), max_tuition: str = "", db: Session = Depends(get_db)):
     """Return the filtered school list as a PDF attachment (saved to the browser's download folder)."""
     player = get_or_404(db, Player, player_id)
-    divisions = [d for d in division if d]; states = [s for s in state if s]
-    matches = school_list_matches(db, player, divisions, states, max_tuition)
-    pdf = school_list_pdf(player, matches, filter_summary(divisions, states, max_tuition))
+    divisions = [d for d in division if d]; states = [s for s in state if s]; majors = [m for m in major if m]
+    matches = school_list_matches(db, player, divisions, states, max_tuition, majors)
+    pdf = school_list_pdf(player, matches, filter_summary(divisions, states, max_tuition, majors))
     safe_name = "".join(ch if ch.isalnum() else "-" for ch in player.name).strip("-") or "player"
     log(db, "school_list_pdf", f"Downloaded school list PDF for {player.name} ({len(matches)} colleges).")
     return Response(content=pdf, media_type="application/pdf",
@@ -689,6 +827,32 @@ async def email_send_stub(request: Request, db: Session = Depends(get_db)):
     chosen = EMAIL_TEMPLATES.get(template_key, EMAIL_TEMPLATES["intro"])
     attachments = str(form.get("attachments", "")).strip()
     matched = None if chosen.audience == "family" else college_for_email(db, recipient)
+    # Try to resolve a player when sending to a family audience
+    player = None
+    player_id = str(form.get("player_id", "")).strip()
+    if player_id.isdigit():
+        player = db.get(Player, int(player_id))
+
+    # Render the email content
+    subj, body = render_template(chosen, matched, player, form_url="")
+
+    # If SEND_EMAILS=1 in the environment, attempt real send via SMTP
+    if os.environ.get("SEND_EMAILS", "0") == "1":
+        sender = os.environ.get("SMTP_USER")
+        ok = send_email(subj, body, recipient, sender=sender)
+        if ok:
+            detail = f'Sent "{chosen.label}" email to {recipient}: {subj}'
+            if attachments: detail += f" [attachments: {attachments}]"
+            log(db, "email_sent", detail)
+            target = f"/email/compose?template={template_key}"
+            if matched:
+                target += f"&college_id={matched.id}"
+            elif chosen.audience == "family" and player:
+                target += f"&player_id={player.id}"
+            return redirect(target, "Email sent successfully.")
+        else:
+            log(db, "email_error", f'Failed to send "{chosen.label}" email to {recipient}: {subj}')
+            return redirect(f"/email/compose?template={template_key}", "Failed to send email; see server logs.")
     if chosen.audience == "family":
         detail = f'Simulated "{chosen.label}" email to {recipient}: {subject}'
     else:
