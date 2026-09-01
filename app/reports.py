@@ -15,7 +15,7 @@ from xml.sax.saxutils import escape
 from .tuition import is_out_of_state, tuition_for
 
 LOGO = Path(__file__).resolve().parent.parent / "static" / "jinx-logo.jpg"
-HEADERS = ["College", "Degree offered", "Division", "State", "Tuition", "Coach email", "Matching need", "Fit"]
+HEADERS = ["College", "Major(s) offered", "Division", "State", "Tuition", "Coach email", "Matching need", "Fit"]
 
 
 def money(amount: float | None) -> str:
@@ -29,7 +29,7 @@ def tuition_display(college, player) -> str:
     return f"<b>{text} *</b>" if oos else text
 
 
-def school_list_pdf(player, matches, filter_summary: str, interest_label: str = "") -> bytes:
+def school_list_pdf(player, matches, filter_summary: str) -> bytes:
     """Render the generated school list as a PDF document and return its bytes."""
     buffer = BytesIO()
     doc = SimpleDocTemplate(buffer, pagesize=landscape(letter), title=f"School List - {player.name}",
@@ -49,9 +49,9 @@ def school_list_pdf(player, matches, filter_summary: str, interest_label: str = 
 
     data = [[Paragraph(f"<b>{h}</b>", cell) for h in HEADERS]]
     any_oos = False
-    for college, need, score, credentials in matches:
+    for college, need, score, majors in matches:
         any_oos = any_oos or is_out_of_state(player, college)
-        degree = f"{interest_label} · {credentials}" if interest_label and credentials else "—"
+        degree = majors or "—"
         need_text = f"{need.position} &middot; {need.class_year}" if need else "Not yet provided"
         # Render the school name as a live hyperlink to the college website when available.
         name = escape(college.name or "")
