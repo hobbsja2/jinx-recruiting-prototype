@@ -609,6 +609,21 @@ def dedupe_school_rows(rows: list[tuple]) -> list[tuple]:
     return list(by_college.values())
 
 
+def major_filter_options(values: list[str] | None = None) -> list[str]:
+    """Return only the canonical top-level major groups for the UI."""
+    groups: list[str] = []
+    seen: set[str] = set()
+    for value in values or []:
+        group = major_group_for_value(value)
+        if group and group not in seen:
+            seen.add(group)
+            groups.append(group)
+    for group in MAJOR_GROUP_OPTIONS:
+        if group not in seen:
+            groups.append(group)
+    return groups
+
+
 def distinct_values(db: Session, column) -> list[str]:
     return [v for v in db.scalars(select(column).distinct().order_by(column)).all() if v]
 
@@ -619,9 +634,14 @@ def checkbox_dropdown(name: str, label: str, options: list[str], selected: list[
     boxes = "".join(
         f'<label><input type="checkbox" name="{name}" value="{esc(option)}"{" checked" if option in chosen else ""}>{esc(option)}</label>'
         for option in options) or f'<label class="muted">No {esc(noun)} available</label>'
-    summary = f"{len(chosen)} {noun} selected" if 0 < len(chosen) < len(options) else (options[0] if len(chosen) == 1 == len(options) else f"All {noun}")
-    if len(chosen) == 1:
+    if not chosen:
+        summary = f"Select {noun}"
+    elif 0 < len(chosen) < len(options):
+        summary = f"{len(chosen)} {noun} selected"
+    elif len(chosen) == 1:
         summary = next(iter(chosen))
+    else:
+        summary = f"All {noun}"
     return (f'<label class="stack">{esc(label)}<details class="checkdrop" data-noun="{esc(noun)}">'
             f'<summary><span class="checkdrop-label">{esc(summary)}</span></summary>'
             f'<div class="checkdrop-panel"><label class="all"><input type="checkbox" class="select-all">Select All</label>{boxes}</div>'
@@ -679,10 +699,11 @@ def school_list(player_id: int, request: Request, division: list[str] = Query(de
     player = get_or_404(db, Player, player_id)
     divisions = [d for d in division if d]; states = [s for s in state if s]; majors = [m for m in major if m]
     matches = school_list_matches(db, player, divisions, states, max_tuition, majors)
+    major_options = major_filter_options(MAJOR_GROUP_OPTIONS)
     filter_form = (f'<form class="filters" method="get">'
                    f'{checkbox_dropdown("division", "Division", distinct_values(db, College.division), divisions, "divisions")}'
                    f'{checkbox_dropdown("state", "State", distinct_values(db, College.state), states, "states")}'
-                   f'{checkbox_dropdown("major", "Major", MAJOR_GROUP_OPTIONS, majors, "majors")}'
+                   f'{checkbox_dropdown("major", "Major", major_options, majors, "majors")}'
                    f'<label class="stack">Maximum tuition<input name="max_tuition" placeholder="e.g. 30000" value="{esc(max_tuition)}"></label>'
                    f'<button>Apply filters</button><a class="button secondary" href="/school-lists/{player.id}">Clear</a></form>')
     query_string = request.url.query
