@@ -5,7 +5,7 @@ import os
 from contextlib import asynccontextmanager
 from io import BytesIO
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import parse_qs, quote
 
 from PIL import Image as PILImage, ImageOps
 from fastapi import Depends, FastAPI, File, HTTPException, Query, Request, Response, UploadFile
@@ -67,7 +67,7 @@ async def authentication_middleware(request: Request, call_next):
 
 app.mount("/static", StaticFiles(directory=str(ROOT / "static")), name="static")
 
-COLLEGE_FIELDS = [("name", "College name", "text", True), ("division", "Division", "text", True), ("conference", "Conference", "text", False), ("city", "City", "text", False), ("state", "State", "text", False), ("academic_ranking", "Academic profile", "text", False), ("tuition", "Annual tuition (in-state + housing)", "number", False), ("in_state_tuition", "In-state tuition", "number", False), ("out_of_state_tuition", "Out-of-state tuition", "number", False), ("housing_cost", "Housing cost", "number", False), ("financial_aid", "Financial aid", "textarea", False), ("head_coach", "Head coach", "text", False), ("recruiting_coordinator", "Recruiting coordinator", "text", False), ("coach_emails", "Coach emails", "text", False), ("coach_phones", "Coach phones", "text", False), ("roster_size", "Roster size", "number", False), ("scholarship_count", "Scholarships", "number", False), ("facilities_notes", "Facilities notes", "textarea", False), ("program_reputation", "Program reputation", "textarea", False), ("website_url", "Website", "url", False), ("notes", "Recruiting notes", "textarea", False)]
+COLLEGE_FIELDS = [("name", "College name", "text", True), ("division", "Division", "text", True), ("conference", "Conference", "text", False), ("city", "City", "text", False), ("state", "State", "text", False), ("academic_ranking", "Academic profile", "text", False), ("avg_admission_gpa", "Average admission GPA", "number", False), ("tuition", "Annual tuition (in-state + housing)", "number", False), ("in_state_tuition", "In-state tuition", "number", False), ("out_of_state_tuition", "Out-of-state tuition", "number", False), ("housing_cost", "Housing cost", "number", False), ("financial_aid", "Financial aid", "textarea", False), ("head_coach", "Head coach", "text", False), ("recruiting_coordinator", "Recruiting coordinator", "text", False), ("coach_emails", "Coach emails", "text", False), ("coach_phones", "Coach phones", "text", False), ("roster_size", "Roster size", "number", False), ("scholarship_count", "Scholarships", "number", False), ("facilities_notes", "Facilities notes", "textarea", False), ("program_reputation", "Program reputation", "textarea", False), ("website_url", "Website", "url", False), ("notes", "Recruiting notes", "textarea", False)]
 PLAYER_FIELDS = [("name", "Player name", "text", True), ("grad_year", "Graduation year", "number", True), ("primary_position", "Primary position", "text", True), ("secondary_position", "Secondary position", "text", False), ("home_state", "Home state", "select", False), ("player_email", "Player email", "email", False), ("parent_email", "Parent/guardian email", "email", False), ("gpa", "GPA", "number", False), ("sat_act", "SAT / ACT", "text", False), ("height", "Height", "text", False), ("weight", "Weight", "text", False), ("throwing_hand", "Throwing hand", "text", False), ("batting_side", "Batting side", "text", False), ("home_to_first", "Home-to-first", "text", False), ("exit_velo", "Exit velocity", "text", False), ("pop_time", "Pop time", "text", False), ("pitching_velo", "Pitching velocity", "text", False), ("highlight_link", "Highlight link", "url", False), ("transcript_path", "Transcript path", "text", False), ("social_handles", "Social handles", "text", False), ("notes", "Recruiting notes", "textarea", False)]
 US_STATES = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA",
              "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM",
@@ -166,7 +166,7 @@ async def payload(request: Request, fields) -> dict:
         if not raw:
             data[key] = None
         elif kind == "number":
-            data[key] = float(raw) if key in {"gpa", "tuition", "in_state_tuition", "out_of_state_tuition", "housing_cost"} else int(raw)
+            data[key] = float(raw) if key in {"gpa", "avg_admission_gpa", "tuition", "in_state_tuition", "out_of_state_tuition", "housing_cost"} else int(raw)
         else:
             data[key] = raw
     return data
@@ -596,16 +596,21 @@ def major_group_for_value(value: str | None) -> str:
 
 
 def dedupe_school_rows(rows: list[tuple]) -> list[tuple]:
-    """Collapse duplicate colleges into a single row, keeping the strongest match."""
+    """Collapse duplicate colleges into a single row, keeping the strongest match.
+
+    Rows are (college, need, score, notes); the whole row is preserved so the
+    highest-scoring entry keeps its matching need and notes.
+    """
     by_college: dict[int, tuple] = {}
-    for college, need, score in rows:
+    for row in rows:
+        college, score = row[0], row[2]
         college_id = getattr(college, "id", None)
         if college_id is None:
-            by_college.setdefault(id(college), (college, need, score))
+            by_college.setdefault(id(college), row)
             continue
         current = by_college.get(college_id)
         if current is None or score > current[2]:
-            by_college[college_id] = (college, need, score)
+            by_college[college_id] = row
     return list(by_college.values())
 
 
@@ -666,24 +671,48 @@ def major_matches_selected(college: College, need: TeamNeed, selected_majors: se
 
 
 def school_list_matches(db: Session, player: Player, divisions: list[str], states: list[str], max_tuition: str, majors: list[str] | None = None):
-    query = (select(TeamNeed).join(TeamNeed.college).options(selectinload(TeamNeed.college))
-             .where(TeamNeed.class_year == player.grad_year, TeamNeed.position == player.primary_position))
-    if divisions: query = query.where(College.division.in_(divisions))
-    if states: query = query.where(College.state.in_(states))
+    # Colleges are suggested independent of team needs: not every program records
+    # its needs. A team need matching the player's class year + primary position,
+    # when present, is attached to the college and boosts its fit score; colleges
+    # without one still appear and show "Not yet provided" for the matching need.
+    college_query = select(College)
+    if divisions: college_query = college_query.where(College.division.in_(divisions))
+    if states: college_query = college_query.where(College.state.in_(states))
     if max_tuition:
         # Blank tuition is unknown, not expensive: keep those colleges visible.
-        try: query = query.where(or_(College.tuition <= float(max_tuition), College.tuition.is_(None)))
+        try: college_query = college_query.where(or_(College.tuition <= float(max_tuition), College.tuition.is_(None)))
         except ValueError: pass
+
+    # Map college_id -> a matching team need (first kept if several exist).
+    need_by_college: dict[int, TeamNeed] = {}
+    need_query = (select(TeamNeed)
+                  .where(TeamNeed.class_year == player.grad_year, TeamNeed.position == player.primary_position))
+    for need in db.scalars(need_query).all():
+        need_by_college.setdefault(need.college_id, need)
+
     rows = []
     selected_majors = {major for major in (majors or []) if major}
-    for need in db.scalars(query.order_by(College.name)).all():
-        college = need.college
+    for college in db.scalars(college_query.order_by(College.name)).all():
+        need = need_by_college.get(college.id)
         if selected_majors and not major_matches_selected(college, need, selected_majors):
             continue
-        score = 100 + (5 if college.tuition and college.tuition < 30000 else 0) + (3 if player.gpa and player.gpa >= 3.5 else 0)
-        rows.append((college, need, score))
-    rows.sort(key=lambda row: (-row[2], row[0].name))
-    return dedupe_school_rows(rows)
+        score = 5 + (10 if need is not None else 0) + (5 if college.tuition and college.tuition < 30000 else 0) + (3 if player.gpa and player.gpa >= 3.5 else 0)
+        # Academic deduction: if the player's GPA is below the college's average
+        # admission GPA, subtract 1 point per 0.1 below (rounded). No penalty when
+        # either value is missing. Total fit score is floored at 0.
+        penalties: list[str] = []
+        if player.gpa and college.avg_admission_gpa and player.gpa < college.avg_admission_gpa:
+            deduction = round((college.avg_admission_gpa - player.gpa) * 10)
+            score -= deduction
+            penalties.append("Player GPA is below average GPA of admitted students")
+        score = max(0, score)
+        # Only surface penalty reasons that pushed the score below the baseline of 5.
+        notes = penalties if score < 5 else []
+        rows.append((college, need, score, notes))
+    deduped = dedupe_school_rows(rows)
+    # Sort alphabetically by college name (case-insensitive).
+    deduped.sort(key=lambda row: (row[0].name or "").lower())
+    return deduped
 
 
 def filter_summary(divisions: list[str], states: list[str], max_tuition: str, majors: list[str] | None = None) -> str:
@@ -707,19 +736,23 @@ def school_list(player_id: int, request: Request, division: list[str] = Query(de
                    f'<label class="stack">Maximum tuition<input name="max_tuition" placeholder="e.g. 30000" value="{esc(max_tuition)}"></label>'
                    f'<button>Apply filters</button><a class="button secondary" href="/school-lists/{player.id}">Clear</a></form>')
     query_string = request.url.query
+    email_list = f'<a class="button secondary" href="/school-lists/{player.id}/email{"?" + query_string if query_string else ""}">Email List</a>'
     download = f'<a class="button" href="/school-lists/{player.id}/pdf{"?" + query_string if query_string else ""}">Download PDF</a>'
+    majors_display = ", ".join(majors) if majors else "All"
     rows = []
     any_oos = False
-    for college, need, score in matches:
+    for college, need, score, notes in matches:
         cell = tuition_cell(college, player)
         any_oos = any_oos or is_out_of_state(player, college)
-        rows.append(f'<tr><td><a href="/colleges/{college.id}?player_id={player.id}">{esc(college.name)}</a></td><td>{esc(college.division)}</td><td>{esc(college.state)}</td>{cell}<td>{esc(college.coach_emails)}</td><td>{esc(need.position)} · {need.class_year}</td><td><span class="pill">{score}</span></td><td><a href="/email/compose?player_id={player.id}&college_id={college.id}">Email</a></td></tr>')
-    table = "".join(rows) or '<tr><td colspan="8">No direct primary-position matches. Try adding team needs or adjusting the player profile.</td></tr>'
-    toolbar = f'<div class="toolbar">{download}<span class="muted">{len(matches)} matching college(s)</span></div>' if matches else ""
+        need_cell = f'{esc(need.position)} · {esc(need.class_year)}' if need else '<span class="muted">Not yet provided</span>'
+        notes_cell = esc("; ".join(notes)) if notes else ""
+        rows.append(f'<tr><td><a href="/colleges/{college.id}?player_id={player.id}">{esc(college.name)}</a></td><td>{esc(college.division)}</td><td>{esc(majors_display)}</td><td>{esc(college.state)}</td>{cell}<td>{esc(college.coach_emails)}</td><td>{need_cell}</td><td><span class="pill">{score}</span></td><td class="muted">{notes_cell}</td><td><a href="/email/compose?player_id={player.id}&college_id={college.id}">Email</a></td></tr>')
+    table = "".join(rows) or '<tr><td colspan="10">No colleges match the selected filters.</td></tr>'
+    toolbar = f'<div class="toolbar">{email_list}{download}<span class="muted">{len(matches)} matching college(s)</span></div>' if matches else ""
     home_note = f' Home state: <b>{esc(player.home_state)}</b>.' if norm_state(player.home_state) else ' No home state on file — showing in-state tuition.'
     oos_legend = '<p class="muted"><strong>Bold *</strong> tuition = out-of-state rate (college is outside the player\'s home state).</p>' if any_oos else ""
-    body = filter_form + f'<p class="muted">Ranked exact matches for {esc(player.name)}: {player.grad_year} {esc(player.primary_position)}.{home_note}</p>{oos_legend}{toolbar}<table><tr><th>College</th><th>Division</th><th>State</th><th>Tuition</th><th>Coach email</th><th>Matching need</th><th>Fit score</th><th></th></tr>{table}</table>'
-    return page(request, f"School List · {player.name}", body, "Exact class-year and primary-position matches")
+    body = filter_form + f'<p class="muted">College suggestions for {esc(player.name)}: {player.grad_year} {esc(player.primary_position)}. Matching team needs are shown when a college has recorded them.{home_note}</p>{oos_legend}{toolbar}<table><tr><th>College</th><th>Division</th><th>Majors</th><th>State</th><th>Tuition</th><th>Coach email</th><th>Matching need</th><th>Fit score</th><th>Notes</th><th></th></tr>{table}</table>'
+    return page(request, f"School List · {player.name}", body, "College suggestions, with matching team needs when available")
 
 
 @app.get("/school-lists/{player_id}/pdf")
@@ -728,11 +761,103 @@ def school_list_download(player_id: int, division: list[str] = Query(default=[])
     player = get_or_404(db, Player, player_id)
     divisions = [d for d in division if d]; states = [s for s in state if s]; majors = [m for m in major if m]
     matches = school_list_matches(db, player, divisions, states, max_tuition, majors)
-    pdf = school_list_pdf(player, matches, filter_summary(divisions, states, max_tuition, majors))
+    majors_display = ", ".join(majors) if majors else "All"
+    pdf = school_list_pdf(player, matches, filter_summary(divisions, states, max_tuition, majors), majors_display)
     safe_name = "".join(ch if ch.isalnum() else "-" for ch in player.name).strip("-") or "player"
     log(db, "school_list_pdf", f"Downloaded school list PDF for {player.name} ({len(matches)} colleges).")
     return Response(content=pdf, media_type="application/pdf",
                     headers={"Content-Disposition": f'attachment; filename="Jinx-School-List-{safe_name}.pdf"'})
+
+
+def school_list_email_body(player: Player, matches: list[tuple], summary: str) -> str:
+    """Plain-text body for the player/family school-list email."""
+    lines = [
+        f"Hi {player.name},",
+        "",
+        "Here is your current recruiting school list, attached as a PDF.",
+        "",
+        "These schools are suggested based on your responses. Changes can be requested at any time for an updated list to be generated.",
+        "Reply to this email with any questions.",
+        "",
+        "— Jinx Recruiting",
+    ]
+    return "\n".join(lines)
+
+
+@app.get("/school-lists/{player_id}/email")
+def school_list_email(player_id: int, request: Request, division: list[str] = Query(default=[]), state: list[str] = Query(default=[]), major: list[str] = Query(default=[]), max_tuition: str = "", db: Session = Depends(get_db)):
+    """Compose an email of the (filtered) school list, addressed to the player with the parent/guardian cc'd."""
+    player = get_or_404(db, Player, player_id)
+    divisions = [d for d in division if d]; states = [s for s in state if s]; majors = [m for m in major if m]
+    matches = school_list_matches(db, player, divisions, states, max_tuition, majors)
+    summary = filter_summary(divisions, states, max_tuition, majors)
+    subject = f"Your recruiting school list — {player.name} ({player.grad_year} {esc(player.primary_position)})"
+    body_text = school_list_email_body(player, matches, summary)
+    to_addr = player.player_email or ""
+    cc_addr = player.parent_email or ""
+    query_string = request.url.query
+    back = f'/school-lists/{player.id}{"?" + query_string if query_string else ""}'
+    safe_name = "".join(ch if ch.isalnum() else "-" for ch in player.name).strip("-") or "player"
+    attach_name = f"Jinx-School-List-{safe_name}.pdf"
+
+    notices = []
+    if not to_addr:
+        notices.append('<div class="notice">This player has no email on file. Add one on the player profile, or enter a recipient below before sending.</div>')
+    if not cc_addr:
+        notices.append('<div class="notice">No parent/guardian email on file, so the Cc field is empty. You can add one below if you have it.</div>')
+    notices_html = "".join(notices)
+
+    compose = (f'<div class="card"><form class="grid" method="post" action="/school-lists/{player.id}/email/send">'
+               f'<input type="hidden" name="query" value="{esc(query_string)}">'
+               f'<label class="wide">To<input name="recipients" value="{esc(to_addr)}" required></label>'
+               f'<label class="wide">Cc<input name="cc" value="{esc(cc_addr)}"></label>'
+               f'<label class="wide">Subject<input name="subject" value="{esc(subject)}" required></label>'
+               f'<label class="wide">Attachment<input value="{esc(attach_name)}" readonly></label>'
+               f'<p class="wide muted">The {len(matches)}-college list shown above (with your current filters) is attached as a PDF; each school name is a clickable link.</p>'
+               f'<label class="wide">Message<textarea name="body" rows="18">{esc(body_text)}</textarea></label>'
+               f'<div class="wide actions"><a class="button secondary" href="{back}">Back to list</a><button>Simulate send</button></div></form></div>')
+    body = (f'<div class="notice">Local email stub: submitting records simulated activity unless real sending is configured (SEND_EMAILS=1).</div>'
+            f'{notices_html}{compose}')
+    return page(request, f"Email School List · {player.name}", body, f"Send {esc(player.name)}'s school list to the player and family")
+
+
+@app.post("/school-lists/{player_id}/email/send")
+async def school_list_email_send(player_id: int, request: Request, db: Session = Depends(get_db)):
+    player = get_or_404(db, Player, player_id)
+    form = await request.form()
+    recipients = str(form.get("recipients", "")).strip()
+    cc = str(form.get("cc", "")).strip()
+    subject = str(form.get("subject", "")).strip()
+    body = str(form.get("body", "")).strip()
+    query = str(form.get("query", "")).strip()
+    if not recipients or not subject:
+        raise HTTPException(status_code=422, detail="Recipient and subject are required")
+    back = f"/school-lists/{player.id}" + (f"?{query}" if query else "")
+    cc_note = f" (cc {cc})" if cc else ""
+
+    # Rebuild the exact filtered list shown to the user and render it as a PDF
+    # attachment (school names are clickable links, per school_list_pdf).
+    parsed = parse_qs(query)
+    divisions = [d for d in parsed.get("division", []) if d]
+    states = [s for s in parsed.get("state", []) if s]
+    majors = [m for m in parsed.get("major", []) if m]
+    max_tuition = (parsed.get("max_tuition", [""]) or [""])[0]
+    matches = school_list_matches(db, player, divisions, states, max_tuition, majors)
+    majors_display = ", ".join(majors) if majors else "All"
+    pdf = school_list_pdf(player, matches, filter_summary(divisions, states, max_tuition, majors), majors_display)
+    safe_name = "".join(ch if ch.isalnum() else "-" for ch in player.name).strip("-") or "player"
+    attach_name = f"Jinx-School-List-{safe_name}.pdf"
+    attachments = [(attach_name, pdf, "application/pdf")]
+
+    if os.environ.get("SEND_EMAILS", "0") == "1":
+        ok = send_email(subject, body, recipients, sender=os.environ.get("SMTP_USER"), cc=cc or None, attachments=attachments)
+        if ok:
+            log(db, "school_list_email_sent", f"Sent school list to {recipients}{cc_note}: {subject} [attached {attach_name}, {len(matches)} colleges]")
+            return redirect(back, "School list email sent with PDF attached.")
+        log(db, "school_list_email_error", f"Failed to send school list to {recipients}{cc_note}: {subject}")
+        return redirect(back, "Failed to send email; see server logs.")
+    log(db, "school_list_email_stub", f"Simulated school list email to {recipients}{cc_note}: {subject} [attached {attach_name}, {len(matches)} colleges]")
+    return redirect(back, "School list email simulated and logged locally (PDF attachment generated). Nothing was sent.")
 
 
 @app.get("/integrations")

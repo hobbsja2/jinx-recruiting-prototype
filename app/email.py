@@ -1,3 +1,4 @@
+import base64
 import os
 import smtplib
 import json
@@ -7,7 +8,18 @@ from typing import Optional
 import httpx
 
 
-def _send_via_sendgrid(subject: str, body: str, recipient: str, sender: Optional[str]) -> bool:
+def _parse_addrs(value) -> list[str]:
+    """Normalize a comma/semicolon-separated string (or list) into an address list."""
+    if not value:
+        return []
+    if isinstance(value, str):
+        parts = value.replace(";", ",").split(",")
+    else:
+        parts = list(value)
+    return [p.strip() for p in parts if p and p.strip()]
+
+
+def _send_via_sendgrid(subject: str, body: str, recipient: str, sender: Optional[str], cc: Optional[list] = None, attachments: Optional[list] = None) -> bool:
     api_key = os.environ.get("SENDGRID_API_KEY")
     if not api_key:
         return False
@@ -15,12 +27,22 @@ def _send_via_sendgrid(subject: str, body: str, recipient: str, sender: Optional
     if not from_addr:
         return False
     url = "https://api.sendgrid.com/v3/mail/send"
+    personalization = {"to": [{"email": recipient}]}
+    if cc:
+        personalization["cc"] = [{"email": a} for a in cc]
     payload = {
-        "personalizations": [{"to": [{"email": recipient}]}],
+        "personalizations": [personalization],
         "from": {"email": from_addr},
         "subject": subject,
         "content": [{"type": "text/plain", "value": body}],
     }
+    if attachments:
+        payload["attachments"] = [{
+            "content": base64.b64encode(content).decode("ascii"),
+            "filename": filename,
+            "type": mimetype,
+            "disposition": "attachment",
+        } for filename, content, mimetype in attachments]
     headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
     try:
         resp = httpx.post(url, headers=headers, json=payload, timeout=20)
@@ -30,7 +52,14 @@ def _send_via_sendgrid(subject: str, body: str, recipient: str, sender: Optional
         return False
 
 
-def _send_via_graph(subject: str, body: str, recipient: str, sender: Optional[str]) -> bool:
+def _send_via_graph(subject: str, body: str, recipient: str, sender: Optional[str], cc: Optional[list] = None, attachments: Optional[list] = None) -> bool:
+    cc_recipients = [{"emailAddress": {"address": a}} for a in (cc or [])]
+    graph_attachments = [{
+        "@odata.type": "#microsoft.graph.fileAttachment",
+        "name": filename,
+        "contentType": mimetype,
+        "contentBytes": base64.b64encode(content).decode("ascii"),
+    } for filename, content, mimetype in (attachments or [])]
     # Prefer an explicit token if provided in the env (delegated flow)
     token = os.environ.get("MS_GRAPH_TOKEN")
     if token:
@@ -41,6 +70,8 @@ def _send_via_graph(subject: str, body: str, recipient: str, sender: Optional[st
                 "subject": subject,
                 "body": {"contentType": "Text", "content": body},
                 "toRecipients": [{"emailAddress": {"address": recipient}}],
+                "ccRecipients": cc_recipients,
+                "attachments": graph_attachments,
             },
             "saveToSentItems": "true",
         }
@@ -81,6 +112,8 @@ def _send_via_graph(subject: str, body: str, recipient: str, sender: Optional[st
                 "subject": subject,
                 "body": {"contentType": "Text", "content": body},
                 "toRecipients": [{"emailAddress": {"address": recipient}}],
+                "ccRecipients": cc_recipients,
+                "attachments": graph_attachments,
                 "from": {"emailAddress": {"address": send_as}},
             },
             "saveToSentItems": "true",
@@ -92,19 +125,23 @@ def _send_via_graph(subject: str, body: str, recipient: str, sender: Optional[st
         return False
 
 
-def send_email(subject: str, body: str, recipient: str, sender: Optional[str] = None) -> bool:
+def send_email(subject: str, body: str, recipient: str, sender: Optional[str] = None, cc=None, attachments: Optional[list] = None) -> bool:
     """Send an email using the first available provider: SendGrid, Microsoft Graph, then SMTP.
 
+    `cc` may be a comma/semicolon-separated string or a list of addresses.
+    `attachments` is an optional list of (filename, content_bytes, mimetype) tuples.
     Returns True on success, False on failure.
     """
+    cc_list = _parse_addrs(cc)
+    attachments = attachments or []
     # Try SendGrid if configured
     if os.environ.get("SENDGRID_API_KEY"):
-        ok = _send_via_sendgrid(subject, body, recipient, sender)
+        ok = _send_via_sendgrid(subject, body, recipient, sender, cc_list, attachments)
         if ok:
             return True
     # Try Microsoft Graph if configured
     if os.environ.get("MS_GRAPH_TOKEN"):
-        ok = _send_via_graph(subject, body, recipient, sender)
+        ok = _send_via_graph(subject, body, recipient, sender, cc_list, attachments)
         if ok:
             return True
 
@@ -122,7 +159,12 @@ def send_email(subject: str, body: str, recipient: str, sender: Optional[str] = 
     msg["Subject"] = subject
     msg["From"] = from_addr
     msg["To"] = recipient
+    if cc_list:
+        msg["Cc"] = ", ".join(cc_list)
     msg.set_content(body)
+    for filename, content, mimetype in attachments:
+        maintype, _, subtype = mimetype.partition("/")
+        msg.add_attachment(content, maintype=maintype or "application", subtype=subtype or "octet-stream", filename=filename)
 
     try:
         with smtplib.SMTP(host, port, timeout=20) as s:

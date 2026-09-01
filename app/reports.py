@@ -10,11 +10,12 @@ from reportlab.lib.pagesizes import landscape, letter
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.units import inch
 from reportlab.platypus import Image, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
+from xml.sax.saxutils import escape
 
 from .tuition import is_out_of_state, tuition_for
 
 LOGO = Path(__file__).resolve().parent.parent / "static" / "jinx-logo.jpg"
-HEADERS = ["College", "Division", "State", "Tuition", "Coach email", "Matching need", "Fit"]
+HEADERS = ["College", "Division", "Majors", "State", "Tuition", "Coach email", "Matching need", "Fit"]
 
 
 def money(amount: float | None) -> str:
@@ -28,7 +29,7 @@ def tuition_display(college, player) -> str:
     return f"<b>{text} *</b>" if oos else text
 
 
-def school_list_pdf(player, matches, filter_summary: str) -> bytes:
+def school_list_pdf(player, matches, filter_summary: str, majors_display: str = "All") -> bytes:
     """Render the generated school list as a PDF document and return its bytes."""
     buffer = BytesIO()
     doc = SimpleDocTemplate(buffer, pagesize=landscape(letter), title=f"School List - {player.name}",
@@ -48,15 +49,20 @@ def school_list_pdf(player, matches, filter_summary: str) -> bytes:
 
     data = [[Paragraph(f"<b>{h}</b>", cell) for h in HEADERS]]
     any_oos = False
-    for college, need, score in matches:
+    for college, need, score, *_notes in matches:
         any_oos = any_oos or is_out_of_state(player, college)
+        need_text = f"{need.position} &middot; {need.class_year}" if need else "Not yet provided"
+        # Render the school name as a live hyperlink to the college website when available.
+        name = escape(college.name or "")
+        url = (college.website_url or "").strip()
+        name_html = f'<a href="{escape(url, {chr(34): "&quot;"})}" color="#1A4FA0"><u>{name}</u></a>' if url else name
         data.append([Paragraph(str(v), cell) for v in (
-            college.name, college.division or "—", college.state or "—", tuition_display(college, player),
-            college.coach_emails or "—", f"{need.position} &middot; {need.class_year}", score)])
+            name_html, college.division or "—", majors_display or "All", college.state or "—", tuition_display(college, player),
+            college.coach_emails or "—", need_text, score)])
     if len(data) == 1:
-        data.append([Paragraph("No matching colleges for the selected filters.", cell)] + [""] * 6)
+        data.append([Paragraph("No matching colleges for the selected filters.", cell)] + [""] * (len(HEADERS) - 1))
 
-    table = Table(data, colWidths=[2.1 * inch, 1.15 * inch, 0.6 * inch, 0.9 * inch, 2.3 * inch, 1.5 * inch, 0.5 * inch], repeatRows=1)
+    table = Table(data, colWidths=[2.0 * inch, 1.05 * inch, 1.0 * inch, 0.55 * inch, 0.9 * inch, 2.0 * inch, 1.5 * inch, 0.5 * inch], repeatRows=1)
     table.setStyle(TableStyle([
         ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#16213A")),
         ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
