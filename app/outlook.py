@@ -217,6 +217,7 @@ def send_mail(
     subject: str,
     body: str,
     attachment: MailAttachment | None = None,
+    cc_text: str = "",
 ) -> str:
     connection = _connection(db)
     if not connection or connection.account_email.lower() != expected_sender():
@@ -243,6 +244,7 @@ def send_mail(
         db.flush()
 
     addresses = recipients(recipient_text)
+    cc_addresses = recipients(cc_text) if cc_text and cc_text.strip() else []
     clean_subject = subject.strip()
     if not clean_subject:
         raise OutlookError("Enter an email subject.")
@@ -258,6 +260,7 @@ def send_mail(
             "subject": clean_subject,
             "body": {"contentType": "Text", "content": body},
             "toRecipients": [{"emailAddress": {"address": address}} for address in addresses],
+            "ccRecipients": [{"emailAddress": {"address": address}} for address in cc_addresses],
         },
         "saveToSentItems": True,
     }

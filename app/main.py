@@ -7,7 +7,7 @@ import secrets
 from contextlib import asynccontextmanager
 from io import BytesIO
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import parse_qs, quote
 
 from PIL import Image as PILImage, ImageOps
 from fastapi import Depends, FastAPI, File, Form, HTTPException, Query, Request, UploadFile
@@ -97,7 +97,7 @@ def healthz(db: Session = Depends(get_db)):
     return {"status": "ok"}
 
 
-COLLEGE_FIELDS = [("name", "College name", "text", True), ("division", "Division", "text", True), ("conference", "Conference", "text", False), ("city", "City", "text", False), ("state", "State", "text", False), ("academic_ranking", "Academic profile", "text", False), ("tuition", "Annual tuition (in-state + housing)", "number", False), ("in_state_tuition", "In-state tuition", "number", False), ("out_of_state_tuition", "Out-of-state tuition", "number", False), ("housing_cost", "Housing cost", "number", False), ("financial_aid", "Financial aid", "textarea", False), ("head_coach", "Head coach", "text", False), ("recruiting_coordinator", "Recruiting coordinator", "text", False), ("coach_emails", "Coach emails", "text", False), ("coach_phones", "Coach phones", "text", False), ("roster_size", "Roster size", "number", False), ("scholarship_count", "Scholarships", "number", False), ("facilities_notes", "Facilities notes", "textarea", False), ("program_reputation", "Program reputation", "textarea", False), ("website_url", "Website", "url", False), ("notes", "Recruiting notes", "textarea", False)]
+COLLEGE_FIELDS = [("name", "College name", "text", True), ("division", "Division", "text", True), ("conference", "Conference", "text", False), ("city", "City", "text", False), ("state", "State", "text", False), ("academic_ranking", "Academic profile", "text", False), ("avg_admission_gpa", "Average admission GPA", "number", False), ("tuition", "Annual tuition (in-state + housing)", "number", False), ("in_state_tuition", "In-state tuition", "number", False), ("out_of_state_tuition", "Out-of-state tuition", "number", False), ("housing_cost", "Housing cost", "number", False), ("financial_aid", "Financial aid", "textarea", False), ("head_coach", "Head coach", "text", False), ("recruiting_coordinator", "Recruiting coordinator", "text", False), ("coach_emails", "Coach emails", "text", False), ("coach_phones", "Coach phones", "text", False), ("roster_size", "Roster size", "number", False), ("scholarship_count", "Scholarships", "number", False), ("facilities_notes", "Facilities notes", "textarea", False), ("program_reputation", "Program reputation", "textarea", False), ("website_url", "Website", "url", False), ("notes", "Recruiting notes", "textarea", False)]
 PLAYER_FIELDS = [("name", "Player name", "text", True), ("grad_year", "Graduation year", "number", True), ("primary_position", "Primary position", "text", True), ("secondary_position", "Secondary position", "text", False), ("home_state", "Home state", "select", False), ("intended_major", "Intended major / field of study", "text", False), ("player_email", "Player email", "email", False), ("parent_email", "Parent/guardian email", "email", False), ("gpa", "GPA", "number", False), ("sat_act", "SAT / ACT", "text", False), ("height", "Height", "text", False), ("throwing_hand", "Throwing hand", "text", False), ("batting_side", "Batting side", "text", False), ("home_to_first", "Home-to-first", "text", False), ("exit_velo", "Exit velocity", "text", False), ("pop_time", "Pop time", "text", False), ("pitching_velo", "Pitching velocity", "text", False), ("highlight_link", "Highlight link", "url", False), ("transcript_path", "Transcript path", "text", False), ("social_handles", "Social handles", "text", False), ("notes", "Recruiting notes", "textarea", False)]
 US_STATES = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA",
              "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM",
@@ -247,7 +247,7 @@ def form_html(action: str, fields, item: object | None, cancel: str, title: str,
                 for option in options)
             control = f'<select name="{key}"><option value="">— select —</option>{rendered}</select>'
         else:
-            step = ' step="any"' if key in {"gpa", "tuition", "in_state_tuition", "out_of_state_tuition", "housing_cost"} else ""
+            step = ' step="any"' if key in {"gpa", "avg_admission_gpa", "tuition", "in_state_tuition", "out_of_state_tuition", "housing_cost"} else ""
             control = f'<input type="{kind}" name="{key}" value="{current}"{step}{required_text}>'
         controls.append(f'<label class="{wide}">{esc(label)}{control}</label>')
     return f'<div class="card"><form class="grid" method="post" action="{action}">{extra}{"".join(controls)}<div class="wide actions"><a class="button secondary" href="{cancel}">Cancel</a><button>{esc(title)}</button></div></form></div>'
@@ -263,7 +263,7 @@ async def payload(request: Request, fields) -> dict:
         if not raw:
             data[key] = None
         elif kind == "number":
-            data[key] = float(raw) if key in {"gpa", "tuition", "in_state_tuition", "out_of_state_tuition", "housing_cost"} else int(raw)
+            data[key] = float(raw) if key in {"gpa", "avg_admission_gpa", "tuition", "in_state_tuition", "out_of_state_tuition", "housing_cost"} else int(raw)
         else:
             data[key] = raw
     return data
@@ -829,6 +829,24 @@ def resolve_program(db: Session, player: Player, cip_code: str,
     )
 
 
+def gpa_fit_adjustment(player: Player, college: College) -> tuple[int, str]:
+    """Academic component of the fit score.
+
+    +3 when the player's GPA is a strong 3.5+, minus 1 point per 0.1 that the
+    player's GPA falls below the college's average admission GPA (when both are
+    known). Returns (delta, note) where note explains any deduction.
+    """
+    delta = 0
+    note = ""
+    if player.gpa and player.gpa >= 3.5:
+        delta += 3
+    avg = getattr(college, "avg_admission_gpa", None)
+    if player.gpa and avg and player.gpa < avg:
+        delta -= round((avg - player.gpa) * 10)
+        note = "Player GPA is below average GPA of admitted students"
+    return delta, note
+
+
 def school_list_matches(
     db: Session,
     player: Player,
@@ -878,6 +896,7 @@ def school_list_matches(
         for need in db.scalars(query.order_by(College.name)).all():
             college = need.college
             score = 100 + (5 if college.tuition and college.tuition < 30000 else 0)
+            score = max(0, score + gpa_fit_adjustment(player, college)[0])
             rows.append((college, need, score, None))
         rows.sort(key=lambda row: (-row[2], row[0].name))
         return rows
@@ -901,6 +920,7 @@ def school_list_matches(
         college = match["college"]
         need = match["need"]
         score = 100 + (25 if need else 0) + (5 if college.tuition and college.tuition < 30000 else 0)
+        score = max(0, score + gpa_fit_adjustment(player, college)[0])
         rows.append((college, need, score, " / ".join(sorted(match["credentials"]))))
     rows.sort(key=lambda row: (-row[2], row[0].name))
     return rows
@@ -939,6 +959,7 @@ def school_list(player_id: int, request: Request, cip_code: str = "", cip6_code:
                    f'<label class="stack">Maximum tuition<input name="max_tuition" placeholder="e.g. 30000" value="{esc(max_tuition)}"></label>'
                    f'<button>Apply filters</button><a class="button secondary" href="/school-lists/{player.id}">Clear</a></form>')
     query_string = request.url.query
+    email_list = f'<a class="button secondary" href="/school-lists/{player.id}/email{"?" + query_string if query_string else ""}">Email List</a>'
     download = f'<a class="button" href="/school-lists/{player.id}/pdf{"?" + query_string if query_string else ""}">Download PDF</a>'
     rows = []
     any_oos = False
@@ -946,17 +967,19 @@ def school_list(player_id: int, request: Request, cip_code: str = "", cip6_code:
         cell = tuition_cell(college, player)
         any_oos = any_oos or is_out_of_state(player, college)
         degree = f'{esc(selected_interest.name)} · {esc(credentials)}' if selected_interest and credentials else "—"
-        need_text = f'{esc(need.position)} · {need.class_year}' if need else "No matching need recorded"
-        rows.append(f'<tr><td><a href="/colleges/{college.id}?player_id={player.id}">{esc(college.name)}</a></td><td>{degree}</td><td>{esc(college.division)}</td><td>{esc(college.state)}</td>{cell}<td>{esc(college.coach_emails)}</td><td>{need_text}</td><td><span class="pill">{score}</span></td><td><a href="/email/compose?player_id={player.id}&college_id={college.id}">Email</a></td></tr>')
+        need_text = f'{esc(need.position)} · {need.class_year}' if need else '<span class="muted">Not yet provided</span>'
+        note = gpa_fit_adjustment(player, college)[1]
+        notes_cell = esc(note) if note else ""
+        rows.append(f'<tr><td><a href="/colleges/{college.id}?player_id={player.id}">{esc(college.name)}</a></td><td>{degree}</td><td>{esc(college.division)}</td><td>{esc(college.state)}</td>{cell}<td>{esc(college.coach_emails)}</td><td>{need_text}</td><td><span class="pill">{score}</span></td><td class="muted">{notes_cell}</td><td><a href="/email/compose?player_id={player.id}&college_id={college.id}">Email</a></td></tr>')
     empty = "No colleges report the selected specialization with these filters." if selected_detail else ("No colleges offer the selected major with these filters." if selected_program else "Select a specialization or major to make academics the primary filter, or review direct athletic-need matches below.")
-    table = "".join(rows) or f'<tr><td colspan="9">{esc(empty)}</td></tr>'
-    toolbar = f'<div class="toolbar">{download}<span class="muted">{len(matches)} matching college(s)</span></div>' if matches else ""
+    table = "".join(rows) or f'<tr><td colspan="10">{esc(empty)}</td></tr>'
+    toolbar = f'<div class="toolbar">{email_list}{download}<span class="muted">{len(matches)} matching college(s)</span></div>' if matches else ""
     home_note = f' Home state: <b>{esc(player.home_state)}</b>.' if norm_state(player.home_state) else ' No home state on file — showing in-state tuition.'
     academic_note = (f' Showing colleges with recent IPEDS evidence for <b>{esc(selected_detail.name)}</b>; exact class/position need adds 25 fit points.' if selected_detail else
                      (f' Showing colleges that report <b>{esc(selected_program.name)}</b>; exact class/position need adds 25 fit points.' if selected_program else
                       ' Choose a specialization or undergraduate major above to filter by academics first.'))
     oos_legend = '<p class="muted"><strong>Bold *</strong> tuition = out-of-state rate (college is outside the player\'s home state).</p>' if any_oos else ""
-    body = filter_form + f'<p class="muted">School-interest list for {esc(player.name)}: {player.grad_year} {esc(player.primary_position)}.{academic_note}{home_note}</p>{oos_legend}{toolbar}<table><tr><th>College</th><th>Degree offered</th><th>Division</th><th>State</th><th>Tuition</th><th>Coach email</th><th>Matching need</th><th>Fit score</th><th></th></tr>{table}</table>'
+    body = filter_form + f'<p class="muted">School-interest list for {esc(player.name)}: {player.grad_year} {esc(player.primary_position)}.{academic_note}{home_note}</p>{oos_legend}{toolbar}<table><tr><th>College</th><th>Degree offered</th><th>Division</th><th>State</th><th>Tuition</th><th>Coach email</th><th>Matching need</th><th>Fit score</th><th>Notes</th><th></th></tr>{table}</table>'
     return page(request, f"School List · {player.name}", body, "Academic specialization or major match first; recruiting need second")
 
 
@@ -978,6 +1001,111 @@ def school_list_download(player_id: int, cip_code: str = "", cip6_code: str = ""
     log(db, "school_list_pdf", f"Downloaded school list PDF for {player.name} ({len(matches)} colleges).")
     return Response(content=pdf, media_type="application/pdf",
                     headers={"Content-Disposition": f'attachment; filename="Jinx-School-List-{safe_name}.pdf"'})
+
+
+def school_list_email_body(player: Player) -> str:
+    """Plain-text body for the player/family school-list email (list travels as the PDF)."""
+    return "\n".join([
+        f"Hi {player.name},",
+        "",
+        "Here is your current recruiting school list, attached as a PDF.",
+        "",
+        "These schools are suggested based on your responses. Changes can be requested at any time for an updated list to be generated.",
+        "Reply to this email with any questions.",
+        "",
+        "\u2014 Jinx Recruiting",
+    ])
+
+
+def _school_list_filters(query: str, db: Session, player: Player):
+    """Parse a school-list query string back into resolved filters + matches (for the emailed PDF)."""
+    parsed = parse_qs(query)
+    cip_code = (parsed.get("cip_code", [""]) or [""])[0]
+    cip6_code = (parsed.get("cip6_code", [""]) or [""])[0]
+    divisions = [d for d in parsed.get("division", []) if d]
+    states = [s for s in parsed.get("state", []) if s]
+    max_tuition = (parsed.get("max_tuition", [""]) or [""])[0]
+    selected_detail = resolve_detail(db, player, cip6_code) if cip6_code or not cip_code else None
+    selected_program = resolve_program(db, player, cip_code, selected_detail)
+    selected_interest = selected_detail or selected_program
+    matches = school_list_matches(db, player, divisions, states, max_tuition, selected_program, selected_detail)
+    summary = filter_summary(divisions, states, max_tuition, selected_program, selected_detail)
+    return matches, selected_interest, summary
+
+
+@app.get("/school-lists/{player_id}/email")
+def school_list_email(player_id: int, request: Request, cip_code: str = "", cip6_code: str = "", division: list[str] = Query(default=[]), state: list[str] = Query(default=[]), max_tuition: str = "", db: Session = Depends(get_db)):
+    """Compose an email of the (filtered) school list, addressed to the player with the parent/guardian cc'd."""
+    player = get_or_404(db, Player, player_id)
+    query_string = request.url.query
+    matches, _interest, _summary = _school_list_filters(query_string, db, player)
+    connection = outlook_status(db)
+    subject = f"Your recruiting school list \u2014 {player.name} ({player.grad_year} {player.primary_position})"
+    body_text = school_list_email_body(player)
+    to_addr = player.player_email or ""
+    cc_addr = player.parent_email or ""
+    back = f'/school-lists/{player.id}{"?" + query_string if query_string else ""}'
+    safe_name = "".join(ch if ch.isalnum() else "-" for ch in player.name).strip("-") or "player"
+    attach_name = f"Jinx-School-List-{safe_name}.pdf"
+
+    notices = []
+    if not to_addr:
+        notices.append('<div class="notice">This player has no email on file. Add one on the player profile, or enter a recipient below before sending.</div>')
+    if not cc_addr:
+        notices.append('<div class="notice">No parent/guardian email on file, so the Cc field is empty. Add one below if you have it.</div>')
+    notices_html = "".join(notices)
+
+    hidden = (f'<input type="hidden" name="csrf_token" value="{esc(csrf_token(request))}">'
+              f'<input type="hidden" name="query" value="{esc(query_string)}">')
+    send_control = ('<button>Send with Outlook</button>' if connection.connected
+                    else '<a class="button" href="/integrations">Connect Outlook to send</a>')
+    compose = (f'<div class="card"><form class="grid" method="post" action="/school-lists/{player.id}/email/send">{hidden}'
+               f'<label class="wide">To<input name="recipients" value="{esc(to_addr)}" required></label>'
+               f'<label class="wide">Cc<input name="cc" value="{esc(cc_addr)}"></label>'
+               f'<label class="wide">Subject<input name="subject" value="{esc(subject)}" required></label>'
+               f'<label class="wide">Attachment<input value="{esc(attach_name)}" readonly></label>'
+               f'<p class="wide muted">The {len(matches)}-college list shown (with your current filters) is attached as a PDF; each school name is a clickable link.</p>'
+               f'<label class="wide">Message<textarea name="body" rows="16">{esc(body_text)}</textarea></label>'
+               f'<div class="wide actions"><a class="button secondary" href="{back}">Back to list</a>{send_control}</div></form></div>')
+    state_notice = (f'Connected as {esc(connection.account_email)}. Messages are saved in Outlook Sent Items.'
+                    if connection.connected else 'Outlook is not connected; sending is disabled.')
+    body = f'<div class="notice">{state_notice}</div>{notices_html}{compose}'
+    return page(request, f"Email School List · {player.name}", body, f"Send {esc(player.name)}'s school list to the player and family")
+
+
+@app.post("/school-lists/{player_id}/email/send")
+async def school_list_email_send(player_id: int, request: Request, db: Session = Depends(get_db)):
+    player = get_or_404(db, Player, player_id)
+    form = await request.form()
+    verify_csrf(request, str(form.get("csrf_token", "")))
+    recipients_text = str(form.get("recipients", "")).strip()
+    cc = str(form.get("cc", "")).strip()
+    subject = str(form.get("subject", "")).strip()
+    body = str(form.get("body", "")).strip()
+    query = str(form.get("query", "")).strip()
+    if not recipients_text or not subject or not body:
+        raise HTTPException(status_code=422, detail="Recipient, subject, and message are required")
+    back = f"/school-lists/{player.id}" + (f"?{query}" if query else "")
+
+    matches, selected_interest, summary = _school_list_filters(query, db, player)
+    pdf = school_list_pdf(player, matches, summary, selected_interest)
+    safe_name = "".join(ch if ch.isalnum() else "-" for ch in player.name).strip("-") or "player"
+    attach_name = f"Jinx-School-List-{safe_name}.pdf"
+    attachment = MailAttachment(name=attach_name, content_type="application/pdf", content=pdf)
+    cc_note = f" (cc {cc})" if cc else ""
+
+    try:
+        request_id = send_mail(db, recipients_text, subject, body, attachment, cc_text=cc)
+    except OutlookError as exc:
+        db.rollback()
+        log(db, "school_list_email_failed", f"Failed school list email to {recipients_text}{cc_note}: {exc}")
+        return redirect(back, str(exc))
+    detail = f'Microsoft Graph accepted school list email to {recipients_text}{cc_note}: {subject} [attached {attach_name}, {len(matches)} colleges].'
+    if request_id:
+        detail += f" Microsoft request {request_id}."
+    db.add(ActivityLog(kind="email_sent", detail=detail))
+    db.commit()
+    return redirect(back, f"School list emailed to {recipients_text}{cc_note} with the PDF attached.")
 
 
 @app.get("/integrations")

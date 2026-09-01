@@ -10,6 +10,7 @@ from reportlab.lib.pagesizes import landscape, letter
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.units import inch
 from reportlab.platypus import Image, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
+from xml.sax.saxutils import escape
 
 from .tuition import is_out_of_state, tuition_for
 
@@ -51,9 +52,13 @@ def school_list_pdf(player, matches, filter_summary: str, program=None) -> bytes
     for college, need, score, credentials in matches:
         any_oos = any_oos or is_out_of_state(player, college)
         degree = f"{program.name} · {credentials}" if program and credentials else "—"
-        need_text = f"{need.position} &middot; {need.class_year}" if need else "No matching need recorded"
+        need_text = f"{need.position} &middot; {need.class_year}" if need else "Not yet provided"
+        # Render the school name as a live hyperlink to the college website when available.
+        name = escape(college.name or "")
+        url = (college.website_url or "").strip()
+        name_html = f'<a href="{escape(url, {chr(34): "&quot;"})}" color="#1A4FA0"><u>{name}</u></a>' if url else name
         data.append([Paragraph(str(v), cell) for v in (
-            college.name, degree, college.division or "—", college.state or "—", tuition_display(college, player),
+            name_html, degree, college.division or "—", college.state or "—", tuition_display(college, player),
             college.coach_emails or "—", need_text, score)])
     if len(data) == 1:
         data.append([Paragraph("No matching colleges for the selected filters.", cell)] + [""] * 7)
