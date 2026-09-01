@@ -976,12 +976,23 @@ def intake_list(request: Request, db: Session = Depends(get_db)):
         f'<td>{("$" + format(i.max_tuition, ",.0f")) if i.max_tuition else "—"}</td>'
         f'<td>{esc(i.division_prefs)}</td><td>{esc(i.preferred_locations)}</td>'
         f'<td><span class="pill">{esc(i.status)}</span></td>'
-        f'<td>{esc(i.created_at.strftime("%b %d, %Y"))}</td></tr>' for i in items) or '<tr><td colspan="9">No submissions yet.</td></tr>'
+        f'<td>{esc(i.created_at.strftime("%b %d, %Y"))}</td>'
+        f'<td><form method="post" action="/intakes/{i.id}/delete" onsubmit="return confirm(\'Delete this intake submission?\');">'
+        f'<button class="button danger" title="Delete intake" aria-label="Delete intake">🗑</button></form></td></tr>' for i in items) or '<tr><td colspan="10">No submissions yet.</td></tr>'
     body = (f'<div class="toolbar"><a class="button" href="/intake">Open the form</a>'
             f'<a class="button secondary" href="/email/compose?template=intake">Email the form to a family</a></div>'
             f'<table><tr><th>Player</th><th>Class</th><th>Position</th><th>Major</th><th>Max tuition</th>'
-            f'<th>Divisions</th><th>Locations</th><th>Status</th><th>Received</th></tr>{rows}</table>')
+            f'<th>Divisions</th><th>Locations</th><th>Status</th><th>Received</th><th>Delete</th></tr>{rows}</table>')
     return page(request, "Intake Submissions", body, "Player profile and college preference responses")
+
+
+@app.post("/intakes/{intake_id}/delete")
+def intake_delete(intake_id: int, db: Session = Depends(get_db)):
+    intake = get_or_404(db, PlayerIntake, intake_id)
+    db.delete(intake)
+    db.commit()
+    log(db, "intake_deleted", f"Deleted intake submission #{intake.id} for {intake.player_name}.")
+    return redirect("/intakes", "Intake submission deleted.")
 
 
 @app.get("/intakes/{intake_id}")
@@ -989,6 +1000,8 @@ def intake_detail(intake_id: int, request: Request, db: Session = Depends(get_db
     intake = get_or_404(db, PlayerIntake, intake_id)
     body = (f'<div class="actions"><form method="post" action="/intakes/{intake.id}/create-player">'
             f'<button>Create player record</button></form>'
+            f'<form method="post" action="/intakes/{intake.id}/delete" onsubmit="return confirm(\'Delete this intake submission?\');">'
+            f'<button class="button danger" title="Delete intake" aria-label="Delete intake">🗑 Delete</button></form>'
             f'<a class="button secondary" href="/intakes">Back to submissions</a></div>')
     body += facts(intake, [("grad_year", "Graduation year"), ("primary_position", "Primary position"), ("secondary_position", "Secondary position"),
                            ("home_state", "Home state"),
