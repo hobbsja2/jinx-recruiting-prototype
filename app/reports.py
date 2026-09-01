@@ -29,7 +29,7 @@ def tuition_display(college, player) -> str:
     return f"<b>{text} *</b>" if oos else text
 
 
-def school_list_pdf(player, matches, filter_summary: str, program=None) -> bytes:
+def school_list_pdf(player, matches, filter_summary: str, interest_label: str = "") -> bytes:
     """Render the generated school list as a PDF document and return its bytes."""
     buffer = BytesIO()
     doc = SimpleDocTemplate(buffer, pagesize=landscape(letter), title=f"School List - {player.name}",
@@ -51,7 +51,7 @@ def school_list_pdf(player, matches, filter_summary: str, program=None) -> bytes
     any_oos = False
     for college, need, score, credentials in matches:
         any_oos = any_oos or is_out_of_state(player, college)
-        degree = f"{program.name} · {credentials}" if program and credentials else "—"
+        degree = f"{interest_label} · {credentials}" if interest_label and credentials else "—"
         need_text = f"{need.position} &middot; {need.class_year}" if need else "Not yet provided"
         # Render the school name as a live hyperlink to the college website when available.
         name = escape(college.name or "")
