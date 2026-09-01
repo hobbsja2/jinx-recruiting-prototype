@@ -17,6 +17,12 @@
       <a href="/school-lists">School Lists</a><a href="/intakes">Intake Forms</a>
       <a href="/integrations">Integrations</a>
     </nav>
+    {% if user %}
+      <div class="user-bar">
+        Signed in as <strong>{{ user.username }}</strong>
+        <a href="/logout">Sign out</a>
+      </div>
+    {% endif %}
     <p class="aside-note">Local prototype<br>Integrations are simulated.</p>
   </aside>
   <main>

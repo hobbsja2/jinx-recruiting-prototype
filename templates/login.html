@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} · Jinx Recruiting</title>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body class="login-page">
+  <main>
+    <header>
+      <h1>{{ title }}</h1>
+      <p>{{ subtitle }}</p>
+    </header>
+    {% if notice %}
+      <div class="notice">{{ notice }}</div>
+    {% endif %}
+    <section class="card login-card">
+      <form method="post" action="/login">
+        <label>Username<input name="username" required></label>
+        <label>Password<input type="password" name="password" required></label>
+        <div class="actions"><button>Sign in</button></div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

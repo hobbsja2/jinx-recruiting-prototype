@@ -41,6 +41,33 @@ Restart the server after updating `.env`.
 
 To reset the demo data, stop the server and delete `jinx_recruiting.db`, then start it again.
 
+## Deploying to Render
+
+This app can be deployed directly from a GitHub repo to Render using the included `render.yaml` service manifest.
+
+Render environment variables required for auth and database access:
+
+```env
+DATABASE_URL=postgresql+psycopg://<username>:<password>@<host>/<db>
+SECRET_KEY=<long-random-secret>
+AUTH_USERS=jinxadmin:pbkdf2_sha256$200000$MVExs_bSjAKiKpHNWrLuCQ$AXLQiXvfEjK9MXIaeIVks3KdLLIWJ5tkC3g6r8-TJeA,jinxcoach:pbkdf2_sha256$200000$iZCvtc7-i-Oz7rPnAjRSrw$eedF1TLvNvPkPETooMHZ61j830xoE_t7eClqTLn_Cso
+```
+
+- `SECRET_KEY` should be a long random string.
+- `AUTH_USERS` must contain comma-separated `username:hash` entries.
+- The login page is available at `/login`.
+
+### Adding more users
+
+To add more users, generate a new PBKDF2 hash and append it to `AUTH_USERS`.
+Run this helper from the repo root:
+
+```cmd
+python generate_auth_hash.py <username>
+```
+
+Then add the output line into the `AUTH_USERS` value.
+
 ## Deliberately deferred
 
 Gmail OAuth and sending, WeasyPrint/PDF/PNG generation, uploads, QR codes, charts, external college data, and scheduled recruiting sequences are not enabled in this local prototype. Their UI routes display or record explicit safe stubs.
