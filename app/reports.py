@@ -15,7 +15,7 @@ from xml.sax.saxutils import escape
 from .tuition import is_out_of_state, tuition_for
 
 LOGO = Path(__file__).resolve().parent.parent / "static" / "jinx-logo.jpg"
-HEADERS = ["College", "Major(s) offered", "Division", "State", "Tuition", "Coach email", "Matching need", "Fit"]
+HEADERS = ["College", "Major(s) offered", "Division", "State", "Tuition", "Coach email", "Matching need", "Fit", "Notes"]
 
 
 def money(amount: float | None) -> str:
@@ -49,7 +49,7 @@ def school_list_pdf(player, matches, filter_summary: str) -> bytes:
 
     data = [[Paragraph(f"<b>{h}</b>", cell) for h in HEADERS]]
     any_oos = False
-    for college, need, score, majors in matches:
+    for college, need, score, majors, note in matches:
         any_oos = any_oos or is_out_of_state(player, college)
         degree = majors or "—"
         need_text = f"{need.position} &middot; {need.class_year}" if need else "Not yet provided"
@@ -59,11 +59,11 @@ def school_list_pdf(player, matches, filter_summary: str) -> bytes:
         name_html = f'<a href="{escape(url, {chr(34): "&quot;"})}" color="#1A4FA0"><u>{name}</u></a>' if url else name
         data.append([Paragraph(str(v), cell) for v in (
             name_html, degree, college.division or "—", college.state or "—", tuition_display(college, player),
-            college.coach_emails or "—", need_text, score)])
+            college.coach_emails or "—", need_text, score, escape(note) if note else "—")])
     if len(data) == 1:
-        data.append([Paragraph("No matching colleges for the selected filters.", cell)] + [""] * 7)
+        data.append([Paragraph("No matching colleges for the selected filters.", cell)] + [""] * (len(HEADERS) - 1))
 
-    table = Table(data, colWidths=[1.65 * inch, 1.75 * inch, 0.9 * inch, 0.5 * inch, 0.8 * inch, 1.9 * inch, 1.35 * inch, 0.45 * inch], repeatRows=1)
+    table = Table(data, colWidths=[1.5 * inch, 1.4 * inch, 0.75 * inch, 0.45 * inch, 0.75 * inch, 1.6 * inch, 1.0 * inch, 0.4 * inch, 1.45 * inch], repeatRows=1)
     table.setStyle(TableStyle([
         ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#16213A")),
         ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),

@@ -967,8 +967,8 @@ def school_list_matches(
             except ValueError: pass
         for need in db.scalars(query.order_by(College.name)).all():
             college = need.college
-            score, _ = fit_score(player, college, need)
-            rows.append((college, need, score, None))
+            score, note = fit_score(player, college, need)
+            rows.append((college, need, score, None, note))
         rows.sort(key=lambda row: (-row[2], row[0].name))
         return rows
 
@@ -1001,8 +1001,8 @@ def school_list_matches(
     for match in matches_by_college.values():
         college = match["college"]
         need = match["need"]
-        score, _ = fit_score(player, college, need)
-        rows.append((college, need, score, " / ".join(sorted(match["majors"]))))
+        score, note = fit_score(player, college, need)
+        rows.append((college, need, score, " / ".join(sorted(match["majors"])), note))
     rows.sort(key=lambda row: (-row[2], row[0].name))
     return rows
 
@@ -1034,12 +1034,11 @@ def school_list(player_id: int, request: Request, cip2: list[str] = Query(defaul
     download = f'<a class="button" href="/school-lists/{player.id}/pdf{"?" + query_string if query_string else ""}">Download PDF</a>'
     rows = []
     any_oos = False
-    for college, need, score, majors in matches:
+    for college, need, score, majors, note in matches:
         cell = tuition_cell(college, player)
         any_oos = any_oos or is_out_of_state(player, college)
         degree = esc(majors) if majors else "—"
         need_text = f'{esc(need.position)} · {need.class_year}' if need else '<span class="muted">Not yet provided</span>'
-        note = gpa_fit_adjustment(player, college)[1]
         notes_cell = esc(note) if note else ""
         rows.append(f'<tr><td><a href="/colleges/{college.id}?player_id={player.id}">{esc(college.name)}</a></td><td>{degree}</td><td>{esc(college.division)}</td><td>{esc(college.state)}</td>{cell}<td>{esc(college.coach_emails)}</td><td>{need_text}</td><td><span class="pill">{score}</span></td><td class="muted">{notes_cell}</td><td><a href="/email/compose?player_id={player.id}&college_id={college.id}">Email</a></td></tr>')
     empty = "No colleges offer the selected major(s) with these filters." if selected_series else "Select one or more interested majors to filter by academics, or review direct athletic-need matches below."
