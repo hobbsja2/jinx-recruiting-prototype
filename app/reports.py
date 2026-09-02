@@ -36,6 +36,7 @@ def school_list_pdf(player, matches, filter_summary: str) -> bytes:
                             author="Jinx Recruiting", leftMargin=36, rightMargin=36, topMargin=32, bottomMargin=32)
     styles = getSampleStyleSheet()
     cell = styles["BodyText"].clone("cell"); cell.fontSize = 8.5; cell.leading = 11
+    head = styles["BodyText"].clone("head"); head.fontSize = 8.5; head.leading = 11; head.textColor = colors.white
     flow = []
     if LOGO.exists():
         flow += [Image(str(LOGO), width=1.5 * inch, height=0.75 * inch, kind="proportional"), Spacer(1, 8)]
@@ -47,7 +48,7 @@ def school_list_pdf(player, matches, filter_summary: str) -> bytes:
         flow.append(Paragraph(f"Home state: <b>{home}</b>", styles["Normal"]))
     flow.append(Spacer(1, 14))
 
-    data = [[Paragraph(f"<b>{h}</b>", cell) for h in HEADERS]]
+    data = [[Paragraph(f"<b>{h}</b>", head) for h in HEADERS]]
     any_oos = False
     for college, need, score, majors, note in matches:
         any_oos = any_oos or is_out_of_state(player, college)
