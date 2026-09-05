@@ -1179,8 +1179,12 @@ def integrations(request: Request, db: Session = Depends(get_db)):
         outlook_card = (
             f'<section class="card"><h2>Microsoft Outlook</h2><p class="pill">Connected</p>'
             f'<p>Messages are sent through Microsoft Graph as <b>{esc(connection.account_email)}</b>.</p>'
+            f'<div class="actions">'
+            f'<a class="button" href="/integrations/outlook/connect">Reconnect Outlook</a>'
             f'<form method="post" action="/integrations/outlook/disconnect">'
-            f'<input type="hidden" name="csrf_token" value="{esc(token)}"><button class="button secondary">Disconnect Outlook</button></form></section>')
+            f'<input type="hidden" name="csrf_token" value="{esc(token)}"><button class="button secondary">Disconnect Outlook</button></form>'
+            f'</div>'
+            f'<p class="muted">Reconnect if sending starts failing or you switched Microsoft accounts.</p></section>')
     elif connection.configured:
         outlook_card = (
             f'<section class="card"><h2>Microsoft Outlook</h2><p class="pill">Not connected</p>'
